@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नेपाल ल ग्रुप – About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Same base styles as index.html – copy exactly from index */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo h1 { font-size: 1.7rem; font-weight: 700; }
+        .logo p { font-size: 0.75rem; opacity: 0.85; }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { text-decoration: underline; }
+        .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
+        section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
+        .bg-light { background: #f8fafc; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar"><div class="container nav-flex"><div class="logo"><h1 class="lang-ne">नेपाल ल ग्रुप</h1><h1 class="lang-en" style="display:none;">Nepal Law Group</h1><p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p><p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p></div><div class="nav-links"><a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a><a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a><a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a><a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a><a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a><a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a></div><button id="langToggle" class="lang-toggle">🇬🇧 English</button></div></div>
+
+    <main>
+        <section><div class="container">
+            <div class="lang-ne"><h2>हाम्रो पृष्ठभूमि र आवश्यकता</h2><p class="section-subhead">परम्परागत कानूनी अभ्यासका चुनौतीहरूलाई सम्बोधन गर्न नेपाल ल ग्रुपको स्थापना गरिएको हो।</p></div>
+            <div class="lang-en" style="display:none;"><h2>Background & Rationale</h2><p class="section-subhead">Nepal Law Group was established to address the challenges of traditional legal practice.</p></div>
+            <div class="grid-2">
+                <div class="card"><i class="fas fa-user-friends card-icon"></i><h3 class="lang-ne">एकल कार्यशैली → सहकारी टोली</h3><h3 class="lang-en" style="display:none;">Siloed → collaborative teams</h3><p class="lang-ne">जटिल मुद्दामा बहु-विषयक सहकार्य सम्भव।</p><p class="lang-en" style="display:none;">Multi‑disciplinary collaboration for complex cases.</p></div>
+                <div class="card"><i class="fas fa-microchip card-icon"></i><h3 class="lang-ne">सीमित पूर्वाधार → साझा स्रोत</h3><h3 class="lang-en" style="display:none;">Limited infra → shared resources</h3><p class="lang-ne">प्रविधि, पुस्तकालय, सहयोगी कर्मचारी साझा।</p><p class="lang-en" style="display:none;">Shared technology, library, support staff.</p></div>
+                <div class="card"><i class="fas fa-building card-icon"></i><h3 class="lang-ne">कमजोर ब्रान्ड → दिगो संस्था</h3><h3 class="lang-en" style="display:none;">Weak brand → lasting institution</h3><p class="lang-ne">व्यक्तिभन्दा माथिको ब्रान्ड इक्विटी।</p><p class="lang-en" style="display:none;">Institutional identity beyond individuals.</p></div>
+                <div class="card"><i class="fas fa-chart-line card-icon"></i><h3 class="lang-ne">अधिशेष वितरण → पुनः लगानी</h3><h3 class="lang-en" style="display:none;">Surplus → reinvestment</h3><p class="lang-ne">कम्पनी-स्तरको आम्दानी र विकास कोष।</p><p class="lang-en" style="display:none;">Company‑level revenue and growth fund.</p></div>
+            </div>
+        </div></section>
+    </main>
+
+    <footer><div class="container"><div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div><div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div></div></footer>
+
+    <script>// same language toggle script as index.html (copy exactly)</script>
+</body>
+</html>
