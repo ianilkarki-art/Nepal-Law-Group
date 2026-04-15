@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nepal Law Group | नेपाल ल ग्रुप</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #fefefe;
+            color: #1e293b;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        .navbar {
+            background: #0f172a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .logo p {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .lang-toggle {
+            background: #2d3a5e;
+            border: none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .lang-toggle:hover {
+            background: #3b4a72;
+        }
+
+        /* sections */
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #e9edf2;
+        }
+        .bg-light {
+            background-color: #f8fafc;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+        .section-subhead {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2.5rem;
+            max-width: 720px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f6;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .member-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .member-badge {
+            background: #f1f5f9;
+            border-radius: 60px;
+            padding: 6px 18px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .compliance-badge {
+            background: #e6f0ff;
+            color: #1e40af;
+            border-radius: 32px;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8rem; }
+            .container { padding: 0 20px; }
+            section { padding: 50px 0; }
+        }
+
+        [data-lang="ne"] .lang-en-only {
+            display: none;
+        }
+        [data-lang="en"] .lang-ne-only {
+            display: none;
+        }
+        .btn-outline {
+            border: 1px solid #2563eb;
+            background: transparent;
+            color: #2563eb;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: 0.2s;
+            display: inline-block;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1>नेपाल ल ग्रुप <span class="lang-en-only" style="display:none;">Nepal Law Group</span></h1>
+                <p class="lang-ne-only">मुनाफा वितरण नगर्ने कम्पनी</p>
+                <p class="lang-en-only" style="display:none;">Profit Non‑Distributing Company</p>
+            </div>
+            <button id="langToggle" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section style="padding-top: 80px;">
+            <div class="container">
+                <div class="lang-ne-only">
+                    <h2>कानूनी सेवामा सहकारी र दिगो संस्था</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुप कम्पनी ऐन, २०६३ (धारा १६६ र १६७) अन्तर्गत दर्ता मुनाफा वितरण नगर्ने कम्पनी हो। हामी चार विभाग र दुई सहायक विभागमार्फत आधुनिक, पारदर्शी र सहकारी कानूनी मञ्च प्रदान गर्दछौं।</p>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <h2>A collaborative & sustainable legal institution</h2>
+                    <p class="section-subhead">Nepal Law Group is a Profit Non‑Distributing Company registered under Sections 166 & 167 of the Companies Act, 2063. We provide a modern, transparent, and collaborative legal platform through four divisions and two support departments.</p>
+                </div>
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon"></i>
+                        <h3 class="lang-ne-only">मुद्दा फाँट तथा अधिवक्ता सेवा</h3>
+                        <h3 class="lang-en-only" style="display:none;">Litigation & Advocacy</h3>
+                        <p class="lang-ne-only">नेपाल बार काउन्सिल अनुमतिप्राप्त सदस्यहरूद्वारा अदालत उपस्थिति, कानूनी सल्लाह र मुद्दा प्रतिनिधित्व।</p>
+                        <p class="lang-en-only" style="display:none;">Court appearances, legal advisory, and representation by Bar‑licensed members.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-book card-icon"></i>
+                        <h3 class="lang-ne-only">अनुसन्धान तथा नीति</h3>
+                        <h3 class="lang-en-only" style="display:none;">Research & Policy</h3>
+                        <p class="lang-ne-only">सरकार, एनजीओ, अन्तर्राष्ट्रिय निकायका लागि अनुसन्धान परियोजना, नीति पत्र, कानून सुधार प्रस्ताव।</p>
+                        <p class="lang-en-only" style="display:none;">Research projects, policy papers, law reform proposals for government, NGOs, and international agencies.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user card-icon"></i>
+                        <h3 class="lang-ne-only">तालिम तथा शिक्षा</h3>
+                        <h3 class="lang-en-only" style="display:none;">Training & Education</h3>
+                        <p class="lang-ne-only">सीपीडी कार्यक्रम, कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला तथा सेमिनार शृंखला।</p>
+                        <p class="lang-en-only" style="display:none;">CPD programs, corporate training, public legal workshops, and seminar series.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-print card-icon"></i>
+                        <h3 class="lang-ne-only">प्रकाशन</h3>
+                        <h3 class="lang-en-only" style="display:none;">Publications</h3>
+                        <p class="lang-ne-only">कानूनी पुस्तक, पत्रिका, अभ्यास पुस्तिका र डिजिटल सामग्री प्रकाशन।</p>
+                        <p class="lang-en-only" style="display:none;">Legal books, journals, practice manuals, newsletters and digital content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Governance & structure -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne-only">
+                    <h2>सुशासन संरचना</h2>
+                    <p class="section-subhead">प्रबन्धपत्र र नियमावली बमोजिम पूर्ण संस्थागत व्यवस्था।</p>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <h2>Governance Structure</h2>
+                    <p class="section-subhead">Full institutional framework as per Memorandum and Articles of Association.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3 class="lang-ne-only">सञ्चालक समिति</h3>
+                        <h3 class="lang-en-only" style="display:none;">Board of Directors</h3>
+                        <p class="lang-ne-only">५ सदस्यीय समिति (अध्यक्ष, प्रबन्ध सञ्चालकसहित ४ अन्य)। एक सदस्य एक मतको सिद्धान्तमा साधारण सभाबाट निर्वाचित।</p>
+                        <p class="lang-en-only" style="display:none;">5‑member Board (Chairman + 4 Directors including Managing Director). Elected by General Meeting on one‑member‑one‑vote basis.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-tie card-icon"></i>
+                        <h3 class="lang-ne-only">प्रमुख कार्यकारी अधिकृत (CEO) तथा सचिव</h3>
+                        <h3 class="lang-en-only" style="display:none;">CEO & Company Secretary</h3>
+                        <p class="lang-ne-only">सीईओ दैनिक सञ्चालनको जिम्मेवार; सचिवले कानूनी अनुपालन, अभिलेख र नियामक फाइलिङ हेर्छन्।</p>
+                        <p class="lang-en-only" style="display:none;">CEO manages day‑to‑day operations; Secretary handles legal compliance, records, and regulatory filings.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building card-icon"></i>
+                        <h3 class="lang-ne-only">प्रशासन तथा लेखा</h3>
+                        <h3 class="lang-en-only" style="display:none;">Admin & Accounts</h3>
+                        <p class="lang-ne-only">कार्यालय व्यवस्थापन, लेखा, कर, अनुपालन – ६०% सदस्यता शुल्क विनियोजन।</p>
+                        <p class="lang-en-only" style="display:none;">Office management, finance, tax, compliance – 60% of membership fee allocation.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-microchip card-icon"></i>
+                        <h3 class="lang-ne-only">लजिस्टिक्स तथा सहयोग</h3>
+                        <h3 class="lang-en-only" style="display:none;">Logistics & Support</h3>
+                        <p class="lang-ne-only">आईटी पूर्वाधार, पुस्तकालय, डाटाबेस, खरिद – ४०% शुल्क विनियोजन।</p>
+                        <p class="lang-en-only" style="display:none;">IT infrastructure, library, databases, procurement – 40% fee allocation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- statutory compliance & key features -->
+        <section>
+            <div class="container">
+                <div class="lang-ne-only">
+                    <h2>ऐनको पूर्ण अनुपालन (धारा १६६–१६७)</h2>
+                    <p class="section-subhead">हामी मुनाफा वितरण नगर्ने, सदस्यता हस्तान्तरण नहुने, र सीमित दायित्वको सिद्धान्तमा कार्य गर्दछौं।</p>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <h2>Full compliance with Sections 166–167</h2>
+                    <p class="section-subhead">We operate under non‑distribution of profit, non‑transferable membership, and limited liability principles.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne-only">प्रशासनिक खर्च सीमा २५%</h3>
+                        <h3 class="lang-en-only" style="display:none;">Admin expense cap 25%</h3>
+                        <p class="lang-ne-only">धारा १६७(१)(ज) बमोजिम कुनै पनि आर्थिक वर्षमा प्रशासनिक खर्च कुल खर्चको २५% भन्दा बढी हुँदैन।</p>
+                        <p class="lang-en-only" style="display:none;">Under Section 167(1)(j), administrative expenses shall not exceed 25% of total expenses in any financial year.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-hand-holding-usd card-icon"></i>
+                        <h3 class="lang-ne-only">लाभांश वितरण निषेध</h3>
+                        <h3 class="lang-en-only" style="display:none;">No dividend / profit distribution</h3>
+                        <p class="lang-ne-only">सबै अधिशेष कम्पनीको पूँजी वृद्धि वा उद्देश्य प्राप्तिमा पुनः लगानी गरिन्छ। सदस्यहरूले व्यक्तिगत लाभांश पाउँदैनन्।</p>
+                        <p class="lang-en-only" style="display:none;">All surplus is reinvested into capital or objectives. Members receive no dividends or profit shares.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-balance-scale card-icon"></i>
+                        <h3 class="lang-ne-only">लाइसेन्स अनिवार्यता (मुद्दा फाँट)</h3>
+                        <h3 class="lang-en-only" style="display:none;">Bar license mandatory for litigation</h3>
+                        <p class="lang-ne-only">नेपाल बार काउन्सिलको अनुमतिपत्र नभएका सदस्य मुद्दा फाँटमा काम गर्न अयोग्य हुनेछन्।</p>
+                        <p class="lang-en-only" style="display:none;">Only members holding a valid Bar Council license may work in the Litigation & Advocacy Division.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-file-signature card-icon"></i>
+                        <h3 class="lang-ne-only">सन्दर्भ शुल्क (Referral Fee) निषेध</h3>
+                        <h3 class="lang-en-only" style="display:none;">Strict prohibition on referral fees</h3>
+                        <p class="lang-ne-only">आचारसंहिता अनुसार मुद्दा सिफारिस बापत कुनै पारिश्रमिक वा कमिसन लिन/दिन पाइँदैन।</p>
+                        <p class="lang-en-only" style="display:none;">No member shall receive or pay any commission or compensation for referring a case, as per the Code of Conduct.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding members -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne-only">
+                    <h2>संस्थापक सदस्यहरू</h2>
+                    <p class="section-subhead">कम्पनीको प्रबन्धपत्रमा हस्ताक्षर गरी दर्ता गराउने पाँच संस्थापकहरू।</p>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <h2>Founding Members</h2>
+                    <p class="section-subhead">The five promoters who signed the Memorandum of Association and registered the company.</p>
+                </div>
+                <div class="member-list">
+                    <span class="member-badge">शोभादेवी पौडेल (Shobhadevi Poudel)</span>
+                    <span class="member-badge">ललिता रिमाल (Lalita Rimal)</span>
+                    <span class="member-badge">प्रकृति पौडेल (Prakriti Poudel)</span>
+                    <span class="member-badge">अभिज्ञा पराजुली (Abhijnya Parajuli)</span>
+                    <span class="member-badge">अग्रता पराजुली (Agrata Parajuli)</span>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <div class="lang-ne-only">
+                        <p><strong>प्रथम सञ्चालक समिति (प्रथम वार्षिक साधारण सभासम्म):</strong><br>
+                        अध्यक्ष: शोभादेवी पौडेल<br>
+                        सदस्यहरू: ललिता रिमाल, प्रकृति पौडेल, अभिज्ञा पराजुली, अग्रता पराजुली<br>
+                        (प्रबन्ध सञ्चालक, CEO र कम्पनी सचिव सञ्चालक समितिले नियुक्त गर्नेछ।)</p>
+                    </div>
+                    <div class="lang-en-only" style="display:none;">
+                        <p><strong>First Board of Directors (until first AGM):</strong><br>
+                        Chairperson: Shobhadevi Poudel<br>
+                        Directors: Lalita Rimal, Prakriti Poudel, Abhijnya Parajuli, Agrata Parajuli<br>
+                        (Managing Director, CEO and Company Secretary to be appointed by the Board.)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial model in brief -->
+        <section>
+            <div class="container">
+                <div class="lang-ne-only">
+                    <h2>वित्तीय मोडेल (संक्षिप्त)</h2>
+                    <p>वार्षिक सदस्यता शुल्क सञ्चालक समितिले सहायक विभागहरूको बजेट र अधिशेष आवश्यकताका आधारमा निर्धारण गर्छ। अनुसन्धान, तालिम र प्रकाशनबाट हुने आम्दानी कम्पनीकै पूँजीमा जम्मा हुन्छ। सबै सदस्यले आयकरको दायरामा व्यक्तिगत कर विवरण दाखिल गर्छन्।</p>
+                    <div class="compliance-badge" style="margin-top: 1rem;">✔ धारा १६७(१)(क) – सेयर पूँजी छैन, सदस्यता शुल्क + दान/अनुदान मात्र</div>
+                    <div class="compliance-badge">✔ धारा १६७(१)(ख) – दायित्व सीमित (लिखित स्वीकार बाहेक)</div>
+                    <div class="compliance-badge">✔ धारा १६७(१)(घ) – मुनाफा वितरण निषेध</div>
+                    <div class="compliance-badge">✔ धारा १६७(१)(झ) – विघटनमा सम्पत्ति नेपाल सरकारमा हस्तान्तरण</div>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <h2>Financial Model (summary)</h2>
+                    <p>Annual membership fee is determined by the Board based on departmental budgets and desired surplus. Income from research, training, and publications is retained by the company as capital. Each member files personal income tax returns.</p>
+                    <div class="compliance-badge" style="margin-top: 1rem;">✔ Section 167(1)(a) – No share capital; only membership fees + donations/grants</div>
+                    <div class="compliance-badge">✔ Section 167(1)(b) – Limited liability (unless written consent given)</div>
+                    <div class="compliance-badge">✔ Section 167(1)(d) – Prohibition on profit distribution</div>
+                    <div class="compliance-badge">✔ Section 167(1)(jh) – On dissolution, assets vest in Government of Nepal</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & footer -->
+        <footer>
+            <div class="container">
+                <div class="lang-ne-only">
+                    <p><strong>नेपाल ल ग्रुप</strong> – कम्पनी ऐन, २०६३ (धारा १६६ र १६७) अन्तर्गत मुनाफा वितरण नगर्ने कम्पनी</p>
+                    <p>रजिस्टर्ड कार्यालय: कास्की, पोखरा महानगरपालिका वडा नं. ७, राष्ट्र बैंक चोक</p>
+                    <p>ईमेल: info@nepallawgroup.com | फोन: +977-XXX-XXXXXX</p>
+                    <p style="margin-top: 1rem;">© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p>
+                </div>
+                <div class="lang-en-only" style="display:none;">
+                    <p><strong>Nepal Law Group</strong> – A Profit Non‑Distributing Company registered under Sections 166 & 167 of the Companies Act, 2063</p>
+                    <p>Registered Office: Pokhara‑7, Rashtra Bank Chowk, Kaski, Nepal</p>
+                    <p>Email: info@nepallawgroup.com | Phone: +977-XXX-XXXXXX</p>
+                    <p style="margin-top: 1rem;">© 2025 Nepal Law Group – All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const langToggleBtn = document.getElementById('langToggle');
+        const htmlRoot = document.body;
+        let currentLang = 'ne'; // ne or en
+
+        function updateLanguage(lang) {
+            htmlRoot.setAttribute('data-lang', lang);
+            const enElements = document.querySelectorAll('.lang-en-only');
+            const neElements = document.querySelectorAll('.lang-ne-only');
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                neElements.forEach(el => el.style.display = 'none');
+                langToggleBtn.innerHTML = '🇳🇵 नेपाली';
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                neElements.forEach(el => el.style.display = 'block');
+                langToggleBtn.innerHTML = '🇬🇧 English';
+            }
+            // adjust logo text manually (since it's separate)
+            const logoH1 = document.querySelector('.logo h1');
+            if (logoH1) {
+                if (lang === 'en') {
+                    logoH1.innerHTML = 'Nepal Law Group';
+                    document.querySelector('.logo p').innerHTML = 'Profit Non‑Distributing Company';
+                } else {
+                    logoH1.innerHTML = 'नेपाल ल ग्रुप';
+                    document.querySelector('.logo p').innerHTML = 'मुनाफा वितरण नगर्ने कम्पनी';
+                }
+            }
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'ne' ? 'en' : 'ne';
+            updateLanguage(currentLang);
+        });
+
+        // initial set (Nepali as default)
+        updateLanguage('ne');
+    </script>
+</body>
+</html>
