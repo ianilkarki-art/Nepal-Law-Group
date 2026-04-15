@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>नेपाल ल ग्रुप – सुशासन | Governance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>नेपाल ल ग्रुप – सुशासन | Governance Structure</title>
+    <meta name="description" content="नेपाल ल ग्रुपको सुशासन संरचना – सञ्चालक समिति, निर्वाचन प्रक्रिया, कार्यकाल, प्रबन्ध सञ्चालक, सीईओ, कम्पनी सचिवको भूमिका।">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-        .logo h1 { font-size: 1.7rem; font-weight: 700; }
-        .logo p { font-size: 0.75rem; opacity: 0.85; }
+        .logo h1 { font-size: 1.7rem; font-weight: 800; background: linear-gradient(135deg, #fff, #93c5fd); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .logo p { font-size: 0.75rem; opacity: 0.8; }
         .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
-        .nav-links a:hover { text-decoration: underline; }
-        .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
-        section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .nav-links a:hover { color: #f87171; }
+        .lang-toggle { background: #dc2626; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; font-weight: 500; transition: 0.2s; }
+        .lang-toggle:hover { background: #b91c1c; }
+        section { padding: 80px 0; }
         .bg-light { background: #f8fafc; }
-        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
-        .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
-        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; border-left: 6px solid #dc2626; padding-left: 1rem; }
+        .section-subhead { font-size: 1.2rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+        .card { background: white; border-radius: 32px; padding: 1.8rem; box-shadow: 0 5px 25px rgba(0,0,0,0.02), 0 0 0 1px #edf2f7; transition: 0.25s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1), 0 0 0 1px #e2e8f0; }
         .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
-        .org-chart { background: #f1f5f9; border-radius: 28px; padding: 2rem; text-align: center; font-family: monospace; white-space: pre-wrap; line-height: 1.8; }
         .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .org-chart { background: #f1f5f9; border-radius: 32px; padding: 2rem; text-align: center; font-family: monospace; white-space: pre-wrap; line-height: 1.8; margin: 2rem 0; border: 1px solid #e2e8f0; }
+        .stat-box { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; border-radius: 32px; padding: 2rem; text-align: center; margin-top: 2rem; }
         footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        footer a { color: #cbd5e1; text-decoration: none; }
+        footer a:hover { color: #f87171; text-decoration: underline; }
         [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .nav-links { gap: 12px; } h2 { font-size: 1.8rem; } .org-chart { font-size: 0.8rem; } }
     </style>
 </head>
 <body data-lang="ne">
@@ -53,37 +62,78 @@
     </div>
 
     <main>
-        <section>
+        <section style="padding-top: 80px;">
             <div class="container">
-                <div class="lang-ne">
-                    <h2>सञ्चालक समितिको संरचना</h2>
-                    <p class="section-subhead">प्रबन्धपत्र र नियमावली बमोजिम कम्पनीको सुशासन संरचना पूर्ण रूपमा व्यवस्थित छ।</p>
-                </div>
-                <div class="lang-en" style="display:none;">
-                    <h2>Board of Directors Structure</h2>
-                    <p class="section-subhead">The governance structure is fully organised as per the Memorandum and Articles of Association.</p>
-                </div>
+                <div class="badge"><i class="fas fa-building"></i> <span class="lang-ne">प्रबन्धपत्र र नियमावली बमोजिम</span><span class="lang-en" style="display:none;">As per MOA & AOA</span></div>
+                <div class="lang-ne"><h2>सुशासन संरचना</h2><div class="section-subhead">नेपाल ल ग्रुपको पूर्ण सुशासन संरचना प्रबन्धपत्र र नियमावली बमोजिम व्यवस्थित छ। तल सञ्चालक समिति, निर्वाचन प्रक्रिया, पदाधिकारीहरूको भूमिका र संगठनात्मक चार्ट प्रस्तुत छ।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Governance Structure</h2><div class="section-subhead">The complete governance structure of Nepal Law Group is organised as per the Memorandum and Articles of Association. Below are the Board of Directors, election process, roles of officers, and organisational chart.</div></div>
+            </div>
+        </section>
+
+        <!-- Board of Directors Section -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne"><h2>सञ्चालक समिति (Board of Directors)</h2></div>
+                <div class="lang-en" style="display:none;"><h2>Board of Directors</h2></div>
                 <div class="grid-2">
                     <div class="card">
                         <i class="fas fa-users card-icon"></i>
-                        <h3 class="lang-ne">सञ्चालक समिति (Board of Directors)</h3>
-                        <h3 class="lang-en" style="display:none;">Board of Directors</h3>
-                        <p class="lang-ne"><strong>सदस्य संख्या:</strong> ५ जना (अध्यक्ष + ४ सञ्चालक, जसमध्ये एक प्रबन्ध सञ्चालक)<br>
-                        <strong>निर्वाचन प्रक्रिया:</strong> साधारण सभाबाट “एक सदस्य एक मत” को सिद्धान्तमा निर्वाचित।<br>
-                        <strong>कार्यकाल:</strong> अधिकतम ४ वर्ष। पुनः निर्वाचनको योग्यता रहनेछ।<br>
-                        <strong>प्रथम समिति (प्रथम वार्षिक सभासम्म):</strong> अध्यक्ष – शोभादेवी पौडेल; सदस्य – ललिता रिमाल, प्रकृति पौडेल, अभिज्ञा पराजुली, अग्रता पराजुली।</p>
-                        <p class="lang-en" style="display:none;"><strong>Number:</strong> 5 members (Chairman + 4 Directors, one of whom is Managing Director)<br>
-                        <strong>Election:</strong> Elected by General Meeting on one‑member‑one‑vote basis.<br>
-                        <strong>Term:</strong> Maximum 4 years; eligible for re‑election.<br>
-                        <strong>First Board (until first AGM):</strong> Chair – Shobhadevi Poudel; Directors – Lalita Rimal, Prakriti Poudel, Abhijnya Parajuli, Agrata Parajuli.</p>
+                        <h3 class="lang-ne">सदस्य संख्या</h3>
+                        <h3 class="lang-en" style="display:none;">Number of Members</h3>
+                        <p class="lang-ne"><strong>५ जना</strong> (अध्यक्ष + ४ सञ्चालक, जसमध्ये एक प्रबन्ध सञ्चालक)</p>
+                        <p class="lang-en" style="display:none;"><strong>5 members</strong> (Chairman + 4 Directors, one of whom is Managing Director)</p>
                     </div>
                     <div class="card">
+                        <i class="fas fa-vote-yea card-icon"></i>
+                        <h3 class="lang-ne">निर्वाचन प्रक्रिया</h3>
+                        <h3 class="lang-en" style="display:none;">Election Process</h3>
+                        <p class="lang-ne">साधारण सभाबाट <strong>“एक सदस्य एक मत”</strong> को सिद्धान्तमा निर्वाचित। (धारा १६७(१)(छ))</p>
+                        <p class="lang-en" style="display:none;">Elected by the General Meeting on a <strong>“one member, one vote”</strong> basis. (Section 167(1)(ch))</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-calendar-alt card-icon"></i>
+                        <h3 class="lang-ne">कार्यकाल</h3>
+                        <h3 class="lang-en" style="display:none;">Term of Office</h3>
+                        <p class="lang-ne">अधिकतम <strong>४ वर्ष</strong>। पुनः निर्वाचनको योग्यता रहनेछ।</p>
+                        <p class="lang-en" style="display:none;">Maximum <strong>4 years</strong>. Eligible for re‑election.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-hand-paper card-icon"></i>
+                        <h3 class="lang-ne">प्रथम सञ्चालक समिति</h3>
+                        <h3 class="lang-en" style="display:none;">First Board of Directors</h3>
+                        <p class="lang-ne"><strong>अध्यक्ष:</strong> शोभादेवी पौडेल<br>
+                        <strong>सदस्यहरू:</strong> ललिता रिमाल, प्रकृति पौडेल, अभिज्ञा पराजुली, अग्रता पराजुली<br>
+                        <em>(प्रथम वार्षिक साधारण सभासम्म)</em></p>
+                        <p class="lang-en" style="display:none;"><strong>Chairperson:</strong> Shobhadevi Poudel<br>
+                        <strong>Directors:</strong> Lalita Rimal, Prakriti Poudel, Abhijnya Parajuli, Agrata Parajuli<br>
+                        <em>(until the first Annual General Meeting)</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Bearers and Their Roles -->
+        <section>
+            <div class="container">
+                <div class="lang-ne"><h2>पदाधिकारीहरू र उनीहरूको भूमिका</h2></div>
+                <div class="lang-en" style="display:none;"><h2>Office Bearers and Their Roles</h2></div>
+                <div class="grid-3">
+                    <div class="card">
                         <i class="fas fa-user-tie card-icon"></i>
+                        <h3 class="lang-ne">अध्यक्ष (Chairman)</h3>
+                        <h3 class="lang-en" style="display:none;">Chairman</h3>
+                        <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले आपसी सञ्चालकहरूबाट निर्वाचित।<br>
+                        <strong>भूमिका:</strong> सञ्चालक समितिको बैठक र साधारण सभाको अध्यक्षता, कम्पनीको औपचारिक प्रतिनिधित्व।</p>
+                        <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Elected by the Board from among the Directors.<br>
+                        <strong>Role:</strong> Presides over Board meetings and General Meetings; ceremonially represents the company.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user card-icon"></i>
                         <h3 class="lang-ne">प्रबन्ध सञ्चालक (Managing Director)</h3>
                         <h3 class="lang-en" style="display:none;">Managing Director</h3>
                         <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले आफू मध्येबाट एक जनालाई तोक्दछ।<br>
                         <strong>कार्यकाल:</strong> ४ वर्षभन्दा बढी हुँदैन।<br>
-                        <strong>भूमिका:</strong> कम्पनीको दैनिक व्यवस्थापनको नेतृत्व गर्छ, सञ्चालक समितिले प्रत्यायोजित अधिकार प्रयोग गर्छ।</p>
+                        <strong>भूमिका:</strong> कम्पनीको दैनिक व्यवस्थापनको नेतृत्व, सञ्चालक समितिले प्रत्यायोजित अधिकार प्रयोग।</p>
                         <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Designated by the Board from among the Directors.<br>
                         <strong>Term:</strong> Not exceeding 4 years.<br>
                         <strong>Role:</strong> Leads day‑to‑day management, exercises powers delegated by the Board.</p>
@@ -93,7 +143,7 @@
                         <h3 class="lang-ne">प्रमुख कार्यकारी अधिकृत (CEO)</h3>
                         <h3 class="lang-en" style="display:none;">Chief Executive Officer (CEO)</h3>
                         <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले (सदस्य वा बाह्य पेशागत व्यक्ति) नियुक्त गर्छ।<br>
-                        <strong>भूमिका:</strong> परिचालन प्रमुख; सञ्चालक समितिका निर्णयहरू कार्यान्वयन गर्छ; सबै विभाग र सहायक विभागको निरीक्षण गर्छ।</p>
+                        <strong>भूमिका:</strong> परिचालन प्रमुख; सञ्चालक समितिका निर्णयहरू कार्यान्वयन; सबै विभाग र सहायक विभागको निरीक्षण।</p>
                         <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Appointed by the Board (may be a member or external professional).<br>
                         <strong>Role:</strong> Operational head; implements Board decisions; oversees all divisions and support departments.</p>
                     </div>
@@ -110,16 +160,11 @@
             </div>
         </section>
 
+        <!-- Organisational Chart -->
         <section class="bg-light">
             <div class="container">
-                <div class="lang-ne">
-                    <h2>संगठनात्मक चार्ट (Organisational Chart)</h2>
-                    <p class="section-subhead">कम्पनीको पदानुक्रम र रिपोर्टिङ संरचना निम्नानुसार छ।</p>
-                </div>
-                <div class="lang-en" style="display:none;">
-                    <h2>Organisational Chart</h2>
-                    <p class="section-subhead">The hierarchical and reporting structure of the company is as follows.</p>
-                </div>
+                <div class="lang-ne"><h2>संगठनात्मक चार्ट (Organisational Chart)</h2><div class="section-subhead">कम्पनीको पदानुक्रम र रिपोर्टिङ संरचना निम्नानुसार छ।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Organisational Chart</h2><div class="section-subhead">The hierarchical and reporting structure of the company is as follows.</div></div>
                 <div class="org-chart">
                     <div class="lang-ne">
                         साधारण सभा (संस्थापक + साधारण सदस्य)<br>
@@ -148,15 +193,54 @@
                         Department Heads (Admin/Accounts, Logistics/Support)
                     </div>
                 </div>
-                <div class="badge" style="margin-top: 2rem;"><i class="fas fa-check-circle"></i> <span class="lang-ne">सबै पदाधिकारीहरू ऐन, प्रबन्धपत्र र नियमावली बमोजिम आफ्नो कर्तव्य पालन गर्न बाध्य छन्।</span><span class="lang-en" style="display:none;">All officers are bound to perform their duties as per the Act, MOA and AOA.</span></div>
+                <div class="badge"><i class="fas fa-check-circle"></i> <span class="lang-ne">सबै पदाधिकारीहरू ऐन, प्रबन्धपत्र र नियमावली बमोजिम आफ्नो कर्तव्य पालन गर्न बाध्य छन्।</span><span class="lang-en" style="display:none;">All officers are bound to perform their duties as per the Act, MOA and AOA.</span></div>
+            </div>
+        </section>
+
+        <!-- Additional Governance Features -->
+        <section>
+            <div class="container">
+                <div class="lang-ne"><h2>अन्य सुशासन विशेषताहरू</h2></div>
+                <div class="lang-en" style="display:none;"><h2>Other Governance Features</h2></div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-hand-holding-usd card-icon"></i>
+                        <h3 class="lang-ne">पारिश्रमिक र सुविधा</h3>
+                        <h3 class="lang-en" style="display:none;">Remuneration & Benefits</h3>
+                        <p class="lang-ne">सञ्चालकको बैठक भत्ता, तलब, सुविधा कार्यालयले तोकेको सीमाभन्दा बढी हुँदैन। प्रबन्ध सञ्चालकको पारिश्रमिक साधारण सभाको स्वीकृतिमा करारद्वारा निर्धारण गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">Director’s meeting allowances, salary, and facilities shall not exceed limits prescribed by the Office. MD’s remuneration is determined by contract with General Meeting approval.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon"></i>
+                        <h3 class="lang-ne">नैतिक आचार र हित बाझिने स्थिति</h3>
+                        <h3 class="lang-en" style="display:none;">Ethics & Conflict of Interest</h3>
+                        <p class="lang-ne">कुनै सञ्चालकले व्यक्तिगत स्वार्थ भएको विषयमा मतदान गर्न पाउने छैन। सबै सञ्चालकहरूले आफ्नो स्वार्थको बारेमा कम्पनीलाई लिखित जानकारी दिनुपर्छ।</p>
+                        <p class="lang-en" style="display:none;">No director may vote on matters where they have a personal interest. All directors must disclose any conflict of interest in writing to the company.</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-gavel" style="font-size: 2rem; margin-bottom: 1rem; display: inline-block; color: #f87171;"></i>
+                    <div class="lang-ne">
+                        <h3 style="color: white;">वार्षिक साधारण सभा (AGM)</h3>
+                        <p>प्रत्येक आर्थिक वर्ष समाप्त भएको ६ महिनाभित्र AGM गरिनेछ। सबै सदस्यहरूले सूचना प्राप्त गर्नेछन् र आफ्नो मताधिकार प्रयोग गर्न सक्नेछन्।</p>
+                    </div>
+                    <div class="lang-en" style="display:none;">
+                        <h3 style="color: white;">Annual General Meeting (AGM)</h3>
+                        <p>An AGM shall be held within 6 months of the end of each financial year. All members shall receive notice and may exercise their voting rights.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div>
-            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div>
+            <div class="lang-ne">
+                <p>© २०८२ नेपाल ल ग्रुप – मुनाफा वितरण नगर्ने कम्पनी | <a href="privacy.html">गोपनीयता नीति</a> | <a href="terms.html">प्रयोगका सर्तहरू</a> | <a href="cookie.html">कुकी नीति</a></p>
+            </div>
+            <div class="lang-en" style="display:none;">
+                <p>© 2025 Nepal Law Group – Profit Non‑Distributing Company | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a> | <a href="cookie.html">Cookie Policy</a></p>
+            </div>
         </div>
     </footer>
 
