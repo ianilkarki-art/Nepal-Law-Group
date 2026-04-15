@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नेपाल ल ग्रुप – प्रकाशन विभाग | Publications Division</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo h1 { font-size: 1.7rem; font-weight: 700; }
+        .logo p { font-size: 0.75rem; opacity: 0.85; }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { text-decoration: underline; }
+        .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
+        section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
+        .bg-light { background: #f8fafc; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08), 0 0 0 1px #e2e8f0; }
+        .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .success-badge { background: #e0f2fe; color: #0c4a6e; }
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .nav-links { gap: 12px; } }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1 class="lang-ne">नेपाल ल ग्रुप</h1>
+                <h1 class="lang-en" style="display:none;">Nepal Law Group</h1>
+                <p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p>
+                <p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a>
+                <a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a>
+                <a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a>
+                <a href="litigation.html" class="lang-ne">मुद्दा फाँट</a><a href="litigation.html" class="lang-en" style="display:none;">Litigation</a>
+                <a href="research.html" class="lang-ne">अनुसन्धान</a><a href="research.html" class="lang-en" style="display:none;">Research</a>
+                <a href="training.html" class="lang-ne">तालिम</a><a href="training.html" class="lang-en" style="display:none;">Training</a>
+                <a href="publications.html" class="lang-ne">प्रकाशन</a><a href="publications.html" class="lang-en" style="display:none;">Publications</a>
+                <a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a>
+                <a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a>
+                <a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a>
+            </div>
+            <button id="langToggle" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section style="padding-top: 80px;">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>📚 प्रकाशन विभाग</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुपको प्रकाशन विभागले गुणस्तरीय कानूनी साहित्य, पत्रिका, अभ्यास पुस्तिका, र डिजिटल सामग्री प्रकाशन गर्दछ। हाम्रो उद्देश्य कानूनी ज्ञानलाई सुलभ बनाउनु र कानूनी पेशाकर्मी तथा आम पाठकहरूका लागि उपयोगी सामग्री उपलब्ध गराउनु हो।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>📚 Publications Division</h2>
+                    <p class="section-subhead">The Publications Division of Nepal Law Group publishes high‑quality legal literature, journals, practice manuals, and digital content. Our goal is to make legal knowledge accessible and provide useful materials for legal professionals and the general public.</p>
+                </div>
+                <div class="badge success-badge"><i class="fas fa-check-circle"></i> <span class="lang-ne">यस विभागमा काम गर्न नेपाल बार काउन्सिलको अनुमतिपत्र आवश्यक छैन। कुनै पनि सदस्य वा कर्मचारीले लेखक, सम्पादक, अनुवादक, वा सहायकको रूपमा काम गर्न सक्छन्।</span><span class="lang-en" style="display:none;">No Bar Council license is required to work in this division. Any member or employee can work as an author, editor, translator, or assistant.</span></div>
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <i class="fas fa-book-open card-icon"></i>
+                        <h3 class="lang-ne">कानूनी पुस्तक तथा अभ्यास पुस्तिका</h3>
+                        <h3 class="lang-en" style="display:none;">Legal Books & Practice Manuals</h3>
+                        <p class="lang-ne">नेपाली कानूनका विभिन्न विधाका पुस्तक – देवानी, फौजदारी, जग्गा, कर, कर्पोरेट, संवैधानिक कानून। अभ्यासकर्ताहरूका लागि प्रयोगात्मक मार्गदर्शन पुस्तिका।</p>
+                        <p class="lang-en" style="display:none;">Books on various branches of Nepalese law – civil, criminal, land, tax, corporate, constitutional law. Practical manuals for practitioners.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-newspaper card-icon"></i>
+                        <h3 class="lang-ne">कानूनी पत्रिका (जर्नल)</h3>
+                        <h3 class="lang-en" style="display:none;">Law Journals</h3>
+                        <p class="lang-ne">त्रैमासिक वा अर्धवार्षिक समीक्षा – लेख, टिप्पणी, केस कमेन्टरी, विद्वान् लेख। अनलाइन र प्रिन्ट दुवै संस्करण।</p>
+                        <p class="lang-en" style="display:none;">Quarterly or biannual review – articles, comments, case commentaries, scholarly essays. Both online and print editions.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-file-pdf card-icon"></i>
+                        <h3 class="lang-ne">कानूनी संकलन र डाइजेस्ट</h3>
+                        <h3 class="lang-en" style="display:none;">Legal Digests & Compilations</h3>
+                        <p class="lang-ne">सर्वोच्च अदालत, उच्च अदालतका महत्वपूर्ण नजिरको संकलन, कानूनको अध्यायवार व्याख्या, विषयगत डाइजेस्ट।</p>
+                        <p class="lang-en" style="display:none;">Compilations of important Supreme Court and High Court precedents, chapter‑wise explanation of laws, subject‑wise digests.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-laptop-code card-icon"></i>
+                        <h3 class="lang-ne">डिजिटल सामग्री र ई-पुस्तक</h3>
+                        <h3 class="lang-en" style="display:none;">Digital Content & E‑books</h3>
+                        <p class="lang-ne">ई-बुक, मोबाइल एप, कानूनी ब्लग, समाचारपत्र (न्यूजलेटर), पोडकास्ट स्क्रिप्ट।</p>
+                        <p class="lang-en" style="display:none;">E‑books, mobile apps, legal blogs, newsletters, podcast scripts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Model -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>राजस्व मोडेल</h2>
+                    <p class="section-subhead">प्रकाशन विभागले पुस्तक बिक्री, सदस्यता, र प्रकाशन सेवा शुल्कबाट कम्पनीलाई आय उत्पन्न गर्दछ। सबै अधिशेष कम्पनीको पूँजीमा जम्मा हुन्छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Revenue Model</h2>
+                    <p class="section-subhead">The Publications Division generates income for the company through book sales, subscriptions, and publication service fees. All surplus is retained as company capital.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-shopping-cart card-icon"></i>
+                        <h3 class="lang-ne">प्रिन्ट पुस्तक बिक्री</h3>
+                        <h3 class="lang-en" style="display:none;">Print Book Sales</h3>
+                        <p class="lang-ne">भौतिक प्रतिहरू सीधा वितरण वा पुस्तक पसलहरू मार्फत बिक्री गरिन्छ। मूल्य निर्धारण सञ्चालक समितिद्वारा।</p>
+                        <p class="lang-en" style="display:none;">Physical copies sold through direct distribution or bookstores. Pricing determined by the Board.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-download card-icon"></i>
+                        <h3 class="lang-ne">ई-पुस्तक तथा डिजिटल डाउनलोड</h3>
+                        <h3 class="lang-en" style="display:none;">E‑books & Digital Downloads</h3>
+                        <p class="lang-ne">PDF, EPUB, MOBI फर्म्याटमा अनलाइन बिक्री। व्यक्तिगत वा संस्थागत अनलाइन पोर्टलमा पहुँच शुल्क।</p>
+                        <p class="lang-en" style="display:none;">Online sales in PDF, EPUB, MOBI formats. Access fees for individual or institutional online portal.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-star card-icon"></i>
+                        <h3 class="lang-ne">सदस्यता (जर्नल / न्यूजलेटर)</h3>
+                        <h3 class="lang-en" style="display:none;">Subscriptions (Journal / Newsletter)</h3>
+                        <p class="lang-ne">वार्षिक सदस्यता शुल्क – प्रिन्ट वा अनलाइन जर्नल, न्यूजलेटर, अलर्ट सेवा।</p>
+                        <p class="lang-en" style="display:none;">Annual subscription fee – print or online journal, newsletter, alert services.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-handshake card-icon"></i>
+                        <h3 class="lang-ne">प्रकाशन सेवा शुल्क</h3>
+                        <h3 class="lang-en" style="display:none;">Publication Service Fees</h3>
+                        <p class="lang-ne">बाह्य लेखक, संस्था, वा कम्पनीका लागि स्वीकार शुल्क, सम्पादन सेवा, मस्यौदा तयारी, आईएसबीएन प्राप्ति सहायता।</p>
+                        <p class="lang-en" style="display:none;">For external authors, institutions, or companies – acceptance fees, editing services, drafting assistance, ISBN procurement support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Structure -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>विभागको टोली संरचना</h2>
+                    <p class="section-subhead">लेखक, सम्पादक, अनुवादक, र प्रकाशन सहायकहरूको पूर्ण व्यवस्था।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Team Structure</h2>
+                    <p class="section-subhead">Full arrangement of authors, editors, translators, and publication assistants.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-user-edit card-icon"></i>
+                        <h3 class="lang-ne">विभागीय प्रमुख</h3>
+                        <h3 class="lang-en" style="display:none;">Division Head</h3>
+                        <p class="lang-ne">सञ्चालक समितिद्वारा नियुक्त। वार्षिक प्रकाशन योजना, बजेट, सम्पादकीय समिति व्यवस्थापन, गुणस्तर नियन्त्रण।</p>
+                        <p class="lang-en" style="display:none;">Appointed by Board. Annual publication plan, budget, editorial committee management, quality control.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-feather-alt card-icon"></i>
+                        <h3 class="lang-ne">लेखक तथा सह-लेखक</h3>
+                        <h3 class="lang-en" style="display:none;">Authors & Co‑authors</h3>
+                        <p class="lang-ne">सदस्य वा बाह्य विज्ञहरू। पाण्डुलिपि तयार गर्छन्, पुनरावलोकन गर्छन्, कानूनी परिवर्तन अनुसार अद्यावधिक राख्छन्।</p>
+                        <p class="lang-en" style="display:none;">Members or external experts. Prepare manuscripts, review, keep updated with legal changes.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-language card-icon"></i>
+                        <h3 class="lang-ne">सम्पादक तथा अनुवादक</h3>
+                        <h3 class="lang-en" style="display:none;">Editors & Translators</h3>
+                        <p class="lang-ne">भाषा सम्पादन, प्रुफ-रिडिङ, नेपाली-अंग्रेजी अनुवाद, परिभाषा एकरूपता।</p>
+                        <p class="lang-en" style="display:none;">Language editing, proof‑reading, Nepali‑English translation, terminology consistency.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-simple card-icon"></i>
+                        <h3 class="lang-ne">प्रकाशन समन्वयक</h3>
+                        <h3 class="lang-en" style="display:none;">Publication Coordinator</h3>
+                        <p class="lang-ne">प्रिन्टिङ, डिजाइन, आईएसबीएन, मूल्य निर्धारण, वितरण, अनलाइन प्लेटफर्म व्यवस्थापन।</p>
+                        <p class="lang-en" style="display:none;">Printing, design, ISBN, pricing, distribution, online platform management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration with Other Divisions -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>अन्य विभागहरूसँग सहकार्य</h2>
+                    <p class="section-subhead">प्रकाशन विभागले कम्पनीका अन्य सबै विभागहरूको आउटपुटलाई प्रकाशन सामग्रीमा रूपान्तरण गर्दछ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Collaboration with Other Divisions</h2>
+                    <p class="section-subhead">The Publications Division transforms outputs from all other divisions into publishable materials.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon"></i>
+                        <h3 class="lang-ne">मुद्दा फाँट विभाग</h3>
+                        <h3 class="lang-en" style="display:none;">Litigation Division</h3>
+                        <p class="lang-ne">मुद्दा प्रतिलिपि, केस स्टडी, अदालत प्रक्रिया पुस्तिका प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Publishing case digests, case studies, court procedure manuals.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-book card-icon"></i>
+                        <h3 class="lang-ne">अनुसन्धान विभाग</h3>
+                        <h3 class="lang-en" style="display:none;">Research Division</h3>
+                        <p class="lang-ne">अनुसन्धान प्रतिवेदन, नीति संक्षिप्त, तुलनात्मक अध्ययनलाई पुस्तक वा जर्नल लेखमा प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Publishing research reports, policy briefs, comparative studies as books or journal articles.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user card-icon"></i>
+                        <h3 class="lang-ne">तालिम विभाग</h3>
+                        <h3 class="lang-en" style="display:none;">Training Division</h3>
+                        <p class="lang-ne">तालिम पुस्तिका, प्रस्तुति स्लाइड, अभ्यास समस्या, सहभागी कार्यपुस्तिका प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Publishing training manuals, presentation slides, practice problems, participant workbooks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intellectual Property & Ethical Guidelines -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>बौद्धिक सम्पत्ति र प्रकाशन आचार</h2>
+                    <p class="section-subhead">सबै प्रकाशन सामग्री प्रतिलिपि अधिकार कानून र अन्तर्राष्ट्रिय प्रकाशन मापदण्डअनुसार सुरक्षित गरिन्छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Intellectual Property & Publication Ethics</h2>
+                    <p class="section-subhead">All published materials are protected under copyright law and international publishing standards.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-copyright card-icon"></i>
+                        <h3 class="lang-ne">प्रतिलिपि अधिकार व्यवस्थापन</h3>
+                        <h3 class="lang-en" style="display:none;">Copyright Management</h3>
+                        <p class="lang-ne">प्रत्येक लेखकसँग प्रकाशन सम्झौता गरिन्छ। कम्पनीले सामूहिक अधिकार राख्छ, लेखकले उचित पारिश्रमिक पाउँछ। बाह्य पुन: प्रयोगको लागि अनुमति आवश्यक।</p>
+                        <p class="lang-en" style="display:none;">Publication agreement with each author. Company retains collective rights, author receives fair compensation. Permission required for external reuse.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-ban card-icon"></i>
+                        <h3 class="lang-ne">साहित्यिक चोरी निषेध</h3>
+                        <h3 class="lang-en" style="display:none;">Plagiarism Prohibition</h3>
+                        <p class="lang-ne">सबै पाण्डुलिपिहरू चोरी जाँच सफ्टवेरबाट परीक्षण गरिन्छ। चोरी पाइएमा प्रकाशन अस्वीकार गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">All manuscripts are screened using plagiarism detection software. Publication is rejected if plagiarism is found.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>प्रकाशन प्रस्ताव वा सहकार्यका लागि सम्पर्क गर्नुहोस्</h2>
+                    <p class="section-subhead">यदि तपाईंसँग प्रकाशन योग्य पाण्डुलिपि छ, प्रकाशन सहकार्य चाहनुहुन्छ, वा हाम्रा प्रकाशनहरू खरिद गर्न चाहनुहुन्छ भने कृपया सम्पर्क गर्नुहोस्।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Contact for Publication Proposals or Collaboration</h2>
+                    <p class="section-subhead">If you have a publishable manuscript, wish to collaborate on publications, or want to purchase our publications, please contact us.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-envelope card-icon"></i>
+                        <h3 class="lang-ne">इमेल</h3>
+                        <h3 class="lang-en" style="display:none;">Email</h3>
+                        <p><code>publications@nepallawgroup.org</code></p>
+                        <p><code>info@nepallawgroup.org</code></p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-phone-alt card-icon"></i>
+                        <h3 class="lang-ne">फोन</h3>
+                        <h3 class="lang-en" style="display:none;">Phone</h3>
+                        <p>+977-XXX-XXXXXX</p>
+                        <p class="lang-ne">कार्यालय समय: सोमबार–शुक्रबार, १०:०० – १७:००</p>
+                        <p class="lang-en" style="display:none;">Office hours: Mon‑Fri, 10:00 – 17:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – प्रकाशन विभाग</p></div>
+            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – Publications Division</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            localStorage.setItem('nlg_lang', lang);
+            document.querySelectorAll('.lang-en, .lang-ne').forEach(el => {
+                if (lang === 'en' && el.classList.contains('lang-en')) el.style.display = 'block';
+                else if (lang === 'en' && el.classList.contains('lang-ne')) el.style.display = 'none';
+                else if (lang === 'ne' && el.classList.contains('lang-ne')) el.style.display = 'block';
+                else if (lang === 'ne' && el.classList.contains('lang-en')) el.style.display = 'none';
+            });
+            const toggle = document.getElementById('langToggle');
+            if (toggle) toggle.innerHTML = lang === 'ne' ? '🇬🇧 English' : '🇳🇵 नेपाली';
+        }
+        const savedLang = localStorage.getItem('nlg_lang') || 'ne';
+        setLanguage(savedLang);
+        document.getElementById('langToggle')?.addEventListener('click', () => {
+            const newLang = document.body.getAttribute('data-lang') === 'ne' ? 'en' : 'ne';
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
