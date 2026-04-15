@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>नेपाल ल ग्रुप – About</title>
+    <title>नेपाल ल ग्रुप – हाम्रो बारेमा | About Nepal Law Group</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Same base styles as index.html – copy exactly from index */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
@@ -22,32 +21,366 @@
         section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
         .bg-light { background: #f8fafc; }
         h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        h3 { font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 0.8rem 0; }
         .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
         .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08), 0 0 0 1px #e2e8f0; }
         .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .stat-box { background: #0f172a; color: white; border-radius: 28px; padding: 2rem; text-align: center; }
         footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
         [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .nav-links { gap: 12px; } }
     </style>
 </head>
 <body data-lang="ne">
-    <div class="navbar"><div class="container nav-flex"><div class="logo"><h1 class="lang-ne">नेपाल ल ग्रुप</h1><h1 class="lang-en" style="display:none;">Nepal Law Group</h1><p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p><p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p></div><div class="nav-links"><a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a><a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a><a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a><a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a><a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a><a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a></div><button id="langToggle" class="lang-toggle">🇬🇧 English</button></div></div>
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1 class="lang-ne">नेपाल ल ग्रुप</h1>
+                <h1 class="lang-en" style="display:none;">Nepal Law Group</h1>
+                <p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p>
+                <p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a>
+                <a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a>
+                <a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a>
+                <a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a>
+                <a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a>
+                <a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a>
+            </div>
+            <button id="langToggle" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
 
     <main>
-        <section><div class="container">
-            <div class="lang-ne"><h2>हाम्रो पृष्ठभूमि र आवश्यकता</h2><p class="section-subhead">परम्परागत कानूनी अभ्यासका चुनौतीहरूलाई सम्बोधन गर्न नेपाल ल ग्रुपको स्थापना गरिएको हो।</p></div>
-            <div class="lang-en" style="display:none;"><h2>Background & Rationale</h2><p class="section-subhead">Nepal Law Group was established to address the challenges of traditional legal practice.</p></div>
-            <div class="grid-2">
-                <div class="card"><i class="fas fa-user-friends card-icon"></i><h3 class="lang-ne">एकल कार्यशैली → सहकारी टोली</h3><h3 class="lang-en" style="display:none;">Siloed → collaborative teams</h3><p class="lang-ne">जटिल मुद्दामा बहु-विषयक सहकार्य सम्भव।</p><p class="lang-en" style="display:none;">Multi‑disciplinary collaboration for complex cases.</p></div>
-                <div class="card"><i class="fas fa-microchip card-icon"></i><h3 class="lang-ne">सीमित पूर्वाधार → साझा स्रोत</h3><h3 class="lang-en" style="display:none;">Limited infra → shared resources</h3><p class="lang-ne">प्रविधि, पुस्तकालय, सहयोगी कर्मचारी साझा।</p><p class="lang-en" style="display:none;">Shared technology, library, support staff.</p></div>
-                <div class="card"><i class="fas fa-building card-icon"></i><h3 class="lang-ne">कमजोर ब्रान्ड → दिगो संस्था</h3><h3 class="lang-en" style="display:none;">Weak brand → lasting institution</h3><p class="lang-ne">व्यक्तिभन्दा माथिको ब्रान्ड इक्विटी।</p><p class="lang-en" style="display:none;">Institutional identity beyond individuals.</p></div>
-                <div class="card"><i class="fas fa-chart-line card-icon"></i><h3 class="lang-ne">अधिशेष वितरण → पुनः लगानी</h3><h3 class="lang-en" style="display:none;">Surplus → reinvestment</h3><p class="lang-ne">कम्पनी-स्तरको आम्दानी र विकास कोष।</p><p class="lang-en" style="display:none;">Company‑level revenue and growth fund.</p></div>
+        <!-- Hero -->
+        <section style="padding-top: 80px;">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>हाम्रो बारेमा – एक सहकारी, दिगो कानूनी संस्था</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुप कम्पनी ऐन, २०६३ (धारा १६६ र १६७) अन्तर्गत दर्ता मुनाफा वितरण नगर्ने कम्पनी हो। हामी परम्परागत कानूनी अभ्यासका चुनौतीहरूलाई सम्बोधन गर्न स्थापित भएको एक आधुनिक, पारदर्शी र सहकारी कानूनी मञ्च हौं।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>About Us – A Collaborative, Sustainable Legal Institution</h2>
+                    <p class="section-subhead">Nepal Law Group is a Profit Non‑Distributing Company registered under Sections 166 & 167 of the Companies Act, 2063. We are a modern, transparent, and collaborative legal platform established to address the challenges of traditional legal practice.</p>
+                </div>
             </div>
-        </div></section>
+        </section>
+
+        <!-- Background & Rationale -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>पृष्ठभूमि र आवश्यकता</h2>
+                    <p class="section-subhead">नेपालमा कानूनी अभ्यास परम्परागत रूपमा व्यक्ति-केन्द्रित, एकल र संसाधन-सीमित रहेको छ। यसले सेवाको गुणस्तर, संस्थागत दिगोपन र व्यावसायिक विकासमा गम्भीर अवरोध पुर्याएको छ। हाम्रो स्थापना यी चुनौतीहरूको समाधानको लागि भएको हो।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Background & Rationale</h2>
+                    <p class="section-subhead">Legal practice in Nepal has traditionally been individual‑centric, siloed, and resource‑constrained. This has created serious obstacles to service quality, institutional sustainability, and professional growth. We were founded to address these challenges.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-user-friends card-icon"></i>
+                        <h3 class="lang-ne">एकल कार्यशैली (Siloed Practice)</h3>
+                        <h3 class="lang-en" style="display:none;">Siloed Practice</h3>
+                        <p class="lang-ne">परम्परागत रूपमा अधिकांश कानूनी व्यवसायी एक्लै वा सानो टोलीमा काम गर्छन्। यसले जटिल, बहु-विषयक मुद्दामा सहकार्यलाई असम्भव बनाउँछ। ग्राहकले विभिन्न विधाका विशेषज्ञको सेवा एकै ठाउँमा पाउँदैनन्।</p>
+                        <p class="lang-en" style="display:none;">Most legal professionals traditionally work alone or in very small teams. This makes collaboration on complex, multi‑disciplinary cases nearly impossible. Clients do not receive integrated services from experts in different fields.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-microchip card-icon"></i>
+                        <h3 class="lang-ne">सीमित पूर्वाधार (Limited Infrastructure)</h3>
+                        <h3 class="lang-en" style="display:none;">Limited Infrastructure</h3>
+                        <p class="lang-ne">व्यक्तिगत अभ्यासकर्ताले उच्च-स्तरीय प्रविधि, कानूनी डाटाबेस, पूर्ण पुस्तकालय र प्रशिक्षित सहायक कर्मचारीको व्यवस्था गर्न सक्दैनन्। यसले सेवाको गुणस्तर र ग्राहक सन्तुष्टिमा प्रत्यक्ष असर पार्छ।</p>
+                        <p class="lang-en" style="display:none;">Individual practitioners cannot afford high‑end technology, legal databases, a full library, or trained support staff. This directly impacts service quality and client satisfaction.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building card-icon"></i>
+                        <h3 class="lang-ne">कमजोर संस्थागत ब्रान्ड (Weak Institutional Branding)</h3>
+                        <h3 class="lang-en" style="display:none;">Weak Institutional Branding</h3>
+                        <p class="lang-ne">फर्मको पहिचान एक वा दुई व्यक्तिको प्रतिष्ठासँग जोडिएको हुन्छ। जब ती व्यक्ति अवकाश पाउँछन् वा छोड्छन्, संस्था नै विघटन हुन्छ। दिगो संस्थागत ब्रान्डको विकास हुँदैन।</p>
+                        <p class="lang-en" style="display:none;">The firm’s identity is tied to one or two individuals. When those individuals retire or leave, the entire firm often dissolves. No sustainable institutional brand is developed.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne">अधिशेष वितरण र पुनः लगानीको अभाव (No Shared Growth)</h3>
+                        <h3 class="lang-en" style="display:none;">No Shared Growth</h3>
+                        <p class="lang-ne">परम्परागत फर्महरूमा अधिशेष आम्दानी सदस्यहरूबीच वितरण गरिन्छ। फर्म-स्तरको लगानीको लागि कुनै पूँजी बाँकी रहँदैन। नयाँ पूर्वाधार, अनुसन्धान, वा तालिममा लगानी गर्न सकिँदैन।</p>
+                        <p class="lang-en" style="display:none;">In traditional firms, surplus income is distributed among members. No capital remains for firm‑level investment. New infrastructure, research, or training cannot be funded.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solution -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>हाम्रो समाधान – नेपाल ल ग्रुपको अवधारणा</h2>
+                    <p class="section-subhead">हामीले माथिका सबै चुनौतीहरूलाई एकीकृत रूपमा समाधान गर्ने एउटा संस्थागत मोडेल विकास गरेका छौं।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Our Solution – The Nepal Law Group Concept</h2>
+                    <p class="section-subhead">We have developed an institutional model that addresses all the above challenges in an integrated manner.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3 class="lang-ne">सहकारी बहु-विषयक टोली</h3>
+                        <h3 class="lang-en" style="display:none;">Collaborative Multi‑disciplinary Teams</h3>
+                        <p class="lang-ne">विभिन्न विधाका विशेषज्ञ सदस्यहरू मिलेर एउटै मुद्दामा काम गर्छन्। ग्राहकले एकै ठाउँबाट कानूनी, कर, कर्पोरेट, अन्तर्राष्ट्रिय कानून सबै सेवा पाउँछन्।</p>
+                        <p class="lang-en" style="display:none;">Specialist members from different fields work together on the same case. Clients receive legal, tax, corporate, and international law services from one place.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-database card-icon"></i>
+                        <h3 class="lang-ne">साझा पूर्वाधार र प्रविधि</h3>
+                        <h3 class="lang-en" style="display:none;">Shared Infrastructure & Technology</h3>
+                        <p class="lang-ne">कम्पनीले उच्चस्तरीय प्रविधि, कानूनी डाटाबेस, पुस्तकालय, र प्रशासनिक सहयोग उपलब्ध गराउँछ। प्रत्येक सदस्यले यी स्रोतको प्रयोग गर्न पाउँछ।</p>
+                        <p class="lang-en" style="display:none;">The company provides high‑end technology, legal databases, a library, and administrative support. Every member has access to these resources.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building-user card-icon"></i>
+                        <h3 class="lang-ne">दिगो संस्थागत ब्रान्ड</h3>
+                        <h3 class="lang-en" style="display:none;">Sustainable Institutional Brand</h3>
+                        <p class="lang-ne">ब्रान्ड कुनै एक व्यक्तिमा नभई कम्पनीको नाममा विकसित हुन्छ। सदस्य परिवर्तन भए पनि कम्पनी र यसको प्रतिष्ठा कायम रहन्छ।</p>
+                        <p class="lang-en" style="display:none;">The brand is built on the company’s name, not on any single individual. Even when members change, the company and its reputation remain.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-simple card-icon"></i>
+                        <h3 class="lang-ne">कम्पनी-स्तरको आय र पुनः लगानी</h3>
+                        <h3 class="lang-en" style="display:none;">Company‑Level Income & Reinvestment</h3>
+                        <p class="lang-ne">अनुसन्धान, तालिम, प्रकाशनबाट हुने आय कम्पनीको पूँजीमा जम्मा हुन्छ। यो पूँजी पूर्वाधार, प्रविधि, मानव संसाधन विकासमा पुनः लगानी गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">Income from research, training, and publications is retained as company capital. This capital is reinvested in infrastructure, technology, and human resource development.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon"></i>
+                        <h3 class="lang-ne">नियामक अनुपालन सुनिश्चित</h3>
+                        <h3 class="lang-en" style="display:none;">Ensured Regulatory Compliance</h3>
+                        <p class="lang-ne">मुद्दा फाँट विभागमा बार काउन्सिलको अनुमतिपत्र प्राप्त सदस्य मात्र; सन्दर्भ शुल्क निषेध; पूर्ण पारदर्शी लेखा – यसले कानूनी जोखिम हटाउँछ।</p>
+                        <p class="lang-en" style="display:none;">Only Bar‑licensed members in litigation; prohibition on referral fees; fully transparent accounting – this eliminates legal risks.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user card-icon"></i>
+                        <h3 class="lang-ne">विविधीकृत आय स्रोत</h3>
+                        <h3 class="lang-en" style="display:none;">Diversified Income Sources</h3>
+                        <p class="lang-ne">केवल मुद्दा शुल्कमा नभई अनुसन्धान ठेक्का, तालिम शुल्क, प्रकाशन बिक्री, अनुदानबाट पनि आम्दानी। यसले एकल क्षेत्रमा मन्दी आए पनि कम्पनीलाई सुरक्षित राख्छ।</p>
+                        <p class="lang-en" style="display:none;">Income from research contracts, training fees, publication sales, and grants, not just litigation fees. This protects the company even if one sector faces a downturn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statutory Objectives (from MOA) -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>हाम्रा वैधानिक उद्देश्यहरू (प्रबन्धपत्र दफा ४)</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुपको प्रबन्धपत्रमा दर्ता गरिएका उद्देश्यहरू निम्न छन्। यी उद्देश्यहरूले हाम्रो दैनिक कार्य र रणनीतिलाई निर्देशन दिन्छन्।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Our Statutory Objectives (MOA Clause 4)</h2>
+                    <p class="section-subhead">The objectives registered in the Memorandum of Association of Nepal Law Group are as follows. These objectives guide our daily operations and strategy.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-scale-balanced card-icon"></i>
+                        <h3 class="lang-ne">(क) न्यायको प्रभावकारी प्रशासन</h3>
+                        <h3 class="lang-en" style="display:none;">(a) Effective Administration of Justice</h3>
+                        <p class="lang-ne">कानूनी क्रियाकलाप, कानूनको सरलीकरण, र न्यायमा पहुँच वृद्धि गर्ने कार्यहरू।</p>
+                        <p class="lang-en" style="display:none;">Legal activities, simplification of laws, and enhancing access to justice.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-flask card-icon"></i>
+                        <h3 class="lang-ne">(ख) कानूनी अनुसन्धान र प्रयोगात्मक विकास</h3>
+                        <h3 class="lang-en" style="display:none;">(b) Legal Research & Experimental Development</h3>
+                        <p class="lang-ne">विद्वत्तापूर्ण कानूनी कार्य, अनुसन्धान, प्रयोगात्मक विकास, पेशागत, वैज्ञानिक र प्राविधिक क्रियाकलाप।</p>
+                        <p class="lang-en" style="display:none;">Scholarly legal work, research, experimental development, professional, scientific, and technical activities.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-graduation-cap card-icon"></i>
+                        <h3 class="lang-ne">(ग) उच्च कानूनी शिक्षा र तालिम</h3>
+                        <h3 class="lang-en" style="display:none;">(c) Higher Legal Education & Training</h3>
+                        <p class="lang-ne">क्याम्पस, इन्स्टिच्युट, विश्वविद्यालयसँग सहकार्य गरी कानूनी शिक्षा र प्रशिक्षण कार्यक्रम।</p>
+                        <p class="lang-en" style="display:none;">Legal education and training programs in collaboration with campuses, institutes, and universities.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-print card-icon"></i>
+                        <h3 class="lang-ne">(घ) प्रकाशन क्रियाकलाप</h3>
+                        <h3 class="lang-en" style="display:none;">(d) Publication Activities</h3>
+                        <p class="lang-ne">कानूनी पुस्तक, जर्नल, अभ्यास पुस्तिका, डिजिटल सामग्री प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Publication of legal books, journals, practice manuals, and digital content.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building-user card-icon"></i>
+                        <h3 class="lang-ne">(ङ) प्रशासनिक सहयोगी क्रियाकलाप</h3>
+                        <h3 class="lang-en" style="display:none;">(e) Administrative Support Activities</h3>
+                        <p class="lang-ne">फोटोकपी, कागजपत्र तयारी, अभिलेखीकरण लगायत कार्यालय सहयोग सेवा।</p>
+                        <p class="lang-en" style="display:none;">Office support services including photocopying, document preparation, and archiving.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-handshake card-icon"></i>
+                        <h3 class="lang-ne">(च) अन्य व्यावसायिक सहयोगी सेवा</h3>
+                        <h3 class="lang-en" style="display:none;">(f) Other Professional Support Services</h3>
+                        <p class="lang-ne">सदस्य संस्थाका गतिविधिहरू, र भविष्यमा विकसित हुने नयाँ सेवा क्षेत्रहरू।</p>
+                        <p class="lang-en" style="display:none;">Activities of member institutions and new service areas that may evolve in the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy and Values -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>हाम्रो दर्शन र मूल्यमान्यता</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुप निम्न मूल मान्यताहरूमा आधारित छ:</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Our Philosophy and Core Values</h2>
+                    <p class="section-subhead">Nepal Law Group is built on the following core values:</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-hand-holding-heart card-icon"></i>
+                        <h3 class="lang-ne">पारदर्शिता</h3>
+                        <h3 class="lang-en" style="display:none;">Transparency</h3>
+                        <p class="lang-ne">सबै आर्थिक कारोबार, निर्णय प्रक्रिया, र शासन संरचना पूर्ण रूपमा पारदर्शी छन्। सदस्यहरूले कुनै पनि समय लेखा, निर्णय, र सभाको विवरण निरीक्षण गर्न सक्छन्।</p>
+                        <p class="lang-en" style="display:none;">All financial transactions, decision‑making processes, and governance structures are fully transparent. Members can inspect accounts, decisions, and meeting minutes at any time.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-handshake card-icon"></i>
+                        <h3 class="lang-ne">सहकारिता</h3>
+                        <h3 class="lang-en" style="display:none;">Collaboration</h3>
+                        <p class="lang-ne">हामी व्यक्तिगत प्रतिस्पर्धालाई होइन, साझा सिकाइ र सहकार्यलाई प्रोत्साहन गर्छौं। विभागहरूबीच नियमित ज्ञान साझेदारी, टोली हडल, र संयुक्त परियोजनाहरू हुन्छन्।</p>
+                        <p class="lang-en" style="display:none;">We encourage shared learning and collaboration, not individual competition. Regular knowledge sharing, team huddles, and joint projects take place across divisions.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon"></i>
+                        <h3 class="lang-ne">नैतिकता र व्यावसायिक आचार</h3>
+                        <h3 class="lang-en" style="display:none;">Ethics & Professional Conduct</h3>
+                        <p class="lang-ne">नेपाल बार काउन्सिलको आचारसंहिताको कडा पालना। सन्दर्भ शुल्क निषेध, ग्राहक गोपनीयता, अदालतप्रति सम्मान, र सहकर्मीप्रति मर्यादा – हाम्रो आधारभूत सिद्धान्तहरू।</p>
+                        <p class="lang-en" style="display:none;">Strict adherence to the Bar Council’s Code of Conduct. Prohibition on referral fees, client confidentiality, respect for the court, and dignity toward colleagues are our fundamental principles.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne">निरन्तर सुधार</h3>
+                        <h3 class="lang-en" style="display:none;">Continuous Improvement</h3>
+                        <p class="lang-ne">हामी सदस्य र ग्राहकको प्रतिक्रिया सङ्कलन गरी हाम्रा सेवा, प्रणाली र प्रक्रियामा नियमित सुधार गर्छौं। प्रशिक्षण कार्यक्रम, प्रविधि अपग्रेड, र नीति समीक्षा निरन्तर चलिरहन्छ।</p>
+                        <p class="lang-en" style="display:none;">We regularly collect feedback from members and clients to improve our services, systems, and processes. Training programs, technology upgrades, and policy reviews are ongoing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why a Profit Non‑Distributing Company? -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>किन मुनाफा वितरण नगर्ने कम्पनी (PNDC) संरचना?</h2>
+                    <p class="section-subhead">हामीले कम्पनी ऐन, २०६३ को धारा १६६–१६७ अन्तर्गत PNDC संरचना रोजेका छौं किनभने:</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Why a Profit Non‑Distributing Company (PNDC) Structure?</h2>
+                    <p class="section-subhead">We chose the PNDC structure under Sections 166‑167 of the Companies Act, 2063 because:</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-ban card-icon"></i>
+                        <p class="lang-ne">सबै अधिशेष कम्पनीमा नै रहन्छ – कुनै व्यक्तिले लाभांश वा बोनस लैजान सक्दैन। यसले पूँजी संचय र पुनः लगानी सुनिश्चित गर्छ।</p>
+                        <p class="lang-en" style="display:none;">All surplus remains with the company – no individual can take dividends or bonuses. This ensures capital accumulation and reinvestment.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <p class="lang-ne">सदस्यहरूको दायित्व सीमित – व्यक्तिगत जोखिम घट्छ।</p>
+                        <p class="lang-en" style="display:none;">Members’ liability is limited – individual risk is reduced.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-exchange-alt card-icon"></i>
+                        <p class="lang-ne">सदस्यता हस्तान्तरण नहुने – संस्थाको स्थिरता र सदस्यको दीर्घकालीन प्रतिबद्धता बढ्छ।</p>
+                        <p class="lang-en" style="display:none;">Membership is non‑transferable – increases stability and long‑term commitment of members.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-pie card-icon"></i>
+                        <p class="lang-ne">प्रशासनिक खर्च २५% सीमा – खर्चमा अनुशासन कायम रहन्छ।</p>
+                        <p class="lang-en" style="display:none;">Administrative expense cap of 25% – maintains fiscal discipline.</p>
+                    </div>
+                </div>
+                <div class="stat-box" style="margin-top: 2rem; background: #1e293b;">
+                    <i class="fas fa-quote-left" style="font-size: 2rem; margin-bottom: 1rem; display: inline-block;"></i>
+                    <p class="lang-ne">“हामी एउटा यस्तो संस्था बनाउन चाहन्छौं जुन व्यक्तिभन्दा माथि उठोस्, दशकौंसम्म सेवा दिइरहोस्, र हरेक सदस्यलाई व्यावसायिक रूपमा विकसित हुने अवसर प्रदान गरोस्।” – संस्थापक सदस्यहरू</p>
+                    <p class="lang-en" style="display:none;">“We want to build an institution that rises above individuals, serves for decades, and gives every member the opportunity to grow professionally.” – Founding Members</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Vision -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>भविष्यको दृष्टिकोण</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुप केवल आजको लागि होइन, भोलिको पुस्ताका कानूनी व्यवसायी र ग्राहकहरूको लागि समेत दिगो संस्था बन्न चाहन्छ। हाम्रो दीर्घकालीन योजनाहरू:</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Future Vision</h2>
+                    <p class="section-subhead">Nepal Law Group aims to be a sustainable institution not only for today but also for future generations of legal professionals and clients. Our long‑term plans:</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-globe card-icon"></i>
+                        <h3 class="lang-ne">प्रदेश स्तरमा शाखा विस्तार</h3>
+                        <h3 class="lang-en" style="display:none;">Provincial Branch Expansion</h3>
+                        <p class="lang-ne">नेपालका प्रमुख शहरहरू (प्रदेश राजधानीहरू) मा कार्यालय स्थापना गर्ने।</p>
+                        <p class="lang-en" style="display:none;">Establish offices in major Nepali cities (provincial capitals).</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user card-icon"></i>
+                        <h3 class="lang-ne">सीपीडी एकेडेमी</h3>
+                        <h3 class="lang-en" style="display:none;">CPD Academy</h3>
+                        <p class="lang-ne">अधिवक्ताहरूको निरन्तर व्यावसायिक विकासको लागि समर्पित प्रशिक्षण संस्थान।</p>
+                        <p class="lang-en" style="display:none;">A dedicated training institute for continuing professional development of advocates.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-laptop-code card-icon"></i>
+                        <h3 class="lang-ne">कानूनी प्रविधि सेवा</h3>
+                        <h3 class="lang-en" style="display:none;">Legal Tech Services</h3>
+                        <p class="lang-ne">केस म्यानेजमेन्ट सफ्टवेर, ई-फाइलिङ प्लेटफर्म, कानूनी एआई सहायकको विकास।</p>
+                        <p class="lang-en" style="display:none;">Development of case management software, e‑filing platforms, and legal AI assistants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer><div class="container"><div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div><div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div></div></footer>
+    <footer>
+        <div class="container">
+            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – हाम्रो बारेमा | सबै अधिकार सुरक्षित</p></div>
+            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – About Us | All Rights Reserved</p></div>
+        </div>
+    </footer>
 
-    <script>// same language toggle script as index.html (copy exactly)</script>
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            localStorage.setItem('nlg_lang', lang);
+            document.querySelectorAll('.lang-en, .lang-ne').forEach(el => {
+                if (lang === 'en' && el.classList.contains('lang-en')) el.style.display = 'block';
+                else if (lang === 'en' && el.classList.contains('lang-ne')) el.style.display = 'none';
+                else if (lang === 'ne' && el.classList.contains('lang-ne')) el.style.display = 'block';
+                else if (lang === 'ne' && el.classList.contains('lang-en')) el.style.display = 'none';
+            });
+            const toggle = document.getElementById('langToggle');
+            if (toggle) toggle.innerHTML = lang === 'ne' ? '🇬🇧 English' : '🇳🇵 नेपाली';
+        }
+        const savedLang = localStorage.getItem('nlg_lang') || 'ne';
+        setLanguage(savedLang);
+        document.getElementById('langToggle')?.addEventListener('click', () => {
+            const newLang = document.body.getAttribute('data-lang') === 'ne' ? 'en' : 'ne';
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>
