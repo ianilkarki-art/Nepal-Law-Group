@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>नेपाल ल ग्रुप – वैधानिक अनुपालन | Compliance</title>
+    <title>नेपाल ल ग्रुप – विस्तृत वैधानिक अनुपालन | Detailed Statutory Compliance</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -19,15 +19,25 @@
         .nav-links a:hover { text-decoration: underline; }
         .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
         section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
+        .bg-light { background: #f8fafc; }
         h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        h3 { font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 0.8rem 0; }
         .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
         .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08), 0 0 0 1px #e2e8f0; }
         .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
         .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .compliance-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 0 0 1px #edf2f7; }
+        .compliance-table th, .compliance-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #eef2f8; }
+        .compliance-table th { background: #f1f5f9; font-weight: 600; }
         .certificate { background: #fef9e3; border-left: 6px solid #f59e0b; padding: 1.5rem; border-radius: 20px; margin: 1.5rem 0; }
+        .stat-box { background: #0f172a; color: white; border-radius: 28px; padding: 2rem; text-align: center; }
         footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
         [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .nav-links { gap: 12px; } }
     </style>
 </head>
 <body data-lang="ne">
@@ -52,43 +62,264 @@
     </div>
 
     <main>
-        <section>
+        <!-- Hero -->
+        <section style="padding-top: 80px;">
             <div class="container">
-                <div class="lang-ne"><h2>कम्पनी ऐन, २०६३ को धारा १६६ र १६७ बमोजिम पूर्ण अनुपालन</h2></div>
-                <div class="lang-en" style="display:none;"><h2>Full Compliance with Sections 166 & 167 of Companies Act, 2063</h2></div>
-                <div class="grid-2">
-                    <div class="card"><i class="fas fa-ban card-icon"></i><h3 class="lang-ne">मुनाफा वितरण निषेध</h3><h3 class="lang-en" style="display:none;">No Profit Distribution</h3><p class="lang-ne">धारा १६७(१)(घ) – कम्पनीले आर्जन गरेको मुनाफाबाट कुनै लाभांश, बोनस वा रकम सदस्य वा कर्मचारीलाई वितरण गरिने छैन। सबै अधिशेष पुनः लगानी हुनेछ।</p><p class="lang-en" style="display:none;">Section 167(1)(d) – The company shall never distribute any dividend, bonus or amount to members or employees. All surplus will be reinvested.</p></div>
-                    <div class="card"><i class="fas fa-exchange-alt card-icon"></i><h3 class="lang-ne">सदस्यता हस्तान्तरण नहुने</h3><h3 class="lang-en" style="display:none;">Non‑transferable Membership</h3><p class="lang-ne">धारा १६६(४) – कुनै पनि सदस्यता अर्को व्यक्तिलाई हस्तान्तरण गर्न मिल्दैन। सदस्यको मृत्यु, विघटन वा अर्को संस्थामा गाभिएमा सदस्यता स्वतः समाप्त हुन्छ।</p><p class="lang-en" style="display:none;">Section 166(4) – Membership is not transferable. It ceases upon death, dissolution, or merger of the member entity.</p></div>
-                    <div class="card"><i class="fas fa-shield-alt card-icon"></i><h3 class="lang-ne">दायित्व सीमित</h3><h3 class="lang-en" style="display:none;">Limited Liability</h3><p class="lang-ne">धारा १६७(१)(ख) – सदस्य लिखित स्वीकार नगरेसम्म कम्पनीको ऋण वा दायित्वको लागि जिम्मेवार हुँदैनन्। यदि स्वीकार गरेमा सो हदसम्म मात्र दायित्व सीमित रहन्छ।</p><p class="lang-en" style="display:none;">Section 167(1)(b) – Members are not liable for company debts or liabilities unless they give written consent. If consent is given, liability is limited to the extent specified.</p></div>
-                    <div class="card"><i class="fas fa-chart-pie card-icon"></i><h3 class="lang-ne">प्रशासनिक खर्च सीमा २५%</h3><h3 class="lang-en" style="display:none;">Admin Expense Cap 25%</h3><p class="lang-ne">धारा १६७(१)(ज) – कुनै पनि आर्थिक वर्षमा प्रशासनिक खर्च (तलब, भत्ता, कार्यालय खर्च, आईटी मर्मत, आदि) कुल खर्चको २५% भन्दा बढी हुँदैन।</p><p class="lang-en" style="display:none;">Section 167(1)(j) – In any financial year, administrative expenses (salaries, allowances, office expenses, IT maintenance, etc.) shall not exceed 25% of total expenses.</p></div>
+                <div class="lang-ne">
+                    <h2>⚖️ वैधानिक अनुपालन – कम्पनी ऐन, २०६३ को धारा १६६ र १६७</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुप एक मुनाफा वितरण नगर्ने कम्पनी (Profit Non‑Distributing Company) को रूपमा दर्ता छ। हामी कम्पनी ऐन, २०६३ को धारा १६६ र १६७ तथा अन्य प्रचलित कानूनहरूको पूर्ण अनुपालन गर्दछौं। तल हाम्रो अनुपालनको विस्तृत विवरण प्रस्तुत छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>⚖️ Statutory Compliance – Sections 166 & 167 of Companies Act, 2063</h2>
+                    <p class="section-subhead">Nepal Law Group is registered as a Profit Non‑Distributing Company. We fully comply with Sections 166 and 167 of the Companies Act, 2063, and all other applicable laws. Detailed compliance information is provided below.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Section 166 Compliance -->
         <section class="bg-light">
             <div class="container">
-                <div class="lang-ne"><h2>विशेष अनुपालन प्रमाणपत्रहरू</h2></div>
-                <div class="lang-en" style="display:none;"><h2>Special Compliance Certificates</h2></div>
+                <div class="lang-ne"><h2>📜 धारा १६६ – मुनाफा वितरण नगर्ने कम्पनीको स्थापना</h2></div>
+                <div class="lang-en" style="display:none;"><h2>📜 Section 166 – Establishment of Profit Non‑Distributing Company</h2></div>
+                <table class="compliance-table">
+                    <thead>
+                        <tr><th class="lang-ne">प्रावधान</th><th class="lang-en" style="display:none;">Provision</th><th class="lang-ne">आवश्यकता</th><th class="lang-en" style="display:none;">Requirement</th><th class="lang-ne">हाम्रो अनुपालन</th><th class="lang-en" style="display:none;">Our Compliance</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>१६६(१)</td><td class="lang-ne">व्यावसायिक/शैक्षिक उद्देश्य; लाभांश वितरण नगर्ने</td><td class="lang-en" style="display:none;">Professional/academic objectives; no dividend distribution</td><td class="lang-ne">प्रबन्धपत्र दफा ४ र ९ अनुसार</td><td class="lang-en" style="display:none;">As per MOA Clauses 4 & 9</td></tr>
+                        <tr><td>१६६(२)</td><td class="lang-ne">पाँच संस्थापकद्वारा निवेदन</td><td class="lang-en" style="display:none;">Application by 5 promoters</td><td class="lang-ne">५ संस्थापक सदस्य (प्रबन्धपत्र दफा १८)</td><td class="lang-en" style="display:none;">5 founding members (MOA Clause 18)</td></tr>
+                        <tr><td>१६६(३)</td><td class="lang-ne">न्यूनतम पाँच सदस्य सधैं कायम रहने</td><td class="lang-en" style="display:none;">Minimum 5 members at all times</td><td class="lang-ne">संस्थापक + साधारण सदस्य मिली सधैं ५+</td><td class="lang-en" style="display:none;">Founding + General members always 5+</td></tr>
+                        <tr><td>१६६(४)</td><td class="lang-ne">सदस्यता हस्तान्तरण नहुने; मृत्यु/विघटनमा समाप्ति</td><td class="lang-en" style="display:none;">Non-transferable; ceases on death/dissolution</td><td class="lang-ne">प्रबन्धपत्र दफा १२ र १३</td><td class="lang-en" style="display:none;">MOA Clauses 12 & 13</td></tr>
+                        <tr><td>१६६(५)</td><td class="lang-ne">नाममा “कम्पनी”, “लिमिटेड” शब्द नराख्ने (स्वीकृति बिना)</td><td class="lang-en" style="display:none;">No prohibited words in name</td><td class="lang-ne">“नेपाल ल ग्रुप” – पूर्ण अनुपालित</td><td class="lang-en" style="display:none;">“Nepal Law Group” – fully compliant</td></tr>
+                        <tr><td>१६६(६)</td><td class="lang-ne">शाखा विस्तारका लागि कार्यालयको स्वीकृति</td><td class="lang-en" style="display:none;">Office approval for branch expansion</td><td class="lang-ne">नियमावली दफा २(२) अनुसार</td><td class="lang-en" style="display:none;">AOA Clause 2(2)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 167 Compliance -->
+        <section>
+            <div class="container">
+                <div class="lang-ne"><h2>📜 धारा १६७ – मुनाफा वितरण नगर्ने कम्पनीको विशेष व्यवस्था</h2></div>
+                <div class="lang-en" style="display:none;"><h2>📜 Section 167 – Special Provisions for Profit Non‑Distributing Companies</h2></div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(क) – सेयर पूँजी छैन</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(a) – No share capital</h3>
+                        <p class="lang-ne">कम्पनीको कुनै सेयर पूँजी हुने छैन। सदस्यता शुल्क, दान, अनुदान मात्र स्वीकार गरिन्छ। (प्रबन्धपत्र दफा ७ र ८)</p>
+                        <p class="lang-en" style="display:none;">The company shall have no share capital. Only membership fees, donations, and grants are accepted. (MOA Clauses 7 & 8)</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(ख) – दायित्व सीमित</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(b) – Limited liability</h3>
+                        <p class="lang-ne">सदस्यहरू लिखित स्वीकार नगरेसम्म कम्पनीको ऋण वा दायित्वको लागि उत्तरदायी हुँदैनन्। स्वीकार गरेमा पनि उल्लेखित हदसम्म मात्र। (प्रबन्धपत्र दफा १४)</p>
+                        <p class="lang-en" style="display:none;">Members are not liable for company debts unless they give written consent, and even then liability is limited to the extent specified. (MOA Clause 14)</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-ban card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(घ) – मुनाफा वितरण निषेध</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(d) – No profit distribution</h3>
+                        <p class="lang-ne">कुनै लाभांश, बोनस वा रकम सदस्य वा कर्मचारीलाई वितरण गरिने छैन। सबै अधिशेष पुनः लगानी गरिनेछ। (प्रबन्धपत्र दफा ९)</p>
+                        <p class="lang-en" style="display:none;">No dividend, bonus, or any amount shall be distributed to members or employees. All surplus shall be reinvested. (MOA Clause 9)</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-vote-yea card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(छ) – एक सदस्य एक मत</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(ch) – One member one vote</h3>
+                        <p class="lang-ne">सञ्चालक निर्वाचन तथा अन्य सभाका निर्णयमा प्रत्येक सदस्यलाई बराबर मताधिकार। (नियमावली दफा ११)</p>
+                        <p class="lang-en" style="display:none;">Each member has equal voting rights in director elections and other general meeting decisions. (AOA Clause 11)</p>
+                    </div>
+                </div>
+                <div class="grid-2" style="margin-top: 1rem;">
+                    <div class="card">
+                        <i class="fas fa-chart-pie card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(ज) – प्रशासनिक खर्च सीमा २५%</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(j) – Admin expense cap 25%</h3>
+                        <p class="lang-ne">प्रशासनिक खर्च कुनै पनि आर्थिक वर्षमा कुल खर्चको २५% भन्दा बढी हुने छैन। तल विस्तृत व्याख्या।</p>
+                        <p class="lang-en" style="display:none;">Administrative expenses shall not exceed 25% of total expenses in any financial year. Detailed explanation below.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building card-icon"></i>
+                        <h3 class="lang-ne">१६७(१)(झ) – विघटनमा सम्पत्ति हस्तान्तरण</h3>
+                        <h3 class="lang-en" style="display:none;">167(1)(jh) – Dissolution asset transfer</h3>
+                        <p class="lang-ne">विघटन भएमा ऋण चुक्तापछि बाँकी सम्पत्ति अर्को समान उद्देश्यको मुनाफा वितरण नगर्ने कम्पनीलाई, नभए नेपाल सरकारलाई हस्तान्तरण। (नियमावली दफा ३४)</p>
+                        <p class="lang-en" style="display:none;">Upon dissolution, after paying debts, remaining assets shall be transferred to another similar PNDC, or else to the Government of Nepal. (AOA Clause 34)</p>
+                    </div>
+                </div>
                 <div class="certificate">
                     <i class="fas fa-certificate" style="color: #f59e0b; font-size: 1.8rem; margin-right: 10px;"></i>
                     <strong class="lang-ne">गैर-वितरण प्रमाणपत्र (Non‑Distribution Certificate)</strong>
                     <strong class="lang-en" style="display:none;">Non‑Distribution Certificate</strong>
-                    <p class="lang-ne">नेपाल ल ग्रुप यसद्वारा प्रमाणित गर्दछ कि यसले कहिल्यै आफ्नो मुनाफाबाट कुनै लाभांश, बोनस वा कुनै रकम सदस्य वा कर्मचारीलाई वितरण गर्ने छैन। सबै अधिशेष केवल उद्देश्य प्राप्ति वा पूँजी वृद्धिका लागि पुनः लगानी गरिनेछ (धारा १६७(१)(घ) बमोजिम)।</p>
-                    <p class="lang-en" style="display:none;">Nepal Law Group hereby certifies that it shall never distribute any dividend, bonus or any amount from its profits to its members or employees. All surplus shall be reinvested solely for achieving the company's objectives or increasing its capital (as per Section 167(1)(d)).</p>
+                    <p class="lang-ne">नेपाल ल ग्रुप यसद्वारा घोषणा गर्दछ कि यसले कहिल्यै आफ्नो मुनाफाबाट कुनै लाभांश, बोनस वा रकम सदस्य वा कर्मचारीलाई वितरण गर्ने छैन। सबै अधिशेष केवल उद्देश्य प्राप्ति वा पूँजी वृद्धिका लागि पुनः लगानी गरिनेछ। यो प्रमाणपत्र धारा १६७(१)(घ) को पालनाको स्थायी प्रतिबद्धता हो।</p>
+                    <p class="lang-en" style="display:none;">Nepal Law Group hereby declares that it shall never distribute any dividend, bonus, or any amount from its profits to its members or employees. All surplus shall be reinvested solely for achieving its objectives or increasing its capital. This certificate is a permanent commitment to Section 167(1)(d).</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Administrative Expense Cap – Detailed -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>💰 प्रशासनिक खर्च सीमा (धारा १६७(१)(ज) को विस्तृत अनुपालन)</h2>
+                    <p class="section-subhead">कम्पनीले प्रशासनिक खर्चलाई कुल खर्चको २५% भन्दा कम राख्न अनिवार्य नियम र प्रक्रिया अपनाएको छ। तल सीमाको परिभाषा, अनुगमन र उल्लङ्घनको परिणाम प्रस्तुत छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>💰 Administrative Expense Cap – Detailed Compliance with Section 167(1)(j)</h2>
+                    <p class="section-subhead">The company has adopted mandatory rules and procedures to keep administrative expenses below 25% of total expenses. Below are the definition, monitoring mechanisms, and consequences of non‑compliance.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-calculator card-icon"></i>
+                        <h3 class="lang-ne">प्रशासनिक खर्चको परिभाषा</h3>
+                        <h3 class="lang-en" style="display:none;">Definition of Administrative Expenses</h3>
+                        <p class="lang-ne">प्रशासनिक तथा सहायक कर्मचारीको तलब र लाभ; कार्यालय भाडा र उपयोगिता; कार्यालय आपूर्ति र स्टेसनरी; प्रशासनिक प्रयोजनको बैठक भत्ता र यात्रा खर्च; प्रशासनिक सेवाको पेशागत शुल्क (लेखापरीक्षण, कर, कानूनी); आईटी पूर्वाधार र मर्मत; तथा कार्यक्रमिक गतिविधिहरूमा प्रत्यक्ष नजाने अन्य सबै खर्च।</p>
+                        <p class="lang-en" style="display:none;">Salaries and benefits of administrative and support staff; office rent and utilities; office supplies and stationery; meeting allowances and travel for administrative purposes; professional fees for administrative services (audit, tax, legal); IT infrastructure and maintenance; and all other expenses not directly attributable to programmatic activities.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne">अनुगमन र प्रतिवेदन</h3>
+                        <h3 class="lang-en" style="display:none;">Monitoring and Reporting</h3>
+                        <p class="lang-ne">वित्त प्रबन्धकले प्रशासनिक खर्चको मासिक रेकर्ड राख्छ। त्रैमासिक प्रतिवेदनले वास्तविक खर्चलाई २५% सीमासँग तुलना गर्छ। यदि खर्च सीमा नजिक पुग्यो भने सच्याउने कारबाही गरिन्छ। वार्षिक लेखापरीक्षण विवरणमा अनुपालन पुष्टि समावेश गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">Finance Manager maintains monthly records of administrative expenses. Quarterly reports compare actual expenses against the 25% cap. Corrective action is taken if the cap is approached. Annual audited statements include a compliance confirmation.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-exclamation-triangle card-icon"></i>
+                        <h3 class="lang-ne">उल्लङ्घनको परिणाम</h3>
+                        <h3 class="lang-en" style="display:none;">Consequences of Non‑Compliance</h3>
+                        <p class="lang-ne">धारा १६७(२) बमोजिम कम्पनी रजिष्ट्रारको कार्यालयले दर्ता खारेज गर्न सक्छ। साथै, सञ्चालकहरू वैधानिक कर्तव्य उल्लङ्घनको लागि व्यक्तिगत रूपमा उत्तरदायी हुन सक्छन्। हामीले यो जोखिमबाट बच्न कडा आन्तरिक नियन्त्रण लागू गरेका छौं।</p>
+                        <p class="lang-en" style="display:none;">Under Section 167(2), the Office of Company Registrar may cancel registration. Directors may also be personally liable for breach of statutory duty. We have implemented strict internal controls to avoid this risk.</p>
+                    </div>
+                </div>
+                <div class="stat-box" style="background: #1e293b; margin-top: 1rem;">
+                    <i class="fas fa-chart-simple" style="font-size: 2rem; margin-bottom: 1rem; display: inline-block;"></i>
+                    <p class="lang-ne"><strong>हाम्रो प्रतिबद्धता:</strong> प्रशासनिक खर्च कहिल्यै कुल खर्चको २५% भन्दा बढी हुने छैन। सञ्चालक समितिले प्रत्येक त्रैमासिक समीक्षा गर्दछ।</p>
+                    <p class="lang-en" style="display:none;"><strong>Our Commitment:</strong> Administrative expenses shall never exceed 25% of total expenses. The Board reviews compliance every quarter.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Statutory Compliance Areas -->
+        <section>
+            <div class="container">
+                <div class="lang-ne"><h2>📋 अन्य वैधानिक अनुपालन क्षेत्रहरू</h2></div>
+                <div class="lang-en" style="display:none;"><h2>📋 Other Statutory Compliance Areas</h2></div>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-balance-scale card-icon"></i>
+                        <h3 class="lang-ne">नेपाल बार काउन्सिल</h3>
+                        <h3 class="lang-en" style="display:none;">Nepal Bar Council</h3>
+                        <p class="lang-ne">कम्पनी बार काउन्सिलमा फर्मको रूपमा दर्ता छ। सबै लाइसेन्स प्राप्त सदस्यहरूको अनुमतिपत्र वार्षिक नवीकरण गरिन्छ। मुद्दा फाँट विभागमा केवल सक्रिय लाइसेन्स प्राप्त सदस्यले मात्र काम गर्छन्।</p>
+                        <p class="lang-en" style="display:none;">The company is registered as a firm with the Bar Council. All licensed members renew their licenses annually. Only active license holders work in the Litigation Division.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-file-invoice-dollar card-icon"></i>
+                        <h3 class="lang-ne">कर अनुपालन</h3>
+                        <h3 class="lang-en" style="display:none;">Tax Compliance</h3>
+                        <p class="lang-ne">कम्पनीको आफ्नै स्थायी लेखा नम्बर (PAN) छ। प्रत्येक सदस्यसँग व्यक्तिगत PAN छ। कम्पनीले आयकर ऐन, २०५८ बमोजिम नियमित रूपमा कर फाइल गर्छ। प्रशासनिक खर्चको २५% सीमा पालनाले कर अडिटको जोखिम घटाउँछ।</p>
+                        <p class="lang-en" style="display:none;">The company has its own PAN. Each member has an individual PAN. The company files taxes regularly under Income Tax Act, 2058. Adherence to the 25% admin expense cap reduces tax audit risk.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-virus card-icon"></i>
+                        <h3 class="lang-ne">सम्पत्ति शुद्धीकरण निवारण</h3>
+                        <h3 class="lang-en" style="display:none;">Anti‑Money Laundering</h3>
+                        <p class="lang-ne">कम्पनीले सम्पत्ति शुद्धीकरण तथा आतङ्ककारी क्रियाकलापमा वित्तीय लगानी निवारण गर्ने सम्बन्धमा प्रचलित कानून बमोजिमको प्रतिबद्धता व्यक्त गरेको छ। सबै कारोबार बैंकिङ च्यानलबाट गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">The company is committed to complying with laws against money laundering and terrorist financing. All transactions are conducted through banking channels.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-database card-icon"></i>
+                        <h3 class="lang-ne">डाटा संरक्षण र गोपनीयता</h3>
+                        <h3 class="lang-en" style="display:none;">Data Protection & Privacy</h3>
+                        <p class="lang-ne">ग्राहकको गोप्य जानकारी र कम्पनीको आन्तरिक अभिलेख सुरक्षित राखिन्छ। सदस्यहरूले आचारसंहिता बमोजिम गोपनीयता कायम गर्छन्।</p>
+                        <p class="lang-en" style="display:none;">Client confidential information and company internal records are kept secure. Members maintain confidentiality as per the Code of Conduct.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-handshake card-icon"></i>
+                        <h3 class="lang-ne">श्रम कानून अनुपालन</h3>
+                        <h3 class="lang-en" style="display:none;">Labour Law Compliance</h3>
+                        <p class="lang-ne">कम्पनीका कर्मचारीहरू श्रम ऐन, २०७४ बमोजिम नियुक्त गरिन्छन्। सामाजिक सुरक्षा कोषमा योगदान गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">Employees are appointed under the Labour Act, 2074. Contributions are made to the Social Security Fund.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-building-user card-icon"></i>
+                        <h3 class="lang-ne">स्थानीय प्रशासन दर्ता</h3>
+                        <h3 class="lang-en" style="display:none;">Local Administration Registration</h3>
+                        <p class="lang-ne">कम्पनीको रजिस्टर्ड कार्यालय रहेको स्थानीय तह (पोखरा महानगरपालिका) मा व्यवसाय दर्ता गरिएको छ। स्थानीय कर तथा नियमहरूको पालना गरिन्छ।</p>
+                        <p class="lang-en" style="display:none;">The company is registered with the local government (Pokhara Metropolitan City) where its registered office is located. Local taxes and regulations are complied with.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates and Declarations -->
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne"><h2>📄 औपचारिक घोषणा र प्रमाणपत्रहरू</h2></div>
+                <div class="lang-en" style="display:none;"><h2>📄 Formal Declarations and Certificates</h2></div>
                 <div class="certificate">
                     <i class="fas fa-file-signature" style="color: #f59e0b; font-size: 1.8rem; margin-right: 10px;"></i>
                     <strong class="lang-ne">सदस्य दायित्व सीमा घोषणा</strong>
                     <strong class="lang-en" style="display:none;">Member Liability Limitation Declaration</strong>
-                    <p class="lang-ne">कुनै पनि सदस्य कम्पनीको ऋण वा दायित्वको लागि व्यक्तिगत रूपमा उत्तरदायी हुने छैन, जबसम्म सदस्यले लिखित रूपमा स्पष्ट रूपमा दायित्व स्वीकार गरेको छैन। त्यस्तो स्वीकार गरेको खण्डमा पनि दायित्व उल्लेखित हदसम्म मात्र सीमित रहनेछ (धारा १६७(१)(ख) र प्रबन्धपत्र दफा १४ बमोजिम)।</p>
-                    <p class="lang-en" style="display:none;">No member shall be personally liable for the debts or liabilities of the company unless the member has given written consent expressly accepting such liability. Even if consent is given, liability shall be limited to the extent specified (as per Section 167(1)(b) and MOA Clause 14).</p>
+                    <p class="lang-ne">“कुनै पनि सदस्य कम्पनीको ऋण वा दायित्वको लागि व्यक्तिगत रूपमा उत्तरदायी हुने छैन, जबसम्म सदस्यले लिखित रूपमा स्पष्ट रूपमा दायित्व स्वीकार गरेको छैन। त्यस्तो स्वीकार गरेको खण्डमा पनि दायित्व उल्लेखित हदसम्म मात्र सीमित रहनेछ।” – प्रबन्धपत्र दफा १४ र धारा १६७(१)(ख)</p>
+                    <p class="lang-en" style="display:none;">“No member shall be personally liable for the debts or liabilities of the company unless the member has given written consent expressly accepting such liability. Even if consent is given, liability shall be limited to the extent specified.” – MOA Clause 14 & Section 167(1)(b)</p>
                 </div>
                 <div class="certificate">
                     <i class="fas fa-building" style="color: #f59e0b; font-size: 1.8rem; margin-right: 10px;"></i>
-                    <strong class="lang-ne">विघटनमा सम्पत्ति हस्तान्तरणको घोषणा</strong>
+                    <strong class="lang-ne">विघटन सम्पत्ति हस्तान्तरण घोषणा</strong>
                     <strong class="lang-en" style="display:none;">Dissolution Asset Transfer Declaration</strong>
-                    <p class="lang-ne">यदि कम्पनी विघटन (खारेज) भएमा, सबै ऋण र दायित्व चुक्ता गरेपश्चात् बाँकी रहेको सम्पत्ति अर्को मुनाफा वितरण नगर्ने समान उद्देश्यको कम्पनीलाई हस्तान्तरण गरिनेछ। त्यसरी हस्तान्तरण नसकिएमा सम्पत्ति नेपाल सरकारको नाममा सर्नेछ (धारा १६७(१)(झ) र नियमावली दफा ३४ बमोजिम)।</p>
-                    <p class="lang-en" style="display:none;">Upon dissolution of the company, after settling all debts and liabilities, the remaining property shall be transferred to another non‑profit distributing company with similar objectives. If such transfer is not possible, the property shall vest in the Government of Nepal (as per Section 167(1)(jh) and AOA Clause 34).</p>
+                    <p class="lang-ne">“यदि कम्पनी विघटन (खारेज) भएमा, सबै ऋण र दायित्व चुक्ता गरेपश्चात् बाँकी रहेको सम्पत्ति अर्को मुनाफा वितरण नगर्ने समान उद्देश्यको कम्पनीलाई हस्तान्तरण गरिनेछ। त्यसरी हस्तान्तरण नसकिएमा सम्पत्ति नेपाल सरकारको नाममा सर्नेछ।” – नियमावली दफा ३४ र धारा १६७(१)(झ)</p>
+                    <p class="lang-en" style="display:none;">“Upon dissolution of the company, after settling all debts and liabilities, the remaining property shall be transferred to another non‑profit distributing company with similar objectives. If such transfer is not possible, the property shall vest in the Government of Nepal.” – AOA Clause 34 & Section 167(1)(jh)</p>
+                </div>
+                <div class="certificate">
+                    <i class="fas fa-gavel" style="color: #f59e0b; font-size: 1.8rem; margin-right: 10px;"></i>
+                    <strong class="lang-ne">उद्देश्य परिवर्तन स्वीकृति घोषणा</strong>
+                    <strong class="lang-en" style="display:none;">Objective Change Approval Declaration</strong>
+                    <p class="lang-ne">“कम्पनीको उद्देश्यमा कुनै परिवर्तन गर्नुपरेमा साधारण सभाबाट विशेष प्रस्ताव पारित गरी कम्पनी रजिष्ट्रारको कार्यालयको पूर्वस्वीकृति लिनुपर्नेछ।” – प्रबन्धपत्र दफा १६ र धारा १६७(१)(ङ)</p>
+                    <p class="lang-en" style="display:none;">“Any change in the company’s objectives shall require a special resolution in the General Meeting and prior approval from the Office of Company Registrar.” – MOA Clause 16 & Section 167(1)(e)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consequences of Non-Compliance -->
+        <section>
+            <div class="container">
+                <div class="lang-ne"><h2>⚠️ अनुपालन नभएको अवस्थामा हुने जोखिम</h2></div>
+                <div class="lang-en" style="display:none;"><h2>⚠️ Risks of Non‑Compliance</h2></div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-times-circle card-icon" style="color: #b91c1c;"></i>
+                        <h3 class="lang-ne">दर्ता खारेजी</h3>
+                        <h3 class="lang-en" style="display:none;">Cancellation of Registration</h3>
+                        <p class="lang-ne">धारा १६७(२) बमोजिम कार्यालयले कम्पनीको दर्ता खारेज गर्न सक्छ। यसको अर्थ कम्पनीको कानूनी अस्तित्व समाप्त हुन्छ।</p>
+                        <p class="lang-en" style="display:none;">Under Section 167(2), the Office may cancel the company’s registration, ending its legal existence.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-shield card-icon" style="color: #b91c1c;"></i>
+                        <h3 class="lang-ne">सञ्चालकको व्यक्तिगत दायित्व</h3>
+                        <h3 class="lang-en" style="display:none;">Personal Liability of Directors</h3>
+                        <p class="lang-ne">प्रशासनिक खर्च सीमा उल्लङ्घन वा मुनाफा वितरण गरेमा सञ्चालकहरू व्यक्तिगत रूपमा उत्तरदायी हुन सक्छन्।</p>
+                        <p class="lang-en" style="display:none;">Violation of the admin expense cap or profit distribution may render directors personally liable.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-ban card-icon" style="color: #b91c1c;"></i>
+                        <h3 class="lang-ne">कर जरिबाना</h3>
+                        <h3 class="lang-en" style="display:none;">Tax Penalties</h3>
+                        <p class="lang-ne">गलत विवरण वा समयमै कर फाइल नगरेमा आयकर ऐन बमोजिम जरिबाना र ब्याज लाग्न सक्छ।</p>
+                        <p class="lang-en" style="display:none;">Incorrect filing or late tax returns may result in penalties and interest under the Income Tax Act.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gavel card-icon" style="color: #b91c1c;"></i>
+                        <h3 class="lang-ne">बार काउन्सिल कारबाही</h3>
+                        <h3 class="lang-en" style="display:none;">Bar Council Action</h3>
+                        <p class="lang-ne">गैर-लाइसेन्स व्यक्तिले मुद्दा फाँटमा काम गरेमा, सन्दर्भ शुल्क लिएमा वा व्यावसायिक आचार उल्लङ्घन गरेमा बार काउन्सिलले अनुशासनात्मक कारबाही गर्न सक्छ।</p>
+                        <p class="lang-en" style="display:none;">If a non‑licensed person works in litigation, referral fees are taken, or professional ethics are violated, the Bar Council may take disciplinary action.</p>
+                    </div>
+                </div>
+                <div class="stat-box" style="background: #f1f5f9; color:#0f172a; margin-top: 1rem;">
+                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                    <p class="lang-ne"><strong>हाम्रो प्रतिबद्धता:</strong> नेपाल ल ग्रुपले यी सबै अनुपालन आवश्यकताहरू पूरा गर्न नियमित आन्तरिक अडिट, कर्मचारी तालिम र बाह्य लेखापरीक्षण गर्दछ। कुनै पनि विचलन भए तुरुन्त सच्याउने व्यवस्था छ।</p>
+                    <p class="lang-en" style="display:none;"><strong>Our Commitment:</strong> Nepal Law Group conducts regular internal audits, staff training, and external audits to meet all compliance requirements. Any deviation is immediately corrected.</p>
                 </div>
             </div>
         </section>
@@ -96,8 +327,8 @@
 
     <footer>
         <div class="container">
-            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div>
-            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div>
+            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – वैधानिक अनुपालन | सबै अधिकार सुरक्षित</p></div>
+            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – Statutory Compliance | All Rights Reserved</p></div>
         </div>
     </footer>
 
