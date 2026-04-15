@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नेपाल ल ग्रुप – सुशासन | Governance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo h1 { font-size: 1.7rem; font-weight: 700; }
+        .logo p { font-size: 0.75rem; opacity: 0.85; }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { text-decoration: underline; }
+        .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
+        section { padding: 80px 0; border-bottom: 1px solid #eef2f8; }
+        .bg-light { background: #f8fafc; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .org-chart { background: #f1f5f9; border-radius: 28px; padding: 2rem; text-align: center; font-family: monospace; white-space: pre-wrap; line-height: 1.8; }
+        .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1 class="lang-ne">नेपाल ल ग्रुप</h1>
+                <h1 class="lang-en" style="display:none;">Nepal Law Group</h1>
+                <p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p>
+                <p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a>
+                <a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a>
+                <a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a>
+                <a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a>
+                <a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a>
+                <a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a>
+            </div>
+            <button id="langToggle" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>सञ्चालक समितिको संरचना</h2>
+                    <p class="section-subhead">प्रबन्धपत्र र नियमावली बमोजिम कम्पनीको सुशासन संरचना पूर्ण रूपमा व्यवस्थित छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Board of Directors Structure</h2>
+                    <p class="section-subhead">The governance structure is fully organised as per the Memorandum and Articles of Association.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3 class="lang-ne">सञ्चालक समिति (Board of Directors)</h3>
+                        <h3 class="lang-en" style="display:none;">Board of Directors</h3>
+                        <p class="lang-ne"><strong>सदस्य संख्या:</strong> ५ जना (अध्यक्ष + ४ सञ्चालक, जसमध्ये एक प्रबन्ध सञ्चालक)<br>
+                        <strong>निर्वाचन प्रक्रिया:</strong> साधारण सभाबाट “एक सदस्य एक मत” को सिद्धान्तमा निर्वाचित।<br>
+                        <strong>कार्यकाल:</strong> अधिकतम ४ वर्ष। पुनः निर्वाचनको योग्यता रहनेछ।<br>
+                        <strong>प्रथम समिति (प्रथम वार्षिक सभासम्म):</strong> अध्यक्ष – शोभादेवी पौडेल; सदस्य – ललिता रिमाल, प्रकृति पौडेल, अभिज्ञा पराजुली, अग्रता पराजुली।</p>
+                        <p class="lang-en" style="display:none;"><strong>Number:</strong> 5 members (Chairman + 4 Directors, one of whom is Managing Director)<br>
+                        <strong>Election:</strong> Elected by General Meeting on one‑member‑one‑vote basis.<br>
+                        <strong>Term:</strong> Maximum 4 years; eligible for re‑election.<br>
+                        <strong>First Board (until first AGM):</strong> Chair – Shobhadevi Poudel; Directors – Lalita Rimal, Prakriti Poudel, Abhijnya Parajuli, Agrata Parajuli.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-tie card-icon"></i>
+                        <h3 class="lang-ne">प्रबन्ध सञ्चालक (Managing Director)</h3>
+                        <h3 class="lang-en" style="display:none;">Managing Director</h3>
+                        <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले आफू मध्येबाट एक जनालाई तोक्दछ।<br>
+                        <strong>कार्यकाल:</strong> ४ वर्षभन्दा बढी हुँदैन।<br>
+                        <strong>भूमिका:</strong> कम्पनीको दैनिक व्यवस्थापनको नेतृत्व गर्छ, सञ्चालक समितिले प्रत्यायोजित अधिकार प्रयोग गर्छ।</p>
+                        <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Designated by the Board from among the Directors.<br>
+                        <strong>Term:</strong> Not exceeding 4 years.<br>
+                        <strong>Role:</strong> Leads day‑to‑day management, exercises powers delegated by the Board.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 class="lang-ne">प्रमुख कार्यकारी अधिकृत (CEO)</h3>
+                        <h3 class="lang-en" style="display:none;">Chief Executive Officer (CEO)</h3>
+                        <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले (सदस्य वा बाह्य पेशागत व्यक्ति) नियुक्त गर्छ।<br>
+                        <strong>भूमिका:</strong> परिचालन प्रमुख; सञ्चालक समितिका निर्णयहरू कार्यान्वयन गर्छ; सबै विभाग र सहायक विभागको निरीक्षण गर्छ।</p>
+                        <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Appointed by the Board (may be a member or external professional).<br>
+                        <strong>Role:</strong> Operational head; implements Board decisions; oversees all divisions and support departments.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-file-alt card-icon"></i>
+                        <h3 class="lang-ne">कम्पनी सचिव (Company Secretary)</h3>
+                        <h3 class="lang-en" style="display:none;">Company Secretary</h3>
+                        <p class="lang-ne"><strong>नियुक्ति:</strong> सञ्चालक समितिले (ऐनको धारा १८५ बमोजिम योग्य व्यक्ति) नियुक्त गर्छ।<br>
+                        <strong>भूमिका:</strong> कानूनी अनुपालन, अभिलेख राख्ने, साधारण सभा र सञ्चालक समितिको बैठकको मिनेट, नियामक फाइलिङ।</p>
+                        <p class="lang-en" style="display:none;"><strong>Appointment:</strong> Appointed by the Board (qualified person as per Section 185 of the Act).<br>
+                        <strong>Role:</strong> Legal compliance, record keeping, meeting minutes of General Meetings and Board, regulatory filings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light">
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>संगठनात्मक चार्ट (Organisational Chart)</h2>
+                    <p class="section-subhead">कम्पनीको पदानुक्रम र रिपोर्टिङ संरचना निम्नानुसार छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Organisational Chart</h2>
+                    <p class="section-subhead">The hierarchical and reporting structure of the company is as follows.</p>
+                </div>
+                <div class="org-chart">
+                    <div class="lang-ne">
+                        साधारण सभा (संस्थापक + साधारण सदस्य)<br>
+                        ↓<br>
+                        सञ्चालक समिति (५ जना)<br>
+                        ├── अध्यक्ष<br>
+                        ├── सञ्चालक (प्रबन्ध सञ्चालक सहित)<br>
+                        ↓<br>
+                        ├── प्रमुख कार्यकारी अधिकृत (CEO)<br>
+                        └── कम्पनी सचिव<br>
+                        ↓<br>
+                        विभागीय प्रमुखहरू (मुद्दा फाँट, अनुसन्धान, तालिम, प्रकाशन)<br>
+                        सहायक विभाग प्रमुखहरू (प्रशासन/लेखा, लजिस्टिक्स/सहयोग)
+                    </div>
+                    <div class="lang-en" style="display:none;">
+                        General Meeting (Founding + General Members)<br>
+                        ↓<br>
+                        Board of Directors (5 members)<br>
+                        ├── Chairman<br>
+                        ├── Directors (including Managing Director)<br>
+                        ↓<br>
+                        ├── Chief Executive Officer (CEO)<br>
+                        └── Company Secretary<br>
+                        ↓<br>
+                        Divisional Heads (Litigation, Research, Training, Publications)<br>
+                        Department Heads (Admin/Accounts, Logistics/Support)
+                    </div>
+                </div>
+                <div class="badge" style="margin-top: 2rem;"><i class="fas fa-check-circle"></i> <span class="lang-ne">सबै पदाधिकारीहरू ऐन, प्रबन्धपत्र र नियमावली बमोजिम आफ्नो कर्तव्य पालन गर्न बाध्य छन्।</span><span class="lang-en" style="display:none;">All officers are bound to perform their duties as per the Act, MOA and AOA.</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div>
+            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            localStorage.setItem('nlg_lang', lang);
+            document.querySelectorAll('.lang-en, .lang-ne').forEach(el => {
+                if (lang === 'en' && el.classList.contains('lang-en')) el.style.display = 'block';
+                else if (lang === 'en' && el.classList.contains('lang-ne')) el.style.display = 'none';
+                else if (lang === 'ne' && el.classList.contains('lang-ne')) el.style.display = 'block';
+                else if (lang === 'ne' && el.classList.contains('lang-en')) el.style.display = 'none';
+            });
+            const toggle = document.getElementById('langToggle');
+            if (toggle) toggle.innerHTML = lang === 'ne' ? '🇬🇧 English' : '🇳🇵 नेपाली';
+        }
+        const savedLang = localStorage.getItem('nlg_lang') || 'ne';
+        setLanguage(savedLang);
+        document.getElementById('langToggle')?.addEventListener('click', () => {
+            const newLang = document.body.getAttribute('data-lang') === 'ne' ? 'en' : 'ne';
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
