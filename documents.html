@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नेपाल ल ग्रुप – कागजातहरू | Documents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo h1 { font-size: 1.7rem; font-weight: 700; }
+        .logo p { font-size: 0.75rem; opacity: 0.85; }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { text-decoration: underline; }
+        .lang-toggle { background: #2d3a5e; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; }
+        section { padding: 80px 0; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
+        .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08), 0 0 0 1px #e2e8f0; }
+        .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .btn-download { display: inline-block; margin-top: 1rem; padding: 8px 20px; background: #2563eb; color: white; border-radius: 40px; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .btn-download:hover { background: #1d4ed8; }
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .nav-links { gap: 12px; } }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1 class="lang-ne">नेपाल ल ग्रुप</h1>
+                <h1 class="lang-en" style="display:none;">Nepal Law Group</h1>
+                <p class="lang-ne">मुनाफा वितरण नगर्ने कम्पनी</p>
+                <p class="lang-en" style="display:none;">Profit Non‑Distributing Company</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="lang-ne">गृह</a><a href="index.html" class="lang-en" style="display:none;">Home</a>
+                <a href="about.html" class="lang-ne">हाम्रो बारेमा</a><a href="about.html" class="lang-en" style="display:none;">About</a>
+                <a href="divisions.html" class="lang-ne">विभागहरू</a><a href="divisions.html" class="lang-en" style="display:none;">Divisions</a>
+                <a href="governance.html" class="lang-ne">सुशासन</a><a href="governance.html" class="lang-en" style="display:none;">Governance</a>
+                <a href="compliance.html" class="lang-ne">अनुपालन</a><a href="compliance.html" class="lang-en" style="display:none;">Compliance</a>
+                <a href="documents.html" class="lang-ne">कागजातहरू</a><a href="documents.html" class="lang-en" style="display:none;">Documents</a>
+                <a href="contact.html" class="lang-ne">सम्पर्क</a><a href="contact.html" class="lang-en" style="display:none;">Contact</a>
+            </div>
+            <button id="langToggle" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>📄 कम्पनीका कानूनी कागजातहरू</h2>
+                    <p class="section-subhead">तल दिइएका लिङ्कहरूमा क्लिक गरी प्रबन्धपत्र (MOA) र नियमावली (AOA) को PDF प्रतिलिपि डाउनलोड गर्नुहोस्। यी कागजातहरू कम्पनी ऐन, २०६३ (धारा १६६–१६७) बमोजिम दर्ता गरिएका हुन्।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>📄 Company Legal Documents</h2>
+                    <p class="section-subhead">Click the links below to download PDF copies of the Memorandum of Association (MOA) and Articles of Association (AOA). These documents are registered under the Companies Act, 2063 (Sections 166–167).</p>
+                </div>
+                <div class="grid-2">
+                    <!-- MOA Card -->
+                    <div class="card">
+                        <i class="fas fa-file-alt card-icon"></i>
+                        <h3 class="lang-ne">प्रबन्धपत्र (Memorandum of Association)</h3>
+                        <h3 class="lang-en" style="display:none;">Memorandum of Association (MOA)</h3>
+                        <p class="lang-ne">कम्पनीको मूल उद्देश्य, शेयर पूँजी नहुने, मुनाफा वितरण नगर्ने, सदस्यता हस्तान्तरण नहुने, दायित्व सीमित, विघटनमा सम्पत्ति हस्तान्तरण लगायतका आधारभूत व्यवस्था समावेश।</p>
+                        <p class="lang-en" style="display:none;">Contains the fundamental provisions: objectives, no share capital, non‑distribution of profit, non‑transferable membership, limited liability, dissolution asset transfer, etc.</p>
+                        <a href="pdfs/moa.pdf" class="btn-download lang-ne" download><i class="fas fa-download"></i> PDF डाउनलोड गर्नुहोस्</a>
+                        <a href="pdfs/moa.pdf" class="btn-download lang-en" style="display:none;" download><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                    <!-- AOA Card -->
+                    <div class="card">
+                        <i class="fas fa-book-open card-icon"></i>
+                        <h3 class="lang-ne">नियमावली (Articles of Association)</h3>
+                        <h3 class="lang-en" style="display:none;">Articles of Association (AOA)</h3>
+                        <p class="lang-ne">कम्पनीको आन्तरिक सञ्चालन, साधारण सभा, सञ्चालक समिति, बैठक कार्यविधि, लेखापरीक्षण, विभागीय संरचना, आचारसंहिता, र प्रशासनिक खर्च सीमा (२५%) को विस्तृत व्यवस्था।</p>
+                        <p class="lang-en" style="display:none;">Contains internal governance rules: general meetings, Board of Directors, meeting procedures, audit, divisional structure, code of conduct, and administrative expense cap (25%).</p>
+                        <a href="pdfs/aoa.pdf" class="btn-download lang-ne" download><i class="fas fa-download"></i> PDF डाउनलोड गर्नुहोस्</a>
+                        <a href="pdfs/aoa.pdf" class="btn-download lang-en" style="display:none;" download><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                </div>
+                <div class="lang-ne" style="margin-top: 2rem; text-align: center;">
+                    <p>📌 यी कागजातहरू कम्पनी रजिष्ट्रारको कार्यालयमा दर्ता गरिएको मिति अनुसार अद्यावधिक गरिएका छन्। कुनै प्रश्न भए <a href="contact.html">सम्पर्क पृष्ठ</a> मार्फत जानकारी लिनुहोस्।</p>
+                </div>
+                <div class="lang-en" style="display:none; margin-top: 2rem; text-align: center;">
+                    <p>📌 These documents are updated as per the registration date with the Office of Company Registrar. For any queries, please visit the <a href="contact.html">Contact page</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="lang-ne"><p>© २०८२ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित</p></div>
+            <div class="lang-en" style="display:none;"><p>© 2025 Nepal Law Group – All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            localStorage.setItem('nlg_lang', lang);
+            document.querySelectorAll('.lang-en, .lang-ne').forEach(el => {
+                if (lang === 'en' && el.classList.contains('lang-en')) el.style.display = 'block';
+                else if (lang === 'en' && el.classList.contains('lang-ne')) el.style.display = 'none';
+                else if (lang === 'ne' && el.classList.contains('lang-ne')) el.style.display = 'block';
+                else if (lang === 'ne' && el.classList.contains('lang-en')) el.style.display = 'none';
+            });
+            const toggle = document.getElementById('langToggle');
+            if (toggle) toggle.innerHTML = lang === 'ne' ? '🇬🇧 English' : '🇳🇵 नेपाली';
+        }
+        const savedLang = localStorage.getItem('nlg_lang') || 'ne';
+        setLanguage(savedLang);
+        document.getElementById('langToggle')?.addEventListener('click', () => {
+            const newLang = document.body.getAttribute('data-lang') === 'ne' ? 'en' : 'ne';
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
