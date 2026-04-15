@@ -22,12 +22,12 @@
         .bg-light { background: #f8fafc; }
         h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0f172a; }
         .section-subhead { font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; max-width: 780px; }
-        .grid-2, .grid-3 { display: grid; gap: 2rem; }
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
-        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .card { background: white; border-radius: 28px; padding: 1.8rem; box-shadow: 0 0 0 1px #edf2f7; transition: 0.2s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08), 0 0 0 1px #e2e8f0; }
         .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .btn-link { display: inline-block; margin-top: 1rem; padding: 8px 16px; background: #2563eb; color: white; border-radius: 40px; text-decoration: none; font-weight: 500; align-self: flex-start; transition: 0.2s; }
+        .btn-link:hover { background: #1d4ed8; }
         .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
         footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
         [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
@@ -59,97 +59,56 @@
         <section>
             <div class="container">
                 <div class="lang-ne">
-                    <h2>चार ग्राहकमुखी विभाग</h2>
-                    <p class="section-subhead">नेपाल ल ग्रुपले आफ्नो उद्देश्य प्राप्तिका लागि चार विशिष्ट सेवा विभागहरू सञ्चालन गर्दछ। प्रत्येक विभागको आफ्नै राजस्व मोडेल र सञ्चालन प्रक्रिया रहेको छ।</p>
+                    <h2>हाम्रा विभागहरू</h2>
+                    <p class="section-subhead">नेपाल ल ग्रुपले चार ग्राहकमुखी विभाग र दुई सहायक विभाग मार्फत सेवा प्रदान गर्दछ। कुनै पनि विभागको विस्तृत जानकारीको लागि “थप जानकारी” बटनमा क्लिक गर्नुहोस्।</p>
                 </div>
                 <div class="lang-en" style="display:none;">
-                    <h2>Four Client‑Facing Divisions</h2>
-                    <p class="section-subhead">Nepal Law Group operates four specialised service divisions to achieve its objectives. Each division has its own revenue model and operational procedures.</p>
+                    <h2>Our Divisions</h2>
+                    <p class="section-subhead">Nepal Law Group operates through four client‑facing divisions and two support departments. Click “Learn more” on any division to view detailed information.</p>
                 </div>
                 <div class="grid-2">
+                    <!-- Litigation Division Card (with link to litigation.html) -->
                     <div class="card">
                         <i class="fas fa-gavel card-icon"></i>
                         <h3 class="lang-ne">⚖️ मुद्दा फाँट तथा अधिवक्ता सेवा विभाग</h3>
                         <h3 class="lang-en" style="display:none;">Litigation & Advocacy Division</h3>
-                        <p class="lang-ne"><strong>क्रियाकलाप:</strong> अदालत उपस्थिति, ग्राहक प्रतिनिधित्व, कानूनी सल्लाह, कागजपत्र तयारी।<br>
-                        <strong>लाइसेन्स:</strong> अनिवार्य (नेपाल बार काउन्सिलको अनुमतिपत्र प्राप्त सदस्य मात्र)<br>
-                        <strong>राजस्व मोडेल:</strong> ग्राहक → सदस्य (प्रत्यक्ष) → सदस्यले कम्पनीलाई वार्षिक शुल्क तिर्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Activities:</strong> Court appearances, client representation, legal advisory, document drafting.<br>
-                        <strong>License:</strong> Mandatory (only Bar Council licensed members)<br>
-                        <strong>Revenue model:</strong> Client pays member directly → member pays annual fee to company.</p>
+                        <p class="lang-ne">अदालत उपस्थिति, कानूनी सल्लाह, मुद्दा प्रतिनिधित्व – केवल नेपाल बार काउन्सिलको अनुमतिपत्र प्राप्त सदस्यहरूद्वारा।</p>
+                        <p class="lang-en" style="display:none;">Court appearances, legal advice, case representation – only by Bar Council licensed members.</p>
+                        <a href="litigation.html" class="btn-link lang-ne">📖 थप जानकारी</a>
+                        <a href="litigation.html" class="btn-link lang-en" style="display:none;">📖 Learn more</a>
                     </div>
+                    <!-- Research Division Card -->
                     <div class="card">
                         <i class="fas fa-book card-icon"></i>
                         <h3 class="lang-ne">अनुसन्धान तथा नीति विभाग</h3>
                         <h3 class="lang-en" style="display:none;">Research & Policy Division</h3>
-                        <p class="lang-ne"><strong>क्रियाकलाप:</strong> अनुसन्धान परियोजना (एनजीओ/सरकार/अन्तर्राष्ट्रिय), नीति पत्र, कानून सुधार प्रस्ताव, कानूनी डाटाबेस।<br>
-                        <strong>लाइसेन्स:</strong> आवश्यक छैन (कुनै पनि सदस्य वा कर्मचारीले काम गर्न सक्छ)<br>
-                        <strong>राजस्व मोडेल:</strong> कम्पनीले ग्राहकलाई बिल गर्छ → कम्पनीले अनुसन्धानकर्तालाई भुक्तानी दिन्छ → अधिशेष कम्पनीमा रहन्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Activities:</strong> Research projects (NGOs/government/international), policy papers, law reform proposals, legal databases.<br>
-                        <strong>License:</strong> Not required (any member or employee)<br>
-                        <strong>Revenue model:</strong> Company bills client → company pays researchers → surplus retained.</p>
+                        <p class="lang-ne">अनुसन्धान परियोजना, नीति पत्र, कानून सुधार प्रस्ताव, कानूनी डाटाबेस।</p>
+                        <p class="lang-en" style="display:none;">Research projects, policy papers, law reform proposals, legal databases.</p>
+                        <a href="#" class="btn-link lang-ne">📖 थप जानकारी (चाँडै आउँदै)</a>
+                        <a href="#" class="btn-link lang-en" style="display:none;">📖 Learn more (coming soon)</a>
                     </div>
+                    <!-- Training Division Card -->
                     <div class="card">
                         <i class="fas fa-chalkboard-user card-icon"></i>
                         <h3 class="lang-ne">तालिम तथा शिक्षा विभाग</h3>
                         <h3 class="lang-en" style="display:none;">Training & Education Division</h3>
-                        <p class="lang-ne"><strong>क्रियाकलाप:</strong> सीपीडी कार्यक्रम (अधिवक्ता), कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला, सेमिनार शृंखला।<br>
-                        <strong>लाइसेन्स:</strong> आवश्यक छैन<br>
-                        <strong>राजस्व मोडेल:</strong> कम्पनीले शुल्क संकलन गर्छ → कम्पनीले प्रशिक्षकलाई भुक्तानी दिन्छ → अधिशेष कम्पनीमा रहन्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Activities:</strong> CPD programs (advocates), corporate training, public legal workshops, seminar series.<br>
-                        <strong>License:</strong> Not required<br>
-                        <strong>Revenue model:</strong> Company collects fees → company pays trainers → surplus retained.</p>
+                        <p class="lang-ne">सीपीडी कार्यक्रम, कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला, सेमिनार शृंखला।</p>
+                        <p class="lang-en" style="display:none;">CPD, corporate training, public legal workshops, seminar series.</p>
+                        <a href="#" class="btn-link lang-ne">📖 थप जानकारी (चाँडै आउँदै)</a>
+                        <a href="#" class="btn-link lang-en" style="display:none;">📖 Learn more (coming soon)</a>
                     </div>
+                    <!-- Publications Division Card -->
                     <div class="card">
                         <i class="fas fa-print card-icon"></i>
                         <h3 class="lang-ne">प्रकाशन विभाग</h3>
                         <h3 class="lang-en" style="display:none;">Publications Division</h3>
-                        <p class="lang-ne"><strong>क्रियाकलाप:</strong> कानूनी पुस्तक, अभ्यास पुस्तिका, त्रैमासिक जर्नल, समाचारपत्र, डिजिटल सामग्री प्रकाशन।<br>
-                        <strong>लाइसेन्स:</strong> आवश्यक छैन<br>
-                        <strong>राजस्व मोडेल:</strong> कम्पनीले बिक्री गर्छ → कम्पनीले लेखक/सम्पादकलाई भुक्तानी दिन्छ → अधिशेष कम्पनीमा रहन्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Activities:</strong> Legal books, practice manuals, quarterly journal, newsletters, digital content.<br>
-                        <strong>License:</strong> Not required<br>
-                        <strong>Revenue model:</strong> Company sells publications → company pays authors/editors → surplus retained.</p>
+                        <p class="lang-ne">कानूनी पुस्तक, पत्रिका, अभ्यास पुस्तिका, डिजिटल सामग्री प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Legal books, journals, practice manuals, digital content.</p>
+                        <a href="#" class="btn-link lang-ne">📖 थप जानकारी (चाँडै आउँदै)</a>
+                        <a href="#" class="btn-link lang-en" style="display:none;">📖 Learn more (coming soon)</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="bg-light">
-            <div class="container">
-                <div class="lang-ne">
-                    <h2>दुई सहायक विभाग (परिचालन आधार)</h2>
-                    <p class="section-subhead">यी विभागहरू कम्पनीको सञ्चालन र सहयोगी पूर्वाधारको लागि जिम्मेवार छन्। वार्षिक सदस्यता शुल्क यही विभागहरूको कोष बनाउन विनियोजन गरिन्छ।</p>
-                </div>
-                <div class="lang-en" style="display:none;">
-                    <h2>Two Internal Support Departments (Operational Backbone)</h2>
-                    <p class="section-subhead">These departments are responsible for the company's operations and support infrastructure. Annual membership fees are allocated to fund these departments.</p>
-                </div>
-                <div class="grid-2">
-                    <div class="card">
-                        <i class="fas fa-building-user card-icon"></i>
-                        <h3 class="lang-ne">प्रशासन तथा लेखा विभाग</h3>
-                        <h3 class="lang-en" style="display:none;">Administration & Accounts Department</h3>
-                        <p class="lang-ne"><strong>कार्यहरू:</strong> कार्यालय व्यवस्थापन, वित्त, लेखा, कर, अनुपालन, अभिलेख, स्वागत, विक्रेता व्यवस्थापन।<br>
-                        <strong>कर्मचारी:</strong> कार्यालय प्रबन्धक, रिसेप्सनिस्ट, प्रशासन सहायक, वित्त प्रबन्धक, लेखापाल, लेखा सहायक, अभिलेख सहायक, कर सल्लाहकार।<br>
-                        <strong>कोष विनियोजन:</strong> वार्षिक सदस्यता शुल्कको ६०% यस विभागमा विनियोजन गरिन्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Functions:</strong> Office management, finance, accounting, tax, compliance, records, reception, vendor management.<br>
-                        <strong>Personnel:</strong> Office Manager, Receptionist, Admin Assistant, Finance Manager, Accountant, Accounts Assistant, Records Clerk, Tax Consultant.<br>
-                        <strong>Budget allocation:</strong> 60% of annual membership fee is allocated to this department.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-microchip card-icon"></i>
-                        <h3 class="lang-ne">लजिस्टिक्स तथा सहयोग विभाग</h3>
-                        <h3 class="lang-en" style="display:none;">Logistics & Support Department</h3>
-                        <p class="lang-ne"><strong>कार्यहरू:</strong> आईटी पूर्वाधार, सफ्टवेर लाइसेन्स, सहायता डेस्क, पुस्तकालय, डाटाबेस, खरिद, सुविधा, कुरियर, यातायात, मर्मत।<br>
-                        <strong>कर्मचारी:</strong> आईटी प्रबन्धक, प्राविधिक सहायक, पुस्तकालयाध्यक्ष, लजिस्टिक्स समन्वयक, खरिद अधिकृत, सुविधा सहायक, कुरियर।<br>
-                        <strong>कोष विनियोजन:</strong> वार्षिक सदस्यता शुल्कको ४०% यस विभागमा विनियोजन गरिन्छ।</p>
-                        <p class="lang-en" style="display:none;"><strong>Functions:</strong> IT infrastructure, software licenses, help desk, library, databases, procurement, facilities, courier, travel, maintenance.<br>
-                        <strong>Personnel:</strong> IT Manager, Technical Assistant, Librarian, Logistics Coordinator, Procurement Officer, Facilities Assistant, Courier.<br>
-                        <strong>Budget allocation:</strong> 40% of annual membership fee is allocated to this department.</p>
-                    </div>
-                </div>
-                <div class="badge" style="margin-top: 1rem;"><i class="fas fa-info-circle"></i> <span class="lang-ne">सबै सहायक विभागहरूको खर्च वार्षिक बजेटमा समावेश गरिन्छ, र प्रशासनिक खर्चको कुल सीमा २५% भन्दा बढी हुँदैन (धारा १६७(१)(ज))।</span><span class="lang-en" style="display:none;">All support department expenses are included in the annual budget, and total administrative expenses shall not exceed 25% (Section 167(1)(j)).</span></div>
+                <div class="badge" style="margin-top: 2rem;"><i class="fas fa-building"></i> <span class="lang-ne">प्रशासन तथा लेखा र लजिस्टिक्स तथा सहयोग सहायक विभागहरू सबै विभागहरूको लागि समान रूपमा सञ्चालन हुन्छन्।</span><span class="lang-en" style="display:none;">The Administration & Accounts and Logistics & Support departments operate uniformly for all divisions.</span></div>
             </div>
         </section>
     </main>
