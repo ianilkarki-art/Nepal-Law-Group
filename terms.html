@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use – Nepal Law Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
+        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
+        .nav-links a:hover { background: var(--crimson); }
+        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
+        .lang-btn.active { background: var(--crimson); }
+        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2rem 0; text-align: center; }
+        .page-hero h1 { font-size: 2rem; color: var(--primary-blue); }
+        .content-policy { background: white; border-radius: 28px; padding: 2rem; margin: 2rem 0; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); }
+        .content-policy h2 { color: var(--primary-blue); margin: 1.5rem 0 0.5rem; font-size: 1.4rem; border-left: 4px solid var(--crimson); padding-left: 1rem; }
+        .content-policy h3 { color: var(--primary-blue); margin: 1rem 0 0.3rem; font-size: 1.2rem; }
+        .content-policy p, .content-policy ul { margin-bottom: 1rem; }
+        .content-policy ul { padding-left: 2rem; }
+        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 1.5rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-name">Nepal Law Group</a>
+        <div class="nav-links">
+            <a href="index.html" id="navHome">Home</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="membership.html" id="navMembership">Membership</a>
+            <a href="contact.html" id="navContact">Contact</a>
+            <div class="lang-toggle">
+                <button class="lang-btn" id="langNp">नेपाली</button>
+                <button class="lang-btn" id="langEn">English</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="page-hero">
+        <div class="container"><h1 id="heroTitle">Terms of Use</h1></div>
+    </div>
+    <div class="container">
+        <div class="content-policy" id="policyContent"></div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container"><p>© 2025 Nepal Law Group - All rights reserved</p></div>
+</footer>
+<script>
+    const termsData = {
+        en: {
+            heroTitle: "Terms of Use",
+            content: `
+                <p><strong>Last updated: April 2025</strong></p>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using the website of Nepal Law Group ("we", "us", "our"), you agree to be bound by these Terms of Use. If you do not agree, please do not use the site.</p>
+                <h2>2. No Attorney-Client Relationship</h2>
+                <p>Use of this website does not create an attorney-client relationship between you and Nepal Law Group. Information provided on this site is for general informational purposes only and does not constitute legal advice.</p>
+                <h2>3. Intellectual Property</h2>
+                <p>All content, including text, graphics, logos, and images, is the property of Nepal Law Group or its licensors and is protected by copyright laws. You may not reproduce, distribute, or modify any content without prior written permission.</p>
+                <h2>4. User Conduct</h2>
+                <p>You agree not to use the website for any unlawful purpose or to transmit harmful code, spam, or any material that could damage our systems or reputation.</p>
+                <h2>5. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of those sites.</p>
+                <h2>6. Disclaimer of Warranties</h2>
+                <p>The website and its content are provided "as is" without warranties of any kind, either express or implied. We do not warrant that the site will be uninterrupted or error-free.</p>
+                <h2>7. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, Nepal Law Group shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website.</p>
+                <h2>8. Governing Law</h2>
+                <p>These Terms shall be governed by the laws of Nepal. Any disputes shall be subject to the exclusive jurisdiction of the courts in Kathmandu, Nepal.</p>
+                <h2>9. Changes to Terms</h2>
+                <p>We may update these Terms from time to time. Continued use of the site after changes constitutes acceptance of the revised Terms.</p>
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a>.</p>
+            `
+        },
+        np: {
+            heroTitle: "प्रयोगका सर्तहरू",
+            content: `
+                <p><strong>अन्तिम मिति: अप्रिल २०२५</strong></p>
+                <h2>१. सर्तहरूको स्वीकारोक्ति</h2>
+                <p>नेपाल ल ग्रुपको वेबसाइट पहुँच वा प्रयोग गरेर, तपाईं यी प्रयोगका सर्तहरूद्वारा बाधित हुन सहमत हुनुहुन्छ। यदि सहमत हुनुहुन्न भने कृपया साइट प्रयोग नगर्नुहोस्।</p>
+                <h2>२. ग्राहक-अधिवक्ता सम्बन्ध स्थापित हुँदैन</h2>
+                <p>यस वेबसाइटको प्रयोगले तपाईं र नेपाल ल ग्रुपबीच कुनै ग्राहक-अधिवक्ता सम्बन्ध सिर्जना गर्दैन। यहाँ उपलब्ध जानकारी केवल सामान्य सूचनात्मक उद्देश्यका लागि हो र यसलाई कानूनी सल्लाहको रूपमा लिनु हुँदैन।</p>
+                <h2>३. बौद्धिक सम्पत्ति</h2>
+                <p>पाठ, ग्राफिक्स, लोगो, र छविहरू सहित सबै सामग्री नेपाल ल ग्रुप वा यसको इजाजतपत्रदाताको सम्पत्ति हो र प्रतिलिपि अधिकार कानूनद्वारा संरक्षित छ। पूर्व लिखित अनुमति बिना कुनै पनि सामग्री पुन: उत्पादन, वितरण वा परिमार्जन गर्न सकिँदैन।</p>
+                <h2>४. प्रयोगकर्ताको आचरण</h2>
+                <p>तपाईं कुनै पनि गैरकानूनी उद्देश्यका लागि वा हानिकारक कोड, स्प्याम, वा हाम्रो प्रणाली वा प्रतिष्ठालाई हानि पुर्याउने कुनै पनि सामग्री पठाउन साइट प्रयोग नगर्ने सहमत हुनुहुन्छ।</p>
+                <h2>५. तेस्रो-पक्ष लिङ्कहरू</h2>
+                <p>हाम्रो वेबसाइटमा तेस्रो-पक्ष वेबसाइटहरूको लिङ्क हुन सक्छ। ती साइटहरूको सामग्री वा गोपनीयता अभ्यासहरूको लागि हामी जिम्मेवार छैनौं।</p>
+                <h2>६. वारेन्टीको अस्वीकरण</h2>
+                <p>वेबसाइट र यसको सामग्री कुनै पनि प्रकारको वारेन्टी बिना "जस्तो छ" प्रदान गरिन्छ। हामी ग्यारेन्टी गर्दैनौं कि साइट अवरोधरहित वा त्रुटिरहित हुनेछ।</p>
+                <h2>७. दायित्वको सीमा</h2>
+                <p>कानूनद्वारा अनुमतिभन्दा बढी नहुने गरी, नेपाल ल ग्रुप वेबसाइटको प्रयोगबाट उत्पन्न हुने कुनै पनि अप्रत्यक्ष, आकस्मिक वा परिणामात्मक क्षतिको लागि उत्तरदायी हुनेछैन।</p>
+                <h2>८. शासक कानून</h2>
+                <p>यी सर्तहरू नेपालको कानूनद्वारा शासित हुनेछन्। कुनै पनि विवाद काठमाडौं, नेपालको अदालतको अनन्य क्षेत्राधिकारको अधीनमा रहनेछ।</p>
+                <h2>९. सर्तहरूमा परिवर्तन</h2>
+                <p>हामी समय-समयमा यी सर्तहरू अद्यावधिक गर्न सक्छौं। परिवर्तनपछि साइटको निरन्तर प्रयोगले संशोधित सर्तहरूको स्वीकारोक्ति जनाउँछ।</p>
+                <h2>१०. सम्पर्क गर्नुहोस्</h2>
+                <p>यी सर्तहरूबारे कुनै प्रश्न भए, कृपया हामीलाई <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a> मा सम्पर्क गर्नुहोस्।</p>
+            `
+        }
+    };
+    let currentLang = localStorage.getItem("nlgLang") || "en";
+    function updateUI(lang) {
+        const d = termsData[lang];
+        document.getElementById("heroTitle").innerText = d.heroTitle;
+        document.getElementById("policyContent").innerHTML = d.content;
+        document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+        if (lang === "np") document.getElementById("langNp").classList.add("active");
+        else document.getElementById("langEn").classList.add("active");
+        localStorage.setItem("nlgLang", lang);
+    }
+    document.getElementById("langNp").onclick = () => updateUI("np");
+    document.getElementById("langEn").onclick = () => updateUI("en");
+    updateUI(currentLang);
+</script>
+</body>
+</html>
