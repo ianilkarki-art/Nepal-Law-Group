@@ -2,59 +2,219 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership – Nepal Law Group | सदस्यता – नेपाल ल ग्रुप</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Membership – Nepal Law Group | नेपाल ल ग्रुप – सदस्यता</title>
+    <meta name="description" content="Become a Founder Member of Nepal Law Group – join a membership‑driven, non‑profit legal institution.">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
-        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1); }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
+            color: #1a2a3a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (same as index/about) */
         .navbar {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid var(--crimson);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
-        .nav-links a:hover, .nav-links a.active { background: var(--crimson); }
-        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
-        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; font-family: inherit; }
-        .lang-btn.active { background: var(--crimson); }
-        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2.5rem 0; text-align: center; }
-        .page-hero h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem; }
-        section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-light); }
-        .section-title { font-size: 1.7rem; font-weight: 800; color: var(--primary-blue); border-left: 6px solid var(--crimson); padding-left: 1.2rem; margin-bottom: 1.5rem; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.8rem; margin-top: 1rem; }
-        .card { background: white; border-radius: 24px; padding: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); transition: 0.2s; }
-        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-        .card i { font-size: 1.8rem; color: var(--crimson); margin-bottom: 0.8rem; display: inline-block; }
-        .card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--primary-blue); }
-        .faq-item { background: white; border-radius: 20px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--crimson); }
-        .faq-q { font-weight: 700; color: var(--primary-blue); margin-bottom: 0.5rem; }
-        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 2rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
-        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } .page-hero h1 { font-size: 1.8rem; } }
-        .btn-apply { display: inline-block; background: var(--crimson); color: white; padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: 0.2s; }
-        .btn-apply:hover { background: #7a1427; transform: scale(1.02); }
-        .rich-text p { margin-bottom: 1rem; }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0b2f5c;
+        }
+
+        .lang-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2rem;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0.2rem;
+            background: #e9ecef;
+            padding: 0.2rem;
+            border-radius: 40px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            color: #2c3e50;
+        }
+
+        .lang-btn.active {
+            background: #0b2f5c;
+            color: white;
+        }
+
+        /* Page hero */
+        .page-hero {
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 1rem;
+            letter-spacing: -0.2px;
+        }
+        .section-text {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Call to action button */
+        .cta-button {
+            display: inline-block;
+            background: #0b2f5c;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #1a4a6e;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f1f5f9;
+            padding: 2rem 0 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+        .footer-policy {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-policy a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+        .footer-policy a:hover {
+            color: #0b2f5c;
+        }
+        .footer-copyright {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                font-size: 1.8rem;
+            }
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
+
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-wrapper">
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -62,273 +222,118 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="page-hero">
-        <div class="container"><h1 id="heroTitle">नेपाल ल ग्रुपको सदस्य बन्नुहोस्</h1></div>
+        <div class="container">
+            <h1 id="pageTitle">Become a Founder Member</h1>
+        </div>
     </div>
+
     <div class="container">
-        <!-- Membership Categories -->
+        <!-- Invitation -->
         <section>
-            <h2 class="section-title" id="catHeading">सदस्यता श्रेणीहरू</h2>
-            <div class="grid-2" id="categoriesGrid"></div>
+            <p class="section-text" id="inviteText">We invite legally qualified individuals who share our vision of independent, ethical, and knowledge driven legal practice to join as Founder Members.</p>
         </section>
 
         <!-- Eligibility -->
         <section>
-            <h2 class="section-title" id="eligHeading">सदस्यता योग्यता</h2>
-            <div id="eligText" class="rich-text"></div>
-            <div class="card" style="margin-top: 1rem;" id="eligExtra"></div>
+            <h2 class="section-title" id="eligTitle">Eligibility</h2>
+            <p class="section-text" id="eligText">Legal qualifications – such as being an advocate, legal scholar, researcher, or legally trained professional – are strongly preferred, though other professionals who can contribute to the company’s mission may also be considered.</p>
         </section>
 
-        <!-- Member Rights -->
+        <!-- Requirements -->
         <section>
-            <h2 class="section-title" id="rightsHeading">सदस्य अधिकारहरू</h2>
-            <div class="grid-2" id="rightsGrid"></div>
+            <h2 class="section-title" id="reqTitle">Requirements</h2>
+            <p class="section-text" id="reqText">Founder Members must pay the prescribed founder membership fee (currently nominal, set to cover only the initial registration and documentation costs). They are expected to actively participate in the first general meeting, contribute to the formulation of the company’s initial rules and code of conduct, and uphold the company’s ethical and professional standards. They must renew their membership annually as per the rules, unless they opt for lifetime membership. Founder Members also bear a duty to promote the company’s objectives and to act in a manner that does not bring the institution into disrepute.</p>
         </section>
 
-        <!-- Duties & Obligations -->
+        <!-- Why Join -->
         <section>
-            <h2 class="section-title" id="dutiesHeading">सदस्य कर्तव्य तथा दायित्वहरू</h2>
-            <div class="grid-2" id="dutiesGrid"></div>
-            <div id="dutiesNote" class="rich-text" style="margin-top: 1rem;"></div>
-        </section>
-
-        <!-- Membership Fee -->
-        <section>
-            <h2 class="section-title" id="feeHeading">सदस्यता शुल्क</h2>
-            <div id="feeText" class="rich-text"></div>
-        </section>
-
-        <!-- Application Process -->
-        <section>
-            <h2 class="section-title" id="applyHeading">आवेदन प्रक्रिया</h2>
-            <div id="applySteps" class="rich-text"></div>
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="contact.html" class="btn-apply" id="applyBtn">दरखास्त फारमको लागि सम्पर्क गर्नुहोस् → Contact for Application</a>
+            <h2 class="section-title" id="whyTitle">Why Join as a Founder Member?</h2>
+            <p class="section-text" id="whyText">By becoming a Founder Member, you will help create an institution that places legal knowledge and public service above commercial profit. You will be a founder of Nepal’s first membership driven, non profit law group – an institution designed to advance the rule of law, legal scholarship, and professional integrity for generations to come.</p>
+            <div style="text-align: center; margin: 1rem 0 0.5rem;">
+                <a href="contact.html" class="cta-button" id="ctaBtn">Express Interest →</a>
             </div>
-        </section>
-
-        <!-- Special Provisions -->
-        <section>
-            <h2 class="section-title" id="specialHeading">सदस्यता सम्बन्धी विशेष व्यवस्था</h2>
-            <div class="grid-2" id="specialGrid"></div>
-        </section>
-
-        <!-- Benefits -->
-        <section>
-            <h2 class="section-title" id="benefitsHeading">सदस्य बन्नुको फाइदा</h2>
-            <div class="grid-2" id="benefitsGrid"></div>
-        </section>
-
-        <!-- FAQ -->
-        <section>
-            <h2 class="section-title" id="faqHeading">प्रायः सोधिने प्रश्नहरू (FAQ)</h2>
-            <div id="faqList"></div>
         </section>
     </div>
 </main>
+
 <footer class="footer">
-    <div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित</p></div>
+    <div class="container">
+        <div class="footer-policy">
+            <a href="terms.html" id="termsLink">Terms of Use</a>
+            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
+        </div>
+        <div class="footer-copyright">
+            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+        </div>
+    </div>
 </footer>
 
 <script>
-    const membershipData = {
+    const content = {
         en: {
-            brand: "Nepal Law Group", navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            heroTitle: "Become a Member of Nepal Law Group",
-            categories: [
-                { title: "Founding Member", desc: "Individuals who signed the Memorandum of Association and registered the company. Full voting rights (one member, one vote). Eligible to be elected to the Board. May work in any division (subject to license requirements). Annual fee required." },
-                { title: "General Member", desc: "Admitted after incorporation by decision of the Board or General Meeting. Full voting rights. Eligible for Board positions. May work in any division (subject to license). Annual fee required." },
-                { title: "Honorary Member", desc: "Conferred by the Board in recognition of special contribution to the legal profession or the company. No voting rights. Cannot hold Board positions. May advise/mentor and use limited infrastructure. No fee required, but must abide by the Code of Conduct." },
-                { title: "Life Member", desc: "One-time prescribed fee; no further annual fee required. All rights of a General Member apply." }
-            ],
-            eligibility: "<p>To become a member, one must meet the following criteria (as per MOA Clause 10):</p><ul><li>Must have completed 18 years of age.</li><li>Must be a Nepali citizen (organisations may also become members).</li><li>Must be of sound mind.</li><li>Must not have been convicted of a criminal offence involving moral turpitude (fraud, theft, corruption, etc.).</li><li>Must not have misappropriated funds of any government or non-government organisation.</li></ul>",
-            eligibilityExtra: "Additional requirement for those wishing to work in the Litigation Division: Must hold a valid certificate of law practitioners (Nepal Bar Council license).",
-            rights: [
-                "Voting rights: Every Founding and General Member has the right to vote on a 'one member, one vote' basis (as per Section 167(1)(ch)).",
-                "Right to stand for election: May contest elections for the Board of Directors.",
-                "Right to work in divisions: May work in any of the four divisions within the scope of their qualifications and license.",
-                "Access to shared infrastructure: May use technology, legal databases, library, and administrative support.",
-                "Inspection of accounts and records: May inspect company accounts and records during office hours as per the AOA."
-            ],
-            duties: [
-                "Pay annual membership fee regularly (amount determined by the Board before each financial year).",
-                "Comply with the Memorandum, Articles, and Code of Conduct.",
-                "Adhere to professional ethics – prohibition on referral fees, client confidentiality, respect for the court and judiciary, dignified conduct toward colleagues and opposing counsel.",
-                "Act in the best interest of the company; refrain from any act that could harm the company.",
-                "Tax obligations: Each member is responsible for their own personal income tax; the company has a separate PAN.",
-                "Confidentiality: Protect all confidential information of clients and the company."
-            ],
-            dutiesNote: "<strong>Important:</strong> Membership is non-transferable. Membership ceases upon death, dissolution, or expulsion (MOA Clauses 12 & 13).",
-            feeText: "<p>The annual membership fee is determined by the Board before the start of each financial year. The fee is allocated to the Administration & Accounts Department (60%) and the Logistics & Support Department (40%) for operational budgets. Life membership requires a one-time prescribed fee. Honorary members are exempt from fees. Failure to pay the membership fee may result in suspension or termination of membership.</p>",
-            applySteps: "<ol><li>Obtain an application form.</li><li>Attach the required documents: certified copy of citizenship certificate; copy of Nepal Bar Council license (if intending to work in Litigation Division); brief statement of professional experience.</li><li>Submit the application to the Board of Directors’ office.</li><li>The Board will review the application and make a decision after due inquiry.</li><li>Upon approval, pay the prescribed membership fee.</li><li>Once the fee is received, the member’s name is recorded in the Register of Members.</li></ol>",
-            applyBtnText: "Contact for Application Form →",
-            special: [
-                "Non-transferability: Membership cannot be transferred to any other person under any circumstances.",
-                "Cessation of membership: Membership ceases upon resignation, death, insolvency, disqualification, expulsion, or failure to renew for three consecutive years.",
-                "Annual renewal: Renewal must be done within 3 months of the end of the financial year (late renewal permitted up to 6 months with penalty).",
-                "Limited liability: Members are not liable for the debts or liabilities of the company unless they have given written consent (MOA Clause 14)."
-            ],
-            benefits: [
-                "Institutional platform: A sustainable career built on the company’s brand, not dependent on any single individual.",
-                "Shared resources: Access to high-end technology, a rich library, legal databases, and trained support staff.",
-                "Multiple income opportunities: Participate in revenue from research, training, and publications in addition to litigation fees (surplus is reinvested in the company; no personal dividends).",
-                "Transparent governance: Members may inspect company accounts, decisions, and meeting minutes.",
-                "Regulatory safety: Full compliance with Bar Council rules, prohibition of referral fees, and professional indemnity insurance arrangements."
-            ],
-            faq: [
-                { q: "Can I become a member without a Bar Council license?", a: "Yes. However, a license is mandatory to work in the Litigation Division. No license is required for the Research, Training, or Publications Divisions." },
-                { q: "Is the membership fee refundable?", a: "No. Paid membership fees are non-refundable under any circumstances." },
-                { q: "Can an organisation (company, associations) become a member?", a: "Yes. Organisations can become members and may nominate a representative (including an alternate) to the Board." },
-                { q: "How can one become an Honorary Member?", a: "Honorary membership is not applied for; it is conferred by a special resolution of the Board in recognition of exceptional contribution." }
-            ],
-            footer: "© 2025 Nepal Law Group - All rights reserved"
+            brand: "Nepal Law Group",
+            navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            pageTitle: "Become a Founder Member",
+            inviteText: "We invite legally qualified individuals who share our vision of independent, ethical, and knowledge driven legal practice to join as Founder Members.",
+            eligTitle: "Eligibility",
+            eligText: "Legal qualifications – such as being an advocate, legal scholar, researcher, or legally trained professional – are strongly preferred, though other professionals who can contribute to the company’s mission may also be considered.",
+            reqTitle: "Requirements",
+            reqText: "Founder Members must pay the prescribed founder membership fee (currently nominal, set to cover only the initial registration and documentation costs). They are expected to actively participate in the first general meeting, contribute to the formulation of the company’s initial rules and code of conduct, and uphold the company’s ethical and professional standards. They must renew their membership annually as per the rules, unless they opt for lifetime membership. Founder Members also bear a duty to promote the company’s objectives and to act in a manner that does not bring the institution into disrepute.",
+            whyTitle: "Why Join as a Founder Member?",
+            whyText: "By becoming a Founder Member, you will help create an institution that places legal knowledge and public service above commercial profit. You will be a founder of Nepal’s first membership driven, non profit law group – an institution designed to advance the rule of law, legal scholarship, and professional integrity for generations to come.",
+            ctaBtn: "Express Interest →",
+            footerText: "© 2025 Nepal Law Group – All rights reserved.",
+            termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            brand: "नेपाल ल ग्रुप", navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            heroTitle: "नेपाल ल ग्रुपको सदस्य बन्नुहोस्",
-            categories: [
-                { title: "संस्थापक सदस्य (Founding Member)", desc: "प्रबन्धपत्रमा हस्ताक्षर गरी कम्पनी दर्ता गराउने व्यक्तिहरू। पूर्ण मताधिकार (एक सदस्य एक मत)। सञ्चालक समितिमा निर्वाचित हुन सक्ने। कुनै पनि विभागमा काम गर्न सक्ने (कानून व्यवसायीको प्रमाणपत्र आवश्यक भएमा सो पूरा गरेपछि)। वार्षिक सदस्यता शुल्क तिर्नुपर्छ।" },
-                { title: "साधारण सदस्य (General Member)", desc: "दर्तापछि सञ्चालक समिति वा साधारण सभाको निर्णयबाट प्रवेश पाउने। पूर्ण मताधिकार। सञ्चालक पदको लागि योग्य। लाइसेन्सको शर्त पूरा गरी जुनसुकै विभागमा काम गर्न सक्ने। वार्षिक सदस्यता शुल्क तिर्नुपर्छ।" },
-                { title: "मानार्थ सदस्य (Honorary Member)", desc: "कानूनी पेशा वा कम्पनीमा विशेष योगदानको मान्यतास्वरूप सञ्चालक समितिले प्रदान गर्ने सम्मानजनक सदस्यता। मताधिकार हुँदैन। सञ्चालक पदमा बस्न पाउँदैन। सल्लाह/मार्गदर्शन दिन सक्छ र सीमित पूर्वाधार प्रयोग गर्न सक्छ। शुल्क तिर्नुपर्दैन, तर आचारसंहिता पालना गर्नुपर्छ।" },
-                { title: "आजीवन सदस्य (Life Member)", desc: "एकपटक तोकिएको शुल्क बुझाएपछि पुनः वार्षिक शुल्क बुझाउनुपर्दैन। साधारण सदस्यको सम्पूर्ण अधिकार।" }
-            ],
-            eligibility: "<p>सदस्य बन्न निम्न योग्यता पूरा गर्नुपर्छ (प्रबन्धपत्र दफा १० बमोजिम):</p><ul><li>१८ वर्ष उमेर पूरा भएको हुनुपर्छ।</li><li>नेपाली नागरिक हुनुपर्छ (वैयक्तिक सदस्यको लागि; संगठित संस्था पनि सदस्य बन्न सक्छन्)।</li><li>मगज नबिग्रेको हुनुपर्छ।</li><li>नैतिक पतन हुने फौजदारी अभियोग (ठगी, चोरी, भ्रष्टाचार आदि) नलागेको हुनुपर्छ।</li><li>सरकारी तथा गैरसरकारी संस्थाको रकम हिनामिना नगरेको हुनुपर्छ।</li></ul>",
-            eligibilityExtra: "मुद्दा फाँट विभागमा काम गर्न चाहने सदस्यहरूको लागि थप: कानून व्यवसायीको प्रमाणपत्र (नेपाल बार काउन्सिल लाइसेन्स) प्राप्त गरेको हुनुपर्छ।",
-            rights: [
-                "मतदान अधिकार: प्रत्येक संस्थापक र साधारण सदस्यलाई 'एक सदस्य एक मत' को अधिकार हुनेछ (धारा १६७(१)(छ) बमोजिम)।",
-                "निर्वाचनमा भाग लिने: सञ्चालक समितिको निर्वाचनमा उम्मेदवार बन्न सक्ने।",
-                "विभागमा काम गर्ने: आफ्नो योग्यता र लाइसेन्सको परिधिभित्र रही चारै विभागमा काम गर्न सक्ने।",
-                "साझा पूर्वाधार प्रयोग: प्रविधि, कानूनी डाटाबेस, पुस्तकालय, प्रशासनिक सहायता प्रयोग गर्न सक्ने।",
-                "कम्पनीको लेखा र अभिलेख निरीक्षण: कार्यालय समयमा नियमावली बमोजिम निरीक्षण गर्न सक्ने।"
-            ],
-            duties: [
-                "वार्षिक सदस्यता शुल्क नियमित रूपमा बुझाउनुपर्छ (रकम सञ्चालक समितिले आर्थिक वर्ष सुरु हुनुअघि निर्धारण गर्छ)।",
-                "प्रबन्धपत्र, नियमावली र आचारसंहिताको पालना गर्नुपर्छ।",
-                "व्यावसायिक आचारसंहिता (नेपाल बार काउन्सिलको नियम) पालना गर्नुपर्छ – सन्दर्भ शुल्क निषेध, ग्राहक गोपनीयता, अदालतप्रति सम्मान, सहकर्मीप्रति मर्यादा।",
-                "कम्पनीको हितमा काम गर्नुपर्छ; कम्पनीलाई हानि हुने कुनै पनि कार्य गर्न हुँदैन।",
-                "कर दायित्व: सदस्यले आफ्नो व्यक्तिगत आयकर तिर्नुपर्छ; कम्पनीको प्यान छुट्टै रहन्छ।",
-                "गोपनीयता: ग्राहक तथा कम्पनीको गोप्य जानकारी सुरक्षित राख्नुपर्छ।"
-            ],
-            dutiesNote: "<strong>महत्त्वपूर्ण:</strong> सदस्यता हस्तान्तरण गर्न मिल्दैन। सदस्यको मृत्यु, विघटन, वा निष्कासनमा सदस्यता स्वतः समाप्त हुन्छ (प्रबन्धपत्र दफा १२ र १३)।",
-            feeText: "<p>वार्षिक सदस्यता शुल्कको रकम सञ्चालक समितिले प्रत्येक आर्थिक वर्ष सुरु हुनुअघि निर्धारण गर्छ। शुल्क प्रशासन तथा लेखा विभाग (६०%) र लजिस्टिक्स तथा सहयोग विभाग (४०%) को सञ्चालन बजेटमा विनियोजन गरिन्छ। आजीवन सदस्यताको लागि एकपटक शुल्क तोकिनेछ। मानार्थ सदस्य शुल्क मुक्त हुन्छन्। सदस्यता शुल्क बुझाउन असफल भएमा सदस्यता निलम्बन वा समाप्त हुन सक्छ।</p>",
-            applySteps: "<ol><li>दरखास्त फारम प्राप्त गर्ने।</li><li>आवश्यक कागजातहरू संलग्न गर्ने: नागरिकताको प्रमाणित प्रतिलिपि; कानून व्यवसायीको प्रमाणपत्र (यदि मुद्दा मामिला तथा वकालत विभागमा काम गर्न चाहन्छ भने); पेशागत अनुभवको संक्षिप्त विवरण।</li><li>दरखास्त सञ्चालक समितिको कार्यालयमा बुझाउने।</li><li>सञ्चालक समितिले आवश्यक छानबिन गरी निर्णय गर्छ।</li><li>सदस्यता स्वीकृत भएपछि, तोकिएको सदस्यता शुल्क बुझाउनुपर्छ।</li><li>सदस्यता प्रदान गरिसकेपछि सदस्यको नाम सदस्य दर्ताकिताबमा अभिलेख गरिन्छ।</li></ol>",
-            applyBtnText: "दरखास्त फारमको लागि सम्पर्क गर्नुहोस् →",
-            special: [
-                "सदस्यता हस्तान्तरण नहुने – कुनै पनि हालतमा सदस्यता अर्को व्यक्तिलाई हस्तान्तरण गर्न मिल्दैन।",
-                "सदस्यता समाप्ति – राजीनामा, मृत्यु, दामासाही, अयोग्यता, निष्कासन, वा लगातार ३ वर्षसम्म नवीकरण नगरेमा स्वतः समाप्त हुन्छ।",
-                "वार्षिक नवीकरण – प्रत्येक आर्थिक वर्ष समाप्त भएको ३ महिनाभित्र शुल्क बुझाई नवीकरण गर्नुपर्छ (विलम्ब शुल्क सहित ६ महिनासम्म नवीकरण गर्न सकिन्छ)।",
-                "सदस्यताको दायित्व सीमित – लिखित स्वीकार बाहेक सदस्य कम्पनीको ऋण वा दायित्वको लागि उत्तरदायी हुँदैनन् (प्रबन्धपत्र दफा १४)।"
-            ],
-            benefits: [
-                "संस्थागत प्लेटफर्म: एक व्यक्तिको प्रतिष्ठामा नभई कम्पनीको ब्रान्डमा टिकेको दिगो करियर।",
-                "साझा स्रोतहरू: उच्च प्रविधि, समृद्ध पुस्तकालय, कानूनी डाटाबेस र प्रशिक्षित सहायक कर्मचारीको पहुँच।",
-                "बहु आय अवसर: मुद्दा शुल्क मात्र होइन, अनुसन्धान, तालिम, प्रकाशनबाट हुने आयमा सहभागिता (कम्पनीको अधिशेष पुनः लगानी हुन्छ, व्यक्तिगत लाभांश हुँदैन)।",
-                "पारदर्शी सुशासन: सदस्यले कम्पनीको लेखा, निर्णय र सभाको विवरण निरीक्षण गर्न सक्छन्।",
-                "नियामक सुरक्षा: बार काउन्सिलको पूर्ण अनुपालन, सन्दर्भ शुल्क निषेध, पेशागत दायित्व बीमाको व्यवस्था।"
-            ],
-            faq: [
-                { q: "के म बार काउन्सिलको लाइसेन्स बिना पनि सदस्य बन्न सक्छु?", a: "हुन सक्छ। तर मुद्दा फाँट विभागमा काम गर्न लाइसेन्स अनिवार्य छ। अन्य विभाग (अनुसन्धान, तालिम, प्रकाशन) मा लाइसेन्स आवश्यक छैन।" },
-                { q: "के सदस्यता शुल्क फिर्ता हुन्छ?", a: "कुनै पनि अवस्थामा भुक्तान गरिसकेको सदस्यता शुल्क फिर्ता हुँदैन।" },
-                { q: "के संगठित संस्था (कम्पनी, संघ संस्था) सदस्य बन्न सक्छ?", a: "हुन सक्छ। संगठित संस्था सदस्य बन्न सक्छ र आफ्नो प्रतिनिधि (वैकल्पिक सहित) सञ्चालक समितिमा पठाउन सक्छ।" },
-                { q: "मानार्थ सदस्य कसरी बन्न सकिन्छ?", a: "मानार्थ सदस्यता आवेदनबाट होइन, सञ्चालक समितिको विशेष निर्णय र मान्यताबाट प्रदान गरिन्छ।" }
-            ],
-            footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित"
+            brand: "नेपाल ल ग्रुप",
+            navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            pageTitle: "संस्थापक सदस्य बन्नुहोस्",
+            inviteText: "हामी स्वतन्त्र, नैतिक र ज्ञान–संचालित कानूनी अभ्यासमा विश्वास राख्ने कानूनी क्षेत्रका योग्य व्यक्तिहरूलाई संस्थापक सदस्य का रूपमा सामेल हुन आमन्त्रण गर्दछौँ।",
+            eligTitle: "योग्यता",
+            eligText: "कानूनी योग्यता, जस्तै अधिवक्ता, कानूनी विद्वान्, अनुसन्धानकर्ता वा कानूनमा प्रशिक्षित पेशाकर्मी भएको व्यक्तिलाई प्राथमिकता दिइनेछ, यद्यपि कम्पनीको मिसनमा योगदान दिन सक्ने अन्य पेशाकर्मीलाई पनि विचार गर्न सकिन्छ।",
+            reqTitle: "आवश्यकताहरू",
+            reqText: "संस्थापक सदस्यहरूले निर्धारित संस्थापक सदस्य शुल्क तिर्नुपर्छ (हाल प्रारम्भिक दर्ता र कागजात लागत मात्र समेट्ने नगण्य रकम राखिएको छ)। उनीहरूले पहिलो साधारण सभामा सक्रिय रूपमा सहभागी हुने, कम्पनीको प्रारम्भिक नियम र आचारसंहिता निर्माणमा योगदान दिने, र कम्पनीको नैतिक तथा व्यावसायिक मापदण्डहरू पालना गर्ने अपेक्षा गरिन्छ। उनीहरूले नियमानुसार वार्षिक रूपमा सदस्यता नवीकरण गर्नुपर्छ (जबसम्म आजीवन सदस्यता नरोजेको हो)। संस्थापक सदस्यहरूले कम्पनीको उद्देश्यहरू प्रवर्द्धन गर्न र संस्थाको प्रतिष्ठामा आँच नआउने गरी कार्य गर्ने दायित्व पनि बोक्छन्।",
+            whyTitle: "संस्थापक सदस्य किन बन्ने?",
+            whyText: "संस्थापक सदस्य बनेर, तपाईंले एउटा यस्तो संस्था सिर्जना गर्न मद्दत गर्नुहुनेछ जसले कानूनी ज्ञान र सार्वजनिक सेवालाई व्यावसायिक नाफाभन्दा माथि राख्छ। तपाईं नेपालको पहिलो सदस्यता–संचालित, गैर-नाफामुखी कानूनी समूहको संस्थापक हुनुहुनेछ – एउटा यस्तो संस्था जसले आउने पुस्ताहरूका लागि कानूनको शासन, कानूनी विद्वत्ता र व्यावसायिक इमानदारीलाई अगाडि बढाउने योजना बनाइएको छ।",
+            ctaBtn: "रुचि व्यक्त गर्नुहोस् →",
+            footerText: "© २०२५ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
+            termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
     };
 
     let currentLang = localStorage.getItem("nlgLang") || "en";
 
-    function renderCategories(lang) {
-        const container = document.getElementById("categoriesGrid");
-        const cats = membershipData[lang].categories;
-        container.innerHTML = cats.map(c => `<div class="card"><i class="fas fa-user-check"></i><h3>${c.title}</h3><p>${c.desc}</p></div>`).join("");
-    }
-
-    function renderRights(lang) {
-        const container = document.getElementById("rightsGrid");
-        const rights = membershipData[lang].rights;
-        container.innerHTML = rights.map(r => `<div class="card"><i class="fas fa-check-circle"></i><p>${r}</p></div>`).join("");
-    }
-
-    function renderDuties(lang) {
-        const container = document.getElementById("dutiesGrid");
-        const duties = membershipData[lang].duties;
-        container.innerHTML = duties.map(d => `<div class="card"><i class="fas fa-tasks"></i><p>${d}</p></div>`).join("");
-        document.getElementById("dutiesNote").innerHTML = membershipData[lang].dutiesNote;
-    }
-
-    function renderSpecial(lang) {
-        const container = document.getElementById("specialGrid");
-        const specials = membershipData[lang].special;
-        container.innerHTML = specials.map(s => `<div class="card"><i class="fas fa-exclamation-circle"></i><p>${s}</p></div>`).join("");
-    }
-
-    function renderBenefits(lang) {
-        const container = document.getElementById("benefitsGrid");
-        const benefits = membershipData[lang].benefits;
-        container.innerHTML = benefits.map(b => `<div class="card"><i class="fas fa-star"></i><p>${b}</p></div>`).join("");
-    }
-
-    function renderFAQ(lang) {
-        const container = document.getElementById("faqList");
-        const faqs = membershipData[lang].faq;
-        container.innerHTML = faqs.map(f => `
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-question-circle" style="color: var(--crimson); margin-right: 8px;"></i> ${f.q}</div>
-                <div class="faq-a">${f.a}</div>
-            </div>
-        `).join("");
-    }
-
     function updateUI(lang) {
-        const d = membershipData[lang];
+        const d = content[lang];
         document.getElementById("brandName").innerText = d.brand;
         document.getElementById("navHome").innerText = d.navHome;
         document.getElementById("navAbout").innerText = d.navAbout;
         document.getElementById("navMembership").innerText = d.navMembership;
         document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("heroTitle").innerText = d.heroTitle;
-        document.getElementById("catHeading").innerHTML = d.catHeading ? d.catHeading : (lang === "np" ? "सदस्यता श्रेणीहरू" : "Membership Categories");
-        document.getElementById("eligHeading").innerHTML = lang === "np" ? "सदस्यता योग्यता" : "Membership Eligibility";
-        document.getElementById("eligText").innerHTML = d.eligibility;
-        document.getElementById("eligExtra").innerHTML = `<p><i class="fas fa-gavel" style="color: var(--crimson); margin-right: 8px;"></i> ${d.eligibilityExtra}</p>`;
-        document.getElementById("rightsHeading").innerHTML = lang === "np" ? "सदस्य अधिकारहरू" : "Member Rights";
-        document.getElementById("dutiesHeading").innerHTML = lang === "np" ? "सदस्य कर्तव्य तथा दायित्वहरू" : "Member Duties and Obligations";
-        document.getElementById("feeHeading").innerHTML = lang === "np" ? "सदस्यता शुल्क" : "Membership Fee";
-        document.getElementById("feeText").innerHTML = d.feeText;
-        document.getElementById("applyHeading").innerHTML = lang === "np" ? "आवेदन प्रक्रिया" : "Application Process";
-        document.getElementById("applySteps").innerHTML = d.applySteps;
-        document.getElementById("applyBtn").innerText = d.applyBtnText;
-        document.getElementById("specialHeading").innerHTML = lang === "np" ? "सदस्यता सम्बन्धी विशेष व्यवस्था" : "Special Provisions Relating to Membership";
-        document.getElementById("benefitsHeading").innerHTML = lang === "np" ? "सदस्य बन्नुको फाइदा" : "Benefits of Membership";
-        document.getElementById("faqHeading").innerHTML = lang === "np" ? "प्रायः सोधिने प्रश्नहरू (FAQ)" : "Frequently Asked Questions (FAQ)";
-        document.getElementById("footerText").innerHTML = d.footer;
-
-        renderCategories(lang);
-        renderRights(lang);
-        renderDuties(lang);
-        renderSpecial(lang);
-        renderBenefits(lang);
-        renderFAQ(lang);
+        document.getElementById("pageTitle").innerText = d.pageTitle;
+        document.getElementById("inviteText").innerText = d.inviteText;
+        document.getElementById("eligTitle").innerText = d.eligTitle;
+        document.getElementById("eligText").innerText = d.eligText;
+        document.getElementById("reqTitle").innerText = d.reqTitle;
+        document.getElementById("reqText").innerText = d.reqText;
+        document.getElementById("whyTitle").innerText = d.whyTitle;
+        document.getElementById("whyText").innerText = d.whyText;
+        document.getElementById("ctaBtn").innerText = d.ctaBtn;
+        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("termsLink").innerText = d.termsText;
+        document.getElementById("privacyLink").innerText = d.privacyText;
+        document.getElementById("cookieLink").innerText = d.cookieText;
 
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
-        currentLang = lang;
     }
-
-    // Fix heading IDs for translation (some are set dynamically)
-    document.getElementById("catHeading").innerHTML = "सदस्यता श्रेणीहरू";
-    document.getElementById("eligHeading").innerHTML = "सदस्यता योग्यता";
-    document.getElementById("rightsHeading").innerHTML = "सदस्य अधिकारहरू";
-    document.getElementById("dutiesHeading").innerHTML = "सदस्य कर्तव्य तथा दायित्वहरू";
-    document.getElementById("feeHeading").innerHTML = "सदस्यता शुल्क";
-    document.getElementById("applyHeading").innerHTML = "आवेदन प्रक्रिया";
-    document.getElementById("specialHeading").innerHTML = "सदस्यता सम्बन्धी विशेष व्यवस्था";
-    document.getElementById("benefitsHeading").innerHTML = "सदस्य बन्नुको फाइदा";
-    document.getElementById("faqHeading").innerHTML = "प्रायः सोधिने प्रश्नहरू (FAQ)";
 
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
