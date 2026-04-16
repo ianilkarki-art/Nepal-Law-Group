@@ -19,10 +19,11 @@
             --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
         }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-        /* Header - bigger */
+        
+        /* Header - smaller now */
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
-            padding: 1.5rem 0;  /* increased from 1rem */
+            padding: 0.8rem 0;  /* reduced from 1.5rem */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -34,46 +35,85 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         .brand-name {
-            font-size: 2.2rem;  /* increased from 1.8rem */
+            font-size: 1.6rem;  /* reduced from 2.2rem */
             font-weight: 800;
             color: white;
             text-decoration: none;
             letter-spacing: -0.3px;
         }
+        
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .dropbtn:hover, .dropbtn.active {
+            background: var(--crimson);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: var(--shadow-md);
+            border-radius: 16px;
+            z-index: 1;
+            right: 0;
+            top: 110%;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+        .dropdown-content a {
+            color: var(--primary-blue);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--soft-gray);
+            color: var(--crimson);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* For touch devices: keep dropdown open on click via small JS, but hover works too */
+        
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;  /* slightly larger */
-            border-radius: 40px;
-            transition: 0.2s;
-            font-size: 1rem;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            background: var(--crimson);
         }
         .lang-toggle {
             display: flex;
             gap: 0.5rem;
             background: rgba(255,255,255,0.15);
-            padding: 0.4rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 60px;
         }
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            padding: 0.4rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 40px;
             cursor: pointer;
             color: white;
@@ -82,6 +122,7 @@
         .lang-btn.active {
             background: var(--crimson);
         }
+        
         /* Hero */
         .hero {
             background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%);
@@ -211,9 +252,10 @@
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
             .hero h1 { font-size: 2rem; }
-            .brand-name { font-size: 1.6rem; }
+            .brand-name { font-size: 1.4rem; }
             .section-title { font-size: 1.5rem; }
             .footer-policy { gap: 1rem; }
+            .dropdown-content { right: auto; left: 0; }
         }
         .text-crimson { color: var(--crimson); }
         hr { margin: 1rem 0; border-color: var(--border-light); }
@@ -224,10 +266,16 @@
     <div class="container nav-container">
         <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
-            <a href="index.html" id="navHome">Home</a>
-            <a href="about.html" id="navAbout">About</a>
-            <a href="membership.html" id="navMembership">Membership</a>
-            <a href="contact.html" id="navContact">Contact</a>
+            <!-- Dropdown menu for navigation -->
+            <div class="dropdown">
+                <button class="dropbtn" id="menuBtn">☰ Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html" id="navHome">Home</a>
+                    <a href="about.html" id="navAbout">About</a>
+                    <a href="membership.html" id="navMembership">Membership</a>
+                    <a href="contact.html" id="navContact">Contact</a>
+                </div>
+            </div>
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -258,7 +306,7 @@
         <!-- Departments -->
         <section>
             <h2 class="section-title" id="deptHeading">⚙️ हाम्रो संरचना • Our Structure</h2>
-            <p class="section-sub" id="deptSub">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-Facing & Internal Support Departments</p>
+            <p class="section-sub" id="deptSub">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
             <div class="dept-grid" id="deptGrid"></div>
         </section>
 
@@ -274,12 +322,13 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-policy">
-            <a href="#" id="termsLink">Terms of Use</a>
-            <a href="#" id="privacyLink">Privacy Policy</a>
-            <a href="#" id="cookieLink">Cookie Policy</a>
+            <a href="terms.html" id="termsLink">Terms of Use</a>
+            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
         <div class="footer-copyright">
-            <p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षिता</p>
+            <p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | कानूनी सेवा सबैको पहुँचमा</p>
+            <p style="font-size:0.75rem; margin-top:0.5rem;" id="footerEthics">गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण</p>
         </div>
     </div>
 </footer>
@@ -296,14 +345,30 @@
                 <h3>📜 Nepal Law Group – A New Legal Organisation</h3>
                 <p>Nepal Law Group is a profit non-distributing company. The nature of the business or transaction to be undertaken by this company will be service-oriented, non-profit, educational, academic, social, charitable, and public utility and welfare in nature. This means that it does not distribute the surplus generated from any business activity as personal gain, but rather reinvests it in the welfare of society and the development of the legal sector. The goal of this company is to make legal services accessible to all levels and classes of citizens.</p>
                 <p>Traditional law firms distribute surplus income among partners. In doing so, they cannot invest in firm-level infrastructure development, technology upgrading, or employee skill enhancement. However, this company will be established as an institutional platform, which reinvests all surplus to achieve the objectives of the company and increase the company's funds. This structure will enable long-term sustainability, shared infrastructure, and a culture of continuous improvement.</p>
-                <p>The company will operate through four client-facing departments (Litigation and Advocacy, Research and Policy, Education, and Publications) and two internal support departments (Administration and Accounting, Management and Support). These departments will coordinate with each other to provide integrated services to clients. The Litigation and Advocacy Department is staffed only by licensed members of the Nepal Bar Council, while the other departments are open to all members and employees. Thus, Nepal Law Group is in the process of establishing itself as a modern, compliant, and sustainable organization as an alternative to traditional legal practice. It aims to set new standards in the legal sector of Nepal.</p>
+                <p>The company will operate through four client-facing departments (Litigation and Advocacy, Research and Policy, Education, and Publications) and two internal support departments (Administration and Accounting, Management and Support). These departments will coordinate with each other to provide integrated services to clients. The Litigation and Advocacy Department is staffed only by licensed members of the Nepal Bar Council, while the other departments are open to all members and employees.</p>
                 <p>Thus, Nepal Law Group is in the process of establishing itself as a modern, compliant, and sustainable organization as an alternative to traditional legal practice. It aims to set new standards in the legal sector of Nepal.</p>
             `,
-            closingTitle: "A Modern Alternative to Traditional Law Practice, Advocacy & Research",
+            comparison: `
+                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
+                <strong style="font-size: 1.3rem;">🏛️ Traditional Law Firms vs. Nepal Law Group</strong>
+                <p style="margin-top: 12px;">Traditional firms distribute surplus income among partners, limiting long-term investment in infrastructure, technology, and staff training. <strong class="text-crimson">Nepal Law Group</strong> reinvests 100% surplus into shared resources, legal innovation, and capacity building — fostering a sustainable ecosystem for legal excellence and accessibility.</p>
+                <hr>
+                <p>✅ Institutional platform | ✅ Continuous improvement | ✅ Public welfare driven</p>
+            `,
+            deptHeading: "⚙️ Our Departments • Institutional Framework",
+            deptSub: "Four client-facing departments + Two internal support wings working in synergy",
+            departments: [
+                { icon: "fas fa-gavel", name: "Litigation & Advocacy", desc: "Licensed members of Nepal Bar Council handle court matters, legal representation, and dispute resolution.", badge: "Nepal Bar Council licensed only" },
+                { icon: "fas fa-chart-line", name: "Research & Policy", desc: "Legal research, policy analysis, law reform advocacy, and advisory for evidence-based legislation." },
+                { icon: "fas fa-graduation-cap", name: "Education", desc: "Legal training, workshops, seminars, and skill development for students and professionals." },
+                { icon: "fas fa-book", name: "Publications", desc: "Law journals, commentaries, legal manuals, and digital resources to democratize legal knowledge." },
+                { icon: "fas fa-users-gear", name: "Administration & Accounting", desc: "Internal support ensuring compliance, transparent finance, and efficient operations.", badge: "open to all members" },
+                { icon: "fas fa-handshake", name: "Management & Support", desc: "Strategic coordination, HR, IT infrastructure, and organizational sustainability.", badge: "cross-department synergy" }
+            ],
+            closingTitle: "A Modern Alternative to Traditional Legal Practice",
             closingText: "Nepal Law Group is establishing itself as a compliant, sustainable, and visionary institution, setting new benchmarks in Nepal's legal landscape.",
-            footerText: "© 2026 Nepal Law Group - All rights reserved",
-            footerEthics: "Profit Non-Distributing Company",
-            // Policy links text (English)
+            footerText: "© 2025 Nepal Law Group - All rights reserved | Access to justice for all",
+            footerEthics: "Non-profit • Educational • Public Welfare",
             termsText: "Terms of Use",
             privacyText: "Privacy Policy",
             cookieText: "Cookie Policy"
@@ -315,16 +380,32 @@
             heroSub: "सेवामूलक, गैर-नाफामुखी, शैक्षिक र सार्वजनिक कल्याणकारी संस्था",
             fullDescription: `
                 <h3>📜 नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h3>
-                <p>नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनीको रूपमा कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत दर्ता हुनेछ। यो एक अभिनव संस्थागत मोडेल हो जुन परम्परागत कानूनी फर्महरूभन्दा भिन्न छ। परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूबीच वितरण गर्छन्, जसले फर्म-स्तरीय पूँजी संचय र दीर्घकालीन लगानीलाई कमजोर बनाउँछ। तर नेपाल ल ग्रुप एउटा संस्थागत मञ्च को रूपमा निर्मित हुनेछ। यसले सम्पूर्ण अधिशेषलाई उद्देश्यहरू प्राप्त गर्न र कोष वृद्धि गर्न पुनः लगानी गर्दछ। यसले संस्थालाई दिगो बनाउँदै लैजान्छ, व्यक्तिको कार्यकालभन्दा बाहिर पनि यसको अस्तित्व कायम रहन्छ।</p>
-                <p>यस कम्पनीको व्यवसाय सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी, तथा सार्वजनिक उपयोगिता र कल्याणकारी प्रकृतिको हुनेछ। यसको अर्थ यसले केवल व्यावसायिक लाभको लागि होइन, समाजमा कानूनी ज्ञानको प्रसार, न्यायमा पहुँचको विस्तार, र कानूनी पेशाको व्यावसायिक विकासमा योगदान पुर्याउन सक्रिय रहनेछ।</p>
-                <p>यस कम्पनी चार ग्राहकमुखी विभाग (मुद्दा मामिला तथा वकालत सेवा, अनुसन्धान तथा नीति, शिक्षा, र प्रकाशन) र दुई आन्तरिक सहायक विभाग (प्रशासन तथा लेखा, लजिस्टिक्स तथा सहयोग) मार्फत सञ्चालन हुनेछ। यस कम्पनीको प्रबन्धपत्र र नियमावलीमा उल्लिखित सुशासन संरचनाले पारदर्शिता, जवाफदेहिता, र नेपाली कम्पनी कानूनको पूर्ण अनुपालन सुनिश्चित गर्दछ।</p>
+                <p>नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनी हो। यस कम्पनीले गर्ने व्यवसाय वा कारोबारको प्रकृति सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी, तथा सार्वजनिक उपयोगिता र कल्याणकारी प्रकृतिको हुनेछ। यसको अर्थ यसले कुनै पनि व्यावसायिक गतिविधिबाट प्राप्त हुने अधिशेषलाई व्यक्तिगत लाभको रूपमा वितरण गर्दैन, बरु त्यसलाई समाजको हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गर्दछ। यस कम्पनीको लक्ष्य कानूनी सेवाहरू सबै तह र वर्गका नागरिकहरूका लागि पहुँचयोग्य बनाउनु हो।</p>
+                <p>परम्परागत कानूनी फर्महरूले अधिशेष आम्दानी साझेदारहरूबीच वितरण गर्छन्। त्यसो गर्दा तिनीहरूले फर्म-स्तरको पूर्वाधार विकास, प्रविधि स्तरोन्नति, वा कर्मचारीको दक्षता वृद्धिमा लगानी गर्न सक्दैनन्। तर, यस कम्पनी एउटा संस्थागत मञ्चको रूपमा स्थापित हुनेछ, जसले सम्पूर्ण अधिशेष कम्पनीको उद्देश्यहरू प्राप्त गर्न र कम्पनीको कोष वृद्धि गर्न पुनः लगानी गर्दछ। यस संरचनाले दीर्घकालीन दिगोपन, साझा पूर्वाधार, र निरन्तर सुधारको संस्कृतिलाई सम्भव बनाउँदछ।</p>
+                <p>यस कम्पनी चार ग्राहकमुखी विभाग (मुद्दा मामिला तथा वकालत, अनुसन्धान तथा नीति, शिक्षा, र प्रकाशन) र दुई आन्तरिक सहायक विभाग (प्रशासन तथा लेखा, व्यवस्थापन तथा सहयोग) मार्फत सञ्चालन हुनेछ। यी विभागहरूले आपसमा समन्वय गरी ग्राहकलाई एकीकृत सेवा प्रदान गर्छन्। मुद्दा मामिला तथा वकालत विभागमा नेपाल कानून व्यवसायी परिषदको अनुमतिपत्र प्राप्त सदस्यहरूले मात्र काम गर्छन्, जबकि अन्य विभागहरू सबै सदस्य र कर्मचारीहरूका लागि खुला छन्।</p>
                 <p>यसरी, नेपाल ल ग्रुप परम्परागत कानूनी अभ्यासको विकल्पको रूपमा एउटा आधुनिक, अनुपालनशील र दिगो संस्थाको रूपमा स्थापना हुने चरणमा छ। यसले नेपालको कानूनी क्षेत्रमा नयाँ मापदण्ड स्थापित गर्ने लक्ष्य राखेको छ।</p>
             `,
+            comparison: `
+                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
+                <strong style="font-size: 1.3rem;">🏛️ परम्परागत कानूनी फर्महरू बनाम नेपाल ल ग्रुप</strong>
+                <p style="margin-top: 12px;">परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूमा बाँड्छन्, जसले पूर्वाधार, प्रविधि र तालिममा दीर्घकालीन लगानी रोक्छ। <strong class="text-crimson">नेपाल ल ग्रुप</strong> सम्पूर्ण अधिशेषलाई साझा स्रोत, कानूनी नवप्रवर्तन र क्षमता विकासमा पुनः लगानी गर्दछ — एक दिगो पारिस्थितिकी प्रणाली निर्माण गर्दै।</p>
+                <hr>
+                <p>✅ संस्थागत मञ्च | ✅ निरन्तर सुधार | ✅ सार्वजनिक कल्याण</p>
+            `,
+            deptHeading: "⚙️ हाम्रा विभागहरू • संस्थागत संरचना",
+            deptSub: "चार ग्राहकमुखी विभाग + दुई आन्तरिक सहायक विभाग समन्वयमा",
+            departments: [
+                { icon: "fas fa-gavel", name: "मुद्दा मामिला तथा वकालत", desc: "नेपाल कानून व्यवसायी परिषदको इजाजतपत्र प्राप्त सदस्यहरूद्वारा मुद्दा, कानूनी सल्लाह र प्रतिनिधित्व।", badge: "नेपाल बार काउन्सिल लाइसेन्स आवश्यक" },
+                { icon: "fas fa-chart-line", name: "अनुसन्धान तथा नीति", desc: "कानूनी अनुसन्धान, नीति विश्लेषण, कानून सुधार अभियान, र प्रमाणमा आधारित विधेयक निर्माण।" },
+                { icon: "fas fa-graduation-cap", name: "शिक्षा", desc: "कानूनी तालिम, कार्यशाला, सेमिनार र विद्यार्थी/पेशाकर्मीका लागि सीप विकास।" },
+                { icon: "fas fa-book", name: "प्रकाशन", desc: "कानूनी जर्नल, टीका-टिप्पणी, पुस्तिका र डिजिटल स्रोतहरू कानूनी ज्ञानको सर्वसुलभताका लागि।" },
+                { icon: "fas fa-users-gear", name: "प्रशासन तथा लेखा", desc: "आन्तरिक सहयोग, अनुपालन, पारदर्शी वित्तीय व्यवस्थापन र प्रभावकारी सञ्चालन।", badge: "सबै सदस्य खुला" },
+                { icon: "fas fa-handshake", name: "व्यवस्थापन तथा सहयोग", desc: "रणनीतिक समन्वय, मानव संसाधन, प्रविधि पूर्वाधार र संस्थागत दिगोपन।", badge: "अन्तर-विभागीय सहकार्य" }
+            ],
             closingTitle: "परम्परागत कानूनी अभ्यासको विकल्प : आधुनिक संस्था",
             closingText: "नेपाल ल ग्रुप अनुपालनशील, दिगो र दूरदर्शी संस्थाको रूपमा स्थापित हुँदै, नेपालको कानूनी क्षेत्रमा नयाँ उचाइ स्थापित गर्ने लक्ष्य राख्दछ।",
             footerText: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | सबैको पहुँचमा न्याय",
             footerEthics: "गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण",
-            // Policy links in Nepali
             termsText: "प्रयोगका सर्तहरू",
             privacyText: "गोपनीयता नीति",
             cookieText: "कुकी नीति"
@@ -363,10 +444,12 @@
         document.getElementById("closingText").innerHTML = d.closingText;
         document.getElementById("footerText").innerHTML = d.footerText;
         document.getElementById("footerEthics").innerHTML = d.footerEthics;
-        // Update policy links text
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
+        // Update dropdown button text (optional, keep "Menu" or translate)
+        const menuBtn = document.getElementById("menuBtn");
+        if (menuBtn) menuBtn.innerText = lang === "np" ? "☰ मेनु" : "☰ Menu";
 
         renderDepartments(lang);
 
