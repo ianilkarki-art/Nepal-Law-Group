@@ -2,50 +2,226 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – Nepal Law Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy – Nepal Law Group | गोपनीयता नीति – नेपाल ल ग्रुप</title>
+    <meta name="description" content="Privacy Policy for Nepal Law Group website.">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
-        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
+            color: #1a2a3a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (same as previous pages) */
         .navbar {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
-            padding: 1.2rem 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid var(--crimson);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
-        .nav-links a:hover { background: var(--crimson); }
-        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
-        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
-        .lang-btn.active { background: var(--crimson); }
-        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2rem 0; text-align: center; }
-        .page-hero h1 { font-size: 2rem; color: var(--primary-blue); }
-        .content-policy { background: white; border-radius: 28px; padding: 2rem; margin: 2rem 0; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); }
-        .content-policy h2 { color: var(--primary-blue); margin: 1.5rem 0 0.5rem; font-size: 1.4rem; border-left: 4px solid var(--crimson); padding-left: 1rem; }
-        .content-policy p, .content-policy ul { margin-bottom: 1rem; }
-        .content-policy ul { padding-left: 2rem; }
-        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 1.5rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
-        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0b2f5c;
+        }
+
+        .lang-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2rem;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0.2rem;
+            background: #e9ecef;
+            padding: 0.2rem;
+            border-radius: 40px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            color: #2c3e50;
+        }
+
+        .lang-btn.active {
+            background: #0b2f5c;
+            color: white;
+        }
+
+        /* Page hero */
+        .page-hero {
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Privacy content card */
+        .privacy-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .privacy-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin: 1.2rem 0 0.5rem;
+            border-left: 4px solid #0b2f5c;
+            padding-left: 1rem;
+        }
+        .privacy-card h2:first-of-type {
+            margin-top: 0;
+        }
+        .privacy-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a4a6e;
+            margin: 1rem 0 0.3rem;
+        }
+        .privacy-card p {
+            margin-bottom: 0.8rem;
+            color: #4a5568;
+        }
+        .privacy-card ul, .privacy-card ol {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #4a5568;
+        }
+        .privacy-card li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f1f5f9;
+            padding: 2rem 0 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+        .footer-policy {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-policy a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+        .footer-policy a:hover {
+            color: #0b2f5c;
+        }
+        .footer-copyright {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                font-size: 1.8rem;
+            }
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .privacy-card {
+                padding: 1.2rem;
+            }
+            .privacy-card h2 {
+                font-size: 1.3rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
+
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name">Nepal Law Group</a>
+        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-wrapper">
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -53,82 +229,232 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="page-hero">
-        <div class="container"><h1 id="heroTitle">Privacy Policy</h1></div>
+        <div class="container">
+            <h1 id="pageTitle">Privacy Policy</h1>
+        </div>
     </div>
+
     <div class="container">
-        <div class="content-policy" id="policyContent"></div>
+        <div class="privacy-card" id="privacyContent"></div>
     </div>
 </main>
+
 <footer class="footer">
-    <div class="container"><p>© 2025 Nepal Law Group - All rights reserved</p></div>
+    <div class="container">
+        <div class="footer-policy">
+            <a href="terms.html" id="termsLink">Terms of Use</a>
+            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
+        </div>
+        <div class="footer-copyright">
+            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+        </div>
+    </div>
 </footer>
+
 <script>
-    const privacyData = {
+    const content = {
         en: {
-            heroTitle: "Privacy Policy",
-            content: `
-                <p><strong>Effective date: April 2025</strong></p>
-                <p>Nepal Law Group ("we", "us", "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.</p>
-                <h2>1. Information We Collect</h2>
-                <p>We may collect personal information that you voluntarily provide to us, such as your name, email address, phone number, and any message you submit through our contact form. We also collect non-personal information such as browser type, IP address, and pages visited.</p>
-                <h2>2. How We Use Your Information</h2>
-                <p>We use your information to respond to inquiries, improve our website, and communicate with you about our services. We do not sell, trade, or rent your personal information to third parties.</p>
-                <h2>3. Cookies</h2>
-                <p>Our website uses cookies to enhance user experience. You can control cookie preferences through your browser settings. For more details, see our <a href="cookie.html">Cookie Policy</a>.</p>
-                <h2>4. Data Security</h2>
-                <p>We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure.</p>
-                <h2>5. Third-Party Links</h2>
-                <p>Our website may contain links to external sites. We are not responsible for the privacy practices of those sites.</p>
-                <h2>6. Children's Privacy</h2>
-                <p>Our website is not intended for children under 13. We do not knowingly collect personal information from children.</p>
-                <h2>7. Your Rights</h2>
-                <p>You may request access to, correction of, or deletion of your personal information by contacting us at <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a>.</p>
-                <h2>8. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time. The revised version will be posted on this page with an updated effective date.</p>
-                <h2>9. Contact Us</h2>
-                <p>If you have questions about this Privacy Policy, please email us at <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a>.</p>
-            `
+            brand: "Nepal Law Group",
+            navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            pageTitle: "Privacy Policy",
+            htmlContent: `
+                <p><strong>Nepal Law Group (proposed company, not yet incorporated under the Companies Act, 2063 of Nepal) (hereinafter referred to as "the Company", "we", "us", or "our") and the Website: https://nepallawgroup.org (hereinafter referred to as "the Website").</strong></p>
+                
+                <h2>1. Introduction and Scope</h2>
+                <p>(1) The Company respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains:</p>
+                <ul>
+                    <li>(a) What personal information we may collect through the Website;</li>
+                    <li>(b) How we use, store, and protect that information;</li>
+                    <li>(c) Your rights regarding your personal information;</li>
+                    <li>(d) How we comply with applicable privacy laws.</li>
+                </ul>
+                <p>(2) This Policy applies to all visitors, users, and any person who accesses the Website or submits information through it, including those applying for membership, subscribing to updates, or contacting us via email. Because the Company is not yet incorporated, this Privacy Policy is issued by the founding group on behalf of the proposed company. After incorporation, the company shall adopt this Policy as its own.</p>
+                
+                <h2>2. Information We Collect</h2>
+                <p>(1) We may collect the following categories of personal information:</p>
+                <p>(a) <strong>Information You Voluntarily Provide:</strong> (i) When you contact us via email, we may collect your name, email address, and any other information you choose to include in your message. (ii) When you apply for membership (Founder, Ordinary, Lifetime, or Honorary), we may collect your full name, address, citizenship details, professional qualifications, contact information, and any other data required to verify eligibility under the Memorandum of Association and Articles of Association. (iii) If you subscribe to any newsletter or update service (if offered), we may collect your email address.</p>
+                <p>(b) <strong>Automatically Collected Information:</strong> When you visit the Website, certain technical information may be automatically collected, including, your IP address, browser type, operating system, and device information; pages you view, links you click, and the date and time of your visit; referring website or search engine.</p>
+                <p>(c) <strong>Cookies and Similar Technologies:</strong> We may use cookies – small text files stored on your device – to enhance your browsing experience, analyse Website traffic, and remember your preferences. You may disable cookies through your browser settings, but some Website features may not function properly as a result.</p>
+                
+                <h2>3. How We Use Your Information</h2>
+                <p>(1) We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li>(a) To communicate with you: Respond to your inquiries, provide information about the Company, and send administrative messages.</li>
+                    <li>(b) To process membership applications: Verify eligibility, maintain membership records, and manage membership communications.</li>
+                    <li>(c) To improve the Website: Analyse usage patterns, diagnose technical problems, and enhance user experience.</li>
+                    <li>(d) To comply with legal obligations: Respond to lawful requests from government authorities or courts, as required under the laws of Nepal.</li>
+                    <li>(e) To protect our rights: Prevent fraud, enforce our Terms of Use, and safeguard the security of the Website and its users.</li>
+                </ul>
+                <p>(2) We will not sell, rent, or trade your personal information to any third party for marketing or commercial purposes.</p>
+                
+                <h2>4. Legal Basis for Processing</h2>
+                <p>Although the Company is based in Nepal, we respect international privacy standards. Our legal bases for processing personal information include: (a) when you voluntarily provide information (e.g., membership application); (b) to operate and improve the Website, communicate with you, and prevent misuse; (c) when required by Nepalese law.</p>
+                
+                <h2>5. Data Sharing and Disclosure</h2>
+                <p>(1) We may share your personal information only in the following limited circumstances:</p>
+                <ul>
+                    <li>(a) Third parties that help us operate the Website or manage membership data (e.g., hosting providers, email services). These providers are contractually bound to protect your data and use it only for specified purposes.</li>
+                    <li>(b) If required by a court order, subpoena, or other legal process under Nepalese law.</li>
+                    <li>(c) If necessary to prevent physical harm or financial loss, or to report suspected illegal activity.</li>
+                    <li>(d) In any other case, we will obtain your prior written consent before sharing your information.</li>
+                </ul>
+                <p>(2) Because the Company is not yet incorporated, the founding group members may have access to membership application data solely for the purpose of processing applications and preparing incorporation documents. All such members are bound by confidentiality obligations.</p>
+                
+                <h2>6. Data Retention</h2>
+                <p>(1) We retain your personal information only as long as necessary to fulfil the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+                <ul>
+                    <li>(a) If your membership application is approved, your information will be kept as long as you remain a member, and for a reasonable period thereafter for archival and legal compliance.</li>
+                    <li>(b) Generally retained for two years after the last communication.</li>
+                    <li>(c) Retained for up to 12 months for analytics and security purposes.</li>
+                </ul>
+                <p>(2) After incorporation, the Company shall adopt a formal data retention schedule.</p>
+                
+                <h2>7. Data Security</h2>
+                <p>We implement reasonable administrative, technical, and physical safeguards to protect your personal information against unauthorised access, disclosure, alteration, or destruction. These include: (a) Secure socket layer (SSL) encryption for data transmitted through the Website; (b) Restricted access to personal information to authorised persons only (founders and designated administrators); (c) Regular reviews of our data collection and storage practices. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+                
+                <h2>8. Your Rights</h2>
+                <p>(1) Depending on your jurisdiction, you may have certain rights regarding your personal information: (a) Request a copy of the personal information we hold about you. (b) Correct inaccurate or incomplete information. (c) Request deletion of your information, subject to legal retention obligations. (d) Limit how we use your information. (e) Receive your information in a structured, machine‑readable format. (f) Where processing is based on consent, you may withdraw it at any time.</p>
+                <p>(2) To exercise any of these rights, please contact to the Company. We will respond within 30 days. Please note that because the Company is not yet a legal entity, some rights may be limited until incorporation.</p>
+                
+                <h2>9. Third‑Party Links</h2>
+                <p>The Website may contain links to external websites (e.g., bar associations, government portals, legal resources). We are not responsible for the privacy practices or content of such third‑party sites. We encourage you to read their privacy policies before providing any personal information.</p>
+                
+                <h2>10. Children’s Privacy</h2>
+                <p>The Website is not intended for persons under the age of 18. We do not knowingly collect personal information from minors. If we become aware that a person under 18 has provided us with personal information, we will delete it immediately. If you believe a minor has submitted data, please contact us.</p>
+                
+                <h2>11. International Data Transfers</h2>
+                <p>The Website is operated from Nepal. If you access the Website from outside Nepal, please be aware that your information may be transferred to, stored, and processed in Nepal, where data protection laws may differ from those in your jurisdiction. By using the Website, you consent to such transfer.</p>
+                
+                <h2>12. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or operational needs. Any material changes will be posted on this page with an updated effective date. We encourage you to review this Policy periodically. Your continued use of the Website after any changes constitutes your acceptance of the revised Policy.</p>
+                
+                <h2>13. Contact Information</h2>
+                <p>For any questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact to the Company. Because the Company is not yet incorporated, inquiries will be handled by the founding group. After incorporation, the company shall appoint a designated privacy officer.</p>
+                
+                <h2>14. Governing Law</h2>
+                <p>(1) This Privacy Policy and any disputes arising under it shall be governed by the laws of Nepal. Any legal action related to this Policy shall be brought before the courts of Kathmandu district, Nepal (or, after incorporation, the district where the registered office of the Company is located), subject to the limitations set forth in our Terms of Use.</p>
+                <p>(2) By using this Website, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
+                <p><em>Dated of 17th day of April, 2026.</em></p>
+            `,
+            footerText: "© 2025 Nepal Law Group – All rights reserved.",
+            termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            heroTitle: "गोपनीयता नीति",
-            content: `
-                <p><strong>प्रभावकारी मिति: अप्रिल २०२५</strong></p>
-                <p>नेपाल ल ग्रुप तपाईंको गोपनीयताको सम्मान गर्दछ। यो गोपनीयता नीतिले हाम्रो वेबसाइट भ्रमण गर्दा हामी कसरी तपाईंको व्यक्तिगत जानकारी सङ्कलन, प्रयोग र सुरक्षा गर्छौं भनी व्याख्या गर्दछ।</p>
-                <h2>१. हामी के जानकारी सङ्कलन गर्छौं</h2>
-                <p>हामीले तपाईंले स्वेच्छिक रूपमा उपलब्ध गराउनुभएको नाम, इमेल ठेगाना, फोन नम्बर, र सम्पर्क फारममा पठाउनुभएको सन्देश सङ्कलन गर्न सक्छौं। ब्राउजर प्रकार, आइपी ठेगाना, र भ्रमण गरिएका पृष्ठहरू जस्ता गैर-व्यक्तिगत जानकारी पनि सङ्कलन गर्छौं।</p>
-                <h2>२. हामी तपाईंको जानकारी कसरी प्रयोग गर्छौं</h2>
-                <p>हामी तपाईंको जानकारी सोधपुछको जवाफ दिन, हाम्रो वेबसाइट सुधार गर्न, र हाम्रो सेवाको बारेमा तपाईंलाई जानकारी दिन प्रयोग गर्छौं। हामी तपाईंको व्यक्तिगत जानकारी तेस्रो पक्षलाई बेच्दैनौं, व्यापार गर्दैनौं, वा भाडामा दिँदैनौं।</p>
-                <h2>३. कुकीहरू</h2>
-                <p>हाम्रो वेबसाइटले प्रयोगकर्ता अनुभव बढाउन कुकीहरू प्रयोग गर्दछ। तपाईंले आफ्नो ब्राउजर सेटिङमार्फत कुकी प्राथमिकताहरू नियन्त्रण गर्न सक्नुहुन्छ। थप विवरणको लागि हाम्रो <a href="cookie.html">कुकी नीति</a> हेर्नुहोस्।</p>
-                <h2>४. डाटा सुरक्षा</h2>
-                <p>हामी तपाईंको जानकारी सुरक्षित राख्न उचित सुरक्षा उपायहरू लागू गर्छौं। तथापि, इन्टरनेटमा कुनै पनि प्रसारण विधि १००% सुरक्षित हुँदैन।</p>
-                <h2>५. तेस्रो-पक्ष लिङ्कहरू</h2>
-                <p>हाम्रो वेबसाइटमा बाह्य साइटहरूको लिङ्क हुन सक्छ। ती साइटहरूको गोपनीयता अभ्यासहरूको लागि हामी जिम्मेवार छैनौं।</p>
-                <h2>६. बालबालिकाको गोपनीयता</h2>
-                <p>हाम्रो वेबसाइट १३ वर्ष मुनिका बालबालिकाका लागि होइन। हामी जानाजानी बालबालिकाबाट व्यक्तिगत जानकारी सङ्कलन गर्दैनौं।</p>
-                <h2>७. तपाईंको अधिकारहरू</h2>
-                <p>तपाईंले <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a> मा सम्पर्क गरी आफ्नो व्यक्तिगत जानकारीको पहुँच, सच्याउन वा मेटाउन अनुरोध गर्न सक्नुहुन्छ।</p>
-                <h2>८. यस नीतिमा परिवर्तन</h2>
-                <p>हामी समय-समयमा यो गोपनीयता नीति अद्यावधिक गर्न सक्छौं। संशोधित संस्करण यस पृष्ठमा अद्यावधिक मिति सहित पोस्ट गरिनेछ।</p>
-                <h2>९. सम्पर्क गर्नुहोस्</h2>
-                <p>यस गोपनीयता नीतिबारे प्रश्न भए, कृपया हामीलाई <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a> मा इमेल गर्नुहोस्।</p>
-            `
+            brand: "नेपाल ल ग्रुप",
+            navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            pageTitle: "गोपनीयता नीति",
+            htmlContent: `
+                <p><strong>नेपाल कानून समूह (प्रस्तावित कम्पनी, कम्पनी ऐन, २०६३ अन्तर्गत अझै सम्मिलित नभएको) (यसपछि "कम्पनी", "हामी", "हामी", वा "हाम्रो" भनेर चिनिन्छ) र वेबसाइट: https://nepallawgroup.org (यसपछि "वेबसाइट" भनेर चिनिन्छ)।</strong></p>
+                
+                <h2>१. परिचय र कार्यक्षेत्र</h2>
+                <p>(१) कम्पनीले तपाईंको गोपनीयताको सम्मान गर्दछ र तपाईंले हामीसँग साझा गर्नुभएको व्यक्तिगत जानकारीको सुरक्षा गर्न प्रतिबद्ध छ। यो गोपनीयता नीतिले व्याख्या गर्दछ:</p>
+                <ul>
+                    <li>(क) वेबसाइट मार्फत हामीले कुन व्यक्तिगत जानकारी सङ्कलन गर्न सक्छौं;</li>
+                    <li>(ख) हामी त्यो जानकारी कसरी प्रयोग गर्छौं, भण्डारण गर्छौं र सुरक्षित गर्छौं;</li>
+                    <li>(ग) तपाईंको व्यक्तिगत जानकारी सम्बन्धी तपाईंको अधिकार;</li>
+                    <li>(घ) हामी लागू हुने गोपनीयता कानूनहरूको कसरी पालना गर्छौं।</li>
+                </ul>
+                <p>(२) यो नीति सबै आगन्तुकहरू, प्रयोगकर्ताहरू, र वेबसाइट पहुँच गर्ने वा यस मार्फत जानकारी पेश गर्ने कुनै पनि व्यक्तिमा लागू हुन्छ, सदस्यताको लागि आवेदन दिने, अद्यावधिकहरूको सदस्यता लिने, वा इमेल मार्फत हामीलाई सम्पर्क गर्नेहरू सहित। कम्पनी अझै सम्मिलित नभएको हुनाले, यो गोपनीयता नीति प्रस्तावित कम्पनीको तर्फबाट संस्थापक समूहद्वारा जारी गरिएको हो। स्थापना पछि, कम्पनीले यो नीतिलाई आफ्नै रूपमा अपनाउनेछ।</p>
+                
+                <h2>२. हामीले सङ्कलन गर्ने जानकारी</h2>
+                <p>(१) हामी निम्न श्रेणीका व्यक्तिगत जानकारी सङ्कलन गर्न सक्छौं:</p>
+                <p>(क) <strong>तपाईंले स्वेच्छाले प्रदान गर्ने जानकारी:</strong> (अ) तपाईंले इमेल मार्फत हामीलाई सम्पर्क गर्दा, हामी तपाईंको नाम, इमेल ठेगाना, र तपाईंले आफ्नो सन्देशमा समावेश गर्न रोज्नुभएको कुनै पनि अन्य जानकारी सङ्कलन गर्न सक्छौं। (आ) तपाईंले सदस्यताको लागि आवेदन दिँदा (संस्थापक, साधारण, आजीवन, वा मानद), हामी तपाईंको पूरा नाम, ठेगाना, नागरिकता विवरण, व्यावसायिक योग्यता, सम्पर्क जानकारी, र संघको ज्ञापनपत्र र संघको लेख अन्तर्गत योग्यता प्रमाणित गर्न आवश्यक पर्ने कुनै पनि अन्य डेटा सङ्कलन गर्न सक्छौं। (इ) यदि तपाईंले कुनै पनि न्यूजलेटर वा अद्यावधिक सेवाको सदस्यता लिनुभयो (यदि प्रस्ताव गरिएको छ भने), हामी तपाईंको इमेल ठेगाना सङ्कलन गर्न सक्छौं।</p>
+                <p>(ख) <strong>स्वचालित रूपमा सङ्कलन गरिएको जानकारी:</strong> जब तपाईं वेबसाइटमा जानुहुन्छ, केही प्राविधिक जानकारी स्वचालित रूपमा सङ्कलन गर्न सकिन्छ, जसमा तपाईंको IP ठेगाना, ब्राउजर प्रकार, अपरेटिङ सिस्टम, र उपकरण जानकारी; तपाईंले हेर्ने पृष्ठहरू, तपाईंले क्लिक गर्ने लिङ्कहरू, र तपाईंको भ्रमणको मिति र समय; सन्दर्भ वेबसाइट वा खोज इन्जिन।</p>
+                <p>(ग) <strong>कुकीज र समान प्रविधिहरू:</strong> हामी तपाईंको ब्राउजिङ अनुभव बढाउन, वेबसाइट ट्राफिकको विश्लेषण गर्न र तपाईंको प्राथमिकताहरू सम्झन कुकीहरू - तपाईंको उपकरणमा भण्डारण गरिएका साना पाठ फाइलहरू - प्रयोग गर्न सक्छौं। तपाईंले आफ्नो ब्राउजर सेटिङहरू मार्फत कुकीहरू असक्षम गर्न सक्नुहुन्छ, तर केही वेबसाइट सुविधाहरूले परिणामस्वरूप राम्ररी काम नगर्न सक्छन्।</p>
+                
+                <h2>३. हामी तपाईंको जानकारी कसरी प्रयोग गर्छौं</h2>
+                <p>(१) हामीले सङ्कलन गरेको जानकारी हामी निम्न उद्देश्यका लागि प्रयोग गर्छौं:</p>
+                <ul>
+                    <li>(क) तपाईंसँग कुराकानी गर्न: तपाईंको सोधपुछको जवाफ दिन, कम्पनीको बारेमा जानकारी प्रदान गर्न, र प्रशासनिक सन्देशहरू पठाउन।</li>
+                    <li>(ख) सदस्यता आवेदनहरू प्रशोधन गर्न: योग्यता प्रमाणित गर्न, सदस्यता रेकर्डहरू कायम राख्न, र सदस्यता सञ्चार व्यवस्थापन गर्न।</li>
+                    <li>(ग) वेबसाइट सुधार गर्न: प्रयोग ढाँचाहरूको विश्लेषण गर्न, प्राविधिक समस्याहरूको निदान गर्न, र प्रयोगकर्ता अनुभव बढाउन।</li>
+                    <li>(घ) कानुनी दायित्वहरूको पालना गर्न: नेपालको कानून अन्तर्गत आवश्यक पर्ने सरकारी अधिकारीहरू वा अदालतहरूबाट कानुनी अनुरोधहरूको जवाफ दिनुहोस्।</li>
+                    <li>(ङ) हाम्रा अधिकारहरूको रक्षा गर्न: धोखाधडी रोक्न, हाम्रो प्रयोगका सर्तहरू लागू गर्न, र वेबसाइट र यसका प्रयोगकर्ताहरूको सुरक्षा सुरक्षित गर्न।</li>
+                </ul>
+                <p>(२) हामी मार्केटिङ वा व्यावसायिक उद्देश्यका लागि कुनै पनि तेस्रो पक्षलाई तपाईंको व्यक्तिगत जानकारी बेच्ने, भाडामा दिने वा व्यापार गर्ने छैनौं।</p>
+                
+                <h2>४. प्रशोधनको लागि कानुनी आधार</h2>
+                <p>कम्पनी नेपालमा आधारित भए तापनि, हामी अन्तर्राष्ट्रिय गोपनीयता मापदण्डहरूको सम्मान गर्छौं। व्यक्तिगत जानकारी प्रशोधन गर्ने हाम्रो कानुनी आधारहरूमा समावेश छन्: (क) जब तपाईं स्वेच्छाले जानकारी प्रदान गर्नुहुन्छ (जस्तै, सदस्यता आवेदन); (ख) वेबसाइट सञ्चालन र सुधार गर्न, तपाईंसँग कुराकानी गर्न, र दुरुपयोग रोक्न; (ग) नेपाली कानूनद्वारा आवश्यक पर्दा।</p>
+                
+                <h2>५. डेटा साझेदारी र खुलासा</h2>
+                <p>(१) हामी निम्न सीमित परिस्थितिहरूमा मात्र तपाईंको व्यक्तिगत जानकारी साझा गर्न सक्छौं:</p>
+                <ul>
+                    <li>(क) हामीलाई वेबसाइट सञ्चालन गर्न वा सदस्यता डेटा व्यवस्थापन गर्न मद्दत गर्ने तेस्रो पक्षहरू (जस्तै, होस्टिंग प्रदायकहरू, इमेल सेवाहरू)। यी प्रदायकहरू तपाईंको डेटा सुरक्षित गर्न र निर्दिष्ट उद्देश्यहरूको लागि मात्र प्रयोग गर्न सम्झौतामा बाध्य छन्।</li>
+                    <li>(ख) अदालतको आदेश, समन, वा नेपाली कानून अन्तर्गत अन्य कानुनी प्रक्रियाद्वारा आवश्यक परेमा।</li>
+                    <li>(ग) भौतिक हानि वा वित्तीय क्षति रोक्न, वा शंकास्पद अवैध गतिविधि रिपोर्ट गर्न आवश्यक परेमा।</li>
+                    <li>(घ) अन्य कुनै पनि अवस्थामा, हामी तपाईंको जानकारी साझा गर्नु अघि तपाईंको पूर्व लिखित सहमति प्राप्त गर्नेछौं।</li>
+                </ul>
+                <p>(२) कम्पनी अझै सम्म समावेश नभएको हुनाले, संस्थापक समूहका सदस्यहरूले आवेदनहरू प्रशोधन गर्ने र समावेशीकरण कागजातहरू तयार गर्ने उद्देश्यका लागि मात्र सदस्यता आवेदन डेटामा पहुँच गर्न सक्छन्। त्यस्ता सबै सदस्यहरू गोपनीयता दायित्वहरूद्वारा बाध्य छन्।</p>
+                
+                <h2>६. डेटा अवधारण</h2>
+                <p>(१) हामी तपाईंको व्यक्तिगत जानकारी यस गोपनीयता नीतिमा उल्लिखित उद्देश्यहरू पूरा गर्न आवश्यक भएसम्म मात्र राख्छौं, जबसम्म कानूनद्वारा लामो अवधारण अवधि आवश्यक वा अनुमति दिइएको छैन।</p>
+                <ul>
+                    <li>(क) यदि तपाईंको सदस्यता आवेदन स्वीकृत भयो भने, तपाईंको जानकारी तपाईं सदस्य रहुन्जेल र त्यसपछि अभिलेखीय र कानुनी अनुपालनको लागि उचित अवधिको लागि राखिनेछ।</li>
+                    <li>(ख) सामान्यतया अन्तिम सञ्चार पछि दुई वर्षसम्म राखिन्छ।</li>
+                    <li>(ग) विश्लेषण र सुरक्षा उद्देश्यका लागि १२ महिनासम्म राखिन्छ।</li>
+                </ul>
+                <p>(२) समावेशीकरण पछि, कम्पनीले औपचारिक डेटा अवधारण तालिका अपनाउनेछ।</p>
+                
+                <h2>७. डेटा सुरक्षा</h2>
+                <p>हामी तपाईंको व्यक्तिगत जानकारीलाई अनधिकृत पहुँच, प्रकटीकरण, परिवर्तन, वा विनाशबाट जोगाउन उचित प्रशासनिक, प्राविधिक र भौतिक सुरक्षा उपायहरू लागू गर्छौं। यसमा समावेश छन्: (क) वेबसाइट मार्फत प्रसारित डेटाको लागि सुरक्षित सकेट तह (SSL) इन्क्रिप्सन; (ख) अधिकृत व्यक्तिहरू (संस्थापकहरू र तोकिएका प्रशासकहरू) लाई मात्र व्यक्तिगत जानकारीमा प्रतिबन्धित पहुँच; (ग) हाम्रो डेटा सङ्कलन र भण्डारण अभ्यासहरूको नियमित समीक्षा। यद्यपि, इन्टरनेट वा इलेक्ट्रोनिक भण्डारण मार्फत प्रसारणको कुनै पनि विधि १००% सुरक्षित छैन। हामी तपाईंको जानकारी सुरक्षित गर्न प्रयासरत भए तापनि, हामी पूर्ण सुरक्षाको ग्यारेन्टी दिन सक्दैनौं।</p>
+                
+                <h2>८. तपाईंको अधिकार</h2>
+                <p>(१) तपाईंको क्षेत्राधिकारमा निर्भर गर्दै, तपाईंको व्यक्तिगत जानकारीको सम्बन्धमा तपाईंसँग केही अधिकारहरू हुन सक्छन्: (क) हामीसँग तपाईंको बारेमा रहेको व्यक्तिगत जानकारीको प्रतिलिपि अनुरोध गर्नुहोस्; (ख) गलत वा अपूर्ण जानकारी सच्याउनुहोस्; (ग) कानुनी अवधारण दायित्वहरूको अधीनमा, तपाईंको जानकारी मेटाउने अनुरोध गर्नुहोस्; (घ) हामीले तपाईंको जानकारी कसरी प्रयोग गर्छौं भन्ने कुरा सीमित गर्नुहोस्; (ङ) तपाईंको जानकारी संरचित, मेसिन-पठनीय ढाँचामा प्राप्त गर्नुहोस्; (च) जहाँ प्रशोधन सहमतिमा आधारित हुन्छ, तपाईं यसलाई कुनै पनि समयमा फिर्ता लिन सक्नुहुन्छ।</p>
+                <p>(२) यी मध्ये कुनै पनि अधिकार प्रयोग गर्न, कृपया कम्पनीलाई सम्पर्क गर्नुहोस्। हामी ३० दिन भित्र प्रतिक्रिया दिनेछौं। कृपया ध्यान दिनुहोस् कि कम्पनी अझै कानुनी संस्था नभएकोले, केही अधिकारहरू समावेश नभएसम्म सीमित हुन सक्छन्।</p>
+                
+                <h2>९. तेस्रो-पक्ष लिङ्कहरू</h2>
+                <p>वेबसाइटमा बाह्य वेबसाइटहरूको लिङ्कहरू हुन सक्छन् (जस्तै, बार संघहरू, सरकारी पोर्टलहरू, कानुनी स्रोतहरू)। हामी त्यस्ता तेस्रो-पक्ष साइटहरूको गोपनीयता अभ्यासहरू वा सामग्रीको लागि जिम्मेवार छैनौं। हामी तपाईंलाई कुनै पनि व्यक्तिगत जानकारी प्रदान गर्नु अघि उनीहरूको गोपनीयता नीतिहरू पढ्न प्रोत्साहित गर्दछौं।</p>
+                
+                <h2>१०. बालबालिकाको गोपनीयता</h2>
+                <p>वेबसाइट १८ वर्ष मुनिका व्यक्तिहरूको लागि लक्षित छैन। हामी जानाजानी नाबालिगहरूबाट व्यक्तिगत जानकारी सङ्कलन गर्दैनौं। यदि हामीलाई थाहा भयो कि १८ वर्ष मुनिको व्यक्तिले हामीलाई व्यक्तिगत जानकारी प्रदान गरेको छ भने, हामी यसलाई तुरुन्तै मेटाउनेछौं। यदि तपाईंलाई विश्वास छ कि कुनै नाबालिगले डेटा पेश गरेको छ भने, कृपया हामीलाई सम्पर्क गर्नुहोस्।</p>
+                
+                <h2>११. अन्तर्राष्ट्रिय डेटा स्थानान्तरण</h2>
+                <p>वेबसाइट नेपालबाट सञ्चालित छ। यदि तपाईं नेपाल बाहिरबाट वेबसाइट पहुँच गर्नुहुन्छ भने, कृपया सचेत रहनुहोस् कि तपाईंको जानकारी नेपालमा स्थानान्तरण, भण्डारण र प्रशोधन गर्न सकिन्छ, जहाँ डेटा सुरक्षा कानूनहरू तपाईंको क्षेत्राधिकारमा रहेका कानूनहरू भन्दा फरक हुन सक्छन्। वेबसाइट प्रयोग गरेर, तपाईं यस्तो स्थानान्तरणमा सहमत हुनुहुन्छ।</p>
+                
+                <h2>१२. यस गोपनीयता नीतिमा परिवर्तनहरू</h2>
+                <p>हामी हाम्रा अभ्यासहरू, कानुनी आवश्यकताहरू, वा सञ्चालन आवश्यकताहरूमा परिवर्तनहरू प्रतिबिम्बित गर्न समय-समयमा यो गोपनीयता नीति अद्यावधिक गर्न सक्छौं। कुनै पनि सामग्री परिवर्तनहरू अद्यावधिक प्रभावकारी मितिको साथ यस पृष्ठमा पोस्ट गरिनेछ। हामी तपाईंलाई आवधिक रूपमा यो नीति समीक्षा गर्न प्रोत्साहित गर्दछौं। कुनै पनि परिवर्तन पछि वेबसाइटको तपाईंको निरन्तर प्रयोगले संशोधित नीतिको तपाईंको स्वीकृतिलाई जनाउँछ।</p>
+                
+                <h2>१३. सम्पर्क जानकारी</h2>
+                <p>यस गोपनीयता नीति वा तपाईंको व्यक्तिगत जानकारी सम्बन्धी कुनै पनि प्रश्न, सरोकार वा अनुरोधहरूको लागि, कृपया कम्पनीलाई सम्पर्क गर्नुहोस्। कम्पनी अझै सम्म समावेश नभएको हुनाले, सोधपुछ संस्थापक समूहद्वारा ह्यान्डल गरिनेछ। स्थापना पछि, कम्पनीले एक तोकिएको गोपनीयता अधिकारी नियुक्त गर्नेछ।</p>
+                
+                <h2>१४. शासित कानून</h2>
+                <p>(१) यो गोपनीयता नीति र यस अन्तर्गत उत्पन्न हुने कुनै पनि विवादहरू नेपालको कानूनद्वारा शासित हुनेछन्। यस नीतिसँग सम्बन्धित कुनै पनि कानुनी कारबाही हाम्रो प्रयोगका सर्तहरूमा तोकिएका सीमाहरूको अधीनमा रहेर काठमाडौँ जिल्ला, नेपाल (वा, स्थापना पछि, कम्पनीको दर्ता गरिएको कार्यालय रहेको जिल्ला) को अदालतहरूमा ल्याइनेछ।</p>
+                <p>(२) यो वेबसाइट प्रयोग गरेर, तपाईंले स्वीकार गर्नुहुन्छ कि तपाईंले यो गोपनीयता नीति पढ्नुभएको छ, बुझ्नुभएको छ र सहमत हुनुहुन्छ।</p>
+                <p><em>इति सम्वत् २०८३ साल वैशाख महिना ४ गते रोज ६ शुभम् .............................................. ।</em></p>
+            `,
+            footerText: "© २०२५ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
+            termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
     };
+
     let currentLang = localStorage.getItem("nlgLang") || "en";
+
     function updateUI(lang) {
-        const d = privacyData[lang];
-        document.getElementById("heroTitle").innerText = d.heroTitle;
-        document.getElementById("policyContent").innerHTML = d.content;
+        const d = content[lang];
+        document.getElementById("brandName").innerText = d.brand;
+        document.getElementById("navHome").innerText = d.navHome;
+        document.getElementById("navAbout").innerText = d.navAbout;
+        document.getElementById("navMembership").innerText = d.navMembership;
+        document.getElementById("navContact").innerText = d.navContact;
+        document.getElementById("pageTitle").innerText = d.pageTitle;
+        document.getElementById("privacyContent").innerHTML = d.htmlContent;
+        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("termsLink").innerText = d.termsText;
+        document.getElementById("privacyLink").innerText = d.privacyText;
+        document.getElementById("cookieLink").innerText = d.cookieText;
+
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
-    document.getElementById("langNp").onclick = () => updateUI("np");
-    document.getElementById("langEn").onclick = () => updateUI("en");
+
+    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
+    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 </script>
 </body>
