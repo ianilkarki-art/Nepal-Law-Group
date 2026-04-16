@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepal Law Group – Modern Legal Institution | नेपाल ल ग्रुप</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nepal Law Group – Royal Legal Heritage | नेपाल ल ग्रुप</title>
+    <meta name="description" content="Nepal Law Group is a profit non-distributing legal organisation providing accessible, non-profit legal services in Nepal.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,41 +16,61 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #1a2c3e;
+            background: #fef7e8;
+            color: #2c2418;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
         :root {
-            --primary-blue: #0B2F66;
-            --primary-blue-light: #1a4580;
-            --crimson: #9E1B32;
-            --crimson-light: #c12742;
-            --gold: #d4af37;
-            --gray-light: #f8fafc;
-            --gray-border: #e2e8f0;
-            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --nepal-indigo: #1a2a4f;
+            --nepal-indigo-light: #253a6b;
+            --nepal-crimson: #8b1a2c;
+            --nepal-crimson-dark: #6e1423;
+            --nepal-gold: #c9a03d;
+            --nepal-gold-light: #e0b354;
+            --nepal-gold-dark: #a07d2e;
+            --nepal-cream: #fff8ef;
+            --nepal-sand: #e8ddc8;
+            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 25px 40px rgba(0, 0, 0, 0.15);
+            --border-gold: 1px solid rgba(201, 160, 61, 0.4);
         }
 
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 24px;
         }
 
-        /* Header - Modern Glassmorphism */
+        /* Traditional Pattern Overlay (Paubha style) */
+        .pattern-bg {
+            position: relative;
+        }
+        .pattern-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.04"><path fill="%23c9a03d" d="M50,0 L61,30 L90,30 L70,50 L80,80 L50,65 L20,80 L30,50 L10,30 L39,30 Z"/><circle cx="50" cy="50" r="8" fill="%238b1a2c"/></svg>');
+            background-repeat: repeat;
+            background-size: 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Header with Royal Border - No hand icon, bolder brand */
         .navbar {
-            background: rgba(11, 47, 102, 0.95);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, var(--nepal-indigo) 0%, var(--nepal-indigo-light) 100%);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid var(--crimson);
-            transition: all 0.3s ease;
+            border-bottom: 3px solid var(--nepal-gold);
+            box-shadow: var(--shadow-md);
         }
 
         .nav-container {
@@ -60,15 +81,22 @@
             gap: 1rem;
         }
 
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
         .brand-name {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff, var(--nepal-gold-light));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-decoration: none;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .nav-links {
@@ -81,225 +109,293 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
             border-radius: 40px;
-            transition: 0.2s;
-            font-size: 0.95rem;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
         }
 
         .nav-links a:hover {
-            background: var(--crimson);
+            background: var(--nepal-crimson);
+            color: var(--nepal-gold-light);
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.25rem;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             padding: 0.2rem;
             border-radius: 60px;
+            border: 1px solid rgba(201, 160, 61, 0.6);
         }
 
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 1rem;
             border-radius: 40px;
             cursor: pointer;
             color: white;
-            font-family: inherit;
+            font-family: 'Inter', sans-serif;
             transition: 0.2s;
         }
 
         .lang-btn.active {
-            background: var(--crimson);
+            background: var(--nepal-crimson);
+            color: var(--nepal-gold-light);
         }
 
-        /* Hero Section - Modern Wave */
+        /* Royal Hero Section with Mandala Motif - No stats section */
         .hero {
-            position: relative;
-            background: linear-gradient(135deg, #f0f4fe 0%, #ffffff 100%);
+            background: linear-gradient(145deg, #fff8ef 0%, #fff3e0 100%);
             padding: 5rem 0 6rem;
+            position: relative;
             overflow: hidden;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            bottom: -2px;
-            left: 0;
+            top: 0;
+            right: 0;
             width: 100%;
-            height: 80px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23ffffff"/></svg>') no-repeat bottom;
-            background-size: cover;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.06"><path fill="%23c9a03d" d="M100,20 L120,80 L180,80 L130,120 L150,180 L100,145 L50,180 L70,120 L20,80 L80,80 Z"/><circle cx="100" cy="100" r="15" fill="%238b1a2c"/></svg>');
+            background-repeat: repeat;
+            background-size: 80px;
+            pointer-events: none;
         }
 
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: repeating-linear-gradient(90deg, var(--nepal-gold), var(--nepal-crimson) 20px, var(--nepal-gold) 40px);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
 
+        .hero-content {
+            max-width: 90%;
+        }
+
         .hero-badge {
             display: inline-block;
-            background: var(--crimson);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.3rem 1rem;
+            background: var(--nepal-crimson);
+            color: var(--nepal-gold-light);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.3rem 1.2rem;
             border-radius: 60px;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
+            border: 1px solid var(--nepal-gold);
         }
 
         .hero h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 3.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-blue), var(--crimson));
+            background: linear-gradient(135deg, var(--nepal-indigo), var(--nepal-crimson));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #2d3e5a;
-            max-width: 700px;
-            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #4a3e2f;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-card {
+            background: rgba(255, 248, 239, 0.95);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border-gold);
+            backdrop-filter: blur(2px);
+            transition: transform 0.3s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '❦';
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 3rem;
+            color: rgba(201, 160, 61, 0.15);
+            font-family: serif;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero-card i {
+            font-size: 2.8rem;
+            color: var(--nepal-gold);
+            margin-bottom: 1rem;
+        }
+
+        .hero-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--nepal-indigo);
+            margin-bottom: 0.5rem;
         }
 
         /* Section Styles */
         section {
             padding: 4rem 0;
+            border-bottom: 1px solid rgba(201, 160, 61, 0.25);
         }
 
         .section-title {
+            font-family: 'Playfair Display', serif;
             font-size: 2rem;
             font-weight: 800;
-            color: var(--primary-blue);
-            border-left: 6px solid var(--crimson);
+            color: var(--nepal-indigo);
+            border-left: 6px solid var(--nepal-gold);
             padding-left: 1.2rem;
             margin-bottom: 2rem;
         }
 
         .full-text-card {
             background: white;
-            border-radius: 32px;
+            border-radius: 28px;
             padding: 2rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-border);
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-gold);
+            transition: all 0.2s;
         }
 
         .full-text-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--nepal-gold);
         }
 
         .full-text-card p {
             margin-bottom: 1rem;
-            color: #334155;
+            color: #3d3a36;
         }
 
         .compare-box {
-            background: linear-gradient(135deg, var(--gray-light), #ffffff);
-            border-radius: 32px;
+            background: linear-gradient(135deg, #fef7eb, white);
+            border-radius: 28px;
             padding: 2rem;
-            margin: 1.5rem 0;
-            border-left: 6px solid var(--crimson);
-            box-shadow: var(--shadow-sm);
-            transition: 0.2s;
+            margin: 1rem 0;
+            border-left: 6px solid var(--nepal-gold);
+            box-shadow: var(--shadow-md);
+            position: relative;
         }
 
-        /* Department Cards - Modern Grid */
+        /* Department Cards */
         .dept-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 1rem;
         }
 
         .card {
             background: white;
-            border-radius: 28px;
-            padding: 1.8rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-border);
-            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            border-radius: 24px;
+            padding: 1.6rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 160, 61, 0.3);
             position: relative;
             overflow: hidden;
         }
 
-        .card::before {
+        .card::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px;
-            height: 100%;
-            background: var(--crimson);
-            transition: width 0.3s ease;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--nepal-gold), var(--nepal-crimson));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--nepal-gold);
         }
 
-        .card:hover::before {
-            width: 100%;
-            opacity: 0.05;
+        .card:hover::after {
+            transform: scaleX(1);
         }
 
         .card-icon {
-            font-size: 2.5rem;
-            color: var(--crimson);
-            margin-bottom: 1.2rem;
+            font-size: 2.2rem;
+            color: var(--nepal-gold);
+            margin-bottom: 1rem;
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
-            color: var(--primary-blue);
+            color: var(--nepal-indigo);
         }
 
         .card p {
-            color: #475569;
-            line-height: 1.6;
+            color: #4a4a46;
         }
 
         .badge-license {
-            background: #eef2ff;
-            color: var(--primary-blue);
-            font-size: 0.7rem;
+            background: #f3efe7;
+            color: var(--nepal-indigo);
+            font-size: 0.65rem;
             font-weight: 600;
             display: inline-block;
             padding: 0.25rem 0.8rem;
             border-radius: 30px;
             margin-top: 1rem;
+            border: 1px solid var(--nepal-gold);
         }
 
-        /* Final CTA Card */
         .final-card {
-            background: linear-gradient(135deg, #fef7e0, #fffaf0);
-            border-left: 6px solid var(--crimson);
+            background: linear-gradient(135deg, #fff8ed, #fffaf0);
+            border-left: 6px solid var(--nepal-gold);
+            text-align: center;
         }
 
-        /* Footer */
+        /* Royal Footer */
         .footer {
-            background: #0a1a2e;
-            color: #cbd5e1;
+            background: var(--nepal-indigo);
+            color: #cdc6b8;
             padding: 2.5rem 0 2rem;
-            border-top: 3px solid var(--crimson);
-            margin-top: 3rem;
+            border-top: 4px solid var(--nepal-gold);
+            margin-top: 2rem;
         }
 
         .footer-policy {
@@ -311,31 +407,34 @@
         }
 
         .footer-policy a {
-            color: #cbd5e1;
+            color: #cdc6b8;
             text-decoration: none;
             font-size: 0.85rem;
             transition: color 0.2s;
+            letter-spacing: 0.3px;
         }
 
         .footer-policy a:hover {
-            color: var(--crimson-light);
+            color: var(--nepal-gold-light);
             text-decoration: underline;
         }
 
         .footer-copyright {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-align: center;
+            border-top: 1px solid rgba(201, 160, 61, 0.2);
+            padding-top: 1.2rem;
         }
 
-        /* Scroll to top button */
+        /* Scroll to top */
         .scroll-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--crimson);
-            color: white;
-            width: 44px;
-            height: 44px;
+            bottom: 24px;
+            right: 24px;
+            background: var(--nepal-crimson);
+            color: var(--nepal-gold-light);
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -345,8 +444,8 @@
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 99;
-            box-shadow: var(--shadow-md);
-            border: none;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--nepal-gold);
         }
 
         .scroll-top.visible {
@@ -355,17 +454,21 @@
         }
 
         .scroll-top:hover {
-            background: var(--primary-blue);
+            background: var(--nepal-indigo);
             transform: translateY(-3px);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .hero-content {
+                max-width: 100%;
             }
             .brand-name {
                 font-size: 1.4rem;
@@ -379,17 +482,16 @@
             .footer-policy {
                 gap: 1rem;
             }
-            .nav-links {
-                gap: 0.5rem;
-            }
-            .nav-links a {
-                padding: 0.4rem 0.7rem;
-                font-size: 0.85rem;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.2rem;
             }
         }
 
-        .text-crimson {
-            color: var(--crimson);
+        .text-gold {
+            color: var(--nepal-gold);
         }
     </style>
 </head>
@@ -397,7 +499,9 @@
 
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <div class="brand">
+            <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        </div>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
@@ -412,36 +516,40 @@
 </header>
 
 <main>
-    <div class="hero">
-        <div class="container hero-content">
-            <span class="hero-badge" id="heroBadge">⚖️ नयाँ मापदण्ड • New Standard</span>
-            <h1 id="heroTitle">नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h1>
-            <p id="heroSub">सेवामूलक, गैर-नाफामुखी, शैक्षिक, सार्वजनिक उपयोगिता</p>
+    <div class="hero pattern-bg">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge" id="heroBadge">⚖️ नयाँ मापदण्ड • New Standard</span>
+                <h1 id="heroTitle">नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h1>
+                <p id="heroSub">सेवामूलक, गैर-नाफामुखी, शैक्षिक, सार्वजनिक उपयोगिता</p>
+            </div>
+            <div class="hero-card">
+                <i class="fas fa-dharmachakra"></i>
+                <h3 id="heroCardTitle">संस्थागत मञ्च</h3>
+                <p id="heroCardText">साझा पूर्वाधार, प्रविधि र सहकार्यमा आधारित दिगो कानूनी संस्था।</p>
+                <p id="heroCardTextEn" style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--nepal-crimson);">A sustainable legal institution built on shared infrastructure, technology, and collaboration.</p>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- Full description -->
         <section>
             <div class="full-text-card" id="fullDescription"></div>
         </section>
 
-        <!-- Comparison with traditional firms -->
         <section>
             <div class="compare-box" id="comparisonBox"></div>
         </section>
 
-        <!-- Departments -->
         <section>
             <h2 class="section-title" id="deptHeading">⚙️ हाम्रो संरचना • Our Structure</h2>
-            <p class="section-sub" id="deptSub" style="color: #4b5563; margin-bottom: 2rem;">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
+            <p id="deptSub" style="color: #5c5548; margin-bottom: 1.5rem;">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
             <div class="dept-grid" id="deptGrid"></div>
         </section>
 
-        <!-- Final note: modern institution -->
         <div class="full-text-card final-card" style="margin-bottom: 2rem;">
-            <i class="fas fa-building" style="color: var(--crimson); font-size: 2rem; margin-bottom: 0.5rem; display: inline-block;"></i>
-            <h3 id="closingTitle" style="color: var(--primary-blue); margin-top: 0.5rem;">नेपाल ल ग्रुप – परम्परागत कानूनी अभ्यासको विकल्प</h3>
+            <i class="fas fa-landmark" style="color: var(--nepal-gold); font-size: 2rem; margin-bottom: 0.5rem; display: inline-block;"></i>
+            <h3 id="closingTitle" style="color: var(--nepal-indigo); margin-top: 0.5rem; font-family: 'Playfair Display', serif;">नेपाल ल ग्रुप – परम्परागत कानूनी अभ्यासको विकल्प</h3>
             <p id="closingText">आधुनिक, अनुपालनशील र दिगो संस्थाको रूपमा स्थापना, नेपालको कानूनी क्षेत्रमा नयाँ मापदण्ड।</p>
         </div>
     </div>
@@ -456,7 +564,7 @@
         </div>
         <div class="footer-copyright">
             <p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | कानूनी सेवा सबैको पहुँचमा</p>
-            <p style="font-size: 0.75rem; margin-top: 0.5rem;" id="footerEthics">गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण</p>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;" id="footerEthics">गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण</p>
         </div>
     </div>
 </footer>
@@ -466,7 +574,7 @@
 </button>
 
 <script>
-    // Bilingual content (same as original but kept intact)
+    // Bilingual content (original full text preserved)
     const content = {
         en: {
             brand: "Nepal Law Group",
@@ -474,18 +582,20 @@
             heroBadge: "⚖️ Redefining Legal Practice",
             heroTitle: "Nepal Law Group – A New Legal Organisation",
             heroSub: "Service-oriented, non-profit, educational & public welfare institution",
+            heroCardTitle: "Institutional Platform",
+            heroCardText: "A sustainable legal institution built on shared infrastructure, technology, and collaboration.",
             fullDescription: `
-                <h3>📜 Nepal Law Group – A New Legal Organisation</h3>
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--nepal-indigo);">📜 Nepal Law Group – A New Legal Organisation</h3>
                 <p>Nepal Law Group is a profit non-distributing company. The nature of the business or transaction to be undertaken by this company will be service-oriented, non-profit, educational, academic, social, charitable, and public utility and welfare in nature. This means that it does not distribute the surplus generated from any business activity as personal gain, but rather reinvests it in the welfare of society and the development of the legal sector. The goal of this company is to make legal services accessible to all levels and classes of citizens.</p>
                 <p>Traditional law firms distribute surplus income among partners. In doing so, they cannot invest in firm-level infrastructure development, technology upgrading, or employee skill enhancement. However, this company will be established as an institutional platform, which reinvests all surplus to achieve the objectives of the company and increase the company's funds. This structure will enable long-term sustainability, shared infrastructure, and a culture of continuous improvement.</p>
                 <p>The company will operate through four client-facing departments (Litigation and Advocacy, Research and Policy, Education, and Publications) and two internal support departments (Administration and Accounting, Management and Support). These departments will coordinate with each other to provide integrated services to clients. The Litigation and Advocacy Department is staffed only by licensed members of the Nepal Bar Council, while the other departments are open to all members and employees.</p>
                 <p>Thus, Nepal Law Group is in the process of establishing itself as a modern, compliant, and sustainable organization as an alternative to traditional legal practice. It aims to set new standards in the legal sector of Nepal.</p>
             `,
             comparison: `
-                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
-                <strong style="font-size: 1.3rem;">🏛️ Traditional Law Firms vs. Nepal Law Group</strong>
-                <p style="margin-top: 12px;">Traditional firms distribute surplus income among partners, limiting long-term investment in infrastructure, technology, and staff training. <strong class="text-crimson">Nepal Law Group</strong> reinvests 100% surplus into shared resources, legal innovation, and capacity building — fostering a sustainable ecosystem for legal excellence and accessibility.</p>
-                <hr>
+                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--nepal-gold); margin-right: 12px;"></i>
+                <strong style="font-size: 1.3rem; font-family: 'Playfair Display', serif;">🏛️ Traditional Law Firms vs. Nepal Law Group</strong>
+                <p style="margin-top: 12px;">Traditional firms distribute surplus income among partners, limiting long-term investment in infrastructure, technology, and staff training. <strong style="color: var(--nepal-crimson);">Nepal Law Group</strong> reinvests 100% surplus into shared resources, legal innovation, and capacity building — fostering a sustainable ecosystem for legal excellence and accessibility.</p>
+                <hr style="border-color: rgba(201,160,61,0.3);">
                 <p>✅ Institutional platform | ✅ Continuous improvement | ✅ Public welfare driven</p>
             `,
             deptHeading: "⚙️ Our Departments • Institutional Framework",
@@ -512,18 +622,20 @@
             heroBadge: "⚖️ नयाँ कानूनी परम्परा",
             heroTitle: "नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था",
             heroSub: "सेवामूलक, गैर-नाफामुखी, शैक्षिक र सार्वजनिक कल्याणकारी संस्था",
+            heroCardTitle: "संस्थागत मञ्च",
+            heroCardText: "साझा पूर्वाधार, प्रविधि र सहकार्यमा आधारित दिगो कानूनी संस्था।",
             fullDescription: `
-                <h3>📜 नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h3>
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--nepal-indigo);">📜 नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h3>
                 <p>नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनी हो। यस कम्पनीले गर्ने व्यवसाय वा कारोबारको प्रकृति सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी, तथा सार्वजनिक उपयोगिता र कल्याणकारी प्रकृतिको हुनेछ। यसको अर्थ यसले कुनै पनि व्यावसायिक गतिविधिबाट प्राप्त हुने अधिशेषलाई व्यक्तिगत लाभको रूपमा वितरण गर्दैन, बरु त्यसलाई समाजको हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गर्दछ। यस कम्पनीको लक्ष्य कानूनी सेवाहरू सबै तह र वर्गका नागरिकहरूका लागि पहुँचयोग्य बनाउनु हो।</p>
                 <p>परम्परागत कानूनी फर्महरूले अधिशेष आम्दानी साझेदारहरूबीच वितरण गर्छन्। त्यसो गर्दा तिनीहरूले फर्म-स्तरको पूर्वाधार विकास, प्रविधि स्तरोन्नति, वा कर्मचारीको दक्षता वृद्धिमा लगानी गर्न सक्दैनन्। तर, यस कम्पनी एउटा संस्थागत मञ्चको रूपमा स्थापित हुनेछ, जसले सम्पूर्ण अधिशेष कम्पनीको उद्देश्यहरू प्राप्त गर्न र कम्पनीको कोष वृद्धि गर्न पुनः लगानी गर्दछ। यस संरचनाले दीर्घकालीन दिगोपन, साझा पूर्वाधार, र निरन्तर सुधारको संस्कृतिलाई सम्भव बनाउँदछ।</p>
                 <p>यस कम्पनी चार ग्राहकमुखी विभाग (मुद्दा मामिला तथा वकालत, अनुसन्धान तथा नीति, शिक्षा, र प्रकाशन) र दुई आन्तरिक सहायक विभाग (प्रशासन तथा लेखा, व्यवस्थापन तथा सहयोग) मार्फत सञ्चालन हुनेछ। यी विभागहरूले आपसमा समन्वय गरी ग्राहकलाई एकीकृत सेवा प्रदान गर्छन्। मुद्दा मामिला तथा वकालत विभागमा नेपाल कानून व्यवसायी परिषदको अनुमतिपत्र प्राप्त सदस्यहरूले मात्र काम गर्छन्, जबकि अन्य विभागहरू सबै सदस्य र कर्मचारीहरूका लागि खुला छन्।</p>
                 <p>यसरी, नेपाल ल ग्रुप परम्परागत कानूनी अभ्यासको विकल्पको रूपमा एउटा आधुनिक, अनुपालनशील र दिगो संस्थाको रूपमा स्थापना हुने चरणमा छ। यसले नेपालको कानूनी क्षेत्रमा नयाँ मापदण्ड स्थापित गर्ने लक्ष्य राखेको छ।</p>
             `,
             comparison: `
-                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
-                <strong style="font-size: 1.3rem;">🏛️ परम्परागत कानूनी फर्महरू बनाम नेपाल ल ग्रुप</strong>
-                <p style="margin-top: 12px;">परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूमा बाँड्छन्, जसले पूर्वाधार, प्रविधि र तालिममा दीर्घकालीन लगानी रोक्छ। <strong class="text-crimson">नेपाल ल ग्रुप</strong> सम्पूर्ण अधिशेषलाई साझा स्रोत, कानूनी नवप्रवर्तन र क्षमता विकासमा पुनः लगानी गर्दछ — एक दिगो पारिस्थितिकी प्रणाली निर्माण गर्दै।</p>
-                <hr>
+                <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--nepal-gold); margin-right: 12px;"></i>
+                <strong style="font-size: 1.3rem; font-family: 'Playfair Display', serif;">🏛️ परम्परागत कानूनी फर्महरू बनाम नेपाल ल ग्रुप</strong>
+                <p style="margin-top: 12px;">परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूमा बाँड्छन्, जसले पूर्वाधार, प्रविधि र तालिममा दीर्घकालीन लगानी रोक्छ। <strong style="color: var(--nepal-crimson);">नेपाल ल ग्रुप</strong> सम्पूर्ण अधिशेषलाई साझा स्रोत, कानूनी नवप्रवर्तन र क्षमता विकासमा पुनः लगानी गर्दछ — एक दिगो पारिस्थितिकी प्रणाली निर्माण गर्दै।</p>
+                <hr style="border-color: rgba(201,160,61,0.3);">
                 <p>✅ संस्थागत मञ्च | ✅ निरन्तर सुधार | ✅ सार्वजनिक कल्याण</p>
             `,
             deptHeading: "⚙️ हाम्रा विभागहरू • संस्थागत संरचना",
@@ -571,6 +683,13 @@
         document.getElementById("heroBadge").innerText = d.heroBadge;
         document.getElementById("heroTitle").innerHTML = d.heroTitle;
         document.getElementById("heroSub").innerHTML = d.heroSub;
+        document.getElementById("heroCardTitle").innerText = d.heroCardTitle;
+        document.getElementById("heroCardText").innerHTML = d.heroCardText;
+        if (lang === "en") {
+            document.getElementById("heroCardTextEn").innerHTML = "A sustainable legal institution built on shared infrastructure, technology, and collaboration.";
+        } else {
+            document.getElementById("heroCardTextEn").innerHTML = "";
+        }
         document.getElementById("fullDescription").innerHTML = d.fullDescription;
         document.getElementById("comparisonBox").innerHTML = d.comparison;
         document.getElementById("deptHeading").innerHTML = d.deptHeading;
@@ -589,14 +708,12 @@
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
-        currentLang = lang;
     }
 
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 
-    // Scroll to top button
     const scrollBtn = document.getElementById("scrollTopBtn");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
