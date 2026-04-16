@@ -2,50 +2,226 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Policy – Nepal Law Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Cookie Policy – Nepal Law Group | कुकी नीति – नेपाल ल ग्रुप</title>
+    <meta name="description" content="Cookie Policy for Nepal Law Group website.">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
-        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
+            color: #1a2a3a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (same as previous pages) */
         .navbar {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
-            padding: 1.2rem 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid var(--crimson);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
-        .nav-links a:hover { background: var(--crimson); }
-        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
-        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
-        .lang-btn.active { background: var(--crimson); }
-        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2rem 0; text-align: center; }
-        .page-hero h1 { font-size: 2rem; color: var(--primary-blue); }
-        .content-policy { background: white; border-radius: 28px; padding: 2rem; margin: 2rem 0; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); }
-        .content-policy h2 { color: var(--primary-blue); margin: 1.5rem 0 0.5rem; font-size: 1.4rem; border-left: 4px solid var(--crimson); padding-left: 1rem; }
-        .content-policy p, .content-policy ul { margin-bottom: 1rem; }
-        .content-policy ul { padding-left: 2rem; }
-        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 1.5rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
-        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0b2f5c;
+        }
+
+        .lang-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2rem;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0.2rem;
+            background: #e9ecef;
+            padding: 0.2rem;
+            border-radius: 40px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            color: #2c3e50;
+        }
+
+        .lang-btn.active {
+            background: #0b2f5c;
+            color: white;
+        }
+
+        /* Page hero */
+        .page-hero {
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Cookie policy card */
+        .policy-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .policy-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin: 1.2rem 0 0.5rem;
+            border-left: 4px solid #0b2f5c;
+            padding-left: 1rem;
+        }
+        .policy-card h2:first-of-type {
+            margin-top: 0;
+        }
+        .policy-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a4a6e;
+            margin: 1rem 0 0.3rem;
+        }
+        .policy-card p {
+            margin-bottom: 0.8rem;
+            color: #4a5568;
+        }
+        .policy-card ul, .policy-card ol {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #4a5568;
+        }
+        .policy-card li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f1f5f9;
+            padding: 2rem 0 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+        .footer-policy {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-policy a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+        .footer-policy a:hover {
+            color: #0b2f5c;
+        }
+        .footer-copyright {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                font-size: 1.8rem;
+            }
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .policy-card {
+                padding: 1.2rem;
+            }
+            .policy-card h2 {
+                font-size: 1.3rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
+
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name">Nepal Law Group</a>
+        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-wrapper">
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -53,82 +229,190 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="page-hero">
-        <div class="container"><h1 id="heroTitle">Cookie Policy</h1></div>
+        <div class="container">
+            <h1 id="pageTitle">Cookie Policy</h1>
+        </div>
     </div>
+
     <div class="container">
-        <div class="content-policy" id="policyContent"></div>
+        <div class="policy-card" id="cookieContent"></div>
     </div>
 </main>
+
 <footer class="footer">
-    <div class="container"><p>© 2025 Nepal Law Group - All rights reserved</p></div>
+    <div class="container">
+        <div class="footer-policy">
+            <a href="terms.html" id="termsLink">Terms of Use</a>
+            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
+        </div>
+        <div class="footer-copyright">
+            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+        </div>
+    </div>
 </footer>
+
 <script>
-    const cookieData = {
+    const content = {
         en: {
-            heroTitle: "Cookie Policy",
-            content: `
-                <p><strong>Last updated: April 2025</strong></p>
-                <p>This Cookie Policy explains how Nepal Law Group ("we", "us", "our") uses cookies and similar technologies on our website.</p>
-                <h2>1. What are Cookies?</h2>
-                <p>Cookies are small text files placed on your device when you visit a website. They help the website remember your actions and preferences over time.</p>
-                <h2>2. Types of Cookies We Use</h2>
+            brand: "Nepal Law Group",
+            navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            pageTitle: "Cookie Policy",
+            htmlContent: `
+                <p><strong>Nepal Law Group (proposed company, not yet incorporated under the Companies Act, 2063 of Nepal) (hereinafter referred to as "the Company", "we", "us", or "our") and Website: https://nepallawgroup.org (hereinafter referred to as "the Website")</strong></p>
+                
+                <h2>1. Introduction</h2>
+                <p>This Cookie Policy explains how the Company uses cookies and similar tracking technologies on the Website. It describes what cookies are, why we use them, and your choices regarding their use. This Policy is incorporated into our Privacy Policy and Terms of Use. By continuing to browse or use the Website, you consent to our use of cookies as described in this Policy, unless you have set your browser to reject them. Because the Company is not yet incorporated, this Cookie Policy is issued by the founding group on behalf of the proposed company. After incorporation, the company shall adopt this Policy as its own.</p>
+                
+                <h2>2. What Are Cookies?</h2>
+                <p>Cookies are small text files that are stored on your device (computer, tablet, smartphone) when you visit a website. They are widely used to make websites work more efficiently, enhance user experience, and provide information to the website operators. Cookies may be "persistent" (remain on your device after you close your browser) or "session" (deleted when you close your browser). Other similar technologies, such as local storage, pixels, and web beacons, may also be used for the same purposes. For simplicity, we refer to all such technologies as "cookies" in this Policy.</p>
+                
+                <h2>3. Types of Cookies We Use</h2>
+                <p>We use the following categories of cookies on the Website:</p>
+                <p>(a) <strong>Strictly Necessary Cookies</strong> are essential for the Website to function properly. They enable basic features such as page navigation, secure access to certain areas, and load balancing. Without these cookies, the Website cannot operate as intended. You cannot disable these cookies through our Website, but you may block them via your browser settings (which may affect Website performance).</p>
+                <p>(b) <strong>Preference (Functionality) Cookies</strong> allow the Website to remember choices you make (such as your language preference or region) and provide enhanced, personalised features. They may also be used to remember changes you have made to text size, fonts, or other customisable parts of the Website. Disabling these cookies may prevent certain services from functioning properly.</p>
+                <p>(c) <strong>Analytics (Performance) Cookies</strong> are used to collect information about how visitors use the Website – for example, which pages are visited most often, how users navigate between pages, and whether they encounter error messages. This helps us improve the Website’s performance and user experience. All information collected by these cookies is aggregated and anonymous. The analytics service we may use (such as Google Analytics or a similar platform) will have its own privacy policy.</p>
+                <p>(d) <strong>Marketing (Targeting) Cookies</strong> are not intentionally set at present because the company does not engage in any advertising or marketing activities on the Website. If this changes in the future, we will update this Policy and seek your explicit consent where required by law.</p>
+                
+                <h2>4. Cookies Used on This Website</h2>
+                <p>(1) The Website currently deploys a limited set of cookies, all of which fall into the categories described above. Strictly necessary cookies include a session identifier (session_id) that maintains your browsing session while you navigate the Website, allowing the server to recognise your requests as part of a continuous interaction. This cookie is deleted when you close your browser. Another strictly necessary cookie, csrf_token, provides security against cross site request forgery attacks by ensuring that any form submission or state changing request originates from the Website itself. This cookie also lasts only for the duration of your session.</p>
+                <p>(2) We also use a preference cookie, lang_pref, which remembers your chosen language preference (Nepali or English) so that you do not have to reselect it on each visit. This cookie persists for one year. Additionally, a strictly necessary cookie named cookie_consent records your acceptance of the cookie notice presented upon your first visit. This cookie is stored for six months and prevents the notice from reappearing repeatedly.</p>
+                <p>(3) For analytics purposes, we may deploy cookies such as _ga and _gid (if we use Google Analytics or a similar service). These cookies distinguish unique users and track their interactions with the Website, helping us understand which pages are visited most frequently, how users navigate between pages, and whether any technical errors occur. The _ga cookie typically lasts for two years, while _gid lasts for 24 hours. All data collected by analytics cookies is aggregated and anonymous; it does not personally identify you. We do not currently use any marketing or targeting cookies, as the Website carries no advertising. If this changes in the future, we will update this Cookie Policy accordingly and seek your explicit consent where required by law.</p>
+                
+                <h2>5. Third Party Cookies</h2>
+                <p>(1) We may use third party services that set their own cookies on your device when you use the Website. These third parties include:</p>
                 <ul>
-                    <li><strong>Essential Cookies:</strong> Necessary for the website to function properly (e.g., language preference).</li>
-                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site (e.g., Google Analytics).</li>
-                    <li><strong>Functional Cookies:</strong> Remember your choices to improve your experience.</li>
+                    <li>(a) Web hosting provider for ensuring reliable delivery of the Website</li>
+                    <li>(b) Analytics provider (e.g., Google Analytics) for collecting anonymous usage statistics.</li>
+                    <li>(c) Email service provider (if you contact us or subscribe) for managing communications.</li>
                 </ul>
-                <h2>3. Managing Cookies</h2>
-                <p>You can control and delete cookies through your browser settings. Most browsers allow you to block or remove cookies. However, disabling essential cookies may affect website functionality.</p>
-                <h2>4. Third-Party Cookies</h2>
-                <p>We may use third-party services (e.g., Google Analytics) that set their own cookies. We do not control those cookies. Please review the privacy policies of those services.</p>
-                <h2>5. Consent</h2>
-                <p>By continuing to use our website, you consent to our use of cookies as described in this policy. You can withdraw consent by disabling cookies in your browser.</p>
-                <h2>6. Changes to This Policy</h2>
-                <p>We may update this Cookie Policy from time to time. Changes will be posted on this page.</p>
-                <h2>7. Contact Us</h2>
-                <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a>.</p>
-            `
+                <p>(2) We do not control the setting of third party cookies. You should review the cookie and privacy policies of these third parties for more information. Currently, the Company does not integrate social media plugins that would set third party tracking cookies.</p>
+                
+                <h2>6. Your Consent and Control</h2>
+                <p>(1) When you first visit the Website, we will display a prominent cookie notice informing you of our use of cookies. By continuing to browse or use the Website after seeing this notice, you consent to our use of cookies as described in this Policy, except for strictly necessary cookies which require no consent.</p>
+                <p>(2) You may withdraw your consent at any time by:</p>
+                <ul>
+                    <li>(a) Clearing cookies from your browser;</li>
+                    <li>(b) Disabling cookies in your browser settings;</li>
+                    <li>(c) Using the opt out mechanisms provided by third party analytics services (e.g., Google Analytics Opt out Browser Add on).</li>
+                </ul>
+                <p>(3) Most web browsers allow you to control cookies through their settings. You can:</p>
+                <ul>
+                    <li>(a) See what cookies are stored on your device and delete them individually;</li>
+                    <li>(b) Block third party cookies;</li>
+                    <li>(c) Block all cookies (including strictly necessary ones);</li>
+                    <li>(d) Receive a notification before a cookie is set.</li>
+                </ul>
+                <p>(4) Please refer to your browser’s help section for instructions. Be aware that blocking all cookies may impair or break the functionality of the Website.</p>
+                
+                <h2>7. Changes to This Cookie Policy</h2>
+                <p>We may update this Cookie Policy from time to time to reflect changes in technology, legal requirements, or our use of cookies. Any material changes will be posted on this page with an updated effective date. We encourage you to review this Policy periodically. Your continued use of the Website after any changes constitutes your acceptance of the revised Policy.</p>
+                
+                <h2>8. Contact Information</h2>
+                <p>If you have any questions, concerns, or requests regarding this Cookie Policy or our use of cookies, please contact to Company. Because the Company is not yet incorporated, inquiries will be handled by the founding group. After incorporation, the company shall appoint a designated data protection contact person.</p>
+                
+                <h2>9. Governing Law</h2>
+                <p>(1) This Cookie Policy and any disputes arising under it shall be governed by the laws of Nepal. Any legal action related to this Policy shall be brought before the courts of Kathmandu district, Nepal (or, after incorporation, the district where the registered office of the Company is located), subject to the limitations set forth in our Terms of Use.</p>
+                <p>(2) By continuing to use this Website, you acknowledge that you have read, understood, and agree to this Cookie Policy.</p>
+                <p><em>Dated of 17th day of April, 2026.</em></p>
+            `,
+            footerText: "© 2025 Nepal Law Group – All rights reserved.",
+            termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            heroTitle: "कुकी नीति",
-            content: `
-                <p><strong>अन्तिम मिति: अप्रिल २०२५</strong></p>
-                <p>यो कुकी नीतिले नेपाल ल ग्रुपले हाम्रो वेबसाइटमा कुकीहरू र समान प्रविधिहरू कसरी प्रयोग गर्दछ भनी व्याख्या गर्दछ।</p>
-                <h2>१. कुकीहरू के हुन्?</h2>
-                <p>कुकीहरू सानो पाठ फाइलहरू हुन् जुन तपाईंले वेबसाइट भ्रमण गर्दा तपाईंको यन्त्रमा राखिन्छ। तिनीहरूले वेबसाइटलाई तपाईंको कार्यहरू र प्राथमिकताहरू सम्झन मद्दत गर्छन्।</p>
-                <h2>२. हामीले प्रयोग गर्ने कुकीका प्रकारहरू</h2>
+            brand: "नेपाल ल ग्रुप",
+            navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            pageTitle: "कुकी नीति",
+            htmlContent: `
+                <p><strong>नेपाल ल ग्रुप (प्रस्तावित कम्पनी, कम्पनी ऐन, २०६३, नेपाल अन्तर्गत अझै सम्मिलित नभएको) (यसपछि "कम्पनी", "हामी", "हामीलाई", वा "हाम्रो" भनेर चिनिन्छ) र वेबसाइट: https://nepallawgroup.org (यसपछि "वेबसाइट" भनेर चिनिन्छ)</strong></p>
+                
+                <h2>१. परिचय</h2>
+                <p>यो कुकी नीतिले कम्पनीले वेबसाइटमा कुकीहरू र समान ट्र्याकिङ प्रविधिहरू कसरी प्रयोग गर्छ भनेर वर्णन गर्दछ। यसले कुकीहरू के हुन्, हामी तिनीहरूलाई किन प्रयोग गर्छौं, र तिनीहरूको प्रयोगको सम्बन्धमा तपाईंको छनौटहरू वर्णन गर्दछ। यो नीति हाम्रो गोपनीयता नीति र प्रयोगका सर्तहरूमा समावेश गरिएको छ। वेबसाइट ब्राउज गर्न वा प्रयोग गर्न जारी राखेर, तपाईंले यस नीतिमा वर्णन गरिए अनुसार कुकीहरूको हाम्रो प्रयोगमा सहमति जनाउनुहुन्छ, जबसम्म तपाईंले आफ्नो ब्राउजरलाई तिनीहरूलाई अस्वीकार गर्न सेट गर्नुभएको छैन। कम्पनी अझै सम्म सम्मिलित नभएको हुनाले, यो कुकी नीति प्रस्तावित कम्पनीको तर्फबाट संस्थापक समूहद्वारा जारी गरिएको हो। समावेश पछि, कम्पनीले यो नीतिलाई आफ्नै रूपमा अपनाउनेछ।</p>
+                
+                <h2>२. कुकीहरू के हुन्?</h2>
+                <p>कुकीहरू साना पाठ फाइलहरू हुन् जुन तपाईंले वेबसाइट भ्रमण गर्दा तपाईंको उपकरण (कम्प्युटर, ट्याब्लेट, स्मार्टफोन) मा भण्डारण गरिन्छ। वेबसाइटहरूलाई अझ प्रभावकारी रूपमा काम गर्न, प्रयोगकर्ता अनुभव बढाउन र वेबसाइट अपरेटरहरूलाई जानकारी प्रदान गर्न तिनीहरू व्यापक रूपमा प्रयोग गरिन्छ। कुकीहरू "स्थिर" हुन सक्छन् (तपाईंले आफ्नो ब्राउजर बन्द गरेपछि तपाईंको उपकरणमा रहन्छन्) वा "सत्र" (तपाईंले आफ्नो ब्राउजर बन्द गर्दा मेटाइन्छ)। स्थानीय भण्डारण, पिक्सेल, र वेब बीकन जस्ता अन्य समान प्रविधिहरू पनि उही उद्देश्यका लागि प्रयोग गर्न सकिन्छ। सरलताको लागि, हामी यस नीतिमा "कुकीज" जस्ता सबै प्रविधिहरूलाई उल्लेख गर्छौं।</p>
+                
+                <h2>३. हामीले प्रयोग गर्ने कुकीहरूका प्रकारहरू</h2>
+                <p>हामी वेबसाइटमा कुकीहरूको निम्न कोटीहरू प्रयोग गर्छौं:</p>
+                <p>(क) <strong>कडा रूपमा आवश्यक कुकीहरू</strong> वेबसाइटलाई राम्रोसँग काम गर्नको लागि आवश्यक छन्। तिनीहरूले पृष्ठ नेभिगेसन, निश्चित क्षेत्रहरूमा सुरक्षित पहुँच, र लोड सन्तुलन जस्ता आधारभूत सुविधाहरू सक्षम गर्छन्। यी कुकीहरू बिना, वेबसाइटले उद्देश्य अनुसार काम गर्न सक्दैन। तपाईंले हाम्रो वेबसाइट मार्फत यी कुकीहरू असक्षम गर्न सक्नुहुन्न, तर तपाईंले तिनीहरूलाई आफ्नो ब्राउजर सेटिङहरू मार्फत ब्लक गर्न सक्नुहुन्छ (जसले वेबसाइटको कार्यसम्पादनलाई असर गर्न सक्छ)।</p>
+                <p>(ख) <strong>प्राथमिकता (कार्यात्मकता) कुकीहरू</strong> ले वेबसाइटलाई तपाईंले गर्नुभएका छनौटहरू (जस्तै तपाईंको भाषा प्राथमिकता वा क्षेत्र) सम्झन र परिष्कृत, व्यक्तिगत सुविधाहरू प्रदान गर्न अनुमति दिन्छ। वेबसाइटको पाठ आकार, फन्ट, वा अन्य अनुकूलन योग्य भागहरूमा तपाईंले गर्नुभएका परिवर्तनहरू सम्झन पनि तिनीहरू प्रयोग गर्न सकिन्छ। यी कुकीहरू असक्षम गर्नाले केही सेवाहरूलाई राम्रोसँग काम गर्नबाट रोक्न सक्छ।</p>
+                <p>(ग) <strong>विश्लेषण (प्रदर्शन) कुकीहरू</strong> आगन्तुकहरूले वेबसाइट कसरी प्रयोग गर्छन् भन्ने बारे जानकारी सङ्कलन गर्न प्रयोग गरिन्छ - उदाहरणका लागि, कुन पृष्ठहरू प्रायः भ्रमण गरिन्छ, प्रयोगकर्ताहरूले पृष्ठहरू बीच कसरी नेभिगेट गर्छन्, र तिनीहरूले त्रुटि सन्देशहरू सामना गर्छन् कि गर्दैनन्। यसले हामीलाई वेबसाइटको प्रदर्शन र प्रयोगकर्ता अनुभव सुधार गर्न मद्दत गर्दछ। यी कुकीहरूद्वारा सङ्कलन गरिएका सबै जानकारीहरू एकत्रित र बेनामी छन्। हामीले प्रयोग गर्न सक्ने विश्लेषण सेवा (जस्तै गुगल एनालिटिक्स वा समान प्लेटफर्म) को आफ्नै गोपनीयता नीति हुनेछ।</p>
+                <p>(घ) <strong>मार्केटिङ (लक्ष्यीकरण) कुकीहरू</strong> हाल जानाजानी सेट गरिएको छैन किनभने कम्पनीले वेबसाइटमा कुनै पनि विज्ञापन वा मार्केटिङ गतिविधिहरूमा संलग्न छैन। यदि भविष्यमा यो परिवर्तन भयो भने, हामी यो नीति अद्यावधिक गर्नेछौं र कानूनद्वारा आवश्यक पर्ने ठाउँमा तपाईंको स्पष्ट सहमति खोज्नेछौं।</p>
+                
+                <h2>४. यस वेबसाइटमा प्रयोग गरिएका कुकीहरू</h2>
+                <p>(१) वेबसाइटले हाल सीमित कुकीहरू तैनाथ गर्दछ, जुन सबै माथि वर्णन गरिएका कोटीहरूमा पर्छन्। कडा रूपमा आवश्यक कुकीहरूमा सत्र पहिचानकर्ता (session_id) समावेश छ जसले तपाईंले वेबसाइट नेभिगेट गर्दा तपाईंको ब्राउजिङ सत्र कायम राख्छ, जसले सर्भरलाई निरन्तर अन्तरक्रियाको भागको रूपमा तपाईंको अनुरोधहरू पहिचान गर्न अनुमति दिन्छ। तपाईंले आफ्नो ब्राउजर बन्द गर्दा यो कुकी मेटाइन्छ। अर्को कडा रूपमा आवश्यक कुकी, csrf_token, कुनै पनि फारम पेश गर्ने वा राज्य परिवर्तन गर्ने अनुरोध वेबसाइटबाटै उत्पन्न भएको सुनिश्चित गरेर क्रस साइट अनुरोध जालसाजी आक्रमणहरू विरुद्ध सुरक्षा प्रदान गर्दछ। यो कुकी तपाईंको सत्रको अवधिको लागि मात्र रहन्छ।</p>
+                <p>(२) हामी प्राथमिकता कुकी, lang_pref पनि प्रयोग गर्छौं, जसले तपाईंको छनौट गरिएको भाषा प्राथमिकता (नेपाली वा अंग्रेजी) सम्झन्छ ताकि तपाईंले प्रत्येक भ्रमणमा यसलाई पुन: चयन गर्नु पर्दैन। यो कुकी एक वर्षको लागि रहन्छ। थप रूपमा, cookie_consent नामको कडा रूपमा आवश्यक कुकीले तपाईंको पहिलो भ्रमणमा प्रस्तुत गरिएको कुकी सूचनाको तपाईंको स्वीकृति रेकर्ड गर्दछ। यो कुकी छ महिनाको लागि भण्डारण गरिन्छ र सूचनालाई बारम्बार देखा पर्नबाट रोक्छ।</p>
+                <p>(३) विश्लेषण उद्देश्यका लागि, हामी _ga र _gid जस्ता कुकीहरू प्रयोग गर्न सक्छौं (यदि हामी गुगल एनालिटिक्स वा समान सेवा प्रयोग गर्छौं भने)। यी कुकीहरूले अद्वितीय प्रयोगकर्ताहरूलाई छुट्याउँछन् र वेबसाइटसँगको उनीहरूको अन्तरक्रिया ट्र्याक गर्छन्, जसले हामीलाई कुन पृष्ठहरू प्रायः भ्रमण गरिन्छ, प्रयोगकर्ताहरूले पृष्ठहरू बीच कसरी नेभिगेट गर्छन्, र कुनै प्राविधिक त्रुटिहरू हुन्छन् कि हुँदैनन् भनेर बुझ्न मद्दत गर्दछ। _ga कुकी सामान्यतया दुई वर्षसम्म रहन्छ, जबकि _gid २४ घण्टासम्म रहन्छ। विश्लेषण कुकीहरूद्वारा सङ्कलन गरिएको सबै डेटा एकत्रित र बेनामी हुन्छ; यसले तपाईंलाई व्यक्तिगत रूपमा पहिचान गर्दैन। हामी हाल कुनै पनि मार्केटिङ वा लक्षित कुकीहरू प्रयोग गर्दैनौं, किनकि वेबसाइटमा कुनै विज्ञापन छैन। यदि यो भविष्यमा परिवर्तन भयो भने, हामी यो कुकी नीति तदनुसार अद्यावधिक गर्नेछौं र कानूनद्वारा आवश्यक भएमा तपाईंको स्पष्ट सहमति खोज्नेछौं।</p>
+                
+                <h2>५. तेस्रो पक्ष कुकीहरू</h2>
+                <p>(१) हामीले तेस्रो पक्ष सेवाहरू प्रयोग गर्न सक्छौं जसले तपाईंले वेबसाइट प्रयोग गर्दा तपाईंको उपकरणमा आफ्नै कुकीहरू सेट गर्दछ। यी तेस्रो पक्षहरूले समावेश गर्दछन्:</p>
                 <ul>
-                    <li><strong>आवश्यक कुकीहरू:</strong> वेबसाइट ठीकसँग काम गर्न आवश्यक (जस्तै भाषा प्राथमिकता)।</li>
-                    <li><strong>विश्लेषणात्मक कुकीहरू:</strong> आगन्तुकहरूले हाम्रो साइटसँग कसरी अन्तरक्रिया गर्छन् भनी बुझ्न मद्दत गर्छन् (जस्तै गुगल एनालिटिक्स)।</li>
-                    <li><strong>कार्यात्मक कुकीहरू:</strong> तपाईंको अनुभव सुधार गर्न तपाईंको छनौटहरू सम्झन्छन्।</li>
+                    <li>(क) वेबसाइटको भरपर्दो डेलिभरी सुनिश्चित गर्न वेब होस्टिंग प्रदायक</li>
+                    <li>(ख) अज्ञात प्रयोग तथ्याङ्कहरू सङ्कलन गर्न विश्लेषण प्रदायक (जस्तै, गुगल एनालिटिक्स)</li>
+                    <li>(ग) सञ्चार व्यवस्थापनको लागि इमेल सेवा प्रदायक (यदि तपाईंले हामीलाई सम्पर्क गर्नुभयो वा सदस्यता लिनुभयो भने)</li>
                 </ul>
-                <h2>३. कुकीहरू व्यवस्थापन गर्ने</h2>
-                <p>तपाईंले आफ्नो ब्राउजर सेटिङमार्फत कुकीहरू नियन्त्रण र मेटाउन सक्नुहुन्छ। धेरैजसो ब्राउजरले कुकीहरू ब्लक वा हटाउन अनुमति दिन्छ। तथापि, आवश्यक कुकीहरू निष्क्रिय गर्दा वेबसाइटको कार्यक्षमता प्रभावित हुन सक्छ।</p>
-                <h2>४. तेस्रो-पक्ष कुकीहरू</h2>
-                <p>हामीले तेस्रो-पक्ष सेवाहरू (जस्तै गुगल एनालिटिक्स) प्रयोग गर्न सक्छौं जसले आफ्नै कुकीहरू सेट गर्छन्। हामी ती कुकीहरू नियन्त्रण गर्दैनौं। कृपया ती सेवाहरूको गोपनीयता नीतिहरू समीक्षा गर्नुहोस्।</p>
-                <h2>५. सहमति</h2>
-                <p>हाम्रो वेबसाइट प्रयोग गर्न जारी राख्दा, तपाईं यस नीतिमा वर्णित अनुसार हाम्रो कुकी प्रयोगमा सहमत हुनुहुन्छ। तपाईंले आफ्नो ब्राउजरमा कुकीहरू निष्क्रिय गरेर सहमति फिर्ता लिन सक्नुहुन्छ।</p>
-                <h2>६. यस नीतिमा परिवर्तन</h2>
-                <p>हामी समय-समयमा यो कुकी नीति अद्यावधिक गर्न सक्छौं। परिवर्तनहरू यस पृष्ठमा पोस्ट गरिनेछन्।</p>
-                <h2>७. सम्पर्क गर्नुहोस्</h2>
-                <p>हाम्रो कुकी प्रयोगबारे कुनै प्रश्न भए, कृपया हामीलाई <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a> मा सम्पर्क गर्नुहोस्।</p>
-            `
+                <p>(२) हामी तेस्रो पक्ष कुकीहरूको सेटिङ नियन्त्रण गर्दैनौं। थप जानकारीको लागि तपाईंले यी तेस्रो पक्षहरूको कुकी र गोपनीयता नीतिहरूको समीक्षा गर्नुपर्छ। हाल, कम्पनीले तेस्रो पक्ष ट्र्याकिङ कुकीहरू सेट गर्ने सामाजिक सञ्जाल प्लगइनहरू एकीकृत गर्दैन।</p>
+                
+                <h2>६. तपाईंको सहमति र नियन्त्रण</h2>
+                <p>(१) जब तपाईं पहिलो पटक वेबसाइटमा जानुहुन्छ, हामी तपाईंलाई कुकीहरूको हाम्रो प्रयोगको बारेमा जानकारी दिने प्रमुख कुकी सूचना प्रदर्शन गर्नेछौं। यो सूचना हेरेपछि वेबसाइट ब्राउज गर्न वा प्रयोग गर्न जारी राखेर, तपाईं यस नीतिमा वर्णन गरिए अनुसार कुकीहरूको हाम्रो प्रयोगमा सहमत हुनुहुन्छ, कडा रूपमा आवश्यक कुकीहरू बाहेक जसलाई कुनै सहमति आवश्यक पर्दैन।</p>
+                <p>(२) तपाईं कुनै पनि समयमा आफ्नो सहमति फिर्ता लिन सक्नुहुन्छ:</p>
+                <ul>
+                    <li>(क) तपाईंको ब्राउजरबाट कुकीहरू खाली गर्दै;</li>
+                    <li>(ख) तपाईंको ब्राउजर सेटिङहरूमा कुकीहरू असक्षम गर्दै;</li>
+                    <li>(ग) तेस्रो पक्ष विश्लेषण सेवाहरू (जस्तै, गुगल एनालिटिक्स अप्ट आउट ब्राउजर एड अन) द्वारा प्रदान गरिएको अप्ट आउट संयन्त्रहरू प्रयोग गर्दै।</li>
+                </ul>
+                <p>(३) धेरैजसो वेब ब्राउजरहरूले तपाईंलाई तिनीहरूको सेटिङहरू मार्फत कुकीहरू नियन्त्रण गर्न अनुमति दिन्छन्। तपाईंले निम्न गर्न सक्नुहुन्छ:</p>
+                <ul>
+                    <li>(क) तपाईंको उपकरणमा कुन कुकीहरू भण्डारण गरिएका छन् हेर्नुहोस् र तिनीहरूलाई व्यक्तिगत रूपमा मेटाउनुहोस्;</li>
+                    <li>(ख) तेस्रो पक्ष कुकीहरू रोक्नुहोस्;</li>
+                    <li>(ग) सबै कुकीहरू रोक्नुहोस् (कडा रूपमा आवश्यक पर्नेहरू सहित);</li>
+                    <li>(घ) कुकी सेट गर्नु अघि सूचना प्राप्त गर्नुहोस्।</li>
+                </ul>
+                <p>(४) निर्देशनहरूको लागि कृपया आफ्नो ब्राउजरको मद्दत खण्ड हेर्नुहोस्। सबै कुकीहरू रोक्दा वेबसाइटको कार्यक्षमता बिग्रन सक्छ भन्ने कुरामा सचेत रहनुहोस्।</p>
+                
+                <h2>७. यस कुकी नीतिमा परिवर्तनहरू</h2>
+                <p>हामी प्रविधि, कानुनी आवश्यकताहरू, वा कुकीहरूको हाम्रो प्रयोगमा परिवर्तनहरू प्रतिबिम्बित गर्न समय-समयमा यो कुकी नीति अद्यावधिक गर्न सक्छौं। कुनै पनि सामग्री परिवर्तनहरू अद्यावधिक प्रभावकारी मितिको साथ यस पृष्ठमा पोस्ट गरिनेछ। हामी तपाईंलाई समय-समयमा यो नीति समीक्षा गर्न प्रोत्साहित गर्दछौं। कुनै पनि परिवर्तन पछि वेबसाइटको तपाईंको निरन्तर प्रयोगले संशोधित नीतिको तपाईंको स्वीकृतिलाई गठन गर्दछ।</p>
+                
+                <h2>८. सम्पर्क जानकारी</h2>
+                <p>यदि तपाईंसँग यस कुकी नीति वा कुकीहरूको हाम्रो प्रयोगको बारेमा कुनै प्रश्न, चिन्ता, वा अनुरोधहरू छन् भने, कृपया कम्पनीलाई सम्पर्क गर्नुहोस्। कम्पनी अझै सम्म समावेश गरिएको छैन, सोधपुछ संस्थापक समूह द्वारा ह्यान्डल गरिनेछ। समावेश पछि, कम्पनीले एक तोकिएको डेटा सुरक्षा सम्पर्क व्यक्ति नियुक्त गर्नेछ।</p>
+                
+                <h2>९. शासकीय कानून</h2>
+                <p>(१) यो कुकी नीति र यस अन्तर्गत उत्पन्न हुने कुनै पनि विवादहरू नेपालको कानूनद्वारा शासित हुनेछन्। यस नीतिसँग सम्बन्धित कुनै पनि कानुनी कारबाही हाम्रो प्रयोगका सर्तहरूमा तोकिएका सीमाहरूको अधीनमा, काठमाडौँ जिल्ला, नेपाल (वा, समावेश पछि, कम्पनीको दर्ता कार्यालय रहेको जिल्ला) को अदालतहरूमा ल्याइनेछ।</p>
+                <p>(२) यो वेबसाइट प्रयोग गर्न जारी राखेर, तपाईंले यो कुकी नीति पढ्नुभएको, बुझ्नुभएको र सहमत भएको स्वीकार गर्नुहुन्छ।</p>
+                <p><em>इति सम्वत् २०८३ साल वैशाख महिना ४ गते रोज ६ शुभम् .............................................. ।</em></p>
+            `,
+            footerText: "© २०२५ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
+            termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
     };
+
     let currentLang = localStorage.getItem("nlgLang") || "en";
+
     function updateUI(lang) {
-        const d = cookieData[lang];
-        document.getElementById("heroTitle").innerText = d.heroTitle;
-        document.getElementById("policyContent").innerHTML = d.content;
+        const d = content[lang];
+        document.getElementById("brandName").innerText = d.brand;
+        document.getElementById("navHome").innerText = d.navHome;
+        document.getElementById("navAbout").innerText = d.navAbout;
+        document.getElementById("navMembership").innerText = d.navMembership;
+        document.getElementById("navContact").innerText = d.navContact;
+        document.getElementById("pageTitle").innerText = d.pageTitle;
+        document.getElementById("cookieContent").innerHTML = d.htmlContent;
+        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("termsLink").innerText = d.termsText;
+        document.getElementById("privacyLink").innerText = d.privacyText;
+        document.getElementById("cookieLink").innerText = d.cookieText;
+
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
-    document.getElementById("langNp").onclick = () => updateUI("np");
-    document.getElementById("langEn").onclick = () => updateUI("en");
+
+    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
+    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 </script>
 </body>
