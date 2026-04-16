@@ -2,54 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – Nepal Law Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact – Nepal Law Group | नेपाल ल ग्रुप – सम्पर्क</title>
+    <meta name="description" content="Contact Nepal Law Group – email us for inquiries or founder membership applications.">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.5; }
-        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
+            color: #1a2a3a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (same as index/about/membership) */
         .navbar {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid var(--crimson);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
-        .nav-links a:hover { background: var(--crimson); }
-        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
-        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
-        .lang-btn.active { background: var(--crimson); }
-        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2.5rem 0; text-align: center; }
-        .page-hero h1 { font-size: 2.5rem; color: var(--primary-blue); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0; }
-        .info-card { background: white; border-radius: 24px; padding: 1.8rem; box-shadow: var(--shadow-sm); border-left: 6px solid var(--crimson); }
-        .info-card i { font-size: 2rem; color: var(--crimson); margin-bottom: 1rem; }
-        .info-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-blue); }
-        .info-card p { margin: 0.5rem 0; }
-        .contact-form { background: white; border-radius: 24px; padding: 1.8rem; box-shadow: var(--shadow-sm); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid var(--border-light); border-radius: 12px; font-family: inherit; }
-        .contact-form button { background: var(--crimson); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 40px; font-weight: 600; cursor: pointer; margin-top: 1rem; }
-        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 2rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .brand-name { font-size: 1.4rem; } }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0b2f5c;
+        }
+
+        .lang-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2rem;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 0.2rem;
+            background: #e9ecef;
+            padding: 0.2rem;
+            border-radius: 40px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            color: #2c3e50;
+        }
+
+        .lang-btn.active {
+            background: #0b2f5c;
+            color: white;
+        }
+
+        /* Page hero */
+        .page-hero {
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact content */
+        .contact-content {
+            text-align: center;
+            padding: 2rem 0 3rem;
+        }
+        .email-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 500px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .email-address {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b2f5c;
+            word-break: break-all;
+            margin: 1rem 0;
+        }
+        .note-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f1f5f9;
+            padding: 2rem 0 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+        .footer-policy {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-policy a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+        .footer-policy a:hover {
+            color: #0b2f5c;
+        }
+        .footer-copyright {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                font-size: 1.8rem;
+            }
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .email-address {
+                font-size: 1.2rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
+
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-wrapper">
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -57,79 +216,89 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="page-hero">
-        <div class="container"><h1 id="heroTitle">सम्पर्क • Contact Us</h1></div>
+        <div class="container">
+            <h1 id="pageTitle">Get in Touch</h1>
+        </div>
     </div>
+
     <div class="container">
-        <div class="contact-grid">
-            <div class="info-card">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3 id="addressTitle">कार्यालय ठेगाना</h3>
-                <p id="addressLine1">Kathmandu, Nepal</p>
-                <i class="fas fa-envelope" style="margin-top: 1rem; display: inline-block;"></i>
-                <p> contact@nepallawgroup.org</p>
-                <i class="fas fa-phone-alt"></i>
-                <p id="phone">+977-9818105492</p>
-            </div>
-            <div class="contact-form">
-                <h3 id="formTitle">सन्देश पठाउनुहोस्</h3>
-                <input type="text" id="nameInput" placeholder="Your Name / तपाईंको नाम">
-                <input type="email" id="emailInput" placeholder="Email / इमेल">
-                <textarea rows="4" id="msgInput" placeholder="Message / सन्देश"></textarea>
-                <button id="sendBtn">पठाउनुहोस् • Send</button>
-                <p id="formNote" style="font-size: 0.8rem; margin-top: 0.8rem;"></p>
+        <div class="contact-content">
+            <div class="email-card">
+                <p id="inquiryText">For all inquiries, including founder membership applications, please write to:</p>
+                <div class="email-address" id="email">contact@nepallawgroup.org</div>
+                <p class="note-text" id="noteText">Please note: The company does not yet have a physical office. All communication is currently by email.</p>
             </div>
         </div>
     </div>
 </main>
-<footer class="footer"><div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप</p></div></footer>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-policy">
+            <a href="terms.html" id="termsLink">Terms of Use</a>
+            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
+        </div>
+        <div class="footer-copyright">
+            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
 <script>
-    const contactContent = {
+    const content = {
         en: {
-            brand: "Nepal Law Group", navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            heroTitle: "Contact Us",
-            addressTitle: "Office Address", addressLine1: "Kathmandu, Nepal",
-            phone: "+977-9818105492",
-            formTitle: "Send a Message",
-            sendBtn: "Send",
-            footer: "© 2025 Nepal Law Group - All rights reserved"
+            brand: "Nepal Law Group",
+            navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            pageTitle: "Get in Touch",
+            inquiryText: "For all inquiries, including founder membership applications, please write to:",
+            email: "contact@nepallawgroup.org",
+            noteText: "Please note: The company does not yet have a physical office. All communication is currently by email.",
+            footerText: "© 2025 Nepal Law Group – All rights reserved.",
+            termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            brand: "नेपाल ल ग्रुप", navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            heroTitle: "सम्पर्क",
-            addressTitle: "कार्यालय ठेगाना", addressLine1: "काठमाडौं, नेपाल",
-            phone: "+९७७-९८१८१०५४९२",
-            formTitle: "सन्देश पठाउनुहोस्",
-            sendBtn: "पठाउनुहोस्",
-            footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित"
+            brand: "नेपाल ल ग्रुप",
+            navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            pageTitle: "सम्पर्क गर्नुहोस्",
+            inquiryText: "कुनै पनि प्रश्न, सुझाव वा संस्थापक सदस्य आवेदनको लागि कृपया इमेल लेख्नुहोस्:",
+            email: "contact@nepallawgroup.org",
+            noteText: "नोट: हाल कम्पनीको कुनै भौतिक कार्यालय छैन। सबै सञ्चार इमेलमार्फत हुनेछ।",
+            footerText: "© २०२५ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
+            termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
     };
+
     let currentLang = localStorage.getItem("nlgLang") || "en";
-    function applyLang(lang) {
-        const d = contactContent[lang];
+
+    function updateUI(lang) {
+        const d = content[lang];
         document.getElementById("brandName").innerText = d.brand;
         document.getElementById("navHome").innerText = d.navHome;
         document.getElementById("navAbout").innerText = d.navAbout;
         document.getElementById("navMembership").innerText = d.navMembership;
         document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("heroTitle").innerText = d.heroTitle;
-        document.getElementById("addressTitle").innerText = d.addressTitle;
-        document.getElementById("addressLine1").innerText = d.addressLine1;
-        document.getElementById("addressLine2").innerText = d.addressLine2;
-        document.getElementById("phone").innerText = d.phone;
-        document.getElementById("formTitle").innerText = d.formTitle;
-        document.getElementById("sendBtn").innerText = d.sendBtn;
-        document.getElementById("footerText").innerHTML = d.footer;
+        document.getElementById("pageTitle").innerText = d.pageTitle;
+        document.getElementById("inquiryText").innerText = d.inquiryText;
+        document.getElementById("email").innerText = d.email;
+        document.getElementById("noteText").innerText = d.noteText;
+        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("termsLink").innerText = d.termsText;
+        document.getElementById("privacyLink").innerText = d.privacyText;
+        document.getElementById("cookieLink").innerText = d.cookieText;
+
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
-    document.getElementById("langNp").onclick = () => applyLang("np");
-    document.getElementById("langEn").onclick = () => applyLang("en");
-    applyLang(currentLang);
-    document.getElementById("sendBtn").addEventListener("click", () => alert("Thank you. This is a demo. In production, you would connect a backend or form service."));
+
+    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
+    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
+    updateUI(currentLang);
 </script>
 </body>
 </html>
