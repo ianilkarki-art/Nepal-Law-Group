@@ -20,15 +20,15 @@
         }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
         
-        /* Header - smaller now */
+        /* Header - smaller */
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
             padding: 0.8rem 0;  /* reduced from 1.5rem */
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            border-bottom: 3px solid var(--crimson);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-bottom: 2px solid var(--crimson);
         }
         .nav-container {
             display: flex;
@@ -38,7 +38,7 @@
             gap: 1rem;
         }
         .brand-name {
-            font-size: 1.6rem;  /* reduced from 2.2rem */
+            font-size: 1.8rem;  /* reduced from 2.2rem */
             font-weight: 800;
             color: white;
             text-decoration: none;
@@ -59,28 +59,26 @@
             border: none;
             border-radius: 40px;
             cursor: pointer;
-            transition: 0.2s;
             font-family: inherit;
+            transition: 0.2s;
         }
-        .dropbtn:hover, .dropbtn.active {
+        .dropbtn:hover, .dropbtn:focus {
             background: var(--crimson);
         }
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: white;
-            min-width: 180px;
-            box-shadow: var(--shadow-md);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             border-radius: 16px;
             z-index: 1;
-            right: 0;
-            top: 110%;
             overflow: hidden;
-            border: 1px solid var(--border-light);
+            margin-top: 0.5rem;
         }
         .dropdown-content a {
             color: var(--primary-blue);
-            padding: 12px 16px;
+            padding: 0.75rem 1rem;
             text-decoration: none;
             display: block;
             font-weight: 500;
@@ -93,14 +91,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        /* For touch devices: keep dropdown open on click via small JS, but hover works too */
         
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
         .lang-toggle {
             display: flex;
             gap: 0.5rem;
@@ -122,7 +113,6 @@
         .lang-btn.active {
             background: var(--crimson);
         }
-        
         /* Hero */
         .hero {
             background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%);
@@ -255,7 +245,9 @@
             .brand-name { font-size: 1.4rem; }
             .section-title { font-size: 1.5rem; }
             .footer-policy { gap: 1rem; }
-            .dropdown-content { right: auto; left: 0; }
+            .dropdown-content {
+                right: 0;
+            }
         }
         .text-crimson { color: var(--crimson); }
         hr { margin: 1rem 0; border-color: var(--border-light); }
@@ -265,15 +257,15 @@
 <header class="navbar">
     <div class="container nav-container">
         <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
-        <div class="nav-links">
-            <!-- Dropdown menu for navigation -->
+        <div class="nav-controls" style="display: flex; align-items: center; gap: 1rem;">
+            <!-- Dropdown navigation triggered by "Home" -->
             <div class="dropdown">
-                <button class="dropbtn" id="menuBtn">☰ Menu</button>
+                <button class="dropbtn" id="dropbtn">Home</button>
                 <div class="dropdown-content">
-                    <a href="index.html" id="navHome">Home</a>
-                    <a href="about.html" id="navAbout">About</a>
-                    <a href="membership.html" id="navMembership">Membership</a>
-                    <a href="contact.html" id="navContact">Contact</a>
+                    <a href="index.html" id="dropHome">Home</a>
+                    <a href="about.html" id="dropAbout">About</a>
+                    <a href="membership.html" id="dropMembership">Membership</a>
+                    <a href="contact.html" id="dropContact">Contact</a>
                 </div>
             </div>
             <div class="lang-toggle">
@@ -322,9 +314,9 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-policy">
-            <a href="terms.html" id="termsLink">Terms of Use</a>
-            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
-            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
+            <a href="#" id="termsLink">Terms of Use</a>
+            <a href="#" id="privacyLink">Privacy Policy</a>
+            <a href="#" id="cookieLink">Cookie Policy</a>
         </div>
         <div class="footer-copyright">
             <p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | कानूनी सेवा सबैको पहुँचमा</p>
@@ -334,11 +326,15 @@
 </footer>
 
 <script>
-    // Complete bilingual content exactly as provided by user
+    // Bilingual content (same as before)
     const content = {
         en: {
             brand: "Nepal Law Group",
-            navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            dropBtn: "Home",
+            dropHome: "Home",
+            dropAbout: "About",
+            dropMembership: "Membership",
+            dropContact: "Contact",
             heroTitle: "Nepal Law Group – A New Legal Organisation",
             heroSub: "Service-oriented, non-profit, educational & public welfare institution",
             fullDescription: `
@@ -375,7 +371,11 @@
         },
         np: {
             brand: "नेपाल ल ग्रुप",
-            navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            dropBtn: "गृहपृष्ठ",
+            dropHome: "गृहपृष्ठ",
+            dropAbout: "बारेमा",
+            dropMembership: "सदस्यता",
+            dropContact: "सम्पर्क",
             heroTitle: "नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था",
             heroSub: "सेवामूलक, गैर-नाफामुखी, शैक्षिक र सार्वजनिक कल्याणकारी संस्था",
             fullDescription: `
@@ -430,10 +430,11 @@
     function updateUI(lang) {
         const d = content[lang];
         document.getElementById("brandName").innerText = d.brand;
-        document.getElementById("navHome").innerText = d.navHome;
-        document.getElementById("navAbout").innerText = d.navAbout;
-        document.getElementById("navMembership").innerText = d.navMembership;
-        document.getElementById("navContact").innerText = d.navContact;
+        document.getElementById("dropbtn").innerText = d.dropBtn;
+        document.getElementById("dropHome").innerText = d.dropHome;
+        document.getElementById("dropAbout").innerText = d.dropAbout;
+        document.getElementById("dropMembership").innerText = d.dropMembership;
+        document.getElementById("dropContact").innerText = d.dropContact;
         document.getElementById("heroTitle").innerHTML = d.heroTitle;
         document.getElementById("heroSub").innerHTML = d.heroSub;
         document.getElementById("fullDescription").innerHTML = d.fullDescription;
@@ -447,9 +448,6 @@
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
-        // Update dropdown button text (optional, keep "Menu" or translate)
-        const menuBtn = document.getElementById("menuBtn");
-        if (menuBtn) menuBtn.innerText = lang === "np" ? "☰ मेनु" : "☰ Menu";
 
         renderDepartments(lang);
 
