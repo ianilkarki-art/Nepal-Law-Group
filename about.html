@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Nepal Law Group</title>
+    <title>About – Nepal Law Group | नेपाल ल ग्रुपको बारेमा</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
-        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1); }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
@@ -18,6 +18,7 @@
             top: 0;
             z-index: 100;
             border-bottom: 2px solid var(--crimson);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
         .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
@@ -25,17 +26,26 @@
         .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
         .nav-links a:hover, .nav-links a.active { background: var(--crimson); }
         .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
-        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
+        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; font-family: inherit; }
         .lang-btn.active { background: var(--crimson); }
         .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2.5rem 0; text-align: center; }
-        .page-hero h1 { font-size: 2.5rem; color: var(--primary-blue); }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem; }
         section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-light); }
         .section-title { font-size: 1.7rem; font-weight: 800; color: var(--primary-blue); border-left: 6px solid var(--crimson); padding-left: 1.2rem; margin-bottom: 1.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; margin-top: 1rem; }
-        .card { background: white; border-radius: 24px; padding: 1.5rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--crimson); }
-        .card i { font-size: 1.8rem; color: var(--crimson); margin-bottom: 0.8rem; }
+        .grid-2, .grid-3 { display: grid; gap: 1.8rem; margin-top: 1.5rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        .card { background: white; border-radius: 24px; padding: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .card i { font-size: 1.8rem; color: var(--crimson); margin-bottom: 0.8rem; display: inline-block; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--primary-blue); }
+        .object-card { border-left: 4px solid var(--crimson); background: #fefaf5; }
+        .badge { background: var(--crimson); color: white; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 20px; display: inline-block; margin-bottom: 0.8rem; }
         .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 2rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
-        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } .page-hero h1 { font-size: 1.8rem; } }
+        .btn-join { display: inline-block; background: var(--crimson); color: white; padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: 0.2s; }
+        .btn-join:hover { background: #7a1427; transform: scale(1.02); }
+        .rich-text p { margin-bottom: 1rem; }
     </style>
 </head>
 <body>
@@ -59,105 +69,218 @@
         <div class="container"><h1 id="heroTitle">नेपाल ल ग्रुपको बारेमा</h1></div>
     </div>
     <div class="container">
-        <section><h2 class="section-title" id="bgHeading">पृष्ठभूमि र आवश्यकता</h2><div id="bgText"></div><div class="grid" id="challengesGrid"></div></section>
-        <section><h2 class="section-title" id="solutionHeading">समाधान: नेपाल ल ग्रुप</h2><div id="solutionText"></div><div class="grid" id="solutionGrid"></div></section>
-        <section><h2 class="section-title" id="valuesHeading">हाम्रो दर्शन र मूल मान्यताहरू</h2><div class="grid" id="valuesGrid"></div></section>
-        <section><h2 class="section-title" id="whyHeading">किन मुनाफा वितरण नगर्ने कम्पनी?</h2><div id="whyText"></div><div class="grid" id="reasonsGrid"></div></section>
+        <!-- Background -->
+        <section>
+            <h2 class="section-title" id="bgHeading">पृष्ठभूमि</h2>
+            <div id="bgText" class="rich-text"></div>
+        </section>
+
+        <!-- Statutory Objects -->
+        <section>
+            <h2 class="section-title" id="objectsHeading">वैधानिक उद्देश्यहरू</h2>
+            <div id="objectsIntro" class="rich-text"></div>
+            <div class="grid-2" id="objectsGrid"></div>
+        </section>
+
+        <!-- Need / Challenges -->
+        <section>
+            <h2 class="section-title" id="needHeading">आवश्यकता</h2>
+            <div id="needIntro" class="rich-text"></div>
+            <div class="grid-2" id="challengesGrid"></div>
+        </section>
+
+        <!-- Solution -->
+        <section>
+            <h2 class="section-title" id="solutionHeading">समाधान: नेपाल ल ग्रुप</h2>
+            <div id="solutionIntro" class="rich-text"></div>
+            <div class="grid-2" id="solutionsGrid"></div>
+        </section>
+
+        <!-- Philosophy & Values -->
+        <section>
+            <h2 class="section-title" id="valuesHeading">हाम्रो दर्शन र मूल मान्यताहरू</h2>
+            <div class="grid-3" id="valuesGrid"></div>
+        </section>
+
+        <!-- Why Non-Profit Structure -->
+        <section>
+            <h2 class="section-title" id="whyHeading">किन मुनाफा वितरण नगर्ने कम्पनी संरचना?</h2>
+            <div id="whyIntro" class="rich-text"></div>
+            <div class="grid-2" id="reasonsGrid"></div>
+        </section>
+
+        <!-- Join Us CTA -->
+        <div style="text-align: center; margin: 2rem 0 3rem;">
+            <i class="fas fa-handshake" style="font-size: 2.5rem; color: var(--crimson);"></i>
+            <h3 id="joinTitle" style="color: var(--primary-blue); margin: 1rem 0;">हामीसँग जोडिनुहोस्</h3>
+            <p id="joinText" style="max-width: 700px; margin: 0 auto 1.5rem;">नेपाल ल ग्रुप योग्य अधिवक्ता, अनुसन्धानकर्ता, प्रशिक्षक, र प्रकाशन पेशाकर्मीहरूका लागि खुला छ। तपाईंको चासोको स्वागत छ।</p>
+            <a href="contact.html" class="btn-join" id="joinBtn">सम्पर्क गर्नुहोस् → Contact Us</a>
+        </div>
     </div>
 </main>
-<footer class="footer"><div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप</p></div></footer>
+<footer class="footer">
+    <div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित</p></div>
+</footer>
 
 <script>
+    // Full bilingual content based on user's detailed input
     const aboutData = {
         en: {
             brand: "Nepal Law Group", navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
             heroTitle: "About Nepal Law Group",
-            bgHeading: "Background and Need",
-            bgText: "The legal sector in Nepal has been based on traditional practice for decades. Before establishing Nepal Law Group, the founding members identified seven enduring challenges:",
+            bgHeading: "Background",
+            bgText: "<p>Nepal Law Group is a profit non-distributing company established to address structural weaknesses in Nepal's legal sector. Our registered objects, as per the Memorandum of Association, guide every activity. These objects align with the educational, academic, social, and charitable nature prescribed under Section 166(1) of the Companies Act, 2063.</p>",
+            objectsHeading: "Statutory Objects (as per Article 4 of the Memorandum)",
+            objectsIntro: "<p>Our registered objects guide every activity of Nepal Law Group. These objects are consistent with the educational, academic, social and charitable nature prescribed for a non-profit company under Section 166(1) of the Companies Act, 2063. A detailed explanation of each object is given below.</p>",
+            objects: [
+                { title: "(a) Effective Administration of Justice", full: "Full text: To carry out legal activities in accordance with the effective and efficient administration of justice and clarification and simplification of the law as well as social needs.", explanation: "Explanation: This object is the basic mission of Nepal Law Group. Under this, the company: • To make the administration of justice effective – contribute to faster, cheaper, more accessible court processes. • To make the administration of justice efficient – maximum results with minimum resources. • Clarification and simplification of law – explain complex legal language simply. • Socially relevant legal activities – legal aid, literacy, policy advice. Implementation: Litigation department, legal handbooks, public legal aid clinics." },
+                { title: "(b) Legal Research and Experimental Development", full: "Full text: Conducting legal research and experimental development, as well as professional, scientific, and technical activities, while promoting scholarly and scientific legal work.", explanation: "Explanation: Establishes the company as an educational and research institution. Includes scholarly legal work, scientific legal work (statistics, comparative studies), contract research for governments/agencies, experimental development (legal tech testing), and organizing conferences/workshops. Implementation: Research & Policy Department, peer-reviewed journals, access to international databases." },
+                { title: "(c) Higher Legal Education and Training", full: "Full text: Conducting activities to support campuses, institutes, universities, and other educational programs that provide higher legal education and training programs.", explanation: "Explanation: Supports education sector: higher legal education (lectures, seminars), training programs (CPD for advocates, officials, judges), support to campuses (curriculum, materials, guest lectures), other educational programs (legal literacy, online courses). Implementation: Training & Education Department, agreements with institutions, LMS platform." },
+                { title: "(d) Publications", full: "Full text: Publication of law books, journals and other publication-related activities.", explanation: "Explanation: Disseminates legal knowledge: law books (original, explanatory, case digests), peer-reviewed journals, newsletters, technical reports, policy briefs, e-books, blogs, and legal app content. Implementation: Publications Department, editorial committees, print & digital, distribution partnerships." },
+                { title: "(e) Administrative and support activities", full: "Full text: Administrative and support activities of the office including photocopying, preparation of necessary documents, and other specific office-related support activities.", explanation: "Explanation: Provides legal basis for internal operations: office administration, HR, logistics, support services (photocopy, scanning, binding, digitization), document preparation (legal documents, reports, drafts), and other office services (translation, notary where permitted). Implementation: Administration & Accounts Department, shared infrastructure for all members." },
+                { title: "(f) Other professional support services", full: "Full text: Carrying out other professional support services and activities of member organizations.", explanation: "Explanation: Offers flexibility for expansion: legal technology consulting, compliance audits, corporate governance services, mediation assistance, and facilitation of member organizations' activities. Future services like international law, IP management, data protection. Implementation: Board may add new service areas within legal limits, collaboration agreements with member organizations." }
+            ],
+            needHeading: "Need",
+            needIntro: "<p>The legal sector in Nepal has been based on traditional practice methods for decades. Before establishing Nepal Law Group, the founding members identified seven enduring challenges:</p>",
             challenges: [
-                "Solo working style – most lawyers work alone, making complex cases difficult.",
-                "Limited Infrastructure – lack of technology, libraries, and trained staff.",
+                "Solo working style – most lawyers work alone; complex multi-disciplinary cases difficult.",
+                "Limited Infrastructure – lack of high-end tech, libraries, databases, trained support staff.",
                 "Weak institutional branding – firms dissolve when senior lawyers leave.",
-                "Lack of shared growth – surplus distributed, no capital accumulation.",
-                "Regulatory complexity – unclear separation of admin and legal practice.",
-                "Untapped revenue sources – over-reliance on litigation fees.",
-                "Succession problem – no transfer of clients and knowledge."
+                "Lack of shared growth – surplus distributed, no firm-level capital accumulation.",
+                "Regulatory complexity – unclear separation of admin and legal practice risks Bar Council action.",
+                "Untapped revenue sources – over-reliance on litigation fees; neglect of research, training, publications.",
+                "Succession problem – no transfer of clients, knowledge, goodwill to next generation."
             ],
             solutionHeading: "Solution: Nepal Law Group",
-            solutionText: "We address all challenges with an integrated institutional model:",
+            solutionIntro: "<p>Nepal Law Group was established to solve all the above challenges with an integrated institutional model:</p>",
             solutions: [
-                "Collaborative multidisciplinary team",
-                "Shared infrastructure and technology",
-                "Sustainable institutional brand",
-                "Company-level income and reinvestment",
-                "Regulatory compliance with clear separation",
-                "Diversified income sources",
-                "Long-term sustainability"
+                "Collaborative, multidisciplinary team – experts from different fields work together.",
+                "Shared infrastructure and technology – case management software, databases, library, skilled team.",
+                "Sustainable institutional brand – brand built on company name, beyond individuals.",
+                "Company-level income and reinvestment – all surplus reinvested in research, tech, infrastructure.",
+                "Regulatory compliance – clear separation: litigation only by licensed Bar members; other departments open.",
+                "Diversified income sources – litigation, research, training, publications, donations.",
+                "Long-term sustainability – continuity despite membership changes, IP transfer, stability."
             ],
-            valuesHeading: "Our Philosophy & Core Values",
+            valuesHeading: "Our Philosophy and Core Values",
             values: [
-                { title: "Transparency", desc: "All financial and governance structures are fully transparent." },
-                { title: "Cooperation", desc: "Shared learning and teamwork over individual competition." },
-                { title: "Ethics & Professional Conduct", desc: "Full adherence to the Bar Council's code." },
-                { title: "Continuous Improvement", desc: "Always refining services and systems." }
+                { icon: "fas fa-eye", title: "Transparency", desc: "All financial transactions, decision-making, and governance structures are fully transparent." },
+                { icon: "fas fa-handshake", title: "Cooperation", desc: "Prioritizing shared learning and teamwork over individual competition." },
+                { icon: "fas fa-gavel", title: "Ethics and Professional Conduct", desc: "Full adherence to the Code of Ethics for Legal Professionals." },
+                { icon: "fas fa-chart-simple", title: "Continuous Improvement", desc: "Constantly refining services, systems, and processes." }
             ],
             whyHeading: "Why a non-profit company structure?",
-            whyText: "Under Sections 166-167 of the Companies Act, 2006:",
+            whyIntro: "<p>The founding members have chosen a non-profit company structure under Sections 166-167 of the Companies Act, 2006. The main reasons are:</p>",
             reasons: [
                 "All surplus remains in the company – capital accumulation and reinvestment.",
                 "Limited liability of members – personal risk minimized.",
-                "Non-transferable membership – stability and long-term commitment.",
-                "25% limit on administrative expenses – financial discipline."
+                "Non-transferability of membership – stability and long-term commitment.",
+                "25% limit on administrative expenses – financial discipline and transparency."
             ],
+            joinTitle: "Join Us",
+            joinText: "Nepal Law Group is open to qualified advocates, researchers, trainers, and publishing professionals who share our commitment to transparency, collaboration, and ethical practice. We welcome your interest.",
+            joinBtn: "Contact Us",
             footer: "© 2025 Nepal Law Group - All rights reserved"
         },
         np: {
             brand: "नेपाल ल ग्रुप", navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
             heroTitle: "नेपाल ल ग्रुपको बारेमा",
-            bgHeading: "पृष्ठभूमि र आवश्यकता",
-            bgText: "नेपालको कानूनी क्षेत्र दशकौंदेखि परम्परागत अभ्यासमा आधारित छ। नेपाल ल ग्रुप स्थापना गर्नुअघि संस्थापक सदस्यहरूले सात स्थायी चुनौतीहरू पहिचान गरे:",
+            bgHeading: "पृष्ठभूमि",
+            bgText: "<p>नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनी हो जुन नेपालको कानूनी क्षेत्रको संरचनात्मक कमजोरीहरू सम्बोधन गर्न स्थापित गरिएको हो। हाम्रा दर्ता गरिएका उद्देश्यहरू, प्रबन्धपत्र बमोजिम, प्रत्येक गतिविधिलाई निर्देशन दिन्छन्। यी उद्देश्यहरू कम्पनी ऐन, २०६३ को दफा १६६(१) बमोजिम मुनाफा वितरण नगर्ने कम्पनीका लागि निर्धारित शैक्षिक, प्राज्ञिक, सामाजिक र परोपकारी प्रकृतिसँग सुसंगत छन्।</p>",
+            objectsHeading: "वैधानिक उद्देश्यहरू (प्रबन्धपत्रको दफा ४ बमोजिम)",
+            objectsIntro: "<p>हाम्रा दर्ता गरिएका उद्देश्यहरूले नेपाल ल ग्रुपको प्रत्येक गतिविधिलाई निर्देशन दिन्छन्। यी उद्देश्यहरू कम्पनी ऐन, २०६३ को दफा १६६(१) बमोजिम मुनाफा वितरण नगर्ने कम्पनीका लागि निर्धारित शैक्षिक, प्राज्ञिक, सामाजिक र परोपकारी प्रकृतिसँग सुसंगत छन्। तल प्रत्येक उद्देश्यको विस्तृत विवेचना प्रस्तुत छ।</p>",
+            objects: [
+                { title: "(क) न्यायको प्रभावकारी प्रशासन", full: "पूर्ण पाठ: न्यायको प्रभावकारी र कुशल प्रशासन तथा कानूनको स्पष्टीकरण र सरलीकरणको साथै सामाजिक आवश्यकताहरू अनुरूप कानूनी क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: यो उद्देश्य नेपाल ल ग्रुपको आधारभूत अभियान हो। यस अन्तर्गत कम्पनीले: • न्याय प्रशासनलाई प्रभावकारी बनाउन – अदालतको प्रक्रियालाई चाँडो, सस्तो र सुलभ बनाउन योगदान। • न्याय प्रशासनलाई कुशल बनाउन – स्रोतको न्यूनतम प्रयोगमा अधिकतम परिणाम। • कानूनको स्पष्टीकरण र सरलीकरण – जटिल कानूनी भाषा सरल बनाउने। • सामाजिक आवश्यकता अनुरूप कानूनी क्रियाकलाप – कानूनी सहायता, साक्षरता, नीति सुझाव। कार्यान्वयन: मुद्दा विभाग, कानूनी पुस्तिका, सार्वजनिक कानूनी क्लिनिक।" },
+                { title: "(ख) कानूनी अनुसन्धान र प्रयोगात्मक विकास", full: "पूर्ण पाठ: विद्वत्तापूर्ण र वैज्ञानिक कानूनी कार्यलाई प्रोत्साहन गर्दै कानूनी अनुसन्धान सञ्चालन एवम् प्रयोगात्मक विकासको साथै पेशागत तथा वैज्ञानिक र प्राविधिक क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: कम्पनीलाई शैक्षिक र अनुसन्धान संस्थानको रूपमा स्थापित गर्दछ। विद्वत्तापूर्ण कार्य, वैज्ञानिक कार्य (तथ्यांक, तुलनात्मक अध्ययन), अनुसन्धान ठेक्का, प्रयोगात्मक विकास (नयाँ प्रविधि परीक्षण), सम्मेलन/गोष्ठी। कार्यान्वयन: अनुसन्धान तथा नीति विभाग, पीयर-रिभ्यू जर्नल, अन्तर्राष्ट्रिय डाटाबेस पहुँच।" },
+                { title: "(ग) उच्च कानूनी शिक्षा र तालिम", full: "पूर्ण पाठ: उच्च कानूनी शिक्षा तथा प्रशिक्षण कार्यक्रमहरूको सञ्चालन, प्रदान गर्ने क्याम्पस, इन्स्टिच्युट, विश्वविद्यालय सम्बन्धी र अन्य शैक्षिक कार्यक्रमहरूलाई सहयोग पुर्याउने क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: उच्च कानूनी शिक्षा (व्याख्यान, सेमिनार), प्रशिक्षण (सीपीडी, सरकारी अधिकारी, न्यायाधीश), शैक्षिक संस्थालाई सहयोग (पाठ्यक्रम, सामग्री, अतिथि व्याख्यान), अन्य कार्यक्रम (कानूनी साक्षरता, अनलाइन प्रमाणपत्र)। कार्यान्वयन: तालिम तथा शिक्षा विभाग, शैक्षिक संस्थासँग सम्झौता, अनलाइन LMS।" },
+                { title: "(घ) प्रकाशन", full: "पूर्ण पाठ: कानूनी पुस्तकहरू, जर्नलहरूको प्रकाशन तथा अन्य प्रकाशनसम्बन्धी क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: कानूनी पुस्तक (मौलिक, व्याख्यात्मक, केस डाइजेस्ट), जर्नल (पीयर-रिभ्यू), अन्य (न्यूजलेटर, प्राविधिक प्रतिवेदन, नीति संक्षिप्त, ई-बुक, ब्लग, पोडकास्ट)। कार्यान्वयन: प्रकाशन विभाग, सम्पादकीय समिति, प्रिन्ट र डिजिटल, वितरण साझेदारी।" },
+                { title: "(ङ) प्रशासनिक तथा सहयोगी क्रियाकलाप", full: "पूर्ण पाठ: कार्यालयको प्रशासनिक तथा सहयोगी संयुक्त क्रियाकलापहरू लगायत फोटोकपी गर्ने, आवश्यक कागजपत्रहरू तयार गर्ने र अन्य विशेष कार्यालयसम्बन्धी सहयोगी क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: प्रशासनिक व्यवस्थापन (कार्यालय सञ्चालन, मानव संसाधन, लजिस्टिक्स), सहयोगी सेवा (फोटोकपी, स्क्यानिङ, अभिलेखीकरण), कागजपत्र तयारी, अन्य सेवा (अनुवाद, नोटरी)। कार्यान्वयन: प्रशासन तथा लेखा विभाग, सबै सदस्यका लागि साझा पूर्वाधार।" },
+                { title: "(च) अन्य व्यावसायिक सहयोगी सेवा", full: "पूर्ण पाठ: अन्य व्यावसायिक सहयोगी सेवा र सदस्य संस्थाहरूका क्रियाकलापहरू गर्ने।", explanation: "व्याख्या: कानूनी प्रविधि सल्लाह, अनुपालन अडिट, कर्पोरेट प्रशासन सेवा, मध्यस्थता सहायता, र सदस्य संस्थाहरूको गतिविधि व्यवस्थापन। भविष्यका सेवा: अन्तर्राष्ट्रिय कानून, बौद्धिक सम्पत्ति, डाटा संरक्षण। कार्यान्वयन: सञ्चालक समितिले समय-समयमा नयाँ सेवा क्षेत्र थप्न सक्नेछ।" }
+            ],
+            needHeading: "आवश्यकता",
+            needIntro: "<p>नेपालको कानूनी क्षेत्र दशकौंदेखि परम्परागत अभ्यास विधिहरूमा आधारित रहेको छ। नेपाल ल ग्रुपको स्थापना गर्नुअघि संस्थापक सदस्यहरूले निम्न सात स्थायी चुनौतीहरू पहिचान गरेका थिए:</p>",
             challenges: [
-                "एकल कार्यशैली – अधिकांश अधिवक्ता एक्लै काम गर्छन्।",
-                "सीमित पूर्वाधार – प्रविधि, पुस्तकालय र तालिमको अभाव।",
+                "एकल कार्यशैली – अधिकांश अधिवक्ता एक्लै वा सानो टोलीमा काम गर्छन्; जटिल बहु-विषयक मुद्दा ह्यान्डल गर्न कठिन।",
+                "सीमित पूर्वाधार – उच्च-स्तरीय प्रविधि, पुस्तकालय, डाटाबेस, प्रशिक्षित कर्मचारीको अभाव।",
                 "कमजोर संस्थागत ब्रान्डिङ – वरिष्ठ अधिवक्ता गएपछि फर्म विघटन।",
-                "साझा वृद्धिको अभाव – अधिशेष बाँडिन्छ, पूँजी संचय हुँदैन।",
-                "नियामक जटिलता – प्रशासन र कानूनी अभ्यासबीच अस्पष्टता।",
-                "अप्रयुक्त आय स्रोत – मुद्दा शुल्कमा मात्र निर्भरता।",
-                "उत्तराधिकार समस्या – ग्राहक र ज्ञान हस्तान्तरणको अभाव।"
+                "साझा वृद्धिको अभाव – अधिशेष बाँडिन्छ, फर्म-स्तरीय पूँजी संचय हुँदैन।",
+                "नियामक जटिलता – प्रशासन र कानूनी अभ्यासबीच स्पष्ट अलगाव नहुँदा बार काउन्सिलको जोखिम।",
+                "अप्रयुक्त आय स्रोत – मुद्दा शुल्कमा मात्र निर्भरता; अनुसन्धान, तालिम, प्रकाशनको उपेक्षा।",
+                "उत्तराधिकार समस्या – ग्राहक, ज्ञान र सद्भावना हस्तान्तरण गर्ने संस्थागत संरचना छैन।"
             ],
             solutionHeading: "समाधान: नेपाल ल ग्रुप",
-            solutionText: "हामी सबै चुनौतीहरूको एकीकृत संस्थागत समाधान प्रस्तुत गर्दछौं:",
+            solutionIntro: "<p>नेपाल ल ग्रुप माथि वर्णित सबै चुनौतीहरूलाई एकीकृत र संरचनात्मक रूपमा समाधान गर्न स्थापित गरिएको हो। हाम्रो समाधानको विस्तृत स्वरूप:</p>",
             solutions: [
-                "सहकार्यमूलक बहु-विषयक टोली",
-                "साझा पूर्वाधार र प्रविधि",
-                "दिगो संस्थागत ब्रान्ड",
-                "कम्पनी-स्तरको आय र पुनः लगानी",
-                "नियामक अनुपालन र स्पष्ट अलगाव",
-                "विविधीकृत आय स्रोत",
-                "दीर्घकालीन दिगोपन"
+                "एक सहकार्य, बहु-विषयक टोली – विभिन्न विधाका विशेषज्ञहरू एकै मञ्चमा।",
+                "साझा पूर्वाधार र प्रविधि – केस म्यानेजमेन्ट सफ्टवेर, डाटाबेस, पुस्तकालय, दक्ष टोली।",
+                "दिगो संस्थागत ब्रान्ड – कम्पनीको नाममा ब्रान्डिङ, व्यक्तिभन्दा माथि।",
+                "कम्पनी-स्तरको आय र पुनः लगानी – अधिशेष पुनः लगानी अनुसन्धान, प्रविधि, पूर्वाधारमा।",
+                "नियामक अनुपालन – स्पष्ट अलगाव: मुद्दा विभागमा मात्र बार लाइसेन्सधारी।",
+                "विविधीकृत आय स्रोत – मुद्दा, अनुसन्धान, तालिम, प्रकाशन, दान।",
+                "दीर्घकालीन दिगोपन – सदस्य परिवर्तनमा पनि निरन्तरता, बौद्धिक सम्पत्ति हस्तान्तरण।"
             ],
             valuesHeading: "हाम्रो दर्शन र मूल मान्यताहरू",
             values: [
-                { title: "पारदर्शिता", desc: "सबै वित्तीय र सुशासन संरचना पारदर्शी।" },
-                { title: "सहकारिता", desc: "व्यक्तिगत प्रतिस्पर्धा नभई टोली कार्य।" },
-                { title: "नैतिकता र व्यावसायिक आचरण", desc: "बार काउन्सिलको आचारसंहिताको पूर्ण पालना।" },
-                { title: "निरन्तर सुधार", desc: "सेवा र प्रणालीलाई निरन्तर परिष्कृत।" }
+                { icon: "fas fa-eye", title: "पारदर्शिता", desc: "सबै आर्थिक कारोबार, निर्णय प्रक्रिया र सुशासन संरचना पूर्ण पारदर्शी।" },
+                { icon: "fas fa-handshake", title: "सहकारिता", desc: "व्यक्तिगत प्रतिस्पर्धा नभई साझा सिकाइ र टोली कार्यलाई प्राथमिकता।" },
+                { icon: "fas fa-gavel", title: "नैतिकता र व्यावसायिक आचरण", desc: "कानून व्यवसायीको आचारसंहिताको पूर्ण पालना।" },
+                { icon: "fas fa-chart-simple", title: "निरन्तर सुधार", desc: "स्थिरतालाई दिगोपनको शत्रु मान्दै, सेवा, प्रणाली र प्रक्रियालाई निरन्तर परिष्कृत।" }
             ],
-            whyHeading: "किन मुनाफा वितरण नगर्ने कम्पनी?",
-            whyText: "कम्पनी ऐन, २०६३ को दफा १६६–१६७ अन्तर्गत:",
+            whyHeading: "किन मुनाफा वितरण नगर्ने कम्पनी संरचना?",
+            whyIntro: "<p>नेपाल ल ग्रुपको संस्थापक सदस्यहरूले कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत मुनाफा वितरण नगर्ने कम्पनीको संरचना रोजेका छन्। मुख्य कारणहरू:</p>",
             reasons: [
-                "सबै अधिशेष कम्पनीमा रहन्छ – पूँजी संचय र पुनः लगानी।",
-                "सदस्यको दायित्व सीमित – व्यक्तिगत जोखिम न्यून।",
+                "सबै अधिशेष कम्पनीमा नै रहन्छ – पूँजी संचय र पुनः लगानीको सुनिश्चितता।",
+                "सदस्यहरूको दायित्व सीमित – व्यक्तिगत जोखिम न्यूनीकरण।",
                 "सदस्यता हस्तान्तरण नहुने – स्थिरता र दीर्घकालीन प्रतिबद्धता।",
-                "प्रशासनिक खर्चको २५% सीमा – वित्तीय अनुशासन।"
+                "प्रशासनिक खर्चको २५% सीमा – वित्तीय अनुशासन र पारदर्शिता।"
             ],
+            joinTitle: "हामीसँग जोडिनुहोस्",
+            joinText: "नेपाल ल ग्रुप योग्य अधिवक्ता, अनुसन्धानकर्ता, प्रशिक्षक, र प्रकाशन पेशाकर्मीहरूका लागि खुला छ जो पारदर्शिता, सहकारिता, र नैतिक अभ्यासप्रति हाम्रो प्रतिबद्धता साझा गर्दछन्। हामी तपाईंको चासोको स्वागत गर्दछौं।",
+            joinBtn: "सम्पर्क गर्नुहोस्",
             footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित"
         }
     };
 
     let currentLang = localStorage.getItem("nlgLang") || "en";
 
-    function updateLang(lang) {
+    function renderObjects(lang) {
+        const container = document.getElementById("objectsGrid");
+        const objs = aboutData[lang].objects;
+        container.innerHTML = objs.map(obj => `
+            <div class="card object-card">
+                <div class="badge">${obj.title.split(' ')[0]}</div>
+                <h3>${obj.title}</h3>
+                <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 0.5rem;">${obj.full}</p>
+                <p>${obj.explanation}</p>
+            </div>
+        `).join("");
+    }
+
+    function renderChallenges(lang) {
+        const container = document.getElementById("challengesGrid");
+        const challenges = aboutData[lang].challenges;
+        container.innerHTML = challenges.map(ch => `<div class="card"><i class="fas fa-exclamation-triangle"></i><p>${ch}</p></div>`).join("");
+    }
+
+    function renderSolutions(lang) {
+        const container = document.getElementById("solutionsGrid");
+        const solutions = aboutData[lang].solutions;
+        container.innerHTML = solutions.map(s => `<div class="card"><i class="fas fa-check-circle"></i><p><strong>✓</strong> ${s}</p></div>`).join("");
+    }
+
+    function renderValues(lang) {
+        const container = document.getElementById("valuesGrid");
+        const values = aboutData[lang].values;
+        container.innerHTML = values.map(v => `<div class="card"><i class="${v.icon}"></i><h3>${v.title}</h3><p>${v.desc}</p></div>`).join("");
+    }
+
+    function renderReasons(lang) {
+        const container = document.getElementById("reasonsGrid");
+        const reasons = aboutData[lang].reasons;
+        container.innerHTML = reasons.map(r => `<div class="card"><i class="fas fa-chart-line"></i><p>${r}</p></div>`).join("");
+    }
+
+    function updateUI(lang) {
         const d = aboutData[lang];
         document.getElementById("brandName").innerText = d.brand;
         document.getElementById("navHome").innerText = d.navHome;
@@ -166,22 +289,26 @@
         document.getElementById("navContact").innerText = d.navContact;
         document.getElementById("heroTitle").innerText = d.heroTitle;
         document.getElementById("bgHeading").innerText = d.bgHeading;
-        document.getElementById("bgText").innerHTML = `<p>${d.bgText}</p>`;
+        document.getElementById("bgText").innerHTML = d.bgText;
+        document.getElementById("objectsHeading").innerText = d.objectsHeading;
+        document.getElementById("objectsIntro").innerHTML = d.objectsIntro;
+        document.getElementById("needHeading").innerText = d.needHeading;
+        document.getElementById("needIntro").innerHTML = d.needIntro;
         document.getElementById("solutionHeading").innerText = d.solutionHeading;
-        document.getElementById("solutionText").innerHTML = `<p>${d.solutionText}</p>`;
+        document.getElementById("solutionIntro").innerHTML = d.solutionIntro;
         document.getElementById("valuesHeading").innerText = d.valuesHeading;
         document.getElementById("whyHeading").innerText = d.whyHeading;
-        document.getElementById("whyText").innerHTML = `<p>${d.whyText}</p>`;
+        document.getElementById("whyIntro").innerHTML = d.whyIntro;
+        document.getElementById("joinTitle").innerText = d.joinTitle;
+        document.getElementById("joinText").innerText = d.joinText;
+        document.getElementById("joinBtn").innerText = d.joinBtn;
         document.getElementById("footerText").innerHTML = d.footer;
 
-        const challengesGrid = document.getElementById("challengesGrid");
-        challengesGrid.innerHTML = d.challenges.map(ch => `<div class="card"><i class="fas fa-exclamation-triangle"></i><p>${ch}</p></div>`).join("");
-        const solutionGrid = document.getElementById("solutionGrid");
-        solutionGrid.innerHTML = d.solutions.map(s => `<div class="card"><i class="fas fa-check-circle"></i><p>${s}</p></div>`).join("");
-        const valuesGrid = document.getElementById("valuesGrid");
-        valuesGrid.innerHTML = d.values.map(v => `<div class="card"><i class="fas fa-star"></i><h3>${v.title}</h3><p>${v.desc}</p></div>`).join("");
-        const reasonsGrid = document.getElementById("reasonsGrid");
-        reasonsGrid.innerHTML = d.reasons.map(r => `<div class="card"><i class="fas fa-chart-line"></i><p>${r}</p></div>`).join("");
+        renderObjects(lang);
+        renderChallenges(lang);
+        renderSolutions(lang);
+        renderValues(lang);
+        renderReasons(lang);
 
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
@@ -190,9 +317,9 @@
         currentLang = lang;
     }
 
-    document.getElementById("langNp").onclick = () => updateLang("np");
-    document.getElementById("langEn").onclick = () => updateLang("en");
-    updateLang(currentLang);
+    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
+    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
+    updateUI(currentLang);
 </script>
 </body>
 </html>
