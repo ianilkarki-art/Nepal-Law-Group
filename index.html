@@ -41,45 +41,83 @@
             padding: 0 32px;
         }
 
-        /* Header / Navbar */
+        /* Header / Navbar - Attractive, no subtext */
         .navbar {
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-bottom: 2px solid var(--crimson);
         }
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.2rem;
         }
-        .logo h1 {
-            font-size: 1.7rem;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-icon {
+            font-size: 2rem;
+            color: var(--crimson-light);
+            background: rgba(255,255,240,0.1);
+            padding: 8px;
+            border-radius: 60px;
+            transition: transform 0.2s;
+        }
+        .brand-name {
+            font-size: 1.9rem;
             font-weight: 800;
             letter-spacing: -0.3px;
             color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .logo p {
-            font-size: 0.75rem;
-            color: rgba(255,255,240,0.85);
-            letter-spacing: 0.5px;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .about-link {
+            background: transparent;
+            border: 1.5px solid rgba(255,255,240,0.6);
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .about-link i {
+            font-size: 0.9rem;
+        }
+        .about-link:hover {
+            background: var(--crimson);
+            border-color: var(--crimson);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .lang-toggle {
             display: flex;
-            gap: 0.75rem;
-            background: rgba(255,255,255,0.12);
-            padding: 0.4rem 1rem;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
             border-radius: 60px;
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(4px);
         }
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             padding: 0.4rem 1rem;
             border-radius: 40px;
@@ -94,7 +132,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         .lang-btn:not(.active):hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.25);
         }
 
         /* Hero Section */
@@ -197,7 +235,7 @@
             margin-top: 0.8rem;
         }
 
-        /* Info highlight / compare box */
+        /* Compare box */
         .compare-box {
             background: var(--soft-gray);
             border-radius: 32px;
@@ -213,19 +251,58 @@
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-light);
         }
-        .full-text-card h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
         .full-text-card p {
             margin-bottom: 1rem;
             line-height: 1.6;
             color: #1f2a3e;
         }
 
-        /* Goal/vision callout */
+        /* About Section (new attractive) */
+        .about-section {
+            background: linear-gradient(120deg, #ffffff 0%, #fef7f0 100%);
+            border-radius: 32px;
+            padding: 2.5rem;
+            margin: 2rem 0 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(158,27,50,0.2);
+            scroll-margin-top: 100px;
+        }
+        .about-section h2 {
+            font-size: 1.9rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .about-section h2 i {
+            color: var(--crimson);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .about-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            transition: 0.2s;
+            border-bottom: 3px solid var(--crimson);
+        }
+        .about-card i {
+            font-size: 2rem;
+            color: var(--crimson);
+            margin-bottom: 1rem;
+        }
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-blue);
+        }
+
+        /* goal block */
         .goal-block {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #123e6e 100%);
             color: white;
@@ -234,17 +311,7 @@
             margin: 2rem 0;
             text-align: center;
         }
-        .goal-block i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #ffcd94;
-        }
-        .goal-block h3 {
-            font-size: 1.7rem;
-            margin-bottom: 0.75rem;
-        }
 
-        /* footer */
         footer {
             background: #0a1a2e;
             color: #cddfea;
@@ -261,18 +328,19 @@
             .hero h2 {
                 font-size: 2rem;
             }
-            .section-title {
-                font-size: 1.7rem;
-            }
-            .dept-grid {
-                grid-template-columns: 1fr;
-            }
-            .logo h1 {
+            .brand-name {
                 font-size: 1.3rem;
             }
-        }
-        button {
-            cursor: pointer;
+            .brand-icon {
+                font-size: 1.4rem;
+            }
+            .nav-links {
+                gap: 0.8rem;
+            }
+            .about-link {
+                padding: 0.3rem 1rem;
+                font-size: 0.8rem;
+            }
         }
         .text-crimson {
             color: var(--crimson);
@@ -281,69 +349,78 @@
             margin: 1rem 0;
             border-color: var(--border-light);
         }
+        .btn-icon {
+            margin-right: 4px;
+        }
     </style>
 </head>
 <body>
 
 <header class="navbar">
     <div class="container nav-container">
-        <div class="logo">
-            <h1 id="brand-name">Nepal Law Group</h1>
+        <div class="brand">
+            <i class="fas fa-gavel brand-icon"></i>
+            <span class="brand-name" id="brand-name">Nepal Law Group</span>
         </div>
-        <div class="lang-toggle">
-            <button class="lang-btn" id="lang-np" data-lang="np">नेपाली</button>
-            <button class="lang-btn active" id="lang-en" data-lang="en">English</button>
+        <div class="nav-links">
+            <a href="#about" class="about-link" id="about-link"><i class="fas fa-info-circle"></i> <span id="about-link-text">About</span></a>
+            <div class="lang-toggle">
+                <button class="lang-btn" id="lang-np" data-lang="np">नेपाली</button>
+                <button class="lang-btn active" id="lang-en" data-lang="en">English</button>
+            </div>
         </div>
     </div>
 </header>
 
 <main>
-    <!-- Hero Section with dynamic language -->
+    <!-- Hero Section -->
     <div class="hero">
         <div class="container hero-content">
-            <span class="hero-badge" id="hero-badge">⚖️ Redefining Law Practice, Advocacy and Research</span>
-            <h2 id="hero-title">Nepal Law Group – A New Legal Organisation</h2>
-            <p id="hero-sub">Service-oriented, non-profit, educational & public welfare institution</p>
+            <span class="hero-badge" id="hero-badge">⚖️ नयाँ मापदण्ड • New Standard</span>
+            <h2 id="hero-title">नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h2>
+            <p id="hero-sub">सेवामूलक, गैर-नाफामुखी, शैक्षिक, सार्वजनिक उपयोगिता | Service-oriented, non-profit, public welfare</p>
         </div>
     </div>
 
     <div class="container">
         <!-- Full description section (exact provided content preserved) -->
         <section>
-            <div class="full-text-card" id="full-description-container">
-                <!-- dynamic content inserted via JS based on language -->
-            </div>
+            <div class="full-text-card" id="full-description-container"></div>
         </section>
 
         <!-- Comparison / unique structure section -->
         <section>
-            <div class="compare-box" id="comparison-box">
-                <!-- dynamic comparison content (traditional vs NLG) -->
-            </div>
+            <div class="compare-box" id="comparison-box"></div>
         </section>
 
-        <!-- Departments Showcase (Rich visual) -->
+        <!-- Departments Showcase -->
         <section>
-            <h2 class="section-title" id="dept-heading">⚙️ Our Structure • Institutional Framework</h2>
-            <p class="section-sub" id="dept-sub">Client-facing & internal support departments working in synergy</p>
-            <div class="dept-grid" id="departments-grid">
-                <!-- JS will inject department cards with i18n support -->
-            </div>
+            <h2 class="section-title" id="dept-heading">⚙️ हाम्रो संरचना • Our Structure</h2>
+            <p class="section-sub" id="dept-sub">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
+            <div class="dept-grid" id="departments-grid"></div>
         </section>
 
-        <!-- Goal & vision block (reinvestment & sustainability) -->
+        <!-- Goal & vision block -->
         <div class="goal-block" id="goal-block">
             <i class="fas fa-chart-line"></i>
-            <h3 id="goal-title">Long-term Sustainability & Reinvestment</h3>
-            <p id="goal-text">All surplus income reinvested for legal sector growth & public welfare.</p>
+            <h3 id="goal-title">दीर्घकालीन दिगोपन • Long-term Sustainability</h3>
+            <p id="goal-text">सम्पूर्ण अधिशेष समाज हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गरिन्छ। All surplus reinvested for legal sector growth & public welfare.</p>
+        </div>
+
+        <!-- About Section (New, linked from header) -->
+        <div id="about" class="about-section">
+            <h2><i class="fas fa-landmark"></i> <span id="about-heading">हाम्रो बारेमा • About Us</span></h2>
+            <div id="about-content">
+                <!-- dynamic bilingual about content -->
+            </div>
         </div>
 
         <!-- final note: institutional platform -->
         <section>
             <div class="full-text-card" style="background:#fef9f0; border-left: 6px solid var(--crimson);">
                 <i class="fas fa-building" style="color: var(--crimson); font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"></i>
-                <h3 id="closing-title">A Modern Alternative to Traditional Legal Practice</h3>
-                <p id="closing-text">Nepal Law Group is establishing itself as a compliant, sustainable, and visionary institution.</p>
+                <h3 id="closing-title">नेपाल ल ग्रुप – परम्परागत कानूनी अभ्यासको विकल्प</h3>
+                <p id="closing-text">आधुनिक, अनुपालनशील र दिगो संस्थाको रूपमा स्थापना, नेपालको कानूनी क्षेत्रमा नयाँ मापदण्ड।</p>
             </div>
         </section>
     </div>
@@ -351,17 +428,18 @@
 
 <footer>
     <div class="container">
-        <p id="footer-text">© 2025 Nepal Law Group - All rights reserved | Access to justice for all</p>
-        <p style="font-size:0.8rem; margin-top:0.5rem;" id="footer-ethics">Non-profit • Educational • Public Welfare</p>
+        <p id="footer-text">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | कानूनी सेवा सबैको पहुँचमा</p>
+        <p style="font-size:0.8rem; margin-top:0.5rem;" id="footer-ethics">गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण</p>
     </div>
 </footer>
 
 <script>
-    // Language dataset : English & Nepali (exact rich content from prompt)
+    // Language dataset: English & Nepali (exact rich content + about section)
     const langData = {
         en: {
             brandName: "Nepal Law Group",
-            heroBadge: "⚖️ Redefining Law Practice, Advocacy and Research",
+            aboutLinkText: "About",
+            heroBadge: "⚖️ Redefining Legal Practice",
             heroTitle: "Nepal Law Group – A New Legal Organisation",
             heroSub: "Service-oriented, non-profit, educational & public welfare institution",
             fullDescription: `
@@ -393,11 +471,22 @@
             closingTitle: "A Modern Alternative to Traditional Legal Practice",
             closingText: "Nepal Law Group is establishing itself as a compliant, sustainable, and visionary institution, setting new benchmarks in Nepal's legal landscape.",
             footerText: "© 2025 Nepal Law Group - All rights reserved | Access to justice for all",
-            footerEthics: "Non-profit • Educational • Public Welfare"
+            footerEthics: "Non-profit • Educational • Public Welfare",
+            aboutHeading: "📖 About Nepal Law Group",
+            aboutContent: `
+                <div class="about-grid">
+                    <div class="about-card"><i class="fas fa-bullseye"></i><h3>Mission & Vision</h3><p>To democratize legal services and create a sustainable, non-profit legal institution that prioritizes public welfare, legal research, and professional excellence.</p></div>
+                    <div class="about-card"><i class="fas fa-hand-holding-heart"></i><h3>Core Values</h3><p>Integrity, accessibility, innovation, pro bono spirit, and reinvestment of surplus into legal infrastructure and education.</p></div>
+                    <div class="about-card"><i class="fas fa-building-columns"></i><h3>Legal Status</h3><p>Registered as a profit non-distributing company under Nepalese law, compliant with Nepal Bar Council regulations, operating as an institutional legal platform.</p></div>
+                    <div class="about-card"><i class="fas fa-globe"></i><h3>Future Goals</h3><p>Establish legal aid clinics, publish open-access law journals, and foster next-gen legal tech for accessible justice across all seven provinces.</p></div>
+                </div>
+                <p style="margin-top: 1.5rem; font-style: italic;">⚖️ Nepal Law Group is committed to setting new ethical and professional standards, bridging the gap between traditional practice and modern public service.</p>
+            `
         },
         np: {
             brandName: "नेपाल ल ग्रुप",
-            heroBadge: "⚖️ कानून अभ्यास, वकालत र अनुसन्धानलाई पुन: परिभाषित गर्दै",
+            aboutLinkText: "बारेमा",
+            heroBadge: "⚖️ नयाँ कानूनी परम्परा",
             heroTitle: "नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था",
             heroSub: "सेवामूलक, गैर-नाफामुखी, शैक्षिक र सार्वजनिक कल्याणकारी संस्था",
             fullDescription: `
@@ -429,25 +518,33 @@
             closingTitle: "परम्परागत कानूनी अभ्यासको विकल्प : आधुनिक संस्था",
             closingText: "नेपाल ल ग्रुप अनुपालनशील, दिगो र दूरदर्शी संस्थाको रूपमा स्थापित हुँदै, नेपालको कानूनी क्षेत्रमा नयाँ उचाइ स्थापित गर्ने लक्ष्य राख्दछ।",
             footerText: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | सबैको पहुँचमा न्याय",
-            footerEthics: "गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण"
+            footerEthics: "गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण",
+            aboutHeading: "📖 नेपाल ल ग्रुपको बारेमा",
+            aboutContent: `
+                <div class="about-grid">
+                    <div class="about-card"><i class="fas fa-bullseye"></i><h3>मिसन र दृष्टिकोण</h3><p>कानूनी सेवा सर्वसुलभ बनाउने, गैर-नाफामुखी दिगो संस्थाको रूपमा सार्वजनिक कल्याण, अनुसन्धान र व्यावसायिक उत्कृष्टतालाई प्राथमिकता दिने।</p></div>
+                    <div class="about-card"><i class="fas fa-hand-holding-heart"></i><h3>मूल मान्यताहरू</h3><p>इमानदारी, पहुँचयोग्यता, नवप्रवर्तन, प्रो बोनो भावना, र अधिशेषलाई कानूनी पूर्वाधार र शिक्षामा पुनः लगानी।</p></div>
+                    <div class="about-card"><i class="fas fa-building-columns"></i><h3>कानूनी हैसियत</h3><p>नेपाली कानून अन्तर्गत मुनाफा वितरण नगर्ने कम्पनीको रूपमा दर्ता, नेपाल बार काउन्सिलको मापदण्ड अनुरूप, संस्थागत कानूनी मञ्च।</p></div>
+                    <div class="about-card"><i class="fas fa-globe"></i><h3>भावी लक्ष्यहरू</h3><p>कानूनी सहायता क्लिनिक स्थापना, खुला पहुँच कानूनी जर्नल प्रकाशन, र सातै प्रदेशमा न्यायको पहुँचको लागि प्रविधि विकास।</p></div>
+                </div>
+                <p style="margin-top: 1.5rem; font-style: italic;">⚖️ नेपाल ल ग्रुपले परम्परागत अभ्यास र आधुनिक सार्वजनिक सेवाबीचको सेतुको रूपमा नैतिक र व्यावसायिक मापदण्ड स्थापित गर्न प्रतिबद्ध छ।</p>
+            `
         }
     };
 
-    // Helper: set active language button style
     let currentLang = "en";
 
     function updateUI(lang) {
         const data = langData[lang];
         if (!data) return;
-        
-        // Update navbar brand (separate language-specific banner)
+        // header brand & about link
         document.getElementById("brand-name").innerText = data.brandName;
-        document.getElementById("brand-sub").innerText = data.brandSub;
-        
-        // Update hero & badges
+        document.getElementById("about-link-text").innerText = data.aboutLinkText;
+        // hero
         document.getElementById("hero-badge").innerText = data.heroBadge;
         document.getElementById("hero-title").innerHTML = data.heroTitle;
         document.getElementById("hero-sub").innerHTML = data.heroSub;
+        // main content
         document.getElementById("full-description-container").innerHTML = data.fullDescription;
         document.getElementById("comparison-box").innerHTML = data.comparison;
         document.getElementById("dept-heading").innerHTML = data.deptHeading;
@@ -458,8 +555,11 @@
         document.getElementById("closing-text").innerHTML = data.closingText;
         document.getElementById("footer-text").innerHTML = data.footerText;
         document.getElementById("footer-ethics").innerHTML = data.footerEthics;
+        // about section
+        document.getElementById("about-heading").innerHTML = data.aboutHeading;
+        document.getElementById("about-content").innerHTML = data.aboutContent;
         
-        // render department cards dynamically
+        // department cards
         const deptGrid = document.getElementById("departments-grid");
         deptGrid.innerHTML = "";
         data.departments.forEach(dept => {
@@ -475,14 +575,13 @@
             deptGrid.appendChild(card);
         });
         currentLang = lang;
-        // update active class on buttons
+        // active button style
         document.getElementById("lang-np").classList.remove("active");
         document.getElementById("lang-en").classList.remove("active");
         if (lang === "np") document.getElementById("lang-np").classList.add("active");
         else document.getElementById("lang-en").classList.add("active");
     }
 
-    // Event listeners for language toggle
     document.getElementById("lang-np").addEventListener("click", () => {
         if (currentLang !== "np") updateUI("np");
     });
@@ -490,7 +589,7 @@
         if (currentLang !== "en") updateUI("en");
     });
 
-    // initial render English (rich content)
+    // initial render English
     updateUI("en");
 </script>
 </body>
