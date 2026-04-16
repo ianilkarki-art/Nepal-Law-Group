@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>About – Nepal Law Group | नेपाल ल ग्रुपको बारेमा</title>
-    <meta name="description" content="Nepal Law Group is a modern, compliant, and sustainable legal institution – a profit non-distributing company under Nepalese law.">
-    <!-- Font Awesome for icons (kept) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>About – Nepal Law Group | नेपाल ल ग्रुप – बारेमा</title>
+    <meta name="description" content="About Nepal Law Group – our vision, mission, foundation, objectives, and efforts.">
     <style>
         * {
             margin: 0;
@@ -15,294 +13,189 @@
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #fef7e8;
-            color: #2c2418;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
+            color: #1a2a3a;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
-        :root {
-            --nepal-indigo: #1a2a4f;
-            --nepal-indigo-light: #253a6b;
-            --nepal-crimson: #8b1a2c;
-            --nepal-gold: #c9a03d;
-            --nepal-gold-light: #e0b354;
-            --nepal-cream: #fff8ef;
-            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.12);
-            --border-gold: 1px solid rgba(201, 160, 61, 0.4);
-        }
-
         .container {
-            max-width: 1280px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ===== HEADER – More Attractive ===== */
+        /* Header (same as home page) */
         .navbar {
-            background: var(--nepal-indigo);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
             padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            border-bottom: 4px solid var(--nepal-gold);
-            box-shadow: var(--shadow-md);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
 
         .nav-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
-        .brand-name {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: white;
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             text-decoration: none;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            transition: opacity 0.2s;
-        }
-        .brand-name:hover {
-            opacity: 0.9;
+            letter-spacing: -0.3px;
+            text-align: center;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            gap: 1.8rem;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: white;
+            color: #2c3e50;
             text-decoration: none;
-            font-weight: 600;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            transition: all 0.2s;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            background: var(--nepal-crimson);
-            color: var(--nepal-gold-light);
+            color: #0b2f5c;
+        }
+
+        .lang-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.2rem;
         }
 
         .lang-toggle {
             display: flex;
-            gap: 0.25rem;
-            background: rgba(255, 255, 255, 0.15);
+            gap: 0.2rem;
+            background: #e9ecef;
             padding: 0.2rem;
-            border-radius: 60px;
-            border: 1px solid rgba(201, 160, 61, 0.6);
+            border-radius: 40px;
         }
 
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            padding: 0.35rem 1rem;
+            padding: 0.3rem 0.9rem;
             border-radius: 40px;
             cursor: pointer;
-            color: white;
             font-family: inherit;
             transition: 0.2s;
+            color: #2c3e50;
         }
 
         .lang-btn.active {
-            background: var(--nepal-crimson);
-            color: var(--nepal-gold-light);
+            background: #0b2f5c;
+            color: white;
         }
 
-        /* Hero Section */
+        /* Page hero */
         .page-hero {
-            background: linear-gradient(145deg, #fff8ef 0%, #fff3e0 100%);
-            padding: 3rem 0;
             text-align: center;
-            position: relative;
-            border-bottom: 1px solid var(--nepal-gold);
+            padding: 3rem 0 1rem;
         }
-
         .page-hero h1 {
             font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--nepal-indigo);
+            font-weight: 700;
+            color: #0b2f5c;
             margin-bottom: 0.5rem;
-            line-height: 1.2;
         }
 
-        .page-hero p {
-            color: #5a4a3a;
-            font-size: 1.1rem;
-        }
-
-        /* Content Sections */
+        /* Sections */
         section {
-            padding: 3rem 0;
-            border-bottom: 1px solid rgba(201, 160, 61, 0.25);
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--nepal-indigo);
-            border-left: 6px solid var(--nepal-gold);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0b2f5c;
+            margin-bottom: 1rem;
+            letter-spacing: -0.2px;
+        }
+        .section-text {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .objectives-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .objectives-list li {
+            margin-bottom: 1rem;
             padding-left: 1.2rem;
-            margin-bottom: 1.5rem;
+            border-left: 3px solid #0b2f5c;
+            color: #2c3e50;
         }
-
-        .rich-text {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .rich-text p {
-            margin-bottom: 1rem;
-            color: #3d3a36;
-        }
-
-        .rich-text h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--nepal-indigo);
-            margin: 1rem 0 0.5rem;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.8rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-gold);
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--nepal-gold);
-        }
-
-        .card i {
-            font-size: 2rem;
-            color: var(--nepal-gold);
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--nepal-indigo);
-            margin-bottom: 0.5rem;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.8rem;
+        .objectives-list li strong {
+            color: #0b2f5c;
         }
 
         /* Footer */
         .footer {
-            background: var(--nepal-indigo);
-            color: #cdc6b8;
+            background: #f1f5f9;
             padding: 2rem 0 1.5rem;
-            border-top: 4px solid var(--nepal-gold);
+            border-top: 1px solid #e2e8f0;
             margin-top: 2rem;
         }
-
         .footer-policy {
             display: flex;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
-
         .footer-policy a {
-            color: #cdc6b8;
+            color: #6c757d;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: color 0.2s;
         }
-
         .footer-policy a:hover {
-            color: var(--nepal-gold-light);
-            text-decoration: underline;
+            color: #0b2f5c;
         }
-
         .footer-copyright {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-align: center;
-            border-top: 1px solid rgba(201, 160, 61, 0.3);
+            color: #6c757d;
+            border-top: 1px solid #e2e8f0;
             padding-top: 1rem;
         }
 
-        .scroll-top {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: var(--nepal-crimson);
-            color: var(--nepal-gold-light);
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 99;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--nepal-gold);
-        }
-
-        .scroll-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            background: var(--nepal-indigo);
-            transform: translateY(-3px);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-            .brand-name {
-                font-size: 1.4rem;
+            .brand {
+                font-size: 1.8rem;
             }
             .page-hero h1 {
                 font-size: 1.8rem;
             }
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
-            .grid-2, .values-grid {
-                grid-template-columns: 1fr;
+            .nav-links {
+                gap: 1rem;
             }
         }
     </style>
@@ -311,12 +204,14 @@
 
 <header class="navbar">
     <div class="container nav-container">
-        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-wrapper">
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -328,56 +223,41 @@
 <main>
     <div class="page-hero">
         <div class="container">
-            <h1 id="heroTitle">नेपाल ल ग्रुपको बारेमा</h1>
-            <p id="heroSub">एक आधुनिक, अनुपालनशील र दिगो कानूनी संस्था</p>
+            <h1 id="pageTitle">About</h1>
         </div>
     </div>
 
     <div class="container">
-        <!-- Introduction / Overview -->
+        <!-- Vision -->
         <section>
-            <div class="rich-text" id="introText"></div>
+            <h2 class="section-title" id="visionTitle">Our Vision</h2>
+            <p class="section-text" id="visionText">To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.</p>
         </section>
 
-        <!-- Background & Need (7 challenges) -->
+        <!-- Mission -->
         <section>
-            <h2 class="section-title" id="bgHeading">पृष्ठभूमि र आवश्यकता</h2>
-            <div id="bgText" class="rich-text"></div>
-            <div class="grid-2" id="challengesGrid"></div>
+            <h2 class="section-title" id="missionTitle">Our Mission</h2>
+            <p class="section-text" id="missionText">To establish a self sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.</p>
         </section>
 
-        <!-- Solution (7 solutions) -->
+        <!-- Foundation -->
         <section>
-            <h2 class="section-title" id="solutionHeading">समाधान: नेपाल ल ग्रुप</h2>
-            <div id="solutionIntro" class="rich-text"></div>
-            <div class="grid-2" id="solutionsGrid"></div>
+            <h2 class="section-title" id="foundationTitle">Our Foundation</h2>
+            <p class="section-text" id="foundationText">The company’s business will be strictly service oriented, non profit, educational, scholarly, social, charitable, and of public utility.</p>
         </section>
 
-        <!-- Statutory Objects -->
+        <!-- Objectives -->
         <section>
-            <h2 class="section-title" id="objectsHeading">वैधानिक उद्देश्यहरू (प्रबन्धपत्रको दफा ४ बमोजिम)</h2>
-            <div class="grid-2" id="objectsGrid"></div>
+            <h2 class="section-title" id="objectivesTitle">Our Objectives</h2>
+            <p class="section-text" id="objectivesSub">The company has identified four priority objectives that will receive the highest attention and resources:</p>
+            <ul class="objectives-list" id="objectivesList"></ul>
         </section>
 
-        <!-- Philosophy & Values -->
+        <!-- Efforts -->
         <section>
-            <h2 class="section-title" id="valuesHeading">हाम्रो दर्शन र मूल मान्यताहरू</h2>
-            <div class="values-grid" id="valuesGrid"></div>
+            <h2 class="section-title" id="effortsTitle">Our Efforts</h2>
+            <p class="section-text" id="effortsText">We aim to elevate legal excellence across Nepal through collaboration and networking.</p>
         </section>
-
-        <!-- Why Non-Profit Structure -->
-        <section>
-            <h2 class="section-title" id="whyHeading">किन मुनाफा वितरण नगर्ने कम्पनी संरचना?</h2>
-            <div class="rich-text" id="whyText"></div>
-            <div class="grid-2" id="reasonsGrid"></div>
-        </section>
-
-        <!-- Join Us -->
-        <div class="rich-text" style="text-align: center; margin-bottom: 2rem;">
-            <i class="fas fa-handshake" style="font-size: 2rem; color: var(--nepal-gold); margin-bottom: 1rem; display: inline-block;"></i>
-            <h3 id="joinTitle" style="color: var(--nepal-indigo);">हामीसँग जोडिनुहोस्</h3>
-            <p id="joinText">नेपाल ल ग्रुप योग्य अधिवक्ता, अनुसन्धानकर्ता, प्रशिक्षक, र प्रकाशन पेशाकर्मीहरूका लागि खुला छ। हामी तपाईंको चासोको स्वागत गर्दछौं।</p>
-        </div>
     </div>
 </main>
 
@@ -389,204 +269,93 @@
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
         <div class="footer-copyright">
-            <p id="footerText">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित</p>
+            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
         </div>
     </div>
 </footer>
 
-<button class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
-
 <script>
-    // Full bilingual content (exact Nepali as provided, with English translation)
-    const aboutData = {
+    const content = {
         en: {
             brand: "Nepal Law Group",
             navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            heroTitle: "About Nepal Law Group",
-            heroSub: "A modern, compliant, and sustainable legal institution",
-            introText: `
-                <h3>📜 A Modern, Compliant, and Sustainable Legal Institution</h3>
-                <p>Nepal Law Group will be registered as a profit non-distributing company under Sections 166 and 167 of the Companies Act, 2063. This is an innovative institutional model different from traditional law firms. Traditional firms distribute surplus income among partners, which weakens firm-level capital accumulation and long-term investment. Nepal Law Group, however, is built as an institutional platform. It reinvests all surplus to achieve its objectives and increase its funds, making the institution sustainable – its existence continues beyond any individual's tenure.</p>
-                <p>The company's business is service-oriented, non-profit, educational, academic, social, charitable, and of public utility and welfare nature. This means it does not operate solely for commercial gain, but actively contributes to the dissemination of legal knowledge, expansion of access to justice, and professional development of the legal profession.</p>
-                <p>The company will operate through four client-facing departments (Litigation and Advocacy, Research and Policy, Education, and Publications) and two internal support departments (Administration and Accounting, Logistics and Support). The governance structure outlined in its Memorandum and Articles ensures transparency, accountability, and full compliance with Nepalese company law.</p>
-            `,
-            bgHeading: "Background and Need",
-            bgText: "<p>The legal sector in Nepal has been based on traditional practice methods for decades. Before establishing Nepal Law Group, the founding members identified seven enduring challenges:</p>",
-            challenges: [
-                "Solo working style – most lawyers work alone or in very small informal teams, making complex multi-disciplinary cases difficult.",
-                "Limited Infrastructure – lack of high-end technology, comprehensive legal libraries, paid databases, and trained support staff.",
-                "Weak institutional branding – firms dissolve when senior lawyers leave or retire; no sustainable institutional brand is built.",
-                "Lack of shared growth – surplus distributed among partners prevents firm-level capital accumulation and long-term investment.",
-                "Regulatory complexity – unclear separation between administrative functions and legal practice risks Bar Council action.",
-                "Untapped revenue sources – over-reliance on litigation fees; neglect of research, training, publications, and legal tech services.",
-                "Succession problem – no institutional structure to transfer clients, knowledge, and goodwill to the next generation."
+            pageTitle: "About",
+            visionTitle: "Our Vision",
+            visionText: "To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.",
+            missionTitle: "Our Mission",
+            missionText: "To establish a self sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.",
+            foundationTitle: "Our Foundation",
+            foundationText: "The company’s business will be strictly service oriented, non profit, educational, scholarly, social, charitable, and of public utility.",
+            objectivesTitle: "Our Objectives",
+            objectivesSub: "The company has identified four priority objectives that will receive the highest attention and resources:",
+            objectives: [
+                "(a) To carry out legal activities in accordance with the social needs, including the effective and efficient administration of justice and the clarification and simplification of the law",
+                "(b) To conduct legal research and experimental development, as well as professional, scientific and technical activities, while encouraging scholarly and scientific legal work",
+                "(c) To carry out activities to support campuses, institutes, universities and other educational programs that provide higher legal education and training programs",
+                "(d) To carry out activities related to publishing legal books, journals and other publications"
             ],
-            solutionHeading: "Solution: Nepal Law Group",
-            solutionIntro: "<p>Nepal Law Group was established to solve all the above challenges with an integrated institutional model:</p>",
-            solutions: [
-                "Collaborative, multidisciplinary team – experts from different fields work together.",
-                "Shared infrastructure and technology – case management software, databases, library, skilled team.",
-                "Sustainable institutional brand – brand built on the company's name, beyond individuals.",
-                "Company-level income and reinvestment – all surplus reinvested in research, tech, infrastructure.",
-                "Regulatory compliance – clear separation: litigation only by licensed Bar members; other departments open.",
-                "Diversified income sources – litigation, research, training, publications, donations.",
-                "Long-term sustainability – continuity despite membership changes, IP transfer, stability."
-            ],
-            objectsHeading: "Statutory Objects (as per Article 4 of the Memorandum)",
-            objects: [
-                { title: "(क) Effective Administration of Justice", desc: "Effective and efficient administration of justice, clarification and simplification of law, and legal activities in accordance with social needs." },
-                { title: "(ख) Legal Research and Experimental Development", desc: "Conducting legal research and experimental development, promoting scholarly and scientific legal work, as well as professional, scientific, and technical activities." },
-                { title: "(ग) Higher Legal Education and Training", desc: "Operating higher legal education and training programs, supporting campuses, institutes, universities, and other educational activities." },
-                { title: "(घ) Publications", desc: "Publication of law books, journals, and other publication-related activities." }
-            ],
-            valuesHeading: "Our Philosophy and Core Values",
-            values: [
-                { icon: "fas fa-eye", title: "Transparency", desc: "All financial transactions, decision-making processes, and governance structures are fully transparent. Members may inspect accounts, board decisions, and meeting minutes during office hours." },
-                { icon: "fas fa-handshake", title: "Cooperation", desc: "We encourage shared learning and teamwork over individual competition. Regular knowledge-sharing sessions, team huddles, case clinics, and joint projects occur across departments." },
-                { icon: "fas fa-gavel", title: "Ethics and Professional Conduct", desc: "We strictly adhere to the Code of Ethics for Legal Professionals: no referral fees, client confidentiality, respect for the court and judiciary, and dignified conduct toward colleagues and opposing counsel." },
-                { icon: "fas fa-chart-simple", title: "Continuous Improvement", desc: "We regularly collect feedback from members, clients, and stakeholders to improve our services, systems, and processes. Training programs, technology upgrades, and policy reviews are ongoing." }
-            ],
-            whyHeading: "Why a profit non-distributing company structure?",
-            whyText: "<p>We have chosen a profit non-distributing company structure under Sections 166 and 167 of the Companies Act, 2063 for the following strategic reasons:</p>",
-            reasons: [
-                "All surplus remains in the company – no individual can take dividends or bonuses; this ensures capital accumulation and reinvestment.",
-                "Limited liability of members – personal risk is minimized.",
-                "Non-transferability of membership – enhances stability and long-term commitment.",
-                "25% limit on administrative expenses – maintains financial discipline and transparency."
-            ],
-            joinTitle: "Join Us",
-            joinText: "Nepal Law Group is open to qualified advocates, researchers, trainers, and publishing professionals who share our commitment to transparency, collaboration, and ethical practice. If you would like to become a member, collaborate on a research project, or learn more about our work, we welcome your interest.",
-            footer: "© 2025 Nepal Law Group - All rights reserved",
-            termsText: "Terms of Use",
-            privacyText: "Privacy Policy",
-            cookieText: "Cookie Policy"
+            effortsTitle: "Our Efforts",
+            effortsText: "We aim to elevate legal excellence across Nepal through collaboration and networking.",
+            footerText: "© 2025 Nepal Law Group – All rights reserved.",
+            termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
             brand: "नेपाल ल ग्रुप",
-            navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            heroTitle: "नेपाल ल ग्रुपको बारेमा",
-            heroSub: "एक आधुनिक, अनुपालनशील र दिगो कानूनी संस्था",
-            introText: `
-                <h3>📜 एक आधुनिक, अनुपालनशील र दिगो कानूनी संस्था</h3>
-                <p>नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनीको रूपमा कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत दर्ता हुनेछ। यो एक अभिनव संस्थागत मोडेल हो जुन परम्परागत कानूनी फर्महरूभन्दा भिन्न छ। परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूबीच वितरण गर्छन्, जसले फर्म-स्तरीय पूँजी संचय र दीर्घकालीन लगानीलाई कमजोर बनाउँछ। तर नेपाल ल ग्रुप एउटा संस्थागत मञ्च को रूपमा निर्मित हुनेछ। यसले सम्पूर्ण अधिशेषलाई उद्देश्यहरू प्राप्त गर्न र कोष वृद्धि गर्न पुनः लगानी गर्दछ। यसले संस्थालाई दिगो बनाउँदै लैजान्छ, व्यक्तिको कार्यकालभन्दा बाहिर पनि यसको अस्तित्व कायम रहन्छ।</p>
-                <p>यस कम्पनीको व्यवसाय सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी, तथा सार्वजनिक उपयोगिता र कल्याणकारी प्रकृतिको हुनेछ। यसको अर्थ यसले केवल व्यावसायिक लाभको लागि होइन, समाजमा कानूनी ज्ञानको प्रसार, न्यायमा पहुँचको विस्तार, र कानूनी पेशाको व्यावसायिक विकासमा योगदान पुर्याउन सक्रिय रहनेछ।</p>
-                <p>यस कम्पनी चार ग्राहकमुखी विभाग (मुद्दा मामिला तथा वकालत सेवा, अनुसन्धान तथा नीति, शिक्षा, र प्रकाशन) र दुई आन्तरिक सहायक विभाग (प्रशासन तथा लेखा, लजिस्टिक्स तथा सहयोग) मार्फत सञ्चालन हुनेछ। यस कम्पनीको प्रबन्धपत्र र नियमावलीमा उल्लिखित सुशासन संरचनाले पारदर्शिता, जवाफदेहिता, र नेपाली कम्पनी कानूनको पूर्ण अनुपालन सुनिश्चित गर्दछ।</p>
-            `,
-            bgHeading: "पृष्ठभूमि र आवश्यकता",
-            bgText: "<p>नेपालको कानूनी क्षेत्र दशकौंदेखि परम्परागत अभ्यास विधिहरूमा आधारित रहेको छ। नेपाल ल ग्रुपको स्थापना गर्नुअघि संस्थापक सदस्यहरूले नेपाली कानूनी पेशामा देखिएका निम्न सात स्थायी चुनौतीहरू पहिचान गरेका थिए:</p>",
-            challenges: [
-                "एकल कार्यशैली – अधिकांश अधिवक्ता एक्लै वा अत्यन्त सानो, अनौपचारिक टोलीमा काम गर्छन्। जटिल, बहु-विषयक मुद्दाहरू ह्यान्डल गर्न कठिन हुन्छ।",
-                "सीमित पूर्वाधार – उच्च-स्तरीय प्रविधि, व्यापक कानूनी पुस्तकालय, सशुल्क डाटाबेस, र प्रशिक्षित सहायक कर्मचारीको अभाव।",
-                "कमजोर संस्थागत ब्रान्डिङ – वरिष्ठ अधिवक्ता गएपछि फर्मको मूल्य घट्न जान्छ र फर्म नै विघटन हुन्छ।",
-                "साझा वृद्धिको अभाव – अधिशेष साझेदारहरूबीच वितरण हुँदा फर्म-स्तरीय पूँजी संचय हुँदैन।",
-                "नियामक जटिलता – प्रशासनिक कार्य र कानूनी अभ्यासबीच स्पष्ट अलगाव नहुँदा बार काउन्सिलको कारबाहीको जोखिम।",
-                "अप्रयुक्त आय स्रोत – मुद्दा शुल्कमा मात्र निर्भरता; अनुसन्धान, तालिम, प्रकाशन, कानूनी प्रविधि सेवाबाट हुने आयको उपेक्षा।",
-                "उत्तराधिकार समस्या – ग्राहक, ज्ञान र सद्भावना अर्को पुस्तामा हस्तान्तरण गर्ने संस्थागत संरचना छैन।"
+            navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            pageTitle: "बारेमा",
+            visionTitle: "हाम्रो सोच",
+            visionText: "कानूनको शासन, कानूनी विद्वत्ता र व्यावसायिक इमानदारीलाई अगाडि बढाउने राष्ट्रियस्तरको सम्मानित संस्था बन्ने – जहाँ प्रत्येक सदस्यको योगदान र लाभ सुनिश्चित हुन्छ।",
+            missionTitle: "हाम्रो लक्ष्य",
+            missionText: "एक आत्मनिर्भर कानूनी समुदाय स्थापना गर्ने, जहाँ अभ्यासरत अधिवक्ता, अनुसन्धानकर्ता, शिक्षाविद् र प्रकाशकहरूले सहकार्य गर्छन्। कम्पनीले कुनै मुनाफा वितरण गर्दैन; यसको सम्पूर्ण आम्दानी (केवल सदस्यता शुल्कबाट) कानूनी अनुसन्धान, शैक्षिक कार्यक्रम, प्रकाशन र संस्थागत विकासमा पुनः लगानी गरिनेछ।",
+            foundationTitle: "हाम्रो आधार",
+            foundationText: "कम्पनीको व्यवसाय सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी र सार्वजनिक उपयोगिताको हुनेछ।",
+            objectivesTitle: "हाम्रा उद्देश्यहरू",
+            objectivesSub: "कम्पनीले चार प्राथमिकताका उद्देश्यहरू पहिचान गरेको छ जसलाई उच्चतम ध्यान र स्रोतहरू प्राप्त हुनेछन्:",
+            objectives: [
+                "(क) न्यायको प्रभावकारी र कुशल प्रशासन तथा कानूनको स्पष्टीकरण र सरलीकरणको साथै सामाजिक आवश्यकताहरू अनुरूप कानूनी क्रियाकलापहरू गर्ने",
+                "(ख) विद्वत्तापूर्ण र वैज्ञानिक कानूनी कार्यलाई प्रोत्साहन गर्दै कानूनी अनुसन्धान सञ्चालन एवम् प्रयोगात्मक विकासको साथै पेशागत तथा वैज्ञानिक र प्राविधिक क्रियाकलापहरू गर्ने",
+                "(ग) उच्च कानूनी शिक्षा तथा प्रशिक्षण कार्यक्रमहरूको सञ्चालन, प्रदान गर्ने क्याम्पस, इन्स्टिच्युट, विश्वविद्यालय सम्बन्धी र अन्य शैक्षिक कार्यक्रमहरूलाई सहयोग पुर्याउने क्रियाकलापहरू गर्ने",
+                "(घ) कानूनी पुस्तकहरू, जर्नलहरूको प्रकाशन तथा अन्य प्रकाशनसम्बन्धी क्रियाकलापहरू गर्ने"
             ],
-            solutionHeading: "समाधान: नेपाल ल ग्रुप",
-            solutionIntro: "<p>नेपाल ल ग्रुप माथि वर्णित सबै चुनौतीहरूलाई एकीकृत र संरचनात्मक रूपमा समाधान गर्ने उद्देश्यले स्थापित गरिएको हो। हाम्रो समाधानको विस्तृत स्वरूप निम्न बमोजिम छ:</p>",
-            solutions: [
-                "एक सहकार्य, बहु-विषयक टोली – विभिन्न कानूनी विधाका विशेषज्ञ सदस्यहरू एउटै मञ्चमा एकीकृत।",
-                "साझा पूर्वाधार र प्रविधि – केस म्यानेजमेन्ट सफ्टवेर, कानूनी डाटाबेस, पुस्तकालय, र दक्ष प्रशासनिक तथा प्राविधिक टोली।",
-                "दिगो संस्थागत ब्रान्ड – ब्रान्ड कम्पनीको नाममा निर्मित, जुन कुनै एक सदस्यभन्दा माथि उठेको हुन्छ।",
-                "कम्पनी-स्तरको आय र पुनः लगानी – अधिशेष आम्दानी कम्पनीकै पूँजीको रूपमा रहन्छ र पुनः लगानी गरिन्छ।",
-                "नियामक अनुपालन – मुद्दा मामिला तथा वकालत सेवा विभागमा केवल बार काउन्सिलको अनुमतिपत्र प्राप्त सदस्यले मात्र काम गर्न पाउँछन्।",
-                "विविधीकृत आय स्रोत – मुद्दा शुल्क, अनुसन्धान, तालिम शुल्क, प्रकाशन बिक्री, दान तथा अनुदान।",
-                "दीर्घकालीन दिगोपन – कुनै एक सदस्यको अवकाश, बहिर्गमन, वा निधनले कम्पनीको कार्यमा अवरोध पुग्दैन।"
-            ],
-            objectsHeading: "वैधानिक उद्देश्यहरू (प्रबन्धपत्रको दफा ४ बमोजिम)",
-            objects: [
-                { title: "(क) न्यायको प्रभावकारी प्रशासन", desc: "न्यायको प्रभावकारी र कुशल प्रशासन तथा कानूनको स्पष्टीकरण र सरलीकरणको साथै सामाजिक आवश्यकताहरू अनुरूप कानूनी क्रियाकलापहरू गर्ने।" },
-                { title: "(ख) कानूनी अनुसन्धान र प्रयोगात्मक विकास", desc: "विद्वत्तापूर्ण र वैज्ञानिक कानूनी कार्यलाई प्रोत्साहन गर्दै कानूनी अनुसन्धान सञ्चालन एवम् प्रयोगात्मक विकासको साथै पेशागत तथा वैज्ञानिक र प्राविधिक क्रियाकलापहरू गर्ने।" },
-                { title: "(ग) उच्च कानूनी शिक्षा र तालिम", desc: "उच्च कानूनी शिक्षा तथा प्रशिक्षण कार्यक्रमहरूको सञ्चालन, प्रदान गर्ने क्याम्पस, इन्स्टिच्युट, विश्वविद्यालय सम्बन्धी र अन्य शैक्षिक कार्यक्रमहरूलाई सहयोग पुर्याउने क्रियाकलापहरू गर्ने।" },
-                { title: "(घ) प्रकाशन", desc: "कानूनी पुस्तकहरू, जर्नलहरूको प्रकाशन तथा अन्य प्रकाशनसम्बन्धी क्रियाकलापहरू गर्ने।" }
-            ],
-            valuesHeading: "हाम्रो दर्शन र मूल मान्यताहरू",
-            values: [
-                { icon: "fas fa-eye", title: "पारदर्शिता", desc: "सबै आर्थिक कारोबार, निर्णय प्रक्रिया, र सुशासन संरचनाहरू पूर्ण रूपमा पारदर्शी छन्। सदस्यहरूले कार्यालय समयमा लेखा, सञ्चालक समितिका निर्णयहरू, र बैठकको मिनेटहरू निरीक्षण गर्न सक्छन्।" },
-                { icon: "fas fa-handshake", title: "सहकारिता", desc: "हामी व्यक्तिगत प्रतिस्पर्धालाई होइन, साझा सिकाइ र टोली कार्यलाई प्रोत्साहन गर्छौं। विभागहरूबीच नियमित ज्ञान साझेदारी सत्र, टोली हडल, केस क्लिनिक, र संयुक्त परियोजनाहरू हुन्छन्।" },
-                { icon: "fas fa-gavel", title: "नैतिकता र व्यावसायिक आचरण", desc: "हामी कानून व्यवसायीको आचारसंहिताको कडा पालना गर्दछौं। सन्दर्भ शुल्क निषेध, ग्राहक गोपनीयता, अदालत र न्यायपालिकाप्रति सम्मान, सहकर्मी र विपक्षी कानून व्यवसायीप्रति मर्यादित व्यवहार।" },
-                { icon: "fas fa-chart-simple", title: "निरन्तर सुधार", desc: "हामी सदस्य, ग्राहक र सरोकारवालाहरूबाट नियमित रूपमा प्रतिक्रिया संकलन गरी हाम्रा सेवा, प्रणाली र प्रक्रियाहरू सुधार गर्दछौं। तालिम कार्यक्रम, प्रविधि अपग्रेड, र नीति समीक्षा निरन्तर चलिरहन्छन्।" }
-            ],
-            whyHeading: "किन मुनाफा वितरण नगर्ने कम्पनी संरचना?",
-            whyText: "<p>हामीले कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत मुनाफा वितरण नगर्ने कम्पनी संरचना निम्न रणनीतिक कारणले रोजेका छौं:</p>",
-            reasons: [
-                "सबै अधिशेष कम्पनीमा नै रहन्छ – कुनै पनि व्यक्तिले लाभांश वा बोनस लैजान सक्दैन। यसले पूँजी संचय र पुनः लगानी सुनिश्चित गर्दछ।",
-                "सदस्यहरूको दायित्व सीमित छ – व्यक्तिगत जोखिम घट्छ।",
-                "सदस्यता हस्तान्तरण नहुने – यसले स्थिरता र दीर्घकालीन प्रतिबद्धता बढाउँदछ।",
-                "प्रशासनिक खर्चको २५% सीमा – वित्तीय अनुशासन कायम रहन्छ।"
-            ],
-            joinTitle: "हामीसँग जोडिनुहोस्",
-            joinText: "नेपाल ल ग्रुप योग्य अधिवक्ता, अनुसन्धानकर्ता, प्रशिक्षक, र प्रकाशन पेशाकर्मीहरूका लागि खुला छ जो पारदर्शिता, सहकारिता, र नैतिक अभ्यासप्रति हाम्रो प्रतिबद्धता साझा गर्दछन्। तपाईं सदस्य बन्न चाहनुहुन्छ, कुनै अनुसन्धान परियोजनामा सहकार्य गर्न चाहनुहुन्छ, वा हाम्रो कार्यबारे थप जान्न चाहनुहुन्छ भने, हामी तपाईंको चासोको स्वागत गर्दछौं।",
-            footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित",
-            termsText: "प्रयोगका सर्तहरू",
-            privacyText: "गोपनीयता नीति",
-            cookieText: "कुकी नीति"
+            effortsTitle: "हाम्रा प्रयासहरू",
+            effortsText: "हामी सहकार्य र नेटवर्किङ मार्फत नेपालभरि कानुनी उत्कृष्टता बढाउने लक्ष्य राख्छौं।",
+            footerText: "© २०२५ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
+            termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
     };
 
     let currentLang = localStorage.getItem("nlgLang") || "en";
 
-    function renderChallenges(lang) {
-        const container = document.getElementById("challengesGrid");
-        const challenges = aboutData[lang].challenges;
-        container.innerHTML = challenges.map(ch => `<div class="card"><i class="fas fa-exclamation-triangle"></i><p>${ch}</p></div>`).join("");
-    }
-
-    function renderSolutions(lang) {
-        const container = document.getElementById("solutionsGrid");
-        const solutions = aboutData[lang].solutions;
-        container.innerHTML = solutions.map(s => `<div class="card"><i class="fas fa-check-circle"></i><p><strong>✓</strong> ${s}</p></div>`).join("");
-    }
-
-    function renderObjects(lang) {
-        const container = document.getElementById("objectsGrid");
-        const objects = aboutData[lang].objects;
-        container.innerHTML = objects.map(obj => `<div class="card"><i class="fas fa-file-alt"></i><h3>${obj.title}</h3><p>${obj.desc}</p></div>`).join("");
-    }
-
-    function renderValues(lang) {
-        const container = document.getElementById("valuesGrid");
-        const values = aboutData[lang].values;
-        container.innerHTML = values.map(v => `<div class="card"><i class="${v.icon}"></i><h3>${v.title}</h3><p>${v.desc}</p></div>`).join("");
-    }
-
-    function renderReasons(lang) {
-        const container = document.getElementById("reasonsGrid");
-        const reasons = aboutData[lang].reasons;
-        container.innerHTML = reasons.map(r => `<div class="card"><i class="fas fa-chart-line"></i><p>${r}</p></div>`).join("");
+    function renderObjectives(lang) {
+        const list = document.getElementById("objectivesList");
+        const objectives = content[lang].objectives;
+        list.innerHTML = objectives.map(obj => `<li><strong>${obj.substring(0, 4)}</strong> ${obj.substring(4)}</li>`).join("");
     }
 
     function updateUI(lang) {
-        const d = aboutData[lang];
+        const d = content[lang];
         document.getElementById("brandName").innerText = d.brand;
         document.getElementById("navHome").innerText = d.navHome;
         document.getElementById("navAbout").innerText = d.navAbout;
         document.getElementById("navMembership").innerText = d.navMembership;
         document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("heroTitle").innerText = d.heroTitle;
-        document.getElementById("heroSub").innerText = d.heroSub;
-        document.getElementById("introText").innerHTML = d.introText;
-        document.getElementById("bgHeading").innerHTML = d.bgHeading;
-        document.getElementById("bgText").innerHTML = d.bgText;
-        document.getElementById("solutionHeading").innerHTML = d.solutionHeading;
-        document.getElementById("solutionIntro").innerHTML = d.solutionIntro;
-        document.getElementById("objectsHeading").innerHTML = d.objectsHeading;
-        document.getElementById("valuesHeading").innerHTML = d.valuesHeading;
-        document.getElementById("whyHeading").innerHTML = d.whyHeading;
-        document.getElementById("whyText").innerHTML = d.whyText;
-        document.getElementById("joinTitle").innerHTML = d.joinTitle;
-        document.getElementById("joinText").innerHTML = d.joinText;
-        document.getElementById("footerText").innerHTML = d.footer;
+        document.getElementById("pageTitle").innerText = d.pageTitle;
+        document.getElementById("visionTitle").innerText = d.visionTitle;
+        document.getElementById("visionText").innerText = d.visionText;
+        document.getElementById("missionTitle").innerText = d.missionTitle;
+        document.getElementById("missionText").innerText = d.missionText;
+        document.getElementById("foundationTitle").innerText = d.foundationTitle;
+        document.getElementById("foundationText").innerText = d.foundationText;
+        document.getElementById("objectivesTitle").innerText = d.objectivesTitle;
+        document.getElementById("objectivesSub").innerText = d.objectivesSub;
+        document.getElementById("effortsTitle").innerText = d.effortsTitle;
+        document.getElementById("effortsText").innerText = d.effortsText;
+        document.getElementById("footerText").innerText = d.footerText;
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
 
-        renderChallenges(lang);
-        renderSolutions(lang);
-        renderObjects(lang);
-        renderValues(lang);
-        renderReasons(lang);
+        renderObjectives(lang);
 
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
@@ -597,13 +366,6 @@
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
-
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) scrollBtn.classList.add("visible");
-        else scrollBtn.classList.remove("visible");
-    });
-    scrollBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 </script>
 </body>
 </html>
