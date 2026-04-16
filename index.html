@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नेपाल ल ग्रुप | Nepal Law Group</title>
+    <meta name="description" content="नेपाल ल ग्रुप – एक मुनाफा वितरण नगर्ने, सेवामूलक कानूनी संस्था। चार विभाग, सहकारी संस्कृति, नेपाली कानूनी क्षेत्रको नयाँ आयाम।">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* navigation minimal */
+        .navbar {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #eaeef2;
+        }
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+            background: #0a2b3e;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 32px;
+            display: inline-block;
+        }
+        .lang-toggle {
+            background: transparent;
+            border: 1px solid #cbd5e1;
+            padding: 6px 16px;
+            border-radius: 32px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .lang-toggle:hover {
+            background: #f1f5f9;
+        }
+        /* sections */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #f0f2f5;
+        }
+        .hero {
+            padding: 3rem 0 4rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+        .lead {
+            font-size: 1.15rem;
+            color: #334155;
+            max-width: 780px;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 1.8rem 0 1rem;
+            color: #0f172a;
+            border-left: 4px solid #2563eb;
+            padding-left: 1rem;
+        }
+        .grid-2, .grid-4 {
+            display: grid;
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .card {
+            background: #fefefe;
+            border: 1px solid #eef2f6;
+            border-radius: 24px;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+        .card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            background: #eef2ff;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #eef2f6;
+        }
+        [data-lang="ne"] .lang-en,
+        [data-lang="en"] .lang-ne {
+            display: none;
+        }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 0 20px; }
+            section { padding: 2.5rem 0; }
+        }
+    </style>
+</head>
+<body data-lang="ne">
+    <div class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">नेपाल ल ग्रुप</div>
+            <button id="toggleLang" class="lang-toggle">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="container">
+                <div class="lang-ne">
+                    <h1>नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h1>
+                    <p class="lead">नेपाल ल ग्रुप मुनाफा वितरण नगर्ने कम्पनी हो। यस कम्पनीले गर्ने व्यवसाय वा कारोबारको प्रकृति सेवामूलक, गैर-नाफामुखी, शैक्षिक, प्राज्ञिक, सामाजिक, परोपकारी, तथा सार्वजनिक उपयोगिता र कल्याणकारी प्रकृतिको हुनेछ। यसको अर्थ यसले कुनै पनि व्यावसायिक गतिविधिबाट प्राप्त हुने अधिशेषलाई व्यक्तिगत लाभको रूपमा वितरण गर्दैन, बरु त्यसलाई समाजको हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गर्दछ। यस कम्पनीको लक्ष्य कानूनी सेवाहरू सबै तह र वर्गका नागरिकहरूका लागि पहुँचयोग्य बनाउनु हो।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h1>Nepal Law Group – A New Legal Organisation</h1>
+                    <p class="lead">Nepal Law Group is a profit non‑distributing company. The nature of its business is service‑oriented, non‑profit, educational, academic, social, charitable, and of public utility and welfare. This means it does not distribute surplus from any activity as personal gain, but reinvests it in society's welfare and the development of the legal sector. The goal is to make legal services accessible to all classes and levels of citizens.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why PNDC (institutional platform) -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>एक संस्थागत मञ्च, दीर्घकालीन दिगोपनको लागि</h2>
+                    <p>परम्परागत कानूनी फर्महरूले अधिशेष आम्दानी साझेदारहरूबीच वितरण गर्छन्। त्यसो गर्दा तिनीहरूले फर्म-स्तरको पूर्वाधार विकास, प्रविधि स्तरोन्नति, वा कर्मचारीको दक्षता वृद्धिमा लगानी गर्न सक्दैनन्। तर, यस कम्पनी एउटा संस्थागत मञ्चको रूपमा स्थापित हुनेछ, जसले सम्पूर्ण अधिशेष कम्पनीको उद्देश्यहरू प्राप्त गर्न र कम्पनीको कोष वृद्धि गर्न पुनः लगानी गर्दछ। यस संरचनाले दीर्घकालीन दिगोपन, साझा पूर्वाधार, र निरन्तर सुधारको संस्कृतिलाई सम्भव बनाउँदछ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>An Institutional Platform for Long‑Term Sustainability</h2>
+                    <p>Traditional law firms distribute surplus income among partners. In doing so, they cannot invest in firm‑level infrastructure, technology upgrades, or employee skill enhancement. Nepal Law Group, however, is established as an institutional platform that reinvests all surplus to achieve its objectives and increase its funds. This structure enables long‑term sustainability, shared infrastructure, and a culture of continuous improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four client-facing divisions -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>चार ग्राहकमुखी विभागहरू</h2>
+                    <p>यी विभागहरूले आपसमा समन्वय गरी ग्राहकलाई एकीकृत सेवा प्रदान गर्छन्।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Four Client‑Facing Divisions</h2>
+                    <p>These divisions coordinate with each other to deliver integrated legal services.</p>
+                </div>
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="badge">⚖️</div>
+                        <h3 class="lang-ne">मुद्दा मामिला तथा वकालत</h3>
+                        <h3 class="lang-en" style="display:none;">Litigation & Advocacy</h3>
+                        <p class="lang-ne">अदालत उपस्थिति, कानूनी सल्लाह, मुद्दा प्रतिनिधित्व – केवल नेपाल बार काउन्सिल अनुमतिप्राप्त सदस्यहरूद्वारा।</p>
+                        <p class="lang-en" style="display:none;">Court appearances, legal advice, case representation – only by Bar Council licensed members.</p>
+                    </div>
+                    <div class="card">
+                        <div class="badge">📘</div>
+                        <h3 class="lang-ne">अनुसन्धान तथा नीति</h3>
+                        <h3 class="lang-en" style="display:none;">Research & Policy</h3>
+                        <p class="lang-ne">अनुसन्धान परियोजना, नीति पत्र, कानून सुधार प्रस्ताव, कानूनी डाटाबेस।</p>
+                        <p class="lang-en" style="display:none;">Research projects, policy papers, law reform proposals, legal databases.</p>
+                    </div>
+                    <div class="card">
+                        <div class="badge">🎓</div>
+                        <h3 class="lang-ne">शिक्षा</h3>
+                        <h3 class="lang-en" style="display:none;">Education</h3>
+                        <p class="lang-ne">सीपीडी कार्यक्रम, कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला, सेमिनार शृंखला।</p>
+                        <p class="lang-en" style="display:none;">CPD programs, corporate training, public legal workshops, seminar series.</p>
+                    </div>
+                    <div class="card">
+                        <div class="badge">📖</div>
+                        <h3 class="lang-ne">प्रकाशन</h3>
+                        <h3 class="lang-en" style="display:none;">Publications</h3>
+                        <p class="lang-ne">कानूनी पुस्तक, पत्रिका, अभ्यास पुस्तिका, डिजिटल सामग्री प्रकाशन।</p>
+                        <p class="lang-en" style="display:none;">Legal books, journals, practice manuals, digital content.</p>
+                    </div>
+                </div>
+                <div class="lang-ne" style="margin-top: 0.5rem;">
+                    <p><strong>नोट:</strong> मुद्दा मामिला तथा वकालत विभागमा नेपाल बार काउन्सिलको अनुमतिपत्र प्राप्त सदस्यहरूले मात्र काम गर्छन्। अन्य विभागहरू सबै सदस्य र कर्मचारीहरूका लागि खुला छन्।</p>
+                </div>
+                <div class="lang-en" style="display:none; margin-top: 0.5rem;">
+                    <p><strong>Note:</strong> Only members holding a valid Nepal Bar Council license may work in the Litigation & Advocacy Division. Other divisions are open to all members and employees.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two support departments -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>दुई आन्तरिक सहायक विभागहरू</h2>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Two Internal Support Departments</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="lang-ne">प्रशासन तथा लेखा</h3>
+                        <h3 class="lang-en" style="display:none;">Administration & Accounting</h3>
+                        <p class="lang-ne">कार्यालय व्यवस्थापन, वित्त, लेखा, कर, अनुपालन, अभिलेख, स्वागत, विक्रेता व्यवस्थापन।</p>
+                        <p class="lang-en" style="display:none;">Office management, finance, accounting, tax, compliance, records, reception, vendor management.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="lang-ne">व्यवस्थापन तथा सहयोग</h3>
+                        <h3 class="lang-en" style="display:none;">Management & Support</h3>
+                        <p class="lang-ne">आईटी पूर्वाधार, सफ्टवेर, पुस्तकालय, डाटाबेस, खरिद, सुविधा, कुरियर, यातायात, मर्मत।</p>
+                        <p class="lang-en" style="display:none;">IT infrastructure, software, library, databases, procurement, facilities, courier, travel, maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brief statutory mention -->
+        <section>
+            <div class="container">
+                <div class="lang-ne">
+                    <h2>कानूनी आधार र अनुपालन</h2>
+                    <p>नेपाल ल ग्रुप कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत दर्ता हुनेछ। यसले कुनै सेयर पूँजी राख्दैन, सदस्यता हस्तान्तरण हुँदैन, सदस्यहरूको दायित्व सीमित रहन्छ, र प्रशासनिक खर्च कुल खर्चको २५% भन्दा बढी हुँदैन। विघटन भएमा बाँकी सम्पत्ति अर्को समान उद्देश्यको कम्पनीलाई वा नेपाल सरकारलाई हस्तान्तरण हुन्छ।</p>
+                </div>
+                <div class="lang-en" style="display:none;">
+                    <h2>Legal Basis & Compliance</h2>
+                    <p>Nepal Law Group will be registered under Sections 166 & 167 of the Companies Act, 2063. It has no share capital, membership is non‑transferable, members’ liability is limited, and administrative expenses shall not exceed 25% of total expenses. Upon dissolution, remaining assets are transferred to another similar company or to the Government of Nepal.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="lang-ne">
+                <p>© २०८१ नेपाल ल ग्रुप – एक मुनाफा वितरण नगर्ने कानूनी संस्था</p>
+                <p>कास्की, पोखरा | सूचनाको लागि: info@nepallawgroup.org</p>
+            </div>
+            <div class="lang-en" style="display:none;">
+                <p>© 2025 Nepal Law Group – A Profit Non‑Distributing Legal Organisation</p>
+                <p>Kaski, Pokhara | For inquiries: info@nepallawgroup.org</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('toggleLang');
+        const root = document.body;
+
+        function setLanguage(lang) {
+            root.setAttribute('data-lang', lang);
+            localStorage.setItem('nlg_lang', lang);
+            if (lang === 'ne') {
+                toggle.innerHTML = '🇬🇧 English';
+                document.querySelector('.logo').innerText = 'नेपाल ल ग्रुप';
+            } else {
+                toggle.innerHTML = '🇳🇵 नेपाली';
+                document.querySelector('.logo').innerText = 'Nepal Law Group';
+            }
+        }
+
+        const savedLang = localStorage.getItem('nlg_lang') || 'ne';
+        setLanguage(savedLang);
+
+        toggle.addEventListener('click', () => {
+            const current = root.getAttribute('data-lang');
+            const newLang = current === 'ne' ? 'en' : 'ne';
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
