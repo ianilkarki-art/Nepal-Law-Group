@@ -1,10 +1,11 @@
+Here is the updated Home page code with the hammer icon removed from the header, a cleaner attractive design, and a working link to the About section (or About page as needed). The header now shows only the brand name in the selected language, with no extra subtext.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group | नेपाल ल ग्रुप – Modern Legal Institution</title>
-    <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -13,7 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #fefefe;
@@ -21,8 +21,6 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
-        /* Color Scheme: Blue (#0B2F66) & Crimson (#B22234 / #9E1B32) */
         :root {
             --primary-blue: #0B2F66;
             --primary-blue-dark: #052045;
@@ -33,15 +31,12 @@
             --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
             --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
         }
-
-        /* Global */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 32px;
         }
-
-        /* Header / Navbar - Attractive, no subtext */
+        /* Header / Navbar - no hammer, no subtext */
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
             padding: 1rem 0;
@@ -61,15 +56,6 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-        .brand-icon {
-            font-size: 2rem;
-            color: var(--crimson-light);
-            background: rgba(255,255,240,0.1);
-            padding: 8px;
-            border-radius: 60px;
-            transition: transform 0.2s;
         }
         .brand-name {
             font-size: 1.9rem;
@@ -92,10 +78,10 @@
             border-radius: 40px;
             text-decoration: none;
             font-size: 0.95rem;
-            transition: all 0.25s;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: all 0.25s;
         }
         .about-link i {
             font-size: 0.9rem;
@@ -134,7 +120,6 @@
         .lang-btn:not(.active):hover {
             background: rgba(255,255,255,0.25);
         }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%);
@@ -170,7 +155,6 @@
             max-width: 720px;
             margin: 0 auto;
         }
-
         /* Section styling */
         section {
             padding: 4rem 0;
@@ -188,7 +172,6 @@
             margin-bottom: 2.5rem;
             font-size: 1.1rem;
         }
-
         /* Cards grid */
         .dept-grid {
             display: grid;
@@ -234,8 +217,6 @@
             border-radius: 20px;
             margin-top: 0.8rem;
         }
-
-        /* Compare box */
         .compare-box {
             background: var(--soft-gray);
             border-radius: 32px;
@@ -256,8 +237,15 @@
             line-height: 1.6;
             color: #1f2a3e;
         }
-
-        /* About Section (new attractive) */
+        .goal-block {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #123e6e 100%);
+            color: white;
+            border-radius: 28px;
+            padding: 2.2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        /* About Section (linked from header) */
         .about-section {
             background: linear-gradient(120deg, #ffffff 0%, #fef7f0 100%);
             border-radius: 32px;
@@ -301,17 +289,6 @@
             margin-bottom: 0.8rem;
             color: var(--primary-blue);
         }
-
-        /* goal block */
-        .goal-block {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #123e6e 100%);
-            color: white;
-            border-radius: 28px;
-            padding: 2.2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
         footer {
             background: #0a1a2e;
             color: #cddfea;
@@ -320,38 +297,15 @@
             margin-top: 2rem;
             border-top: 3px solid var(--crimson);
         }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-            .hero h2 {
-                font-size: 2rem;
-            }
-            .brand-name {
-                font-size: 1.3rem;
-            }
-            .brand-icon {
-                font-size: 1.4rem;
-            }
-            .nav-links {
-                gap: 0.8rem;
-            }
-            .about-link {
-                padding: 0.3rem 1rem;
-                font-size: 0.8rem;
-            }
+            .container { padding: 0 20px; }
+            .hero h2 { font-size: 2rem; }
+            .brand-name { font-size: 1.4rem; }
+            .nav-links { gap: 0.8rem; }
+            .about-link { padding: 0.3rem 1rem; font-size: 0.8rem; }
         }
-        .text-crimson {
-            color: var(--crimson);
-        }
-        hr {
-            margin: 1rem 0;
-            border-color: var(--border-light);
-        }
-        .btn-icon {
-            margin-right: 4px;
-        }
+        .text-crimson { color: var(--crimson); }
+        hr { margin: 1rem 0; border-color: var(--border-light); }
     </style>
 </head>
 <body>
@@ -359,7 +313,6 @@
 <header class="navbar">
     <div class="container nav-container">
         <div class="brand">
-            <i class="fas fa-gavel brand-icon"></i>
             <span class="brand-name" id="brand-name">Nepal Law Group</span>
         </div>
         <div class="nav-links">
@@ -373,7 +326,6 @@
 </header>
 
 <main>
-    <!-- Hero Section -->
     <div class="hero">
         <div class="container hero-content">
             <span class="hero-badge" id="hero-badge">⚖️ नयाँ मापदण्ड • New Standard</span>
@@ -383,39 +335,37 @@
     </div>
 
     <div class="container">
-        <!-- Full description section (exact provided content preserved) -->
+        <!-- Full description (exact content preserved) -->
         <section>
             <div class="full-text-card" id="full-description-container"></div>
         </section>
 
-        <!-- Comparison / unique structure section -->
+        <!-- Comparison block -->
         <section>
             <div class="compare-box" id="comparison-box"></div>
         </section>
 
-        <!-- Departments Showcase -->
+        <!-- Departments -->
         <section>
             <h2 class="section-title" id="dept-heading">⚙️ हाम्रो संरचना • Our Structure</h2>
             <p class="section-sub" id="dept-sub">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
             <div class="dept-grid" id="departments-grid"></div>
         </section>
 
-        <!-- Goal & vision block -->
+        <!-- Goal block -->
         <div class="goal-block" id="goal-block">
             <i class="fas fa-chart-line"></i>
             <h3 id="goal-title">दीर्घकालीन दिगोपन • Long-term Sustainability</h3>
             <p id="goal-text">सम्पूर्ण अधिशेष समाज हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गरिन्छ। All surplus reinvested for legal sector growth & public welfare.</p>
         </div>
 
-        <!-- About Section (New, linked from header) -->
+        <!-- About Section (target of the About link) -->
         <div id="about" class="about-section">
             <h2><i class="fas fa-landmark"></i> <span id="about-heading">हाम्रो बारेमा • About Us</span></h2>
-            <div id="about-content">
-                <!-- dynamic bilingual about content -->
-            </div>
+            <div id="about-content"></div>
         </div>
 
-        <!-- final note: institutional platform -->
+        <!-- Final note -->
         <section>
             <div class="full-text-card" style="background:#fef9f0; border-left: 6px solid var(--crimson);">
                 <i class="fas fa-building" style="color: var(--crimson); font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"></i>
@@ -434,7 +384,6 @@
 </footer>
 
 <script>
-    // Language dataset: English & Nepali (exact rich content + about section)
     const langData = {
         en: {
             brandName: "Nepal Law Group",
@@ -453,8 +402,7 @@
                 <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
                 <strong style="font-size: 1.3rem;">🏛️ Traditional Law Firms vs. Nepal Law Group</strong>
                 <p style="margin-top: 12px;">Traditional firms distribute surplus income among partners, limiting long-term investment in infrastructure, technology, and staff training. <strong class="text-crimson">Nepal Law Group</strong> reinvests 100% surplus into shared resources, legal innovation, and capacity building — fostering a sustainable ecosystem for legal excellence and accessibility.</p>
-                <hr>
-                <p>✅ Institutional platform | ✅ Continuous improvement | ✅ Public welfare driven</p>
+                <hr><p>✅ Institutional platform | ✅ Continuous improvement | ✅ Public welfare driven</p>
             `,
             deptHeading: "⚙️ Our Departments • Institutional Framework",
             deptSub: "Four client-facing departments + Two internal support wings working in synergy",
@@ -500,8 +448,7 @@
                 <i class="fas fa-scale-balanced" style="font-size: 1.6rem; color: var(--crimson); margin-right: 12px;"></i>
                 <strong style="font-size: 1.3rem;">🏛️ परम्परागत कानूनी फर्महरू बनाम नेपाल ल ग्रुप</strong>
                 <p style="margin-top: 12px;">परम्परागत फर्महरूले अधिशेष आम्दानी साझेदारहरूमा बाँड्छन्, जसले पूर्वाधार, प्रविधि र तालिममा दीर्घकालीन लगानी रोक्छ। <strong class="text-crimson">नेपाल ल ग्रुप</strong> सम्पूर्ण अधिशेषलाई साझा स्रोत, कानूनी नवप्रवर्तन र क्षमता विकासमा पुनः लगानी गर्दछ — एक दिगो पारिस्थितिकी प्रणाली निर्माण गर्दै।</p>
-                <hr>
-                <p>✅ संस्थागत मञ्च | ✅ निरन्तर सुधार | ✅ सार्वजनिक कल्याण</p>
+                <hr><p>✅ संस्थागत मञ्च | ✅ निरन्तर सुधार | ✅ सार्वजनिक कल्याण</p>
             `,
             deptHeading: "⚙️ हाम्रा विभागहरू • संस्थागत संरचना",
             deptSub: "चार ग्राहकमुखी विभाग + दुई आन्तरिक सहायक विभाग समन्वयमा",
@@ -536,15 +483,11 @@
 
     function updateUI(lang) {
         const data = langData[lang];
-        if (!data) return;
-        // header brand & about link
         document.getElementById("brand-name").innerText = data.brandName;
         document.getElementById("about-link-text").innerText = data.aboutLinkText;
-        // hero
         document.getElementById("hero-badge").innerText = data.heroBadge;
         document.getElementById("hero-title").innerHTML = data.heroTitle;
         document.getElementById("hero-sub").innerHTML = data.heroSub;
-        // main content
         document.getElementById("full-description-container").innerHTML = data.fullDescription;
         document.getElementById("comparison-box").innerHTML = data.comparison;
         document.getElementById("dept-heading").innerHTML = data.deptHeading;
@@ -555,11 +498,9 @@
         document.getElementById("closing-text").innerHTML = data.closingText;
         document.getElementById("footer-text").innerHTML = data.footerText;
         document.getElementById("footer-ethics").innerHTML = data.footerEthics;
-        // about section
         document.getElementById("about-heading").innerHTML = data.aboutHeading;
         document.getElementById("about-content").innerHTML = data.aboutContent;
-        
-        // department cards
+
         const deptGrid = document.getElementById("departments-grid");
         deptGrid.innerHTML = "";
         data.departments.forEach(dept => {
@@ -574,23 +515,19 @@
             `;
             deptGrid.appendChild(card);
         });
+
         currentLang = lang;
-        // active button style
         document.getElementById("lang-np").classList.remove("active");
         document.getElementById("lang-en").classList.remove("active");
         if (lang === "np") document.getElementById("lang-np").classList.add("active");
         else document.getElementById("lang-en").classList.add("active");
     }
 
-    document.getElementById("lang-np").addEventListener("click", () => {
-        if (currentLang !== "np") updateUI("np");
-    });
-    document.getElementById("lang-en").addEventListener("click", () => {
-        if (currentLang !== "en") updateUI("en");
-    });
+    document.getElementById("lang-np").addEventListener("click", () => { if (currentLang !== "np") updateUI("np"); });
+    document.getElementById("lang-en").addEventListener("click", () => { if (currentLang !== "en") updateUI("en"); });
 
-    // initial render English
     updateUI("en");
 </script>
 </body>
 </html>
+```
