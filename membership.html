@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership – Nepal Law Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.5; }
+        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
+        .nav-links a:hover { background: var(--crimson); }
+        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
+        .lang-btn.active { background: var(--crimson); }
+        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2.5rem 0; text-align: center; }
+        .page-hero h1 { font-size: 2.5rem; color: var(--primary-blue); }
+        section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-light); }
+        .section-title { font-size: 1.7rem; font-weight: 800; color: var(--primary-blue); border-left: 6px solid var(--crimson); padding-left: 1.2rem; margin-bottom: 1.5rem; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .card { background: white; border-radius: 24px; padding: 1.5rem; box-shadow: var(--shadow-sm); border-top: 4px solid var(--crimson); }
+        .card i { font-size: 2rem; color: var(--crimson); margin-bottom: 1rem; }
+        .btn { display: inline-block; background: var(--crimson); color: white; padding: 0.8rem 1.5rem; border-radius: 40px; text-decoration: none; font-weight: 600; margin-top: 1rem; border: none; cursor: pointer; }
+        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 2rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } .brand-name { font-size: 1.4rem; } }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <div class="nav-links">
+            <a href="index.html" id="navHome">Home</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="membership.html" id="navMembership">Membership</a>
+            <a href="contact.html" id="navContact">Contact</a>
+            <div class="lang-toggle">
+                <button class="lang-btn" id="langNp">नेपाली</button>
+                <button class="lang-btn" id="langEn">English</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="page-hero">
+        <div class="container"><h1 id="heroTitle">सदस्यता • Membership</h1></div>
+    </div>
+    <div class="container">
+        <section>
+            <h2 class="section-title" id="whyJoinTitle">किन सदस्य बन्ने? • Why Join?</h2>
+            <div class="two-col">
+                <div class="card"><i class="fas fa-handshake"></i><h3 id="benefit1Title">सहकार्य र साझा स्रोत</h3><p id="benefit1Desc">परम्परागत एकल अभ्यासको सीमितता तोड्दै, साझा पूर्वाधार, प्रविधि र विशेषज्ञताको लाभ लिनुहोस्।</p></div>
+                <div class="card"><i class="fas fa-chart-line"></i><h3 id="benefit2Title">दीर्घकालीन दिगोपन</h3><p id="benefit2Desc">कम्पनी-स्तरको पुनः लगानीले तपाईंको व्यावसायिक भविष्य सुरक्षित गर्दछ।</p></div>
+                <div class="card"><i class="fas fa-building"></i><h3 id="benefit3Title">संस्थागत ब्रान्ड</h3><p id="benefit3Desc">व्यक्तिगत नभई संस्थागत नाममा विश्वसनीयता र प्रतिष्ठा निर्माण।</p></div>
+                <div class="card"><i class="fas fa-gavel"></i><h3 id="benefit4Title">नियामक अनुपालन</h3><p id="benefit4Desc">नेपाल बार काउन्सिलको नियम पूर्ण पालना, जोखिममुक्त अभ्यास।</p></div>
+            </div>
+        </section>
+        <section>
+            <h2 class="section-title" id="criteriaTitle">सदस्यता मापदण्ड • Eligibility</h2>
+            <div class="two-col">
+                <div class="card"><i class="fas fa-user-check"></i><h3 id="criteria1Title">वकालत विभागका लागि</h3><p id="criteria1Desc">नेपाल कानून व्यवसायी परिषदको अनुमतिपत्र प्राप्त अधिवक्ता।</p></div>
+                <div class="card"><i class="fas fa-microscope"></i><h3 id="criteria2Title">अनुसन्धान, शिक्षा, प्रकाशन</h3><p id="criteria2Desc">कानूनी अनुसन्धान, प्रशिक्षण वा प्रकाशनमा विशेषज्ञता भएका व्यक्तिहरू (बार लाइसेन्स आवश्यक छैन)।</p></div>
+                <div class="card"><i class="fas fa-school"></i><h3 id="criteria3Title">शैक्षिक संस्था साझेदारी</h3><p id="criteria3Desc">विश्वविद्यालय, कानूनी महाविद्यालयहरू सहकार्यका लागि स्वागत छ।</p></div>
+                <div class="card"><i class="fas fa-globe"></i><h3 id="criteria4Title">अन्तर्राष्ट्रिय साझेदार</h3><p id="criteria4Desc">विदेशी कानूनी संस्था वा शोधकर्ताहरू सम्पर्क गर्न सक्नुहुन्छ।</p></div>
+            </div>
+        </section>
+        <section style="text-align: center;">
+            <h2 class="section-title" id="applyTitle">आवेदन गर्नुहोस् • Apply Now</h2>
+            <p id="applyText">कृपया आफ्नो विवरण र चासोको क्षेत्र सहित हामीलाई इमेल गर्नुहोस्। हाम्रो टोलीले तपाईंलाई सदस्यता प्रक्रियामा मार्गदर्शन गर्नेछ।</p>
+            <a href="contact.html" class="btn" id="applyBtn">सम्पर्क गर्नुहोस् → Contact Us</a>
+        </section>
+    </div>
+</main>
+<footer class="footer"><div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप</p></div></footer>
+
+<script>
+    const membershipContent = {
+        en: {
+            brand: "Nepal Law Group", navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            heroTitle: "Membership",
+            whyJoinTitle: "Why Join?",
+            benefit1Title: "Collaboration & Shared Resources", benefit1Desc: "Break the limits of solo practice – access shared infrastructure, technology, and expertise.",
+            benefit2Title: "Long-term Sustainability", benefit2Desc: "Company-level reinvestment secures your professional future.",
+            benefit3Title: "Institutional Brand", benefit3Desc: "Build credibility under an institutional name, not just personal reputation.",
+            benefit4Title: "Regulatory Compliance", benefit4Desc: "Full adherence to Nepal Bar Council rules, risk-free practice.",
+            criteriaTitle: "Eligibility",
+            criteria1Title: "For Litigation Dept.", criteria1Desc: "Licensed advocate of Nepal Bar Council.",
+            criteria2Title: "Research, Education, Publications", criteria2Desc: "Experts in legal research, training, or publishing (Bar license not required).",
+            criteria3Title: "Academic Partnerships", criteria3Desc: "Universities and law colleges welcome for collaboration.",
+            criteria4Title: "International Partners", criteria4Desc: "Foreign legal institutions or researchers may contact us.",
+            applyTitle: "Apply Now",
+            applyText: "Please email us with your details and area of interest. Our team will guide you through the membership process.",
+            applyBtn: "Contact Us",
+            footer: "© 2025 Nepal Law Group - All rights reserved"
+        },
+        np: {
+            brand: "नेपाल ल ग्रुप", navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            heroTitle: "सदस्यता",
+            whyJoinTitle: "किन सदस्य बन्ने?",
+            benefit1Title: "सहकार्य र साझा स्रोत", benefit1Desc: "परम्परागत एकल अभ्यासको सीमितता तोड्दै, साझा पूर्वाधार, प्रविधि र विशेषज्ञताको लाभ।",
+            benefit2Title: "दीर्घकालीन दिगोपन", benefit2Desc: "कम्पनी-स्तरको पुनः लगानीले व्यावसायिक भविष्य सुरक्षित गर्दछ।",
+            benefit3Title: "संस्थागत ब्रान्ड", benefit3Desc: "व्यक्तिगत नभई संस्थागत नाममा विश्वसनीयता निर्माण।",
+            benefit4Title: "नियामक अनुपालन", benefit4Desc: "नेपाल बार काउन्सिलको नियम पूर्ण पालना, जोखिममुक्त अभ्यास।",
+            criteriaTitle: "सदस्यता मापदण्ड",
+            criteria1Title: "मुद्दा विभागका लागि", criteria1Desc: "नेपाल कानून व्यवसायी परिषदको अनुमतिपत्र प्राप्त अधिवक्ता।",
+            criteria2Title: "अनुसन्धान, शिक्षा, प्रकाशन", criteria2Desc: "कानूनी अनुसन्धान, प्रशिक्षण वा प्रकाशनमा विशेषज्ञता (बार लाइसेन्स आवश्यक छैन)।",
+            criteria3Title: "शैक्षिक साझेदारी", criteria3Desc: "विश्वविद्यालय र कानूनी महाविद्यालयहरू स्वागत छन्।",
+            criteria4Title: "अन्तर्राष्ट्रिय साझेदार", criteria4Desc: "विदेशी कानूनी संस्था वा शोधकर्ताहरू सम्पर्क गर्न सक्नुहुन्छ।",
+            applyTitle: "आवेदन गर्नुहोस्",
+            applyText: "कृपया आफ्नो विवरण र चासोको क्षेत्र सहित हामीलाई इमेल गर्नुहोस्। हाम्रो टोलीले तपाईंलाई सदस्यता प्रक्रियामा मार्गदर्शन गर्नेछ।",
+            applyBtn: "सम्पर्क गर्नुहोस्",
+            footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित"
+        }
+    };
+
+    let currentLang = localStorage.getItem("nlgLang") || "en";
+    function applyLang(lang) {
+        const d = membershipContent[lang];
+        document.getElementById("brandName").innerText = d.brand;
+        document.getElementById("navHome").innerText = d.navHome;
+        document.getElementById("navAbout").innerText = d.navAbout;
+        document.getElementById("navMembership").innerText = d.navMembership;
+        document.getElementById("navContact").innerText = d.navContact;
+        document.getElementById("heroTitle").innerText = d.heroTitle;
+        document.getElementById("whyJoinTitle").innerHTML = d.whyJoinTitle;
+        document.getElementById("benefit1Title").innerText = d.benefit1Title; document.getElementById("benefit1Desc").innerText = d.benefit1Desc;
+        document.getElementById("benefit2Title").innerText = d.benefit2Title; document.getElementById("benefit2Desc").innerText = d.benefit2Desc;
+        document.getElementById("benefit3Title").innerText = d.benefit3Title; document.getElementById("benefit3Desc").innerText = d.benefit3Desc;
+        document.getElementById("benefit4Title").innerText = d.benefit4Title; document.getElementById("benefit4Desc").innerText = d.benefit4Desc;
+        document.getElementById("criteriaTitle").innerHTML = d.criteriaTitle;
+        document.getElementById("criteria1Title").innerText = d.criteria1Title; document.getElementById("criteria1Desc").innerText = d.criteria1Desc;
+        document.getElementById("criteria2Title").innerText = d.criteria2Title; document.getElementById("criteria2Desc").innerText = d.criteria2Desc;
+        document.getElementById("criteria3Title").innerText = d.criteria3Title; document.getElementById("criteria3Desc").innerText = d.criteria3Desc;
+        document.getElementById("criteria4Title").innerText = d.criteria4Title; document.getElementById("criteria4Desc").innerText = d.criteria4Desc;
+        document.getElementById("applyTitle").innerHTML = d.applyTitle;
+        document.getElementById("applyText").innerText = d.applyText;
+        document.getElementById("applyBtn").innerText = d.applyBtn;
+        document.getElementById("footerText").innerHTML = d.footer;
+        document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+        if (lang === "np") document.getElementById("langNp").classList.add("active");
+        else document.getElementById("langEn").classList.add("active");
+        localStorage.setItem("nlgLang", lang);
+    }
+    document.getElementById("langNp").onclick = () => applyLang("np");
+    document.getElementById("langEn").onclick = () => applyLang("en");
+    applyLang(currentLang);
+</script>
+</body>
+</html>
