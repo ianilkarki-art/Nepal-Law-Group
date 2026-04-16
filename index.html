@@ -3,195 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>नेपाल ल ग्रुप | Nepal Law Group – Home</title>
-    <meta name="description" content="Nepal Law Group – a profit non-distributing company registered under Companies Act, 2063 (Sections 166 & 167). Legal services, research, training, publications.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>नेपाल ल ग्रुप – मुनाफा वितरण नगर्ने कानूनी संस्था | Nepal Law Group</title>
+    <meta name="description" content="नेपाल ल ग्रुप – कम्पनी ऐन, २०६३ (धारा १६६–१६७) अन्तर्गत दर्ता मुनाफा वितरण नगर्ने कम्पनी। चार विभाग, सहकारी संस्कृति, पूर्ण वैधानिक अनुपालन।">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
-            background: #fefefe;
-            color: #1e293b;
-            line-height: 1.5;
-        }
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background: #fefefe; color: #1e293b; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         /* Navbar */
-        .navbar {
-            background: #0f172a;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .logo h1 {
-            font-size: 1.7rem;
-            font-weight: 700;
-            background: #dc2626;   /* red background for the name */
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 40px;
-            color: white;          /* white text on red? Wait user said red font on blue background – we'll do blue background for the whole logo area? Actually user said "keeping Nepal Law Group in a red font with blue background". So the text should be red, background blue. Let's adjust: */
-        }
-        /* Correction: red font on blue background */
-        .logo h1 {
-            background: #2563eb;   /* blue background */
-            color: #dc2626;        /* red text */
-            font-weight: 800;
-            letter-spacing: -0.3px;
-            display: inline-block;
-            padding: 4px 16px;
-            border-radius: 40px;
-        }
-        .logo p {
-            font-size: 0.75rem;
-            opacity: 0.8;
-            margin-top: 5px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-        .nav-links a:hover {
-            color: #f87171;
-        }
-        .lang-toggle {
-            background: #dc2626;
-            border: none;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 40px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-        .lang-toggle:hover {
-            background: #b91c1c;
-        }
-        /* Sections */
-        section {
-            padding: 60px 0;
-        }
-        .bg-light {
-            background: #f8fafc;
-        }
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #0f172a;
-            border-left: 6px solid #dc2626;
-            padding-left: 1rem;
-        }
-        .section-subhead {
-            font-size: 1.1rem;
-            color: #475569;
-            margin-bottom: 2rem;
-            max-width: 720px;
-        }
-        .grid-2, .grid-3 {
-            display: grid;
-            gap: 1.5rem;
-        }
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        }
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 0 0 1px #edf2f7;
-            transition: 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.1), 0 0 0 1px #e2e8f0;
-        }
-        .card-icon {
-            font-size: 2rem;
-            color: #2563eb;
-            margin-bottom: 1rem;
-        }
-        .badge {
-            background: #e6f0ff;
-            color: #1e40af;
-            border-radius: 40px;
-            padding: 4px 14px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        .btn-primary {
-            display: inline-block;
-            background: #dc2626;
-            color: white;
-            padding: 10px 28px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-            margin-top: 1rem;
-            border: none;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            background: #b91c1c;
-            transform: translateY(-2px);
-        }
-        footer {
-            background: #0f172a;
-            color: #cbd5e1;
-            padding: 1.5rem 0;
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.85rem;
-        }
-        footer a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        footer a:hover {
-            color: #f87171;
-            text-decoration: underline;
-        }
-        [data-lang="ne"] .lang-en,
-        [data-lang="en"] .lang-ne {
-            display: none;
-        }
-        @media (max-width: 768px) {
-            .nav-links { gap: 12px; }
-            h2 { font-size: 1.6rem; }
-        }
+        .navbar { background: #0f172a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo h1 { font-size: 1.7rem; font-weight: 800; background: linear-gradient(135deg, #fff, #93c5fd); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .logo p { font-size: 0.75rem; opacity: 0.8; }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .nav-links a:hover { color: #f87171; }
+        .lang-toggle { background: #dc2626; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-family: inherit; font-weight: 500; transition: 0.2s; }
+        .lang-toggle:hover { background: #b91c1c; }
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; padding: 100px 0 80px; position: relative; overflow: hidden; }
+        .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><path fill="%23ffffff" d="M0,0 L1000,0 L1000,1000 L0,1000 Z M200,200 L800,200 L800,800 L200,800 Z"/></svg>') repeat; background-size: 40px; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #fca5a5); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .hero-sub { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 2rem; max-width: 90%; }
+        .hero-stats { display: flex; gap: 2rem; margin-top: 2rem; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 800; color: #f87171; }
+        .hero-image { background: rgba(255,255,255,0.05); border-radius: 32px; padding: 1rem; text-align: center; backdrop-filter: blur(4px); }
+        .btn-primary { display: inline-block; background: #dc2626; color: white; padding: 12px 32px; border-radius: 40px; text-decoration: none; font-weight: 600; transition: 0.2s; margin-right: 1rem; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #b91c1c; transform: translateY(-2px); }
+        .btn-outline-light { display: inline-block; border: 1px solid #fca5a5; color: white; padding: 12px 32px; border-radius: 40px; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .btn-outline-light:hover { background: rgba(220,38,38,0.2); border-color: #f87171; }
+        section { padding: 80px 0; }
+        .bg-light { background: #f8fafc; }
+        h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; border-left: 6px solid #dc2626; padding-left: 1rem; }
+        .section-subhead { font-size: 1.2rem; color: #475569; margin-bottom: 2.5rem; max-width: 720px; }
+        .grid-2, .grid-3, .grid-4 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+        .card { background: white; border-radius: 32px; padding: 1.8rem; box-shadow: 0 5px 25px rgba(0,0,0,0.02), 0 0 0 1px #edf2f7; transition: 0.25s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1), 0 0 0 1px #e2e8f0; }
+        .card-icon { font-size: 2.5rem; color: #2563eb; margin-bottom: 1.2rem; }
+        .badge { background: #e6f0ff; color: #1e40af; border-radius: 40px; padding: 4px 16px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .stat-box { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; border-radius: 32px; padding: 2rem; text-align: center; }
+        .stat-box h3 { color: white; }
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+        footer a { color: #cbd5e1; text-decoration: none; }
+        footer a:hover { color: #f87171; text-decoration: underline; }
+        [data-lang="ne"] .lang-en, [data-lang="en"] .lang-ne { display: none; }
+        @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; text-align: center; } .hero-sub { margin: 0 auto 2rem auto; } .nav-links { gap: 16px; } .hero-title { font-size: 2.2rem; } }
     </style>
 </head>
 <body data-lang="ne">
@@ -216,104 +78,103 @@
     </div>
 
     <main>
-        <!-- Hero section -->
-        <section style="padding-top: 80px;">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="hero-title lang-ne">कानूनी सेवाको सहकारी, दिगो भविष्य</div>
+                    <div class="hero-title lang-en" style="display:none;">Collaborative, Sustainable Future for Legal Services</div>
+                    <div class="hero-sub lang-ne">नेपाल ल ग्रुप कम्पनी ऐन, २०६३ (धारा १६६ र १६७) अन्तर्गत मुनाफा वितरण नगर्ने कम्पनी हो। चार विभाग, दुई सहायक विभाग, र पूर्ण सुशासन संरचनाको साथ हामी नेपाली कानूनी परिदृश्यमा नयाँ मापदण्ड स्थापित गर्दछौं।</div>
+                    <div class="hero-sub lang-en" style="display:none;">Nepal Law Group is a Profit Non‑Distributing Company registered under Sections 166 & 167 of the Companies Act, 2063. With four divisions, two support departments, and a complete governance structure, we set new standards in the Nepalese legal landscape.</div>
+                    <div>
+                        <a href="divisions.html" class="btn-primary lang-ne">हाम्रा विभागहरू</a>
+                        <a href="contact.html" class="btn-outline-light lang-ne">सम्पर्क गर्नुहोस्</a>
+                        <a href="divisions.html" class="btn-primary lang-en" style="display:none;">Our Divisions</a>
+                        <a href="contact.html" class="btn-outline-light lang-en" style="display:none;">Contact Us</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item"><div class="stat-number">5+</div><div class="lang-ne">स्थापक सदस्य</div><div class="lang-en" style="display:none;">Founding Members</div></div>
+                        <div class="stat-item"><div class="stat-number">4</div><div class="lang-ne">विभागहरू</div><div class="lang-en" style="display:none;">Divisions</div></div>
+                        <div class="stat-item"><div class="stat-number">100%</div><div class="lang-ne">ऐन अनुपालन</div><div class="lang-en" style="display:none;">Legal Compliance</div></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-gavel" style="font-size: 8rem; color: #f87171; opacity: 0.9;"></i>
+                    <p class="lang-ne" style="margin-top: 1rem;">⚖️ न्याय, पारदर्शिता, सहकार्य</p>
+                    <p class="lang-en" style="display:none; margin-top: 1rem;">⚖️ Justice, Transparency, Collaboration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divisions Overview -->
+        <section id="divisions">
             <div class="container">
-                <div class="badge">⚖️ कम्पनी ऐन, २०६३ (धारा १६६–१६७)</div>
-                <div class="lang-ne">
-                    <h2>एक मुनाफा वितरण नगर्ने कानूनी संस्था</h2>
-                    <p class="section-subhead">नेपाल ल ग्रुप कम्पनी ऐन, २०६३ अन्तर्गत दर्ता मुनाफा वितरण नगर्ने कम्पनी हो। हामी चार विभागमार्फत कानूनी सेवा, अनुसन्धान, तालिम र प्रकाशनमा उत्कृष्टता प्रदान गर्दछौं।</p>
+                <div class="lang-ne"><h2>हाम्रा चार ग्राहकमुखी विभाग</h2><div class="section-subhead">प्रत्येक विभागले विशिष्ट सेवा क्षेत्रमा उत्कृष्टता प्रदान गर्दछ।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Our Four Client‑Facing Divisions</h2><div class="section-subhead">Each division delivers excellence in a specific service area.</div></div>
+                <div class="grid-4">
+                    <div class="card"><i class="fas fa-gavel card-icon"></i><h3 class="lang-ne">मुद्दा फाँट</h3><h3 class="lang-en" style="display:none;">Litigation</h3><p class="lang-ne">अदालत उपस्थिति, कानूनी सल्लाह, मुद्दा प्रतिनिधित्व – केवल बार काउन्सिल लाइसेन्स प्राप्त सदस्यहरूद्वारा।</p><p class="lang-en" style="display:none;">Court appearances, legal advice, case representation – only by Bar‑licensed members.</p></div>
+                    <div class="card"><i class="fas fa-book card-icon"></i><h3 class="lang-ne">अनुसन्धान</h3><h3 class="lang-en" style="display:none;">Research</h3><p class="lang-ne">अनुसन्धान ठेक्का, नीति पत्र, कानून सुधार प्रस्ताव, कानूनी डाटाबेस।</p><p class="lang-en" style="display:none;">Research contracts, policy papers, law reform, legal databases.</p></div>
+                    <div class="card"><i class="fas fa-chalkboard-user card-icon"></i><h3 class="lang-ne">तालिम</h3><h3 class="lang-en" style="display:none;">Training</h3><p class="lang-ne">सीपीडी, कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला, अनलाइन पाठ्यक्रम।</p><p class="lang-en" style="display:none;">CPD, corporate training, public legal workshops, online courses.</p></div>
+                    <div class="card"><i class="fas fa-print card-icon"></i><h3 class="lang-ne">प्रकाशन</h3><h3 class="lang-en" style="display:none;">Publications</h3><p class="lang-ne">कानूनी पुस्तक, पत्रिका, अभ्यास पुस्तिका, डिजिटल सामग्री।</p><p class="lang-en" style="display:none;">Legal books, journals, practice manuals, digital content.</p></div>
                 </div>
-                <div class="lang-en" style="display:none;">
-                    <h2>A Profit Non‑Distributing Legal Institution</h2>
-                    <p class="section-subhead">Nepal Law Group is registered as a profit non‑distributing company under the Companies Act, 2063. We provide excellence in legal services, research, training, and publications through four divisions.</p>
-                </div>
-                <a href="divisions.html" class="btn-primary lang-ne">हाम्रा विभागहरू हेर्नुहोस्</a>
-                <a href="divisions.html" class="btn-primary lang-en" style="display:none;">View Our Divisions</a>
+                <div class="badge" style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> <span class="lang-ne">सबै विभागहरू प्रशासन तथा लेखा र लजिस्टिक्स सहायक विभागहरूद्वारा समर्थित छन्।</span><span class="lang-en" style="display:none;">All divisions are supported by Administration & Accounts and Logistics & Support departments.</span></div>
             </div>
         </section>
 
-        <!-- Divisions overview -->
+        <!-- Statutory Compliance Highlights -->
         <section class="bg-light">
             <div class="container">
-                <div class="lang-ne"><h2>हाम्रा विभागहरू</h2></div>
-                <div class="lang-en" style="display:none;"><h2>Our Divisions</h2></div>
-                <div class="grid-2">
-                    <div class="card">
-                        <i class="fas fa-gavel card-icon"></i>
-                        <h3 class="lang-ne">मुद्दा फाँट तथा अधिवक्ता सेवा</h3>
-                        <h3 class="lang-en" style="display:none;">Litigation & Advocacy</h3>
-                        <p class="lang-ne">बार काउन्सिल लाइसेन्स प्राप्त सदस्यहरूद्वारा अदालत उपस्थिति, कानूनी सल्लाह र मुद्दा प्रतिनिधित्व।</p>
-                        <p class="lang-en" style="display:none;">Court appearances, legal advice, and representation by Bar‑licensed members.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-book card-icon"></i>
-                        <h3 class="lang-ne">अनुसन्धान तथा नीति</h3>
-                        <h3 class="lang-en" style="display:none;">Research & Policy</h3>
-                        <p class="lang-ne">अनुसन्धान परियोजना, नीति पत्र, कानून सुधार प्रस्ताव, कानूनी डाटाबेस।</p>
-                        <p class="lang-en" style="display:none;">Research projects, policy papers, law reform proposals, legal databases.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-chalkboard-user card-icon"></i>
-                        <h3 class="lang-ne">तालिम तथा शिक्षा</h3>
-                        <h3 class="lang-en" style="display:none;">Training & Education</h3>
-                        <p class="lang-ne">सीपीडी कार्यक्रम, कर्पोरेट तालिम, सार्वजनिक कानूनी कार्यशाला, सेमिनार शृंखला।</p>
-                        <p class="lang-en" style="display:none;">CPD, corporate training, public legal workshops, seminar series.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-print card-icon"></i>
-                        <h3 class="lang-ne">प्रकाशन</h3>
-                        <h3 class="lang-en" style="display:none;">Publications</h3>
-                        <p class="lang-ne">कानूनी पुस्तक, पत्रिका, अभ्यास पुस्तिका, डिजिटल सामग्री प्रकाशन।</p>
-                        <p class="lang-en" style="display:none;">Legal books, journals, practice manuals, digital content.</p>
-                    </div>
+                <div class="lang-ne"><h2>वैधानिक अनुपालन – कम्पनी ऐन, २०६३ (धारा १६६–१६७)</h2><div class="section-subhead">हामी नेपालको कम्पनी कानूनको प्रत्येक प्रावधानको पूर्ण पालना गर्दछौं।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Statutory Compliance – Companies Act, 2063 (Sections 166‑167)</h2><div class="section-subhead">We fully comply with every provision of Nepal’s company law.</div></div>
+                <div class="grid-3">
+                    <div class="card"><i class="fas fa-ban card-icon"></i><h3 class="lang-ne">मुनाफा वितरण निषेध</h3><h3 class="lang-en" style="display:none;">No Profit Distribution</h3><p class="lang-ne">कुनै लाभांश, बोनस वा रकम सदस्यलाई वितरण गरिने छैन। सबै अधिशेष पुनः लगानी हुनेछ।</p><p class="lang-en" style="display:none;">No dividend, bonus, or profit to members. All surplus reinvested.</p></div>
+                    <div class="card"><i class="fas fa-exchange-alt card-icon"></i><h3 class="lang-ne">सदस्यता हस्तान्तरण नहुने</h3><h3 class="lang-en" style="display:none;">Non‑transferable Membership</h3><p class="lang-ne">सदस्यता कसैलाई हस्तान्तरण गर्न मिल्दैन; मृत्यु वा विघटनमा समाप्त हुन्छ।</p><p class="lang-en" style="display:none;">Membership cannot be transferred; ceases upon death or dissolution.</p></div>
+                    <div class="card"><i class="fas fa-chart-pie card-icon"></i><h3 class="lang-ne">प्रशासनिक खर्च सीमा २५%</h3><h3 class="lang-en" style="display:none;">Admin Expense Cap 25%</h3><p class="lang-ne">प्रशासनिक खर्च कुल खर्चको २५% भन्दा बढी हुने छैन (धारा १६७(१)(ज))।</p><p class="lang-en" style="display:none;">Administrative expenses shall not exceed 25% of total expenses (Section 167(1)(j)).</p></div>
+                    <div class="card"><i class="fas fa-shield-alt card-icon"></i><h3 class="lang-ne">दायित्व सीमित</h3><h3 class="lang-en" style="display:none;">Limited Liability</h3><p class="lang-ne">सदस्यहरू लिखित स्वीकार बिना कम्पनीको ऋणको लागि उत्तरदायी हुँदैनन्।</p><p class="lang-en" style="display:none;">Members are not liable for company debts without written consent.</p></div>
+                    <div class="card"><i class="fas fa-vote-yea card-icon"></i><h3 class="lang-ne">एक सदस्य एक मत</h3><h3 class="lang-en" style="display:none;">One Member One Vote</h3><p class="lang-ne">सञ्चालक निर्वाचन तथा सभाका निर्णयमा बराबर मताधिकार।</p><p class="lang-en" style="display:none;">Equal voting rights in director elections and general meetings.</p></div>
+                    <div class="card"><i class="fas fa-building card-icon"></i><h3 class="lang-ne">विघटनमा सम्पत्ति सरकारमा</h3><h3 class="lang-en" style="display:none;">Assets vest in Government on dissolution</h3><p class="lang-ne">विघटनपछि बाँकी सम्पत्ति नेपाल सरकारमा सर्नेछ (अर्को PNDC नभएमा)।</p><p class="lang-en" style="display:none;">Remaining assets vest in Government of Nepal (if no other PNDC).</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Statutory highlights (short) -->
+        <!-- Why Choose Us / Key Advantages -->
         <section>
             <div class="container">
-                <div class="lang-ne"><h2>वैधानिक अनुपालन</h2><p class="section-subhead">हामी कम्पनी ऐन, २०६३ (धारा १६६–१६७) को पूर्ण पालना गर्दछौं।</p></div>
-                <div class="lang-en" style="display:none;"><h2>Statutory Compliance</h2><p class="section-subhead">We fully comply with Sections 166‑167 of the Companies Act, 2063.</p></div>
-                <div class="grid-3">
-                    <div class="card">
-                        <i class="fas fa-ban card-icon"></i>
-                        <h3 class="lang-ne">मुनाफा वितरण निषेध</h3>
-                        <h3 class="lang-en" style="display:none;">No Profit Distribution</h3>
-                        <p class="lang-ne">कुनै लाभांश, बोनस वा रकम सदस्यलाई वितरण गरिने छैन। सबै अधिशेष पुनः लगानी।</p>
-                        <p class="lang-en" style="display:none;">No dividend, bonus, or profit to members. All surplus reinvested.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-exchange-alt card-icon"></i>
-                        <h3 class="lang-ne">सदस्यता हस्तान्तरण नहुने</h3>
-                        <h3 class="lang-en" style="display:none;">Non‑transferable Membership</h3>
-                        <p class="lang-ne">सदस्यता हस्तान्तरण गर्न मिल्दैन; मृत्यु वा विघटनमा समाप्त।</p>
-                        <p class="lang-en" style="display:none;">Membership cannot be transferred; ceases upon death or dissolution.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-chart-pie card-icon"></i>
-                        <h3 class="lang-ne">प्रशासनिक खर्च सीमा २५%</h3>
-                        <h3 class="lang-en" style="display:none;">Admin Expense Cap 25%</h3>
-                        <p class="lang-ne">प्रशासनिक खर्च कुल खर्चको २५% भन्दा बढी हुने छैन (धारा १६७(१)(ज))।</p>
-                        <p class="lang-en" style="display:none;">Admin expenses ≤ 25% of total expenses (Section 167(1)(j)).</p>
-                    </div>
+                <div class="lang-ne"><h2>किन नेपाल ल ग्रुप?</h2><div class="section-subhead">हाम्रो संस्थागत मोडेलले परम्परागत कानूनी अभ्यासका सबै चुनौतीहरू समाधान गर्दछ।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Why Nepal Law Group?</h2><div class="section-subhead">Our institutional model solves all challenges of traditional legal practice.</div></div>
+                <div class="grid-2">
+                    <div class="card"><i class="fas fa-users card-icon"></i><h3 class="lang-ne">सहकारी बहु-विषयक टोली</h3><h3 class="lang-en" style="display:none;">Collaborative Multi‑disciplinary Teams</h3><p class="lang-ne">जटिल मुद्दाहरूमा विभिन्न विधाका विशेषज्ञहरू सँगै काम गर्छन्। ग्राहकले एकीकृत सेवा पाउँछन्।</p><p class="lang-en" style="display:none;">Experts from different fields work together on complex cases. Clients receive integrated services.</p></div>
+                    <div class="card"><i class="fas fa-microchip card-icon"></i><h3 class="lang-ne">साझा पूर्वाधार</h3><h3 class="lang-en" style="display:none;">Shared Infrastructure</h3><p class="lang-ne">प्रविधि, पुस्तकालय, डाटाबेस, र प्रशासनिक सहयोग सबै सदस्यहरूका लागि उपलब्ध।</p><p class="lang-en" style="display:none;">Technology, library, databases, and admin support available to all members.</p></div>
+                    <div class="card"><i class="fas fa-chart-line card-icon"></i><h3 class="lang-ne">पुनः लगानीको संस्कृति</h3><h3 class="lang-en" style="display:none;">Reinvestment Culture</h3><p class="lang-ne">अनुसन्धान, तालिम, प्रकाशनको आय कम्पनीमा जम्मा हुन्छ, जसले दीर्घकालीन वृद्धि सुनिश्चित गर्छ।</p><p class="lang-en" style="display:none;">Income from research, training, publications stays with the company, ensuring long‑term growth.</p></div>
+                    <div class="card"><i class="fas fa-gavel card-icon"></i><h3 class="lang-ne">नियामक रूपमा सुरक्षित</h3><h3 class="lang-en" style="display:none;">Regulatory Safe</h3><p class="lang-ne">बार काउन्सिलको पूर्ण अनुपालन, सन्दर्भ शुल्क निषेध, पारदर्शी लेखा – कानूनी जोखिम शून्य।</p><p class="lang-en" style="display:none;">Full Bar Council compliance, prohibition on referral fees, transparent accounts – zero legal risk.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Simple call to action -->
+        <!-- Collaborative Culture Teaser -->
         <section class="bg-light">
-            <div class="container" style="text-align: center;">
-                <div class="lang-ne">
-                    <h2 style="border-left: none; padding-left: 0;">सम्पर्क गर्नुहोस्</h2>
-                    <p>कानूनी सेवा, सहकार्य वा थप जानकारीको लागि हामीलाई सम्पर्क गर्नुहोस्।</p>
-                    <a href="contact.html" class="btn-primary">सम्पर्क पृष्ठमा जानुहोस्</a>
+            <div class="container">
+                <div class="lang-ne"><h2>सहकारी संस्कृतिका पहलहरू</h2><div class="section-subhead">हामी सिक्ने, साझा गर्ने, र मिलेर बढ्ने वातावरण बनाउँछौं।</div></div>
+                <div class="lang-en" style="display:none;"><h2>Collaborative Culture Initiatives</h2><div class="section-subhead">We create an environment of learning, sharing, and growing together.</div></div>
+                <div class="grid-3">
+                    <div class="card"><i class="fas fa-calendar-week card-icon"></i><h3 class="lang-ne">साप्ताहिक टिम हडल</h3><h3 class="lang-en" style="display:none;">Weekly Team Huddle</h3><p class="lang-ne">कार्यभार साझा, मुद्दा अद्यावधिक, सफलता उत्सव।</p><p class="lang-en" style="display:none;">Share workloads, case updates, celebrate wins.</p></div>
+                    <div class="card"><i class="fas fa-comments card-icon"></i><h3 class="lang-ne">द्वि-साप्ताहिक केस क्लिनिक</h3><h3 class="lang-en" style="display:none;">Bi‑weekly Case Clinic</h3><p class="lang-ne">चुनौतीपूर्ण मुद्दाको सामूहिक विचार परामर्श।</p><p class="lang-en" style="display:none;">Collective brainstorming on challenging cases.</p></div>
+                    <div class="card"><i class="fas fa-chalkboard card-icon"></i><h3 class="lang-ne">मासिक ज्ञान साझेदारी</h3><h3 class="lang-en" style="display:none;">Monthly Knowledge Sharing</h3><p class="lang-ne">एक सदस्यले हालैको कानूनी विकासको प्रस्तुति दिने।</p><p class="lang-en" style="display:none;">A member presents on recent legal developments.</p></div>
                 </div>
-                <div class="lang-en" style="display:none;">
-                    <h2 style="border-left: none; padding-left: 0;">Contact Us</h2>
-                    <p>For legal services, cooperation, or more information, please contact us.</p>
-                    <a href="contact.html" class="btn-primary">Go to Contact Page</a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section>
+            <div class="container">
+                <div class="stat-box">
+                    <i class="fas fa-handshake" style="font-size: 3rem; margin-bottom: 1rem; display: inline-block; color: #f87171;"></i>
+                    <h3 class="lang-ne" style="color: white;">सहकारी कानूनी यात्रामा सामेल हुनुहोस्</h3>
+                    <h3 class="lang-en" style="display:none; color: white;">Join the Collaborative Legal Journey</h3>
+                    <p class="lang-ne" style="margin: 1rem 0;">तपाईं एक अनुभवी अधिवक्ता हुनुहुन्छ, अनुसन्धानकर्ता हुनुहुन्छ, वा कानूनी सेवा खोज्दै हुनुहुन्छ – हामी तपाईंलाई स्वागत गर्दछौं।</p>
+                    <p class="lang-en" style="display:none; margin: 1rem 0;">Whether you are an experienced advocate, a researcher, or seeking legal services – you are welcome.</p>
+                    <a href="contact.html" class="btn-primary" style="background: #dc2626; color: white;" class="lang-ne">सम्पर्क गर्नुहोस्</a>
+                    <a href="contact.html" class="btn-primary" style="background: #dc2626; color: white;" class="lang-en" style="display:none;">Contact Us</a>
                 </div>
             </div>
         </section>
