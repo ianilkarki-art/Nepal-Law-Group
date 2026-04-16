@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>About – Nepal Law Group | नेपाल ल ग्रुपको बारेमा</title>
     <meta name="description" content="Nepal Law Group is a modern, compliant, and sustainable legal institution – a profit non-distributing company under Nepalese law.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (kept) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: #fef7e8;
             color: #2c2418;
             line-height: 1.5;
@@ -26,14 +26,11 @@
             --nepal-indigo: #1a2a4f;
             --nepal-indigo-light: #253a6b;
             --nepal-crimson: #8b1a2c;
-            --nepal-crimson-dark: #6e1423;
             --nepal-gold: #c9a03d;
             --nepal-gold-light: #e0b354;
-            --nepal-gold-dark: #a07d2e;
             --nepal-cream: #fff8ef;
             --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
             --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.12);
-            --shadow-xl: 0 25px 40px rgba(0, 0, 0, 0.15);
             --border-gold: 1px solid rgba(201, 160, 61, 0.4);
         }
 
@@ -43,14 +40,14 @@
             padding: 0 24px;
         }
 
-        /* Header - Royal, no icon */
+        /* ===== HEADER – More Attractive ===== */
         .navbar {
-            background: linear-gradient(135deg, var(--nepal-indigo) 0%, var(--nepal-indigo-light) 100%);
+            background: var(--nepal-indigo);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 3px solid var(--nepal-gold);
+            border-bottom: 4px solid var(--nepal-gold);
             box-shadow: var(--shadow-md);
         }
 
@@ -63,15 +60,16 @@
         }
 
         .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff, var(--nepal-gold-light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: white;
             text-decoration: none;
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: opacity 0.2s;
+        }
+        .brand-name:hover {
+            opacity: 0.9;
         }
 
         .nav-links {
@@ -84,7 +82,7 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             padding: 0.4rem 1rem;
             border-radius: 40px;
             transition: all 0.2s;
@@ -99,7 +97,7 @@
         .lang-toggle {
             display: flex;
             gap: 0.25rem;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 0.2rem;
             border-radius: 60px;
             border: 1px solid rgba(201, 160, 61, 0.6);
@@ -114,7 +112,7 @@
             border-radius: 40px;
             cursor: pointer;
             color: white;
-            font-family: 'Inter', sans-serif;
+            font-family: inherit;
             transition: 0.2s;
         }
 
@@ -129,33 +127,20 @@
             padding: 3rem 0;
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .page-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: repeating-linear-gradient(90deg, var(--nepal-gold), var(--nepal-crimson) 20px, var(--nepal-gold) 40px);
+            border-bottom: 1px solid var(--nepal-gold);
         }
 
         .page-hero h1 {
-            font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--nepal-indigo), var(--nepal-crimson));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--nepal-indigo);
             margin-bottom: 0.5rem;
+            line-height: 1.2;
         }
 
         .page-hero p {
             color: #5a4a3a;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         /* Content Sections */
@@ -165,7 +150,6 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 800;
             color: var(--nepal-indigo);
@@ -189,8 +173,8 @@
         }
 
         .rich-text h3 {
-            font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
+            font-weight: 700;
             color: var(--nepal-indigo);
             margin: 1rem 0 0.5rem;
         }
@@ -224,8 +208,8 @@
         }
 
         .card h3 {
-            font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
+            font-weight: 700;
             color: var(--nepal-indigo);
             margin-bottom: 0.5rem;
         }
@@ -240,7 +224,7 @@
         .footer {
             background: var(--nepal-indigo);
             color: #cdc6b8;
-            padding: 2.5rem 0 2rem;
+            padding: 2rem 0 1.5rem;
             border-top: 4px solid var(--nepal-gold);
             margin-top: 2rem;
         }
@@ -268,8 +252,8 @@
         .footer-copyright {
             font-size: 0.8rem;
             text-align: center;
-            border-top: 1px solid rgba(201, 160, 61, 0.2);
-            padding-top: 1.2rem;
+            border-top: 1px solid rgba(201, 160, 61, 0.3);
+            padding-top: 1rem;
         }
 
         .scroll-top {
@@ -303,6 +287,7 @@
             transform: translateY(-3px);
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 0 20px;
@@ -390,7 +375,7 @@
         <!-- Join Us -->
         <div class="rich-text" style="text-align: center; margin-bottom: 2rem;">
             <i class="fas fa-handshake" style="font-size: 2rem; color: var(--nepal-gold); margin-bottom: 1rem; display: inline-block;"></i>
-            <h3 id="joinTitle" style="font-family: 'Playfair Display', serif; color: var(--nepal-indigo);">हामीसँग जोडिनुहोस्</h3>
+            <h3 id="joinTitle" style="color: var(--nepal-indigo);">हामीसँग जोडिनुहोस्</h3>
             <p id="joinText">नेपाल ल ग्रुप योग्य अधिवक्ता, अनुसन्धानकर्ता, प्रशिक्षक, र प्रकाशन पेशाकर्मीहरूका लागि खुला छ। हामी तपाईंको चासोको स्वागत गर्दछौं।</p>
         </div>
     </div>
