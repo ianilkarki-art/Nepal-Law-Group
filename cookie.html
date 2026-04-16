@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy – Nepal Law Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.55; }
+        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
+        .nav-links a:hover { background: var(--crimson); }
+        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
+        .lang-btn.active { background: var(--crimson); }
+        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2rem 0; text-align: center; }
+        .page-hero h1 { font-size: 2rem; color: var(--primary-blue); }
+        .content-policy { background: white; border-radius: 28px; padding: 2rem; margin: 2rem 0; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); }
+        .content-policy h2 { color: var(--primary-blue); margin: 1.5rem 0 0.5rem; font-size: 1.4rem; border-left: 4px solid var(--crimson); padding-left: 1rem; }
+        .content-policy p, .content-policy ul { margin-bottom: 1rem; }
+        .content-policy ul { padding-left: 2rem; }
+        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 1.5rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .brand-name { font-size: 1.4rem; } }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-name">Nepal Law Group</a>
+        <div class="nav-links">
+            <a href="index.html" id="navHome">Home</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="membership.html" id="navMembership">Membership</a>
+            <a href="contact.html" id="navContact">Contact</a>
+            <div class="lang-toggle">
+                <button class="lang-btn" id="langNp">नेपाली</button>
+                <button class="lang-btn" id="langEn">English</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="page-hero">
+        <div class="container"><h1 id="heroTitle">Cookie Policy</h1></div>
+    </div>
+    <div class="container">
+        <div class="content-policy" id="policyContent"></div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container"><p>© 2025 Nepal Law Group - All rights reserved</p></div>
+</footer>
+<script>
+    const cookieData = {
+        en: {
+            heroTitle: "Cookie Policy",
+            content: `
+                <p><strong>Last updated: April 2025</strong></p>
+                <p>This Cookie Policy explains how Nepal Law Group ("we", "us", "our") uses cookies and similar technologies on our website.</p>
+                <h2>1. What are Cookies?</h2>
+                <p>Cookies are small text files placed on your device when you visit a website. They help the website remember your actions and preferences over time.</p>
+                <h2>2. Types of Cookies We Use</h2>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Necessary for the website to function properly (e.g., language preference).</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site (e.g., Google Analytics).</li>
+                    <li><strong>Functional Cookies:</strong> Remember your choices to improve your experience.</li>
+                </ul>
+                <h2>3. Managing Cookies</h2>
+                <p>You can control and delete cookies through your browser settings. Most browsers allow you to block or remove cookies. However, disabling essential cookies may affect website functionality.</p>
+                <h2>4. Third-Party Cookies</h2>
+                <p>We may use third-party services (e.g., Google Analytics) that set their own cookies. We do not control those cookies. Please review the privacy policies of those services.</p>
+                <h2>5. Consent</h2>
+                <p>By continuing to use our website, you consent to our use of cookies as described in this policy. You can withdraw consent by disabling cookies in your browser.</p>
+                <h2>6. Changes to This Policy</h2>
+                <p>We may update this Cookie Policy from time to time. Changes will be posted on this page.</p>
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a>.</p>
+            `
+        },
+        np: {
+            heroTitle: "कुकी नीति",
+            content: `
+                <p><strong>अन्तिम मिति: अप्रिल २०२५</strong></p>
+                <p>यो कुकी नीतिले नेपाल ल ग्रुपले हाम्रो वेबसाइटमा कुकीहरू र समान प्रविधिहरू कसरी प्रयोग गर्दछ भनी व्याख्या गर्दछ।</p>
+                <h2>१. कुकीहरू के हुन्?</h2>
+                <p>कुकीहरू सानो पाठ फाइलहरू हुन् जुन तपाईंले वेबसाइट भ्रमण गर्दा तपाईंको यन्त्रमा राखिन्छ। तिनीहरूले वेबसाइटलाई तपाईंको कार्यहरू र प्राथमिकताहरू सम्झन मद्दत गर्छन्।</p>
+                <h2>२. हामीले प्रयोग गर्ने कुकीका प्रकारहरू</h2>
+                <ul>
+                    <li><strong>आवश्यक कुकीहरू:</strong> वेबसाइट ठीकसँग काम गर्न आवश्यक (जस्तै भाषा प्राथमिकता)।</li>
+                    <li><strong>विश्लेषणात्मक कुकीहरू:</strong> आगन्तुकहरूले हाम्रो साइटसँग कसरी अन्तरक्रिया गर्छन् भनी बुझ्न मद्दत गर्छन् (जस्तै गुगल एनालिटिक्स)।</li>
+                    <li><strong>कार्यात्मक कुकीहरू:</strong> तपाईंको अनुभव सुधार गर्न तपाईंको छनौटहरू सम्झन्छन्।</li>
+                </ul>
+                <h2>३. कुकीहरू व्यवस्थापन गर्ने</h2>
+                <p>तपाईंले आफ्नो ब्राउजर सेटिङमार्फत कुकीहरू नियन्त्रण र मेटाउन सक्नुहुन्छ। धेरैजसो ब्राउजरले कुकीहरू ब्लक वा हटाउन अनुमति दिन्छ। तथापि, आवश्यक कुकीहरू निष्क्रिय गर्दा वेबसाइटको कार्यक्षमता प्रभावित हुन सक्छ।</p>
+                <h2>४. तेस्रो-पक्ष कुकीहरू</h2>
+                <p>हामीले तेस्रो-पक्ष सेवाहरू (जस्तै गुगल एनालिटिक्स) प्रयोग गर्न सक्छौं जसले आफ्नै कुकीहरू सेट गर्छन्। हामी ती कुकीहरू नियन्त्रण गर्दैनौं। कृपया ती सेवाहरूको गोपनीयता नीतिहरू समीक्षा गर्नुहोस्।</p>
+                <h2>५. सहमति</h2>
+                <p>हाम्रो वेबसाइट प्रयोग गर्न जारी राख्दा, तपाईं यस नीतिमा वर्णित अनुसार हाम्रो कुकी प्रयोगमा सहमत हुनुहुन्छ। तपाईंले आफ्नो ब्राउजरमा कुकीहरू निष्क्रिय गरेर सहमति फिर्ता लिन सक्नुहुन्छ।</p>
+                <h2>६. यस नीतिमा परिवर्तन</h2>
+                <p>हामी समय-समयमा यो कुकी नीति अद्यावधिक गर्न सक्छौं। परिवर्तनहरू यस पृष्ठमा पोस्ट गरिनेछन्।</p>
+                <h2>७. सम्पर्क गर्नुहोस्</h2>
+                <p>हाम्रो कुकी प्रयोगबारे कुनै प्रश्न भए, कृपया हामीलाई <a href="mailto:info@nepallawgroup.org">info@nepallawgroup.org</a> मा सम्पर्क गर्नुहोस्।</p>
+            `
+        }
+    };
+    let currentLang = localStorage.getItem("nlgLang") || "en";
+    function updateUI(lang) {
+        const d = cookieData[lang];
+        document.getElementById("heroTitle").innerText = d.heroTitle;
+        document.getElementById("policyContent").innerHTML = d.content;
+        document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+        if (lang === "np") document.getElementById("langNp").classList.add("active");
+        else document.getElementById("langEn").classList.add("active");
+        localStorage.setItem("nlgLang", lang);
+    }
+    document.getElementById("langNp").onclick = () => updateUI("np");
+    document.getElementById("langEn").onclick = () => updateUI("en");
+    updateUI(currentLang);
+</script>
+</body>
+</html>
