@@ -288,8 +288,7 @@
 <header class="navbar">
     <div class="container nav-container">
         <div class="logo">
-            <h1>नेपाल ल ग्रुप <span style="font-weight:400">|</span> NLG</h1>
-            <p>Profit non-distributing • गैर-नाफामुखी</p>
+            <h1 id="brand-name">Nepal Law Group</h1>
         </div>
         <div class="lang-toggle">
             <button class="lang-btn" id="lang-np" data-lang="np">नेपाली</button>
@@ -302,9 +301,9 @@
     <!-- Hero Section with dynamic language -->
     <div class="hero">
         <div class="container hero-content">
-            <span class="hero-badge" id="hero-badge">⚖️ नयाँ मापदण्ड • New Standard</span>
-            <h2 id="hero-title">नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था</h2>
-            <p id="hero-sub">सेवामूलक, गैर-नाफामुखी, शैक्षिक, सार्वजनिक उपयोगिता | Service-oriented, non-profit, public welfare</p>
+            <span class="hero-badge" id="hero-badge">⚖️ Redefining Law Practice, Advocacy and Research</span>
+            <h2 id="hero-title">Nepal Law Group – A New Legal Organisation</h2>
+            <p id="hero-sub">Service-oriented, non-profit, educational & public welfare institution</p>
         </div>
     </div>
 
@@ -325,8 +324,8 @@
 
         <!-- Departments Showcase (Rich visual) -->
         <section>
-            <h2 class="section-title" id="dept-heading">⚙️ हाम्रो संरचना • Our Structure</h2>
-            <p class="section-sub" id="dept-sub">ग्राहकमुखी र आन्तरिक सहायक विभागहरू | Client-facing & internal support departments</p>
+            <h2 class="section-title" id="dept-heading">⚙️ Our Structure • Institutional Framework</h2>
+            <p class="section-sub" id="dept-sub">Client-facing & internal support departments working in synergy</p>
             <div class="dept-grid" id="departments-grid">
                 <!-- JS will inject department cards with i18n support -->
             </div>
@@ -335,16 +334,16 @@
         <!-- Goal & vision block (reinvestment & sustainability) -->
         <div class="goal-block" id="goal-block">
             <i class="fas fa-chart-line"></i>
-            <h3 id="goal-title">दीर्घकालीन दिगोपन • Long-term Sustainability</h3>
-            <p id="goal-text">सम्पूर्ण अधिशेष समाज हित र कानूनी क्षेत्रको विकासमा पुनः लगानी गरिन्छ। All surplus reinvested for legal sector growth & public welfare.</p>
+            <h3 id="goal-title">Long-term Sustainability & Reinvestment</h3>
+            <p id="goal-text">All surplus income reinvested for legal sector growth & public welfare.</p>
         </div>
 
         <!-- final note: institutional platform -->
         <section>
             <div class="full-text-card" style="background:#fef9f0; border-left: 6px solid var(--crimson);">
                 <i class="fas fa-building" style="color: var(--crimson); font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"></i>
-                <h3 id="closing-title">नेपाल ल ग्रुप – परम्परागत कानूनी अभ्यासको विकल्प</h3>
-                <p id="closing-text">आधुनिक, अनुपालनशील र दिगो संस्थाको रूपमा स्थापना, नेपालको कानूनी क्षेत्रमा नयाँ मापदण्ड।</p>
+                <h3 id="closing-title">A Modern Alternative to Traditional Legal Practice</h3>
+                <p id="closing-text">Nepal Law Group is establishing itself as a compliant, sustainable, and visionary institution.</p>
             </div>
         </section>
     </div>
@@ -352,8 +351,8 @@
 
 <footer>
     <div class="container">
-        <p id="footer-text">© 2025 नेपाल ल ग्रुप - सबै अधिकार सुरक्षित | कानूनी सेवा सबैको पहुँचमा</p>
-        <p style="font-size:0.8rem; margin-top:0.5rem;" id="footer-ethics">गैर-नाफामुखी • शैक्षिक • सार्वजनिक कल्याण</p>
+        <p id="footer-text">© 2025 Nepal Law Group - All rights reserved | Access to justice for all</p>
+        <p style="font-size:0.8rem; margin-top:0.5rem;" id="footer-ethics">Non-profit • Educational • Public Welfare</p>
     </div>
 </footer>
 
@@ -361,7 +360,8 @@
     // Language dataset : English & Nepali (exact rich content from prompt)
     const langData = {
         en: {
-            heroBadge: "⚖️ Redefining Legal Practice",
+            brandName: "Nepal Law Group",
+            heroBadge: "⚖️ Redefining Law Practice, Advocacy and Research",
             heroTitle: "Nepal Law Group – A New Legal Organisation",
             heroSub: "Service-oriented, non-profit, educational & public welfare institution",
             fullDescription: `
@@ -396,7 +396,8 @@
             footerEthics: "Non-profit • Educational • Public Welfare"
         },
         np: {
-            heroBadge: "⚖️ नयाँ कानूनी परम्परा",
+            brandName: "नेपाल ल ग्रुप",
+            heroBadge: "⚖️ कानून अभ्यास, वकालत र अनुसन्धानलाई पुन: परिभाषित गर्दै",
             heroTitle: "नेपाल ल ग्रुप – एक नयाँ कानूनी संस्था",
             heroSub: "सेवामूलक, गैर-नाफामुखी, शैक्षिक र सार्वजनिक कल्याणकारी संस्था",
             fullDescription: `
@@ -438,7 +439,12 @@
     function updateUI(lang) {
         const data = langData[lang];
         if (!data) return;
-        // update hero & badges
+        
+        // Update navbar brand (separate language-specific banner)
+        document.getElementById("brand-name").innerText = data.brandName;
+        document.getElementById("brand-sub").innerText = data.brandSub;
+        
+        // Update hero & badges
         document.getElementById("hero-badge").innerText = data.heroBadge;
         document.getElementById("hero-title").innerHTML = data.heroTitle;
         document.getElementById("hero-sub").innerHTML = data.heroSub;
