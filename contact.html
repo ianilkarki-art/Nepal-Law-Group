@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Nepal Law Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fefefe; color: #1e1e2a; line-height: 1.5; }
+        :root { --primary-blue: #0B2F66; --crimson: #9E1B32; --border-light: #e9ecef; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-name { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.2s; }
+        .nav-links a:hover { background: var(--crimson); }
+        .lang-toggle { display: flex; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 60px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.9rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 40px; cursor: pointer; color: white; }
+        .lang-btn.active { background: var(--crimson); }
+        .page-hero { background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%); border-bottom: 4px solid var(--crimson); padding: 2.5rem 0; text-align: center; }
+        .page-hero h1 { font-size: 2.5rem; color: var(--primary-blue); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0; }
+        .info-card { background: white; border-radius: 24px; padding: 1.8rem; box-shadow: var(--shadow-sm); border-left: 6px solid var(--crimson); }
+        .info-card i { font-size: 2rem; color: var(--crimson); margin-bottom: 1rem; }
+        .info-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-blue); }
+        .info-card p { margin: 0.5rem 0; }
+        .contact-form { background: white; border-radius: 24px; padding: 1.8rem; box-shadow: var(--shadow-sm); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid var(--border-light); border-radius: 12px; font-family: inherit; }
+        .contact-form button { background: var(--crimson); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 40px; font-weight: 600; cursor: pointer; margin-top: 1rem; }
+        .footer { background: #0a1a2e; color: #cddfea; text-align: center; padding: 2rem 0; border-top: 3px solid var(--crimson); margin-top: 2rem; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .brand-name { font-size: 1.4rem; } }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-name" id="brandName">Nepal Law Group</a>
+        <div class="nav-links">
+            <a href="index.html" id="navHome">Home</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="membership.html" id="navMembership">Membership</a>
+            <a href="contact.html" id="navContact">Contact</a>
+            <div class="lang-toggle">
+                <button class="lang-btn" id="langNp">नेपाली</button>
+                <button class="lang-btn" id="langEn">English</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="page-hero">
+        <div class="container"><h1 id="heroTitle">सम्पर्क • Contact Us</h1></div>
+    </div>
+    <div class="container">
+        <div class="contact-grid">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 id="addressTitle">कार्यालय ठेगाना</h3>
+                <p id="addressLine1">Kathmandu, Nepal</p>
+                <p id="addressLine2">(पूरा ठेगाना चाँडै उपलब्ध हुनेछ)</p>
+                <i class="fas fa-envelope" style="margin-top: 1rem; display: inline-block;"></i>
+                <p>info@nepallawgroup.org</p>
+                <i class="fas fa-phone-alt"></i>
+                <p id="phone">+977-1-XXXXXXX</p>
+            </div>
+            <div class="contact-form">
+                <h3 id="formTitle">सन्देश पठाउनुहोस्</h3>
+                <input type="text" id="nameInput" placeholder="Your Name / तपाईंको नाम">
+                <input type="email" id="emailInput" placeholder="Email / इमेल">
+                <textarea rows="4" id="msgInput" placeholder="Message / सन्देश"></textarea>
+                <button id="sendBtn">पठाउनुहोस् • Send</button>
+                <p id="formNote" style="font-size: 0.8rem; margin-top: 0.8rem;">(हाल डेमो फारम – जानकारी सङ्कलन मात्र।)</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer"><div class="container"><p id="footerText">© 2025 नेपाल ल ग्रुप</p></div></footer>
+<script>
+    const contactContent = {
+        en: {
+            brand: "Nepal Law Group", navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
+            heroTitle: "Contact Us",
+            addressTitle: "Office Address", addressLine1: "Kathmandu, Nepal", addressLine2: "(Full address coming soon)",
+            phone: "+977-1-XXXXXXX",
+            formTitle: "Send a Message",
+            sendBtn: "Send",
+            footer: "© 2025 Nepal Law Group - All rights reserved"
+        },
+        np: {
+            brand: "नेपाल ल ग्रुप", navHome: "गृहपृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
+            heroTitle: "सम्पर्क",
+            addressTitle: "कार्यालय ठेगाना", addressLine1: "काठमाडौं, नेपाल", addressLine2: "(पूरा ठेगाना चाँडै उपलब्ध हुनेछ)",
+            phone: "+९७७-१-XXXXXXX",
+            formTitle: "सन्देश पठाउनुहोस्",
+            sendBtn: "पठाउनुहोस्",
+            footer: "© २०२५ नेपाल ल ग्रुप - सबै अधिकार सुरक्षित"
+        }
+    };
+    let currentLang = localStorage.getItem("nlgLang") || "en";
+    function applyLang(lang) {
+        const d = contactContent[lang];
+        document.getElementById("brandName").innerText = d.brand;
+        document.getElementById("navHome").innerText = d.navHome;
+        document.getElementById("navAbout").innerText = d.navAbout;
+        document.getElementById("navMembership").innerText = d.navMembership;
+        document.getElementById("navContact").innerText = d.navContact;
+        document.getElementById("heroTitle").innerText = d.heroTitle;
+        document.getElementById("addressTitle").innerText = d.addressTitle;
+        document.getElementById("addressLine1").innerText = d.addressLine1;
+        document.getElementById("addressLine2").innerText = d.addressLine2;
+        document.getElementById("phone").innerText = d.phone;
+        document.getElementById("formTitle").innerText = d.formTitle;
+        document.getElementById("sendBtn").innerText = d.sendBtn;
+        document.getElementById("footerText").innerHTML = d.footer;
+        document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+        if (lang === "np") document.getElementById("langNp").classList.add("active");
+        else document.getElementById("langEn").classList.add("active");
+        localStorage.setItem("nlgLang", lang);
+    }
+    document.getElementById("langNp").onclick = () => applyLang("np");
+    document.getElementById("langEn").onclick = () => applyLang("en");
+    applyLang(currentLang);
+    document.getElementById("sendBtn").addEventListener("click", () => alert("Thank you. This is a demo. In production, you would connect a backend or form service."));
+</script>
+</body>
+</html>
