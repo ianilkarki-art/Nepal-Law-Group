@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>About – Nepal Law Group | नेपाल ल ग्रुपको बारेमा</title>
-    <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -35,7 +34,7 @@
             margin: 0 auto;
             padding: 0 32px;
         }
-        /* Navbar */
+        /* Header - no hammer, no subtext */
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #0a3a6e 100%);
             padding: 1rem 0;
@@ -52,24 +51,17 @@
             flex-wrap: wrap;
             gap: 1.2rem;
         }
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .brand-icon {
-            font-size: 2rem;
-            color: var(--crimson-light);
-            background: rgba(255,255,240,0.1);
-            padding: 8px;
-            border-radius: 60px;
-        }
         .brand-name {
-            font-size: 1.7rem;
+            font-size: 1.9rem;
             font-weight: 800;
             letter-spacing: -0.3px;
             color: white;
-            text-decoration: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
         .home-link {
             background: transparent;
@@ -79,15 +71,20 @@
             padding: 0.5rem 1.2rem;
             border-radius: 40px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.2s;
+            transition: all 0.25s;
+        }
+        .home-link i {
+            font-size: 0.9rem;
         }
         .home-link:hover {
             background: var(--crimson);
             border-color: var(--crimson);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .lang-toggle {
             display: flex;
@@ -95,6 +92,7 @@
             background: rgba(255,255,255,0.1);
             padding: 0.3rem 0.8rem;
             border-radius: 60px;
+            backdrop-filter: blur(4px);
         }
         .lang-btn {
             background: transparent;
@@ -104,18 +102,19 @@
             padding: 0.4rem 1rem;
             border-radius: 40px;
             cursor: pointer;
+            transition: 0.2s;
             color: white;
             font-family: inherit;
-            transition: 0.2s;
         }
         .lang-btn.active {
             background: var(--crimson);
+            color: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         .lang-btn:not(.active):hover {
             background: rgba(255,255,255,0.25);
         }
-        /* Hero section */
+        /* Hero Section */
         .about-hero {
             background: linear-gradient(105deg, #f0f4fe 0%, #ffffff 100%);
             border-bottom: 4px solid var(--crimson);
@@ -147,7 +146,7 @@
             padding-left: 1.2rem;
             margin-bottom: 2rem;
         }
-        .challenge-grid, .solution-grid, .values-grid {
+        .challenge-grid, .solution-grid, .values-grid, .reasons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 1.8rem;
@@ -199,20 +198,19 @@
             .container { padding: 0 20px; }
             .about-hero h1 { font-size: 2rem; }
             .section-title { font-size: 1.5rem; }
+            .brand-name { font-size: 1.4rem; }
         }
-        .btn-icon { margin-right: 6px; }
         .text-crimson { color: var(--crimson); }
+        hr { margin: 1rem 0; border-color: var(--border-light); }
+        .rich-text p { margin-bottom: 1rem; }
     </style>
 </head>
 <body>
 
 <header class="navbar">
     <div class="container nav-container">
-        <div class="brand">
-            <i class="fas fa-gavel brand-icon"></i>
-            <span class="brand-name" id="brandName">नेपाल ल ग्रुप</span>
-        </div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
+        <div class="brand-name" id="brandName">नेपाल ल ग्रुप</div>
+        <div class="nav-links">
             <a href="#" class="home-link" id="homeLink"><i class="fas fa-home"></i> <span id="homeText">गृहपृष्ठ</span></a>
             <div class="lang-toggle">
                 <button class="lang-btn" id="lang-np" data-lang="np">नेपाली</button>
@@ -255,7 +253,7 @@
         <section>
             <h2 class="section-title" id="whyHeading">किन मुनाफा वितरण नगर्ने कम्पनी संरचना?</h2>
             <div id="whyText" class="rich-text"></div>
-            <div class="challenge-grid" id="reasonsGrid"></div>
+            <div class="reasons-grid" id="reasonsGrid"></div>
         </section>
 
         <!-- Join Us CTA -->
@@ -274,7 +272,7 @@
 </footer>
 
 <script>
-    // Full bilingual content (exact as provided)
+    // Complete bilingual content (exact as provided by user)
     const langData = {
         np: {
             brand: "नेपाल ल ग्रुप",
@@ -284,13 +282,13 @@
             bgHeading: "पृष्ठभूमि र आवश्यकता",
             bgText: `<p>नेपालको कानूनी क्षेत्र दशकौंदेखि परम्परागत अभ्यास विधिहरूमा आधारित रहेको छ। यद्यपि यसले धेरै सफल व्यक्तिगत अभ्यासकर्ता र फर्महरू जन्माएको छ, यसले केही संरचनात्मक कमजोरीहरू पनि जन्माएको छ जसले गुणस्तरीय सेवा प्रवाह, संस्थागत दिगोपन, र पेशागत विकासमा बाधा पुर्याएका छन्। नेपाल ल ग्रुपको स्थापना गर्नुअघि संस्थापक सदस्यहरूले नेपाली कानूनी पेशामा देखिएका निम्न सात स्थायी चुनौतीहरू पहिचान गरेका थिए:</p>`,
             challenges: [
-                { icon: "fas fa-user", title: "एकल कार्यशैली", desc: "अधिकांश अधिवक्ता एक्लै वा सानो टोलीमा काम गर्छन्, जसले जटिल बहु-विषयक मुद्दाहरूमा सहकार्य गर्न कठिन बनाउँछ।" },
-                { icon: "fas fa-microchip", title: "सीमित पूर्वाधार", desc: "प्रविधि, कानूनी पुस्तकालय, डाटाबेस र प्रशिक्षित सहायक कर्मचारीको अभावले सेवा गुणस्तर प्रभावित हुन्छ।" },
-                { icon: "fas fa-building", title: "कमजोर संस्थागत ब्रान्डिङ", desc: "फर्मको पहिचान व्यक्तिमा केन्द्रित हुँदा वरिष्ठ अभ्यासकर्ताको बहिर्गमनपछि फर्म नै विघटन हुन्छ।" },
+                { icon: "fas fa-user", title: "एकल कार्यशैली", desc: "अधिकांश अधिवक्ता एक्लै वा अत्यन्त सानो, अनौपचारिक टोलीमा काम गर्छन्। यसले जटिल, बहु-विषयक मुद्दाहरू ह्यान्डल गर्न कठिन बनाउँछ।" },
+                { icon: "fas fa-microchip", title: "सीमित पूर्वाधार", desc: "उच्च-स्तरीय प्रविधि, कानूनी पुस्तकालय, डाटाबेस र प्रशिक्षित सहायक कर्मचारीको व्यवस्था गर्ने आर्थिक क्षमता हुँदैन।" },
+                { icon: "fas fa-building", title: "कमजोर संस्थागत ब्रान्डिङ", desc: "फर्मको पहिचान व्यक्तिको प्रतिष्ठामा आधारित; ती व्यक्ति गएपछि फर्म नै विघटन हुन्छ।" },
                 { icon: "fas fa-chart-line", title: "साझा वृद्धिको अभाव", desc: "अधिशेष साझेदारबीच वितरण हुँदा फर्म-स्तरीय पूँजी संचय हुँदैन, दीर्घकालीन लगानी अवरुद्ध हुन्छ।" },
                 { icon: "fas fa-balance-scale", title: "नियामक जटिलता", desc: "प्रशासनिक र कानूनी अभ्यासबीच स्पष्ट अलगाव नहुँदा बार काउन्सिलको कारबाहीको जोखिम।" },
-                { icon: "fas fa-coins", title: "अप्रयुक्त आय स्रोत", desc: "मुद्दा शुल्कमा मात्र निर्भरता; अनुसन्धान, तालिम, प्रकाशन, प्रविधि सेवाबाट हुने आयको उपेक्षा।" },
-                { icon: "fas fa-exchange-alt", title: "उत्तराधिकार समस्या", desc: "वरिष्ठ अभ्यासकर्ताको अवकाशपछि ग्राहक, ज्ञान र सद्भावना हस्तान्तरणको कुनै संस्थागत संरचना छैन।" }
+                { icon: "fas fa-coins", title: "अप्रयुक्त आय स्रोत", desc: "अधिकांश फर्मको आय मुद्दा शुल्कमा मात्र; अनुसन्धान, तालिम, प्रकाशन, कानूनी प्रविधि सेवाबाट हुने आयको उपेक्षा।" },
+                { icon: "fas fa-exchange-alt", title: "उत्तराधिकार समस्या", desc: "वरिष्ठ अभ्यासकर्ताको अवकाश वा निधनपछि ग्राहक, ज्ञान र सद्भावना हस्तान्तरणको कुनै संस्थागत संरचना छैन।" }
             ],
             solutionHeading: "समाधान: नेपाल ल ग्रुप",
             solutionIntro: `<p>नेपाल ल ग्रुप माथि वर्णित सबै चुनौतीहरूलाई एकीकृत र संरचनात्मक रूपमा समाधान गर्ने उद्देश्यले स्थापित गरिएको हो। हाम्रो समाधानको विस्तृत स्वरूप निम्न बमोजिम छ:</p>`,
@@ -311,7 +309,7 @@
                 { icon: "fas fa-chart-simple", title: "निरन्तर सुधार", desc: "स्थिरतालाई दिगोपनको शत्रु मान्दै, सेवा, प्रणाली र प्रक्रियालाई निरन्तर परिष्कृत।" }
             ],
             whyHeading: "किन मुनाफा वितरण नगर्ने कम्पनी संरचना?",
-            whyText: `<p>नेपाल ल ग्रुपको संस्थापक सदस्यहरूले कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत मुनाफा वितरण नगर्ने कम्पनीको संरचना रोजेका छन्। यो निर्णय दीर्घकालीन दिगोपन, पारदर्शिता र सामूहिक हितको दृष्टिले अत्यन्त रणनीतिक छ।</p>`,
+            whyText: `<p>नेपाल ल ग्रुपको संस्थापक सदस्यहरूले कम्पनी ऐन, २०६३ को दफा १६६ र १६७ अन्तर्गत मुनाफा वितरण नगर्ने कम्पनीको संरचना रोजेका छन्। यो निर्णय दीर्घकालीन दिगोपन, पारदर्शिता र सामूहिक हितको दृष्टिले अत्यन्त रणनीतिक छ। तल हामीले यो संरचना रोज्नुका मुख्य कारणहरू विस्तृत रूपमा प्रस्तुत गर्दछौं:</p>`,
             reasons: [
                 "सबै अधिशेष कम्पनीमा नै रहन्छ – पूँजी संचय र पुनः लगानीको सुनिश्चितता",
                 "सदस्यहरूको दायित्व सीमित – व्यक्तिगत जोखिम न्यूनीकरण",
@@ -330,13 +328,13 @@
             bgHeading: "Background and Need",
             bgText: `<p>The legal sector in Nepal has been based on traditional practice methods for decades. Although this has given rise to many successful individual practitioners and firms, it has also given rise to some structural weaknesses that have hindered quality service delivery, institutional sustainability, and professional development. Before establishing Nepal Law Group, the founding members identified the following seven enduring challenges facing the Nepali legal profession:</p>`,
             challenges: [
-                { icon: "fas fa-user", title: "Solo working style", desc: "Most lawyers work alone or in very small teams, making collaboration difficult for complex multi-disciplinary cases." },
-                { icon: "fas fa-microchip", title: "Limited Infrastructure", desc: "Lack of technology, legal libraries, databases and trained support staff impacts service quality." },
-                { icon: "fas fa-building", title: "Weak institutional branding", desc: "Firm identity is person-centric; when senior practitioners exit, the firm often dissolves." },
+                { icon: "fas fa-user", title: "Solo working style", desc: "Most lawyers work alone or in very small, informal teams. This makes it difficult to handle complex, multi-disciplinary cases." },
+                { icon: "fas fa-microchip", title: "Limited Infrastructure", desc: "Lack of financial capacity to afford high-end technology, legal libraries, databases, and trained support staff." },
+                { icon: "fas fa-building", title: "Weak institutional branding", desc: "Firm identity is based on personal reputation; when key individuals leave, the firm often dissolves." },
                 { icon: "fas fa-chart-line", title: "Lack of Shared Growth", desc: "Surplus distributed among partners prevents firm-level capital accumulation and long-term investment." },
-                { icon: "fas fa-balance-scale", title: "Regulatory complexity", desc: "No clear separation between admin and legal practice risks Bar Council action." },
-                { icon: "fas fa-coins", title: "Untapped revenue sources", desc: "Over-reliance on litigation fees; neglect of research, training, publications, legal tech services." },
-                { icon: "fas fa-exchange-alt", title: "Succession Problem", desc: "No institutional structure to transfer clients, knowledge, goodwill after senior practitioners retire." }
+                { icon: "fas fa-balance-scale", title: "Regulatory complexity", desc: "No clear separation between administrative and legal practice risks Bar Council action." },
+                { icon: "fas fa-coins", title: "Untapped revenue sources", desc: "Most firms rely solely on litigation fees; neglect of research, training, publications, legal tech services." },
+                { icon: "fas fa-exchange-alt", title: "Succession Problem", desc: "No institutional structure to transfer clients, knowledge, and goodwill after senior practitioners retire or pass away." }
             ],
             solutionHeading: "Solution: Nepal Law Group",
             solutionIntro: `<p>Nepal Law Group was established with the aim of solving all the challenges described above in an integrated and structured way. The detailed nature of our solution is as follows:</p>`,
@@ -357,7 +355,7 @@
                 { icon: "fas fa-chart-simple", title: "Continuous Improvement", desc: "Constantly refining services, systems, and processes." }
             ],
             whyHeading: "Why a non-profit company structure?",
-            whyText: `<p>The founding members of Nepal Law Group have chosen a non-profit company structure under Sections 166 and 167 of the Companies Act, 2006. This decision is highly strategic for long-term sustainability, transparency and collective interest.</p>`,
+            whyText: `<p>The founding members of Nepal Law Group have chosen a non-profit company structure under Sections 166 and 167 of the Companies Act, 2006. This decision is not only for legal compliance but also highly strategic for long-term sustainability, transparency and collective interest. Below we present in detail the main reasons for choosing this structure:</p>`,
             reasons: [
                 "All surplus remains in the company – ensuring capital accumulation and reinvestment",
                 "Limited liability of members – minimization of personal risk",
@@ -390,7 +388,7 @@
         container.innerHTML = solutions.map(sol => `
             <div class="card reason-card">
                 <div class="card-icon"><i class="fas fa-check-circle"></i></div>
-                <p>${sol}</p>
+                <p><strong>✓ ${sol}</strong></p>
             </div>
         `).join("");
     }
@@ -452,7 +450,7 @@
     document.getElementById("lang-np").addEventListener("click", () => { if(currentLang !== "np") updateUI("np"); });
     document.getElementById("lang-en").addEventListener("click", () => { if(currentLang !== "en") updateUI("en"); });
     
-    // Home link dummy (relative path - can be replaced with actual index)
+    // Home link - replace with actual homepage URL if needed
     document.getElementById("homeLink").addEventListener("click", (e) => {
         e.preventDefault();
         alert("Home page would be linked here. In production, set href to 'index.html'");
