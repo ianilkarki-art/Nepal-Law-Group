@@ -26,16 +26,31 @@
             padding: 0 24px;
         }
 
-        /* Header (same as previous pages) */
+        /* Header – fixed, with hide/show transition */
         .navbar {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(8px);
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease;
+            transform: translateY(0);
+        }
+
+        /* Hidden state */
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Spacer to prevent content jump */
+        .navbar-spacer {
+            transition: height 0.2s;
+            background: transparent;
         }
 
         .nav-container {
@@ -212,7 +227,7 @@
 </head>
 <body>
 
-<header class="navbar">
+<header class="navbar" id="mainHeader">
     <div class="container nav-container">
         <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
@@ -229,6 +244,9 @@
         </div>
     </div>
 </header>
+
+<!-- Spacer to preserve layout when header is fixed -->
+<div class="navbar-spacer" id="navbarSpacer"></div>
 
 <main>
     <div class="page-hero">
@@ -250,7 +268,7 @@
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
         <div class="footer-copyright">
-            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+            <p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p>
         </div>
     </div>
 </footer>
@@ -410,6 +428,52 @@
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
+
+    // ----- Scroll hide/show logic -----
+    const header = document.getElementById('mainHeader');
+    const spacer = document.getElementById('navbarSpacer');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeaderHeight() {
+        if (header) {
+            const height = header.offsetHeight;
+            spacer.style.height = height + 'px';
+        }
+    }
+
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        const scrollThreshold = 50;
+
+        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+            header.classList.add('hidden');
+        } else if (currentScrollY < lastScrollY) {
+            header.classList.remove('hidden');
+        }
+
+        if (currentScrollY === 0) {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    });
+
+    window.addEventListener('load', () => {
+        updateHeaderHeight();
+        header.classList.remove('hidden');
+    });
+    window.addEventListener('resize', () => {
+        updateHeaderHeight();
+    });
 
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
