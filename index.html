@@ -26,16 +26,31 @@
             padding: 0 24px;
         }
 
-        /* Header with centered bold brand and centered language toggle */
+        /* Header – fixed, with hide/show transition */
         .navbar {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(8px);
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease;
+            transform: translateY(0);
+        }
+
+        /* Hidden state */
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Spacer to prevent content jump */
+        .navbar-spacer {
+            transition: height 0.2s;
+            background: transparent;
         }
 
         .nav-container {
@@ -47,8 +62,8 @@
         }
 
         .brand {
-            font-size: 2.5rem;      /* larger */
-            font-weight: 900;        /* extra bold */
+            font-size: 2.5rem;
+            font-weight: 900;
             background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
             -webkit-background-clip: text;
             background-clip: text;
@@ -69,7 +84,7 @@
         .nav-links a {
             color: #2c3e50;
             text-decoration: none;
-            font-weight: 700;        /* bold navigation */
+            font-weight: 700;
             font-size: 0.95rem;
             transition: color 0.2s;
         }
@@ -78,7 +93,6 @@
             color: #0b2f5c;
         }
 
-        /* Language toggle – centered */
         .lang-wrapper {
             display: flex;
             justify-content: center;
@@ -111,7 +125,7 @@
             color: white;
         }
 
-        /* Main content – two columns */
+        /* Hero Section – two columns */
         .hero {
             padding: 4rem 0 3rem;
         }
@@ -245,7 +259,7 @@
 </head>
 <body>
 
-<header class="navbar">
+<header class="navbar" id="mainHeader">
     <div class="container nav-container">
         <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         <div class="nav-links">
@@ -263,15 +277,16 @@
     </div>
 </header>
 
+<!-- Spacer to preserve layout when header is fixed -->
+<div class="navbar-spacer" id="navbarSpacer"></div>
+
 <main>
     <div class="hero">
         <div class="container hero-grid">
-            <!-- Left column: welcome text -->
             <div class="hero-content">
                 <h1 id="heroTitle">Welcome to a New Initiative for Legal Excellence in Nepal</h1>
                 <p id="heroText">Nepal Law Group is a proposed profit non-distributing company to be established under the Companies Act, 2006 of Nepal. Though not yet incorporated, we are building an institution that will serve as a unique confluence of legal practice, research, academics, and publications – all driven by a membership‑based, public‑interest model.</p>
             </div>
-            <!-- Right column: founder callout -->
             <div class="callout-card">
                 <h2 id="ctaTitle">Call for Founder Members – Be a Founder</h2>
                 <p id="ctaText">We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.</p>
@@ -290,12 +305,13 @@
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
         <div class="footer-copyright">
-            <p id="footerText">© 2025 Nepal Law Group – All rights reserved.</p>
+            <p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <script>
+    // Bilingual content
     const content = {
         en: {
             brand: "Nepal Law Group",
@@ -349,6 +365,58 @@
         localStorage.setItem("nlgLang", lang);
     }
 
+    // ----- Scroll hide/show logic -----
+    const header = document.getElementById('mainHeader');
+    const spacer = document.getElementById('navbarSpacer');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeaderHeight() {
+        if (header) {
+            const height = header.offsetHeight;
+            spacer.style.height = height + 'px';
+        }
+    }
+
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        const scrollThreshold = 50; // only hide after scrolling down at least 50px
+
+        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+            // Scrolling down – hide header
+            header.classList.add('hidden');
+        } else if (currentScrollY < lastScrollY) {
+            // Scrolling up – show header
+            header.classList.remove('hidden');
+        }
+
+        // If at top, ensure header is visible
+        if (currentScrollY === 0) {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    });
+
+    // Adjust spacer on load and resize
+    window.addEventListener('load', () => {
+        updateHeaderHeight();
+        // Initial header state: visible
+        header.classList.remove('hidden');
+    });
+    window.addEventListener('resize', () => {
+        updateHeaderHeight();
+    });
+
+    // Language toggle
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
