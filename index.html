@@ -27,23 +27,29 @@
             padding: 0 24px;
         }
 
-        /* Header – fixed, bigger */
+        /* Enhanced Header */
         .site-header {
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(6px);
-            padding: 1.2rem 0;          /* increased from 1rem */
+            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(253,250,245,0.98));
+            backdrop-filter: blur(8px);
+            padding: 1.2rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-            border-bottom: 1px solid #e2e0d4;
-            transition: transform 0.25s ease;
+            border-bottom: 2px solid #d4c2a8;  /* gold‑toned */
+            transition: transform 0.25s ease, box-shadow 0.2s;
             transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
         }
 
         .site-header.hidden {
             transform: translateY(-100%);
+        }
+
+        /* Add slightly more shadow when visible (optional) */
+        .site-header:not(.hidden) {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .header-spacer {
@@ -62,37 +68,48 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 0.9rem;                /* slightly larger gap */
+            gap: 0.9rem;
         }
 
         .logo {
-            height: 48px;               /* increased from 40px */
+            height: 50px;          /* slightly larger */
             width: auto;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
         }
 
         .site-title {
-            font-size: 1.6rem;          /* increased from 1.4rem */
-            font-weight: 600;
-            letter-spacing: -0.2px;
+            font-family: 'Merriweather', serif;
+            font-size: 1.7rem;     /* slightly larger */
+            font-weight: 700;
+            letter-spacing: -0.3px;
             color: #1e4660;
             text-decoration: none;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+            transition: color 0.2s;
+        }
+
+        .site-title:hover {
+            color: #9e7b5c;
         }
 
         .nav-links {
             display: flex;
-            gap: 1.8rem;                /* slightly larger gap */
+            gap: 2rem;
         }
 
         .nav-links a {
             color: #3b5c7a;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;            /* slightly larger */
-            transition: color 0.2s;
+            font-size: 1rem;
+            transition: color 0.2s, border-bottom-color 0.2s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
         }
 
         .nav-links a:hover {
             color: #9e7b5c;
+            border-bottom-color: #c4aa82;
         }
 
         .lang-toggle {
@@ -100,28 +117,32 @@
             gap: 0.2rem;
             background: #f0ede5;
             padding: 0.2rem;
-            border-radius: 30px;
+            border-radius: 40px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02), 0 1px 1px rgba(0,0,0,0.02);
         }
 
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.8rem;          /* slightly larger */
+            font-size: 0.8rem;
             font-family: inherit;
-            padding: 0.35rem 1rem;       /* larger padding */
-            border-radius: 30px;
+            font-weight: 500;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
             cursor: pointer;
             color: #2c2c2c;
+            transition: all 0.2s;
         }
 
         .lang-btn.active {
             background: #1e4660;
             color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
 
-        /* Hero Section – extra top padding to compensate for taller header */
+        /* Hero Section – extra top padding for taller header */
         .hero {
-            padding: 8rem 0 3rem;       /* increased from 7rem */
+            padding: 8rem 0 3rem;
         }
 
         .hero h1 {
@@ -140,7 +161,7 @@
             margin-bottom: 2rem;
         }
 
-        /* Callout Box */
+        /* Callout Box (unchanged) */
         .callout {
             background: #f8f6f0;
             border-left: 6px solid #9e7b5c;
@@ -156,11 +177,6 @@
             margin-bottom: 1rem;
         }
 
-        .callout p {
-            margin-bottom: 1rem;
-            color: #3c3c3c;
-        }
-
         .btn {
             display: inline-block;
             background: #1e4660;
@@ -174,26 +190,6 @@
 
         .btn:hover {
             background: #9e7b5c;
-        }
-
-        /* Sections (for About, Membership etc.) */
-        .section {
-            margin: 3rem 0;
-        }
-
-        .section h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #1e4660;
-            margin-bottom: 1rem;
-            border-left: 4px solid #9e7b5c;
-            padding-left: 1rem;
-        }
-
-        .section p {
-            color: #3c3c3c;
-            margin-bottom: 1rem;
         }
 
         /* Footer */
@@ -217,6 +213,7 @@
             color: #6b7b8c;
             text-decoration: none;
             font-size: 0.8rem;
+            transition: color 0.2s;
         }
 
         .footer-policy a:hover {
@@ -225,11 +222,11 @@
 
         @media (max-width: 700px) {
             .hero h1 { font-size: 2rem; }
-            .hero { padding-top: 7rem; }  /* slightly less on mobile but still adjusted */
+            .hero { padding-top: 7rem; }
             .header-inner { flex-direction: column; align-items: center; }
-            .nav-links { gap: 1rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .site-title { font-size: 1.4rem; }
-            .logo { height: 40px; }
+            .logo { height: 42px; }
         }
     </style>
 </head>
@@ -338,30 +335,23 @@
         localStorage.setItem("nlgLang", lang);
     }
 
-    // Scroll hide/show logic
+    // Scroll hide/show logic (unchanged)
     const header = document.getElementById('mainHeader');
     const spacer = document.getElementById('headerSpacer');
     let lastScrollY = window.scrollY;
     let ticking = false;
 
     function updateSpacer() {
-        if (header) {
-            spacer.style.height = header.offsetHeight + 'px';
-        }
+        if (header) spacer.style.height = header.offsetHeight + 'px';
     }
 
     function onScroll() {
-        const currentScrollY = window.scrollY;
-        const scrollThreshold = 50;
-        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-            header.classList.add('hidden');
-        } else if (currentScrollY < lastScrollY) {
-            header.classList.remove('hidden');
-        }
-        if (currentScrollY === 0) {
-            header.classList.remove('hidden');
-        }
-        lastScrollY = currentScrollY;
+        const currentY = window.scrollY;
+        const threshold = 50;
+        if (currentY > lastScrollY && currentY > threshold) header.classList.add('hidden');
+        else if (currentY < lastScrollY) header.classList.remove('hidden');
+        if (currentY === 0) header.classList.remove('hidden');
+        lastScrollY = currentY;
         ticking = false;
     }
 
