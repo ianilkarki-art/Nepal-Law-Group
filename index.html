@@ -16,8 +16,8 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #d9d9d9;  /* light grey */
-            color: #545454;        /* dark grey for text */
+            background: #d9d9d9;
+            color: #545454;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
@@ -28,18 +28,18 @@
             padding: 0 24px;
         }
 
-        /* Header – fixed, larger banner */
+        /* Header – white background, gold text */
         .navbar {
-            background: #545454;   /* dark grey */
+            background: #ffffff;
             backdrop-filter: blur(8px);
-            padding: 1.2rem 0;     /* bigger padding */
+            padding: 1.2rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 3px solid #b4882a;  /* gold accent */
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #b4882a;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
@@ -53,7 +53,6 @@
             background: transparent;
         }
 
-        /* Horizontal nav container */
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -62,7 +61,6 @@
             gap: 1rem;
         }
 
-        /* Left side: logo + brand */
         .brand-wrapper {
             display: flex;
             align-items: center;
@@ -70,7 +68,7 @@
         }
 
         .logo {
-            height: 48px;          /* slightly larger for bigger header */
+            height: 48px;
             width: auto;
             display: block;
         }
@@ -78,13 +76,12 @@
         .brand {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #ffffff;        /* white text for contrast on dark header */
+            color: #b4882a;
             text-decoration: none;
             letter-spacing: -0.3px;
             white-space: nowrap;
         }
 
-        /* Right side: nav links + lang toggle */
         .nav-right {
             display: flex;
             align-items: center;
@@ -100,7 +97,7 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: #b4882a;
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
@@ -108,13 +105,13 @@
         }
 
         .nav-links a:hover {
-            color: #b4882a;       /* gold on hover */
+            color: #545454;
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: rgba(255, 255, 255, 0.2);
+            background: #e9ecef;
             padding: 0.2rem;
             border-radius: 40px;
         }
@@ -129,17 +126,17 @@
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #ffffff;
+            color: #545454;
         }
 
         .lang-btn.active {
             background: #b4882a;
-            color: #545454;
+            color: #ffffff;
         }
 
         /* Hero section – two columns */
         .hero {
-            padding: 5rem 0 3rem;  /* extra top padding because header is larger */
+            padding: 6rem 0 3rem;  /* extra top padding because header is larger */
         }
 
         .hero-grid {
@@ -285,12 +282,10 @@
 
 <header class="navbar" id="mainHeader">
     <div class="container nav-container">
-        <!-- Left side: logo + brand name -->
         <div class="brand-wrapper">
             <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo" id="logoImg">
             <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         </div>
-        <!-- Right side: navigation links + language toggle -->
         <div class="nav-right">
             <div class="nav-links">
                 <a href="index.html" id="navHome">Home</a>
