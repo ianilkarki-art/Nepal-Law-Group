@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepal Law Group</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,55 +14,34 @@
         }
 
         body {
-            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-            background: #faf8f2;
-            color: #2a2b26;
-            line-height: 1.55;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fefcf5;
+            color: #2c2c2c;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
-        /* subtle two‑tone background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 30%, rgba(210, 190, 160, 0.08) 0%, rgba(250, 248, 242, 0) 70%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
         .container {
-            max-width: 780px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* header – floating, minimal */
-        .navbar {
-            background: rgba(250, 248, 242, 0.96);
+        /* Header */
+        .site-header {
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(6px);
-            padding: 0.8rem 0;
+            padding: 1rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-            transition: transform 0.25s ease;
+            border-bottom: 1px solid #e2e0d4;
+            transition: transform 0.2s ease;
         }
 
-        .navbar.hidden {
-            transform: translateY(-100%);
-        }
-
-        .navbar-spacer {
-            height: 70px;
-        }
-
-        .nav-container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -69,190 +49,216 @@
             gap: 1rem;
         }
 
-        .brand-wrapper {
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.75rem;
         }
 
         .logo {
-            height: 36px;
+            height: 40px;
             width: auto;
-            opacity: 0.85;
         }
 
-        .brand {
-            font-size: 1.3rem;
-            font-weight: 500;
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: 600;
             letter-spacing: -0.2px;
-            color: #4a3b28;
+            color: #1e4660;
             text-decoration: none;
-            border-bottom: none;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .nav-links a {
-            font-size: 0.9rem;
-            color: #5c4b34;
+            color: #3b5c7a;
             text-decoration: none;
-            font-weight: 450;
+            font-weight: 500;
+            font-size: 0.9rem;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #8b6c45;
+            color: #9e7b5c;
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: #e8e2d8;
-            padding: 0.15rem;
+            background: #f0ede5;
+            padding: 0.2rem;
             border-radius: 30px;
         }
 
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.7rem;
-            padding: 0.25rem 0.8rem;
+            font-size: 0.75rem;
+            font-family: inherit;
+            padding: 0.3rem 0.9rem;
             border-radius: 30px;
             cursor: pointer;
-            font-family: inherit;
-            color: #4a3b28;
+            color: #2c2c2c;
         }
 
         .lang-btn.active {
-            background: #8b6c45;
+            background: #1e4660;
             color: white;
         }
 
-        /* main content – scholarly narrow column */
-        .content {
-            margin: 2rem 0 4rem;
+        /* Hero Section */
+        .hero {
+            padding: 7rem 0 3rem;
         }
 
-        h1 {
+        .hero h1 {
+            font-family: 'Merriweather', serif;
             font-size: 2.8rem;
-            font-weight: 500;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            color: #3a2c1c;
+            font-weight: 700;
+            color: #1e4660;
             margin-bottom: 1.2rem;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #5c4b34;
-            margin: 2rem 0 0.75rem;
-            padding-bottom: 0.3rem;
-            border-bottom: 1px solid #e2d8cc;
+        .hero p {
+            font-size: 1.1rem;
+            color: #4a5c6e;
+            margin-bottom: 2rem;
         }
 
-        p {
+        /* Callout Box */
+        .callout {
+            background: #f8f6f0;
+            border-left: 6px solid #9e7b5c;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .callout h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e4660;
             margin-bottom: 1rem;
-            color: #3e3a33;
         }
 
-        a {
-            color: #7a6233;
+        .callout p {
+            margin-bottom: 1rem;
+            color: #3c3c3c;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1e4660;
+            color: white;
+            padding: 0.6rem 1.2rem;
             text-decoration: none;
-            border-bottom: 1px dotted #c8b998;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s;
         }
 
-        a:hover {
-            border-bottom-style: solid;
-            color: #4a3b28;
+        .btn:hover {
+            background: #9e7b5c;
         }
 
-        /* footer – minimal */
-        .footer {
-            background: #f3efe8;
-            padding: 1.5rem 0;
+        /* Sections */
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e4660;
+            margin-bottom: 1rem;
+            border-left: 4px solid #9e7b5c;
+            padding-left: 1rem;
+        }
+
+        .section p {
+            color: #3c3c3c;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #f8f6f0;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #e2e0d4;
             text-align: center;
-            font-size: 0.75rem;
-            color: #8b7b68;
-            border-top: 1px solid #e2d8cc;
         }
 
         .footer-policy {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 0.8rem;
+            gap: 2rem;
+            margin-bottom: 1rem;
             flex-wrap: wrap;
         }
 
         .footer-policy a {
-            color: #8b7b68;
-            border-bottom: none;
+            color: #6b7b8c;
+            text-decoration: none;
+            font-size: 0.8rem;
         }
 
         .footer-policy a:hover {
-            color: #4a3b28;
+            color: #1e4660;
         }
 
         @media (max-width: 700px) {
-            .navbar-spacer { height: 100px; }
-            .nav-container { flex-direction: column; align-items: center; gap: 0.6rem; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.3rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero { padding-top: 6rem; }
+            .header-inner { flex-direction: column; align-items: center; }
+            .nav-links { gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
-<header class="navbar" id="mainHeader">
-    <div class="container nav-container">
-        <div class="brand-wrapper">
-            <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo">
-            <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <img src="/images/logo.png" alt="Logo" class="logo">
+            <a href="index.html" class="site-title" id="brandName">Nepal Law Group</a>
         </div>
-        <div class="nav-right">
-            <div class="nav-links">
-                <a href="index.html" id="navHome">Home</a>
-                <a href="about.html" id="navAbout">About</a>
-                <a href="membership.html" id="navMembership">Membership</a>
-                <a href="contact.html" id="navContact">Contact</a>
-            </div>
-            <div class="lang-toggle">
-                <button class="lang-btn" id="langNp">नेपाली</button>
-                <button class="lang-btn" id="langEn">English</button>
-            </div>
+        <div class="nav-links">
+            <a href="index.html" id="navHome">Home</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="membership.html" id="navMembership">Membership</a>
+            <a href="contact.html" id="navContact">Contact</a>
+        </div>
+        <div class="lang-toggle">
+            <button class="lang-btn" id="langNp">नेपाली</button>
+            <button class="lang-btn" id="langEn">English</button>
         </div>
     </div>
 </header>
 
-<div class="navbar-spacer"></div>
+<main>
+    <div class="container hero">
+        <h1 id="heroTitle">A New Institutional Paradigm for Legal Excellence in Nepal</h1>
+        <p id="heroText">Nepal Law Group is a proposed profit non-distributing company, to be incorporated under the Companies Act, 2006 of Nepal. Prior to its formal establishment, the Group is being constructed as an institutional platform that will seamlessly integrate legal practice, jurisprudential research, higher legal education, and scholarly publications – all governed by a membership‑based, public‑interest model.</p>
+    </div>
 
-<main class="container content">
-    <h1 id="heroTitle">Welcome to a New Initiative for Legal Excellence in Nepal</h1>
-    <p id="heroText">Nepal Law Group is a proposed profit non-distributing company to be established under the Companies Act, 2006 of Nepal. Though not yet incorporated, we are building an institution that will serve as a unique confluence of legal practice, research, academics, and publications – all driven by a membership‑based, public‑interest model.</p>
-
-    <h2 id="ctaTitle">Call for Founder Members – Be a Founder</h2>
-    <p id="ctaText">We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.</p>
-    <p id="ctaExtra">If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.</p>
-    <p><a href="membership.html" id="ctaBtn">Learn more →</a></p>
-
-    <h2 id="visionTitle">Our Vision</h2>
-    <p id="visionText">To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.</p>
-
-    <h2 id="missionTitle">Our Mission</h2>
-    <p id="missionText">To establish a self‑sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.</p>
+    <div class="container">
+        <div class="callout">
+            <h2 id="ctaTitle">Call for Founder Members – Be a Founder</h2>
+            <p id="ctaText">We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.</p>
+            <p id="ctaExtra">If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.</p>
+            <a href="membership.html" class="btn" id="ctaBtn">Learn more →</a>
+        </div>
+    </div>
 </main>
 
-<footer class="footer">
+<footer class="site-footer">
     <div class="container">
         <div class="footer-policy">
             <a href="terms.html" id="termsLink">Terms of Use</a>
@@ -264,37 +270,29 @@
 </footer>
 
 <script>
-    // Bilingual content (exact same text as before)
+    // Bilingual content as per your provided drafts
     const content = {
         en: {
             brand: "Nepal Law Group",
             navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            heroTitle: "Welcome to a New Initiative for Legal Excellence in Nepal",
-            heroText: "Nepal Law Group is a proposed profit non-distributing company to be established under the Companies Act, 2006 of Nepal. Though not yet incorporated, we are building an institution that will serve as a unique confluence of legal practice, research, academics, and publications – all driven by a membership‑based, public‑interest model.",
+            heroTitle: "A New Institutional Paradigm for Legal Excellence in Nepal",
+            heroText: "Nepal Law Group is a proposed profit non-distributing company, to be incorporated under the Companies Act, 2006 of Nepal. Prior to its formal establishment, the Group is being constructed as an institutional platform that will seamlessly integrate legal practice, jurisprudential research, higher legal education, and scholarly publications – all governed by a membership‑based, public‑interest model.",
             ctaTitle: "Call for Founder Members – Be a Founder",
             ctaText: "We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.",
             ctaExtra: "If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.",
             ctaBtn: "Learn more →",
-            visionTitle: "Our Vision",
-            visionText: "To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.",
-            missionTitle: "Our Mission",
-            missionText: "To establish a self‑sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.",
             footerText: "© 2026 Nepal Law Group – All rights reserved.",
             termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
             brand: "नेपाल ल ग्रुप",
             navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            heroTitle: "नेपालमा कानूनी उत्कृष्टताका लागि एउटा नयाँ अवधारणामा स्वागत छ",
-            heroText: "नेपाल ल ग्रुप कम्पनी ऐन, २०६३ अन्तर्गत स्थापित हुने मुनाफा वितरण नगर्ने कम्पनी हो। हालसम्म कम्पनी दर्ता भएको छैन। तर हामी एउटा यस्तो संस्था निर्माण गर्दै छौँ जहाँ कानूनी अभ्यास, अनुसन्धान, शिक्षा र प्रकाशन एकै छानामुनी रहनेछन् र यो सबै सदस्यता-आधारित, सार्वजनिक हितको अवधारणमामा सञ्चालित हुनेछ।",
+            heroTitle: "नेपालमा कानूनी उत्कृष्टताका लागि एक नयाँ संस्थागत प्रतिमान",
+            heroText: "नेपाल ल ग्रुप कम्पनी ऐन, २०६३ अन्तर्गत स्थापित हुने प्रस्तावित मुनाफा वितरण नगर्ने कम्पनी हो। औपचारिक स्थापनाभन्दा पूर्व नै समूहलाई एक संस्थागत मञ्चको रूपमा निर्माण गरिँदैछ, जहाँ कानूनी अभ्यास, न्यायशास्त्रीय अनुसन्धान, उच्च कानूनी शिक्षा र विद्वत्तापूर्ण प्रकाशनहरू एकीकृत रूपमा सञ्चालित हुनेछन् – यी सबै सदस्यता-आधारित, सार्वजनिक हितको मोडेलमा आधारित।",
             ctaTitle: "संस्थापक सदस्यको आह्वान – संस्थापक बन्नुहोस्",
             ctaText: "कम्पनी अहिलेसम्म दर्ता भएको छैन। हामी अहिले कानूनी क्षेत्रका योग्य व्यक्ति तथा व्यवसायीहरूलाई संस्थापक सदस्य का रूपमा सामेल हुन आमन्त्रण गर्दछौँ। संस्थापक सदस्यहरूले कम्पनीको सुशासन, नीति तथा रणनीतिक दिशा निर्धारण गर्ने अवसर पाउनेछन्।",
             ctaExtra: "यदि तपाईं स्वतन्त्र, नैतिक र ज्ञान–संचालित कानूनी अभ्यासमा विश्वास राख्नुहुन्छ भने, आजै संस्थापक सदस्य बन्नुहोस्।",
             ctaBtn: "थप जान्नुहोस् →",
-            visionTitle: "हाम्रो सोच",
-            visionText: "कानूनको शासन, कानूनी विद्वत्ता र व्यावसायिक इमानदारीलाई अगाडि बढाउने राष्ट्रियस्तरको सम्मानित संस्था बन्ने – जहाँ प्रत्येक सदस्यको योगदान र लाभ सुनिश्चित हुन्छ।",
-            missionTitle: "हाम्रो लक्ष्य",
-            missionText: "एक आत्मनिर्भर कानूनी समुदाय स्थापना गर्ने, जहाँ अभ्यासरत अधिवक्ता, अनुसन्धानकर्ता, शिक्षाविद् र प्रकाशकहरूले सहकार्य गर्छन्। कम्पनीले कुनै मुनाफा वितरण गर्दैन; यसको सम्पूर्ण आम्दानी (केवल सदस्यता शुल्कबाट) कानूनी अनुसन्धान, शैक्षिक कार्यक्रम, प्रकाशन र संस्थागत विकासमा पुनः लगानी गरिनेछ।",
             footerText: "© २०८३ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
             termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
@@ -315,10 +313,6 @@
         document.getElementById("ctaText").innerText = d.ctaText;
         document.getElementById("ctaExtra").innerText = d.ctaExtra;
         document.getElementById("ctaBtn").innerText = d.ctaBtn;
-        document.getElementById("visionTitle").innerText = d.visionTitle;
-        document.getElementById("visionText").innerText = d.visionText;
-        document.getElementById("missionTitle").innerText = d.missionTitle;
-        document.getElementById("missionText").innerText = d.missionText;
         document.getElementById("footerText").innerText = d.footerText;
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
@@ -329,38 +323,6 @@
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
-
-    // Scroll‑hide logic
-    const header = document.getElementById('mainHeader');
-    const spacer = document.querySelector('.navbar-spacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateSpacer() {
-        if (header) spacer.style.height = header.offsetHeight + 'px';
-    }
-
-    function onScroll() {
-        const currentY = window.scrollY;
-        const threshold = 50;
-        if (currentY > lastScrollY && currentY > threshold) header.classList.add('hidden');
-        else if (currentY < lastScrollY) header.classList.remove('hidden');
-        if (currentY === 0) header.classList.remove('hidden');
-        lastScrollY = currentY;
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(onScroll);
-            ticking = true;
-        }
-    });
-    window.addEventListener('load', () => {
-        updateSpacer();
-        header.classList.remove('hidden');
-    });
-    window.addEventListener('resize', updateSpacer);
 
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
