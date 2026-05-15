@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
@@ -15,177 +15,152 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #fefcf5;
-            color: #2c2c2c;
-            line-height: 1.6;
+            background: #d9d9d9;  /* light grey background */
+            color: #545454;        /* dark grey text */
+            line-height: 1.5;
             scroll-behavior: smooth;
         }
 
+        /* Full‑screen hero section */
+        .fullscreen-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: #d9d9d9;
+            position: relative;
+        }
+
+        /* Large centered content */
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            margin-bottom: 1.5rem;
+        }
+        .hero-logo img {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .hero-brand {
+            font-family: 'Merriweather', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #545454;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .hero-nav a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #545454;
+            text-decoration: none;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .hero-nav a:hover {
+            color: #b4882a;
+            border-bottom-color: #b4882a;
+        }
+
+        .hero-lang {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            background: rgba(84,84,84,0.1);
+            padding: 0.3rem;
+            border-radius: 60px;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #545454;
+        }
+        .lang-btn.active {
+            background: #b4882a;
+            color: white;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: #545454;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Main content – normal scrolling */
+        .main-content {
+            background: #ffffff;
+            padding: 3rem 0;
+            border-radius: 32px 32px 0 0;
+            margin-top: 0;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+        }
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Enhanced Header – centered vertical stack */
-        .site-header {
-            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(253,250,245,0.98));
-            backdrop-filter: blur(8px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            border-bottom: 2px solid #d4c2a8;
-            transition: transform 0.25s ease, box-shadow 0.2s;
-            transform: translateY(0);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-        }
-
-        .site-header.hidden {
-            transform: translateY(-100%);
-        }
-
-        .site-header:not(.hidden) {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .header-spacer {
-            transition: height 0.2s;
-            background: transparent;
-        }
-
-        /* Stack everything vertically, center */
-        .header-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        /* Logo – bigger, centered */
-        .logo-area {
-            text-align: center;
-        }
-        .logo {
-            height: 70px;          /* increased size */
-            width: auto;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
-        }
-
-        /* Brand name – larger, centered */
-        .site-title {
-            font-family: 'Merriweather', serif;
-            font-size: 2rem;       /* larger */
-            font-weight: 700;
-            letter-spacing: -0.3px;
-            color: #1e4660;
-            text-decoration: none;
-            text-align: center;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-            transition: color 0.2s;
-            display: block;
-        }
-
-        .site-title:hover {
-            color: #9e7b5c;
-        }
-
-        /* Navigation – centered */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 0.25rem 0;
-        }
-
-        .nav-links a {
-            color: #3b5c7a;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            transition: color 0.2s, border-bottom-color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #9e7b5c;
-            border-bottom-color: #c4aa82;
-        }
-
-        /* Language toggle – centered, English first, then Nepali */
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.2rem;
-            background: #f0ede5;
-            padding: 0.2rem;
-            border-radius: 40px;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02), 0 1px 1px rgba(0,0,0,0.02);
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            font-size: 0.8rem;
-            font-family: inherit;
-            font-weight: 500;
-            padding: 0.35rem 1rem;
-            border-radius: 40px;
-            cursor: pointer;
-            color: #2c2c2c;
-            transition: all 0.2s;
-        }
-
-        .lang-btn.active {
-            background: #1e4660;
-            color: white;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-
-        /* Hero Section – extra top padding for taller header */
-        .hero {
-            padding: 10rem 0 3rem;  /* increased to accommodate taller header */
-        }
-
-        .hero h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #1e4660;
-            margin-bottom: 1.2rem;
-            line-height: 1.2;
-            letter-spacing: -0.3px;
-        }
-
-        .hero p {
+        .intro-text {
             font-size: 1.1rem;
-            color: #4a5c6e;
+            color: #3c3c3c;
             margin-bottom: 2rem;
         }
 
-        /* Callout Box */
         .callout {
             background: #f8f6f0;
-            border-left: 6px solid #9e7b5c;
+            border-left: 6px solid #b4882a;
             padding: 2rem;
             margin: 2rem 0;
         }
-
         .callout h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.6rem;
             font-weight: 600;
-            color: #1e4660;
+            color: #545454;
             margin-bottom: 1rem;
         }
-
         .btn {
             display: inline-block;
-            background: #1e4660;
+            background: #b4882a;
             color: white;
             padding: 0.6rem 1.2rem;
             text-decoration: none;
@@ -193,20 +168,34 @@
             font-weight: 500;
             transition: background 0.2s;
         }
-
         .btn:hover {
-            background: #9e7b5c;
+            background: #9e6e20;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+        .section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #545454;
+            border-left: 4px solid #b4882a;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            color: #3c3c3c;
+            margin-bottom: 1rem;
         }
 
         /* Footer */
-        .site-footer {
+        .footer {
             background: #f8f6f0;
             padding: 2rem 0;
-            margin-top: 4rem;
             border-top: 1px solid #e2e0d4;
             text-align: center;
         }
-
         .footer-policy {
             display: flex;
             justify-content: center;
@@ -214,67 +203,79 @@
             margin-bottom: 1rem;
             flex-wrap: wrap;
         }
-
         .footer-policy a {
             color: #6b7b8c;
             text-decoration: none;
             font-size: 0.8rem;
-            transition: color 0.2s;
         }
-
         .footer-policy a:hover {
-            color: #1e4660;
+            color: #545454;
         }
 
         @media (max-width: 700px) {
-            .hero h1 { font-size: 2rem; }
-            .hero { padding-top: 9rem; }
-            .logo { height: 55px; }
-            .site-title { font-size: 1.6rem; }
-            .nav-links { gap: 1rem; }
+            .hero-brand { font-size: 2rem; }
+            .hero-logo img { height: 80px; }
+            .hero-nav a { font-size: 0.9rem; }
+            .hero-nav { gap: 1rem; }
+            .lang-btn { font-size: 0.8rem; padding: 0.3rem 0.9rem; }
         }
     </style>
 </head>
 <body>
 
-<header class="site-header" id="mainHeader">
-    <div class="container header-inner">
-        <div class="logo-area">
-            <img src="/images/logo.png" alt="Logo" class="logo">
+<!-- Full‑screen hero section -->
+<div class="fullscreen-hero">
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="/images/logo.png" alt="Nepal Law Group Logo">
         </div>
-        <a href="index.html" class="site-title" id="brandName">Nepal Law Group</a>
-        <div class="nav-links">
+        <div class="hero-brand" id="heroBrand">Nepal Law Group</div>
+        <div class="hero-nav">
             <a href="index.html" id="navHome">Home</a>
             <a href="about.html" id="navAbout">About</a>
             <a href="membership.html" id="navMembership">Membership</a>
             <a href="contact.html" id="navContact">Contact</a>
         </div>
-        <div class="lang-toggle">
-            <button class="lang-btn" id="langEn">English</button>
+        <div class="hero-lang">
             <button class="lang-btn" id="langNp">नेपाली</button>
+            <button class="lang-btn" id="langEn">English</button>
         </div>
     </div>
-</header>
-
-<div class="header-spacer" id="headerSpacer"></div>
-
-<main>
-    <div class="container hero">
-        <h1 id="heroTitle">A New Institutional Paradigm for Legal Excellence in Nepal</h1>
-        <p id="heroText">Nepal Law Group is a proposed profit non-distributing company, to be incorporated under the Companies Act, 2006 of Nepal. Prior to its formal establishment, the Group is being constructed as an institutional platform that will seamlessly integrate legal practice, jurisprudential research, higher legal education, and scholarly publications – all governed by a membership‑based, public‑interest model.</p>
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#545454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
     </div>
+</div>
 
+<!-- Main scrollable content -->
+<div class="main-content">
     <div class="container">
+        <div class="intro-text" id="heroText">
+            Nepal Law Group is a proposed profit non-distributing company, to be incorporated under the Companies Act, 2006 of Nepal. Prior to its formal establishment, the Group is being constructed as an institutional platform that will seamlessly integrate legal practice, jurisprudential research, higher legal education, and scholarly publications – all governed by a membership‑based, public‑interest model.
+        </div>
+
         <div class="callout">
             <h2 id="ctaTitle">Call for Founder Members – Be a Founder</h2>
             <p id="ctaText">We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.</p>
             <p id="ctaExtra">If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.</p>
             <a href="membership.html" class="btn" id="ctaBtn">Learn more →</a>
         </div>
-    </div>
-</main>
 
-<footer class="site-footer">
+        <div class="section">
+            <h2 id="visionTitle">Our Vision</h2>
+            <p id="visionText">To evolve into a nationally esteemed institutional platform that advances the rule of law, legal scholarship, and professional integrity – ensuring that every member both contributes to and benefits from a culture of excellence.</p>
+        </div>
+
+        <div class="section">
+            <h2 id="missionTitle">Our Mission</h2>
+            <p id="missionText">To create a self‑sustaining legal community wherein practising advocates, legal researchers, academics, and publishers collaborate synergistically. The Group shall distribute no profit; its entire revenue (derived exclusively from membership fees) will be reinvested into legal research, academic programmes, publications, and institutional development.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
     <div class="container">
         <div class="footer-policy">
             <a href="terms.html" id="termsLink">Terms of Use</a>
@@ -286,29 +287,35 @@
 </footer>
 
 <script>
-    // Bilingual content (unchanged)
+    // Bilingual content (English and Nepali)
     const content = {
         en: {
-            brand: "Nepal Law Group",
+            heroBrand: "Nepal Law Group",
             navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            heroTitle: "A New Institutional Paradigm for Legal Excellence in Nepal",
             heroText: "Nepal Law Group is a proposed profit non-distributing company, to be incorporated under the Companies Act, 2006 of Nepal. Prior to its formal establishment, the Group is being constructed as an institutional platform that will seamlessly integrate legal practice, jurisprudential research, higher legal education, and scholarly publications – all governed by a membership‑based, public‑interest model.",
             ctaTitle: "Call for Founder Members – Be a Founder",
             ctaText: "We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.",
             ctaExtra: "If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.",
             ctaBtn: "Learn more →",
+            visionTitle: "Our Vision",
+            visionText: "To evolve into a nationally esteemed institutional platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member both contributes to and benefits from a culture of excellence.",
+            missionTitle: "Our Mission",
+            missionText: "To create a self‑sustaining legal community wherein practising advocates, legal researchers, academics, and publishers collaborate synergistically. The Group shall distribute no profit; its entire revenue (derived exclusively from membership fees) will be reinvested into legal research, academic programmes, publications, and institutional development.",
             footerText: "© 2026 Nepal Law Group – All rights reserved.",
             termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            brand: "नेपाल ल ग्रुप",
+            heroBrand: "नेपाल ल ग्रुप",
             navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            heroTitle: "नेपालमा कानूनी उत्कृष्टताका लागि एक नयाँ संस्थागत प्रतिमान",
             heroText: "नेपाल ल ग्रुप कम्पनी ऐन, २०६३ अन्तर्गत स्थापित हुने प्रस्तावित मुनाफा वितरण नगर्ने कम्पनी हो। औपचारिक स्थापनाभन्दा पूर्व नै समूहलाई एक संस्थागत मञ्चको रूपमा निर्माण गरिँदैछ, जहाँ कानूनी अभ्यास, न्यायशास्त्रीय अनुसन्धान, उच्च कानूनी शिक्षा र विद्वत्तापूर्ण प्रकाशनहरू एकीकृत रूपमा सञ्चालित हुनेछन् – यी सबै सदस्यता-आधारित, सार्वजनिक हितको मोडेलमा आधारित।",
             ctaTitle: "संस्थापक सदस्यको आह्वान – संस्थापक बन्नुहोस्",
             ctaText: "कम्पनी अहिलेसम्म दर्ता भएको छैन। हामी अहिले कानूनी क्षेत्रका योग्य व्यक्ति तथा व्यवसायीहरूलाई संस्थापक सदस्य का रूपमा सामेल हुन आमन्त्रण गर्दछौँ। संस्थापक सदस्यहरूले कम्पनीको सुशासन, नीति तथा रणनीतिक दिशा निर्धारण गर्ने अवसर पाउनेछन्।",
             ctaExtra: "यदि तपाईं स्वतन्त्र, नैतिक र ज्ञान–संचालित कानूनी अभ्यासमा विश्वास राख्नुहुन्छ भने, आजै संस्थापक सदस्य बन्नुहोस्।",
             ctaBtn: "थप जान्नुहोस् →",
+            visionTitle: "हाम्रो सोच",
+            visionText: "राष्ट्रियस्तरमा सम्मानित संस्थाको रूपमा विकसित हुने, जसले कानूनको शासन, कानूनी विद्वत्ता र व्यावसायिक इमानदारीलाई अगाडि बढाउँछ – र जहाँ प्रत्येक सदस्यको योगदान र लाभ उत्कृष्टताको संस्कृतिभित्र सुनिश्चित हुन्छ।",
+            missionTitle: "हाम्रो लक्ष्य",
+            missionText: "एक आत्मनिर्भर कानूनी समुदायको स्थापना गर्ने, जहाँ अभ्यासरत अधिवक्ता, कानूनी अनुसन्धानकर्ता, शिक्षाविद् र प्रकाशकहरूले सहकार्य गर्छन्। समूहले कुनै मुनाफा वितरण गर्दैन; यसको सम्पूर्ण आम्दानी (केवल सदस्यता शुल्कबाट) कानूनी अनुसन्धान, शैक्षिक कार्यक्रम, प्रकाशन र संस्थागत विकासमा पुनः लगानी गरिनेछ।",
             footerText: "© २०८३ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
             termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
@@ -318,70 +325,40 @@
 
     function updateUI(lang) {
         const d = content[lang];
-        document.getElementById("brandName").innerText = d.brand;
+        document.getElementById("heroBrand").innerText = d.heroBrand;
         document.getElementById("navHome").innerText = d.navHome;
         document.getElementById("navAbout").innerText = d.navAbout;
         document.getElementById("navMembership").innerText = d.navMembership;
         document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("heroTitle").innerText = d.heroTitle;
         document.getElementById("heroText").innerText = d.heroText;
         document.getElementById("ctaTitle").innerText = d.ctaTitle;
         document.getElementById("ctaText").innerText = d.ctaText;
         document.getElementById("ctaExtra").innerText = d.ctaExtra;
         document.getElementById("ctaBtn").innerText = d.ctaBtn;
+        document.getElementById("visionTitle").innerText = d.visionTitle;
+        document.getElementById("visionText").innerText = d.visionText;
+        document.getElementById("missionTitle").innerText = d.missionTitle;
+        document.getElementById("missionText").innerText = d.missionText;
         document.getElementById("footerText").innerText = d.footerText;
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
 
-        // Language toggle order: English is first button, Nepali second
-        const enBtn = document.getElementById("langEn");
+        // Language toggle buttons (Nepali first, English second – as in the HTML order)
         const npBtn = document.getElementById("langNp");
-        if (lang === "en") {
-            enBtn.classList.add("active");
-            npBtn.classList.remove("active");
-        } else {
+        const enBtn = document.getElementById("langEn");
+        if (lang === "np") {
             npBtn.classList.add("active");
             enBtn.classList.remove("active");
+        } else {
+            enBtn.classList.add("active");
+            npBtn.classList.remove("active");
         }
         localStorage.setItem("nlgLang", lang);
     }
 
-    // Scroll hide/show logic
-    const header = document.getElementById('mainHeader');
-    const spacer = document.getElementById('headerSpacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateSpacer() {
-        if (header) spacer.style.height = header.offsetHeight + 'px';
-    }
-
-    function onScroll() {
-        const currentY = window.scrollY;
-        const threshold = 50;
-        if (currentY > lastScrollY && currentY > threshold) header.classList.add('hidden');
-        else if (currentY < lastScrollY) header.classList.remove('hidden');
-        if (currentY === 0) header.classList.remove('hidden');
-        lastScrollY = currentY;
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(onScroll);
-            ticking = true;
-        }
-    });
-    window.addEventListener('load', () => {
-        updateSpacer();
-        header.classList.remove('hidden');
-    });
-    window.addEventListener('resize', updateSpacer);
-
-    // Language button listeners
-    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
+    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 </script>
 </body>
