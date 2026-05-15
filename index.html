@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group – Home | नेपाल ल ग्रुप</title>
     <meta name="description" content="Nepal Law Group – a proposed profit non-distributing company for legal excellence in Nepal.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
     <style>
         * {
             margin: 0;
@@ -42,12 +44,10 @@
             transform: translateY(0);
         }
 
-        /* Hidden state */
         .navbar.hidden {
             transform: translateY(-100%);
         }
 
-        /* Spacer to prevent content jump */
         .navbar-spacer {
             transition: height 0.2s;
             background: transparent;
@@ -125,7 +125,7 @@
             color: white;
         }
 
-        /* Hero Section – two columns */
+        /* Hero section – two columns */
         .hero {
             padding: 4rem 0 3rem;
         }
@@ -365,7 +365,7 @@
         localStorage.setItem("nlgLang", lang);
     }
 
-    // ----- Scroll hide/show logic -----
+    // Scroll hide/show logic
     const header = document.getElementById('mainHeader');
     const spacer = document.getElementById('navbarSpacer');
     let lastScrollY = window.scrollY;
@@ -380,17 +380,14 @@
 
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        const scrollThreshold = 50; // only hide after scrolling down at least 50px
+        const scrollThreshold = 50;
 
         if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-            // Scrolling down – hide header
             header.classList.add('hidden');
         } else if (currentScrollY < lastScrollY) {
-            // Scrolling up – show header
             header.classList.remove('hidden');
         }
 
-        // If at top, ensure header is visible
         if (currentScrollY === 0) {
             header.classList.remove('hidden');
         }
@@ -406,17 +403,14 @@
         }
     });
 
-    // Adjust spacer on load and resize
     window.addEventListener('load', () => {
         updateHeaderHeight();
-        // Initial header state: visible
         header.classList.remove('hidden');
     });
     window.addEventListener('resize', () => {
         updateHeaderHeight();
     });
 
-    // Language toggle
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
