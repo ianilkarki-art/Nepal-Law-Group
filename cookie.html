@@ -3,175 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Nepal Law Group</title>
-    <meta name="description" content="Cookie Policy for Nepal Law Group website.">
+    <title>Nepal Law Group – Cookie Policy</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: #ffffff;
-            color: #1a2a3f;
+            color: #545454;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-
-        /* Header */
-        .navbar {
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(8px);
+        .site-header {
+            background: #ffffff;
             padding: 1rem 0;
-            position: fixed;
+            border-bottom: 1px solid #d6a12f;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            transform: translateY(0);
+            z-index: 100;
         }
-        .navbar.hidden { transform: translateY(-100%); }
-        .navbar-spacer { transition: height 0.2s; }
-        .nav-container {
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
         }
-        .brand-wrapper { display: flex; align-items: center; gap: 0.75rem; }
-        .logo { height: 42px; width: auto; display: block; }
-        .brand { font-size: 1.5rem; font-weight: 700; color: #0a2b3e; text-decoration: none; letter-spacing: -0.3px; white-space: nowrap; }
-        .nav-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-        .nav-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
-        .nav-links a:hover { color: #2c7da0; }
-        .lang-toggle {
+        .logo-area {
             display: flex;
-            gap: 0.2rem;
-            background: #f0f2f5;
-            padding: 0.2rem;
-            border-radius: 40px;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
         }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            font-size: 0.75rem;
+        .logo-small {
+            height: 50px;
+            width: auto;
+        }
+        .brand-name {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #545454;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #545454;
+            text-decoration: none;
             font-weight: 500;
-            padding: 0.3rem 0.9rem;
-            border-radius: 40px;
-            cursor: pointer;
-            font-family: inherit;
-            transition: 0.2s;
-            color: #2c3e50;
+            font-size: 1rem;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
         }
-        .lang-btn.active { background: #2c7da0; color: white; }
-
-        /* Page hero */
-        .page-hero { padding: 8rem 0 2rem; text-align: center; }
-        .page-hero h1 { font-size: 2rem; font-weight: 600; color: #0a2b3e; margin-bottom: 0.5rem; }
-
-        /* Policy card */
-        .policy-card {
-            background: #f8fafc;
-            border-radius: 24px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 1px solid #eef2f8;
+        .nav-links a:hover, .nav-links a.active {
+            color: #d6a12f;
+            border-bottom-color: #d6a12f;
         }
-        .policy-card h2 {
-            font-size: 1.3rem;
+        .main-content {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 24px;
+        }
+        .policy-content {
+            background: #ffffff;
+            padding: 1rem 0;
+        }
+        .policy-content h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
             font-weight: 600;
-            color: #0a2b3e;
-            margin: 1rem 0 0.5rem;
-            border-left: 3px solid #2c7da0;
+            color: #545454;
+            margin: 1.5rem 0 0.5rem;
+            border-left: 4px solid #d6a12f;
             padding-left: 1rem;
         }
-        .policy-card h2:first-of-type { margin-top: 0; }
-        .policy-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2c7da0;
-            margin: 1rem 0 0.3rem;
+        .policy-content p {
+            color: #3c3c3c;
+            margin-bottom: 1rem;
         }
-        .policy-card p { margin-bottom: 0.8rem; color: #4a5c6e; }
-        .policy-card ul, .policy-card ol { margin: 0.5rem 0 1rem 1.5rem; color: #4a5c6e; }
-        .policy-card li { margin-bottom: 0.3rem; }
-
-        /* Footer */
+        .policy-content ul {
+            margin-left: 2rem;
+            color: #3c3c3c;
+        }
         .footer {
-            background: #f8fafc;
-            padding: 2.5rem 0 2rem;
-            border-top: 1px solid #eef2f8;
-            margin-top: 2rem;
+            background: #f8f6f0;
+            padding: 2rem 0;
+            border-top: 1px solid #d6a12f;
+            text-align: center;
         }
-        .footer-policy { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-        .footer-policy a { color: #6c7e8e; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .footer-policy a:hover { color: #2c7da0; }
-        .footer-copyright { font-size: 0.75rem; text-align: center; color: #8ba0ae; border-top: 1px solid #eef2f8; padding-top: 1rem; }
-
-        @media (max-width: 768px) {
-            .container { padding: 0 20px; }
-            .brand { font-size: 1.2rem; }
-            .logo { height: 34px; }
-            .page-hero h1 { font-size: 1.6rem; }
-            .policy-card { padding: 1.2rem; }
-            .nav-container { flex-direction: column; align-items: center; gap: 0.8rem; }
-            .brand-wrapper, .nav-right { justify-content: center; }
+        .footer-policy {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer-policy a {
+            color: #545454;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer-policy a:hover {
+            color: #d6a12f;
+        }
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: #6b7b8c;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 700px) {
+            .logo-small { height: 40px; }
+            .brand-name { font-size: 1.1rem; }
+            .nav-links { gap: 1rem; }
+            .footer-policy a { font-size: 0.85rem; }
+            .policy-content h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
-<header class="navbar" id="mainHeader">
-    <div class="container nav-container">
-        <div class="brand-wrapper">
-            <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo">
-            <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
-        </div>
-        <div class="nav-right">
-            <div class="nav-links">
-                <a href="index.html" id="navHome">Home</a>
-                <a href="about.html" id="navAbout">About</a>
-                <a href="membership.html" id="navMembership">Membership</a>
-                <a href="contact.html" id="navContact">Contact</a>
-            </div>
-            <div class="lang-toggle">
-                <button class="lang-btn" id="langNp">नेपाली</button>
-                <button class="lang-btn" id="langEn">English</button>
-            </div>
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html?reset=1" class="logo-area">
+            <img src="/images/logo.png" alt="Logo" class="logo-small">
+            <span class="brand-name" id="headerBrand">Nepal Law Group</span>
+        </a>
+        <div class="nav-links" id="navLinks"></div>
     </div>
 </header>
 
-<div class="navbar-spacer" id="navbarSpacer"></div>
-
-<main>
-    <div class="page-hero"><div class="container"><h1 id="pageTitle">Cookie Policy</h1></div></div>
-    <div class="container">
-        <div class="policy-card" id="policyContent"></div>
-    </div>
-</main>
+<div class="main-content">
+    <div class="policy-content" id="policyContent"></div>
+</div>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-policy">
-            <a href="terms.html" id="termsLink">Terms of Use</a>
-            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
-            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
-        </div>
-        <div class="footer-copyright"><p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p></div>
+    <div class="footer-policy">
+        <a href="terms.html" id="termsLink">Terms of Use</a>
+        <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+        <a href="cookie.html" id="cookieLink">Cookie Policy</a>
     </div>
+    <div class="footer-copyright" id="footerText">© 2026 Nepal Law Group – All rights reserved.</div>
 </footer>
 
 <script>
     const content = {
         en: {
-            brand: "Nepal Law Group",
+            headerBrand: "Nepal Law Group",
             navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
-            pageTitle: "Cookie Policy",
             htmlContent: `
                 <p><strong>Nepal Law Group (proposed company, not yet incorporated under the Companies Act, 2063 of Nepal) (hereinafter referred to as "the Company", "we", "us", or "our") and Website: https://nepallawgroup.org (hereinafter referred to as "the Website")</strong></p>
                 <h2>1. Introduction</h2>
@@ -209,9 +198,8 @@
             termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            brand: "नेपाल ल ग्रुप",
+            headerBrand: "नेपाल ल ग्रुप",
             navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
-            pageTitle: "कुकी नीति",
             htmlContent: `
                 <p><strong>नेपाल ल ग्रुप (प्रस्तावित कम्पनी, कम्पनी ऐन, २०६३, नेपाल अन्तर्गत अझै सम्मिलित नभएको) (यसपछि "कम्पनी", "हामी", "हामीलाई", वा "हाम्रो" भनेर चिनिन्छ) र वेबसाइट: https://nepallawgroup.org (यसपछि "वेबसाइट" भनेर चिनिन्छ)</strong></p>
                 <h2>१. परिचय</h2>
@@ -239,7 +227,7 @@
                 <p>प्रश्न वा अनुरोधको लागि कृपया कम्पनीलाई सम्पर्क गर्नुहोस्।</p>
                 <h2>९. शासकीय कानून</h2>
                 <p>यो कुकी नीति नेपालको कानूनद्वारा शासित हुनेछ। विवादहरू काठमाडौं जिल्ला अदालतको अधिकार क्षेत्रमा पेश गरिनेछन्।</p>
-                <p><em>इति सम्वत् २०८३ साल वैशाख महिना ४ गते रोज ६ शुभम् .............................................. ।</em></p>
+                <p><em>इति सम्वत् २०८३ साल वैशाख महिना ४ गते रोज ६ शुभम्</em></p>
             `,
             footerText: "© २०८३ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
             termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
@@ -250,43 +238,27 @@
 
     function updateUI(lang) {
         const d = content[lang];
-        document.getElementById("brandName").innerText = d.brand;
-        document.getElementById("navHome").innerText = d.navHome;
-        document.getElementById("navAbout").innerText = d.navAbout;
-        document.getElementById("navMembership").innerText = d.navMembership;
-        document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("pageTitle").innerText = d.pageTitle;
-        document.getElementById("policyContent").innerHTML = d.htmlContent;
-        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("headerBrand").innerText = d.headerBrand;
+        const navContainer = document.getElementById("navLinks");
+        navContainer.innerHTML = `
+            <a href="index.html">${d.navHome}</a>
+            <a href="about.html">${d.navAbout}</a>
+            <a href="membership.html">${d.navMembership}</a>
+            <a href="contact.html">${d.navContact}</a>
+        `;
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
-        document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
-        if (lang === "np") document.getElementById("langNp").classList.add("active");
-        else document.getElementById("langEn").classList.add("active");
+        document.getElementById("footerText").innerHTML = d.footerText;
+        document.getElementById("policyContent").innerHTML = d.htmlContent;
+        // Mark current page active
+        document.querySelectorAll("#navLinks a").forEach(link => {
+            if (link.getAttribute("href") === "cookie.html") link.classList.add("active");
+            else link.classList.remove("active");
+        });
         localStorage.setItem("nlgLang", lang);
     }
 
-    // Scroll hide/show logic
-    const header = document.getElementById('mainHeader');
-    const spacer = document.getElementById('navbarSpacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-    function updateHeaderHeight() { if (header) spacer.style.height = header.offsetHeight + 'px'; }
-    function handleScroll() {
-        const currentScrollY = window.scrollY;
-        const threshold = 50;
-        if (currentScrollY > lastScrollY && currentScrollY > threshold) header.classList.add('hidden');
-        else if (currentScrollY < lastScrollY) header.classList.remove('hidden');
-        if (currentScrollY === 0) header.classList.remove('hidden');
-        lastScrollY = currentScrollY; ticking = false;
-    }
-    window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(handleScroll); ticking = true; } });
-    window.addEventListener('load', () => { updateHeaderHeight(); header.classList.remove('hidden'); });
-    window.addEventListener('resize', updateHeaderHeight);
-
-    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
-    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 </script>
 </body>
