@@ -7,143 +7,73 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* same styles as about.html */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #d9d9d9;
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
             color: #545454;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
-        /* Full‑screen hero section */
-        .fullscreen-hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            background: #d9d9d9;
-            position: relative;
+        .site-header {
+            background: #ffffff;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e0d4;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-
-        .hero-content {
-            max-width: 900px;
+        .header-inner {
+            max-width: 1100px;
             margin: 0 auto;
-        }
-
-        .hero-logo {
-            margin-bottom: 1.5rem;
-        }
-        .hero-logo img {
-            height: 120px;
-            width: auto;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
-        }
-
-        .hero-brand {
-            font-family: 'Merriweather', serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #545454;
-            letter-spacing: -0.02em;
-            margin-bottom: 2rem;
-        }
-
-        .hero-nav {
+            padding: 0 24px;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            gap: 1rem;
         }
-        .hero-nav a {
-            font-size: 1.1rem;
-            font-weight: 500;
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-small {
+            height: 50px;
+            width: auto;
+        }
+        .brand-name {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
             color: #545454;
             text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #545454;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
             padding-bottom: 4px;
             border-bottom: 2px solid transparent;
             transition: all 0.2s;
         }
-        .hero-nav a:hover {
+        .nav-links a:hover, .nav-links a.active {
             color: #b4882a;
             border-bottom-color: #b4882a;
         }
-        .hero-nav a.active {
-            color: #b4882a;
-            border-bottom-color: #b4882a;
-        }
-
-        .hero-lang {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            background: rgba(84,84,84,0.1);
-            padding: 0.3rem;
-            border-radius: 60px;
-            width: fit-content;
-            margin: 0 auto;
-        }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.4rem 1.2rem;
-            border-radius: 60px;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: #545454;
-        }
-        .lang-btn.active {
-            background: #b4882a;
-            color: white;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: #545454;
-            font-size: 0.8rem;
-            opacity: 0.7;
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-
-        /* Main scrollable content */
         .main-content {
-            background: #ffffff;
-            padding: 3rem 0;
-            border-radius: 32px 32px 0 0;
-            margin-top: 0;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
-        }
-        .container {
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 2rem auto;
             padding: 0 24px;
         }
-
-        .section {
-            margin: 3rem 0;
-        }
+        .section { margin: 3rem 0; }
         .section h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.8rem;
@@ -153,10 +83,7 @@
             padding-left: 1rem;
             margin-bottom: 1rem;
         }
-        .section p {
-            color: #3c3c3c;
-            margin-bottom: 1rem;
-        }
+        .section p { color: #3c3c3c; margin-bottom: 1rem; }
         .btn {
             display: inline-block;
             background: #b4882a;
@@ -166,13 +93,8 @@
             border-radius: 4px;
             font-weight: 500;
             transition: background 0.2s;
-            margin-top: 0.5rem;
         }
-        .btn:hover {
-            background: #9e6e20;
-        }
-
-        /* Footer */
+        .btn:hover { background: #9e6e20; }
         .footer {
             background: #f8f6f0;
             padding: 2rem 0;
@@ -191,88 +113,42 @@
             text-decoration: none;
             font-size: 0.8rem;
         }
-        .footer-policy a:hover {
-            color: #545454;
-        }
-
+        .footer-policy a:hover { color: #545454; }
         @media (max-width: 700px) {
-            .hero-brand { font-size: 2rem; }
-            .hero-logo img { height: 80px; }
-            .hero-nav a { font-size: 0.9rem; }
-            .hero-nav { gap: 1rem; }
-            .lang-btn { font-size: 0.8rem; padding: 0.3rem 0.9rem; }
+            .logo-small { height: 40px; }
+            .brand-name { font-size: 1.1rem; }
+            .nav-links { gap: 1rem; }
             .section h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Full‑screen hero section -->
-<div class="fullscreen-hero">
-    <div class="hero-content">
-        <div class="hero-logo">
-            <img src="/images/logo.png" alt="Nepal Law Group Logo">
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <img src="/images/logo.png" alt="Logo" class="logo-small">
+            <span class="brand-name" id="headerBrand">Nepal Law Group</span>
         </div>
-        <div class="hero-brand" id="heroBrand">Nepal Law Group</div>
-        <div class="hero-nav">
-            <a href="index.html" id="navHome">Home</a>
-            <a href="about.html" id="navAbout">About</a>
-            <a href="membership.html" id="navMembership" class="active">Membership</a>
-            <a href="contact.html" id="navContact">Contact</a>
-        </div>
-        <div class="hero-lang">
-            <button class="lang-btn" id="langNp">नेपाली</button>
-            <button class="lang-btn" id="langEn">English</button>
-        </div>
+        <div class="nav-links" id="navLinks"></div>
     </div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#545454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-    </div>
-</div>
+</header>
 
-<!-- Main scrollable content -->
-<div class="main-content">
-    <div class="container">
-        <div class="section">
-            <p id="inviteText">We invite legally qualified individuals who share our vision of independent, ethical, and knowledge‑driven legal practice to join as Founder Members.</p>
-        </div>
-
-        <div class="section">
-            <h2 id="eligTitle">Eligibility</h2>
-            <p id="eligText">Legal qualifications – such as being an advocate, legal scholar, researcher, or legally trained professional – are strongly preferred, though other professionals who can contribute to the company’s mission may also be considered.</p>
-        </div>
-
-        <div class="section">
-            <h2 id="reqTitle">Requirements</h2>
-            <p id="reqText">Founder Members must pay the prescribed founder membership fee (currently nominal, set to cover only the initial registration and documentation costs). They are expected to actively participate in the first general meeting, contribute to the formulation of the company’s initial rules and code of conduct, and uphold the company’s ethical and professional standards. They must renew their membership annually as per the rules, unless they opt for lifetime membership. Founder Members also bear a duty to promote the company’s objectives and to act in a manner that does not bring the institution into disrepute.</p>
-        </div>
-
-        <div class="section">
-            <h2 id="whyTitle">Why Join as a Founder Member?</h2>
-            <p id="whyText">By becoming a Founder Member, you will help create an institution that places legal knowledge and public service above commercial profit. You will be a founder of Nepal’s first membership‑driven, non‑profit law group – an institution designed to advance the rule of law, legal scholarship, and professional integrity for generations to come.</p>
-            <p><a href="contact.html" class="btn" id="ctaBtn">Express Interest →</a></p>
-        </div>
-    </div>
-</div>
+<div class="main-content" id="mainContent"></div>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-policy">
-            <a href="terms.html" id="termsLink">Terms of Use</a>
-            <a href="privacy.html" id="privacyLink">Privacy Policy</a>
-            <a href="cookie.html" id="cookieLink">Cookie Policy</a>
-        </div>
-        <div id="footerText">© 2026 Nepal Law Group – All rights reserved.</div>
+    <div class="footer-policy">
+        <a href="terms.html" id="termsLink">Terms of Use</a>
+        <a href="privacy.html" id="privacyLink">Privacy Policy</a>
+        <a href="cookie.html" id="cookieLink">Cookie Policy</a>
     </div>
+    <div id="footerText">© 2026 Nepal Law Group – All rights reserved.</div>
 </footer>
 
 <script>
     const content = {
         en: {
-            heroBrand: "Nepal Law Group",
+            headerBrand: "Nepal Law Group",
             navHome: "Home", navAbout: "About", navMembership: "Membership", navContact: "Contact",
             inviteText: "We invite legally qualified individuals who share our vision of independent, ethical, and knowledge‑driven legal practice to join as Founder Members.",
             eligTitle: "Eligibility",
@@ -286,7 +162,7 @@
             termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
         np: {
-            heroBrand: "नेपाल ल ग्रुप",
+            headerBrand: "नेपाल ल ग्रुप",
             navHome: "गृह पृष्ठ", navAbout: "बारेमा", navMembership: "सदस्यता", navContact: "सम्पर्क",
             inviteText: "हामी स्वतन्त्र, नैतिक र ज्ञान–संचालित कानूनी अभ्यासमा विश्वास राख्ने कानूनी क्षेत्रका योग्य व्यक्तिहरूलाई संस्थापक सदस्य का रूपमा सामेल हुन आमन्त्रण गर्दछौँ।",
             eligTitle: "योग्यता",
@@ -305,38 +181,41 @@
 
     function updateUI(lang) {
         const d = content[lang];
-        document.getElementById("heroBrand").innerText = d.heroBrand;
-        document.getElementById("navHome").innerText = d.navHome;
-        document.getElementById("navAbout").innerText = d.navAbout;
-        document.getElementById("navMembership").innerText = d.navMembership;
-        document.getElementById("navContact").innerText = d.navContact;
-        document.getElementById("inviteText").innerText = d.inviteText;
-        document.getElementById("eligTitle").innerText = d.eligTitle;
-        document.getElementById("eligText").innerText = d.eligText;
-        document.getElementById("reqTitle").innerText = d.reqTitle;
-        document.getElementById("reqText").innerText = d.reqText;
-        document.getElementById("whyTitle").innerText = d.whyTitle;
-        document.getElementById("whyText").innerText = d.whyText;
-        document.getElementById("ctaBtn").innerText = d.ctaBtn;
-        document.getElementById("footerText").innerText = d.footerText;
+        document.getElementById("headerBrand").innerText = d.headerBrand;
+        const navContainer = document.getElementById("navLinks");
+        navContainer.innerHTML = `
+            <a href="index.html">${d.navHome}</a>
+            <a href="about.html">${d.navAbout}</a>
+            <a href="membership.html" class="active">${d.navMembership}</a>
+            <a href="contact.html">${d.navContact}</a>
+        `;
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
+        document.getElementById("footerText").innerHTML = d.footerText;
 
-        const npBtn = document.getElementById("langNp");
-        const enBtn = document.getElementById("langEn");
-        if (lang === "np") {
-            npBtn.classList.add("active");
-            enBtn.classList.remove("active");
-        } else {
-            enBtn.classList.add("active");
-            npBtn.classList.remove("active");
-        }
+        const mainDiv = document.getElementById("mainContent");
+        mainDiv.innerHTML = `
+            <div class="section">
+                <p>${d.inviteText}</p>
+            </div>
+            <div class="section">
+                <h2>${d.eligTitle}</h2>
+                <p>${d.eligText}</p>
+            </div>
+            <div class="section">
+                <h2>${d.reqTitle}</h2>
+                <p>${d.reqText}</p>
+            </div>
+            <div class="section">
+                <h2>${d.whyTitle}</h2>
+                <p>${d.whyText}</p>
+                <p><a href="contact.html" class="btn">${d.ctaBtn}</a></p>
+            </div>
+        `;
         localStorage.setItem("nlgLang", lang);
     }
 
-    document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
-    document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
 </script>
 </body>
