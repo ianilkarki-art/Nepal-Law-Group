@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: #d9d9d9;
+            background: #ffffff;
             color: #545454;
             line-height: 1.5;
             scroll-behavior: smooth;
@@ -24,10 +24,10 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            background: #d9d9d9;
+            background: #ffffff;
         }
         .initial-logo img {
-            height: 180px;
+            height: 240px;
             width: auto;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
             margin-bottom: 1rem;
@@ -41,8 +41,8 @@
         }
         .initial-brand-en {
             font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 3rem;
+            font-weight: 800;
             color: #545454;
             margin-bottom: 2rem;
         }
@@ -74,7 +74,7 @@
         }
         /* Header (shown after language selection) */
         .site-header {
-            background: #d9d9d9;
+            background: #ffffff;
             padding: 1rem 0;
             border-bottom: 1px solid #be8c10;
             position: sticky;
@@ -132,7 +132,7 @@
             padding: 0 24px;
         }
         .callout {
-            background: #ffffff;
+            background: #f8f6f0;
             border-left: 6px solid #be8c10;
             padding: 2rem;
             margin: 2rem 0;
@@ -167,7 +167,7 @@
         }
         .section p { color: #3c3c3c; margin-bottom: 1rem; }
         .footer {
-            background: #d9d9d9;
+            background: #f8f6f0;
             padding: 2rem 0;
             border-top: 1px solid #be8c10;
             text-align: center;
@@ -187,8 +187,8 @@
         .footer-policy a:hover { color: #be8c10; }
         @media (max-width: 700px) {
             .initial-brand-np { font-size: 2rem; }
-            .initial-brand-en { font-size: 1.2rem; }
-            .initial-logo img { height: 100px; }
+            .initial-brand-en { font-size: 2rem; }
+            .initial-logo img { height: 140px; }
             .logo-small { height: 40px; }
             .brand-name { font-size: 1.1rem; }
             .nav-links { gap: 1rem; }
@@ -207,8 +207,8 @@
     <div class="initial-brand-np">नेपाल ल ग्रुप</div>
     <div class="initial-brand-en">Nepal Law Group</div>
     <div class="initial-lang">
-        <button class="lang-btn" id="initialLangNp">नेपाली</button>
         <button class="lang-btn" id="initialLangEn">English</button>
+        <button class="lang-btn" id="initialLangNp">नेपाली</button>
     </div>
 </div>
 
@@ -235,7 +235,6 @@
 </div>
 
 <script>
-    // Bilingual content
     const content = {
         en: {
             headerBrand: "Nepal Law Group",
@@ -307,29 +306,27 @@
         document.getElementById("mainSite").style.display = "block";
     }
 
-    // Reset to initial hero (clear stored language and show initial screen)
     function resetToInitial() {
         localStorage.removeItem("nlgLang");
         document.getElementById("mainSite").style.display = "none";
         document.getElementById("initialScreen").style.display = "flex";
-        // Reset any active states on language buttons (just in case)
-        document.getElementById("initialLangNp").classList.remove("active");
+        // Reset active states on language buttons
         document.getElementById("initialLangEn").classList.remove("active");
+        document.getElementById("initialLangNp").classList.remove("active");
     }
 
-    // Language button event handlers
-    document.getElementById("initialLangNp").addEventListener("click", () => loadSite("np"));
+    // Language button event handlers (English first, then Nepali)
     document.getElementById("initialLangEn").addEventListener("click", () => loadSite("en"));
+    document.getElementById("initialLangNp").addEventListener("click", () => loadSite("np"));
 
     // Reset when logo or brand name is clicked
     document.getElementById("resetButton").addEventListener("click", resetToInitial);
 
-    // Check for reset query parameter (when coming from other pages)
+    // Check for reset query parameter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("reset")) {
         resetToInitial();
     } else {
-        // If a language is already stored (e.g., from previous visit), show main site
         const storedLang = localStorage.getItem("nlgLang");
         if (storedLang && (storedLang === "en" || storedLang === "np")) {
             loadSite(storedLang);
