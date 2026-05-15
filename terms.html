@@ -3,228 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Terms of Use – Nepal Law Group | प्रयोगका सर्तहरू – नेपाल ल ग्रुप</title>
+    <title>Nepal Law Group</title>
     <meta name="description" content="Terms of Use for Nepal Law Group website.">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(145deg, #ffffff 0%, #f4f7fb 100%);
-            color: #1a2a3a;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header – fixed, with hide/show transition */
-        .navbar {
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
-            transition: transform 0.3s ease;
-            transform: translateY(0);
-        }
-
-        /* Hidden state */
-        .navbar.hidden {
-            transform: translateY(-100%);
-        }
-
-        /* Spacer to prevent content jump */
-        .navbar-spacer {
-            transition: height 0.2s;
-            background: transparent;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .brand {
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #0b2f5c, #1a4a6e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-decoration: none;
-            letter-spacing: -0.3px;
-            text-align: center;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #0b2f5c;
-        }
-
-        .lang-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 0.2rem;
-        }
-
-        .lang-toggle {
-            display: flex;
-            gap: 0.2rem;
-            background: #e9ecef;
-            padding: 0.2rem;
-            border-radius: 40px;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.3rem 0.9rem;
-            border-radius: 40px;
-            cursor: pointer;
-            font-family: inherit;
-            transition: 0.2s;
-            color: #2c3e50;
-        }
-
-        .lang-btn.active {
-            background: #0b2f5c;
-            color: white;
-        }
-
-        /* Page hero */
-        .page-hero {
-            text-align: center;
-            padding: 3rem 0 1rem;
-        }
-        .page-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #0b2f5c;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Terms content */
-        .terms-card {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem;
-            margin: 1rem 0 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        .terms-card h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0b2f5c;
-            margin: 1.2rem 0 0.5rem;
-            border-left: 4px solid #0b2f5c;
-            padding-left: 1rem;
-        }
-        .terms-card h2:first-of-type {
-            margin-top: 0;
-        }
-        .terms-card h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1a4a6e;
-            margin: 1rem 0 0.3rem;
-        }
-        .terms-card p {
-            margin-bottom: 0.8rem;
-            color: #4a5568;
-        }
-        .terms-card ul, .terms-card ol {
-            margin: 0.5rem 0 1rem 1.5rem;
-            color: #4a5568;
-        }
-        .terms-card li {
-            margin-bottom: 0.3rem;
-        }
-        .terms-card .sub-list {
-            margin-left: 2rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: #f1f5f9;
-            padding: 2rem 0 1.5rem;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 2rem;
-        }
-        .footer-policy {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        .footer-policy a {
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.2s;
-        }
-        .footer-policy a:hover {
-            color: #0b2f5c;
-        }
-        .footer-copyright {
-            font-size: 0.75rem;
-            text-align: center;
-            color: #6c757d;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1rem;
-        }
-
+        /* same global styles as above */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a2a3f; line-height: 1.5; scroll-behavior: smooth; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .navbar { background: rgba(255,255,255,0.98); backdrop-filter: blur(8px); padding: 1rem 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s ease; transform: translateY(0); }
+        .navbar.hidden { transform: translateY(-100%); }
+        .navbar-spacer { transition: height 0.2s; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-wrapper { display: flex; align-items: center; gap: 0.75rem; }
+        .logo { height: 42px; width: auto; display: block; }
+        .brand { font-size: 1.5rem; font-weight: 700; color: #0a2b3e; text-decoration: none; letter-spacing: -0.3px; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        .nav-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #2c7da0; }
+        .lang-toggle { display: flex; gap: 0.2rem; background: #f0f2f5; padding: 0.2rem; border-radius: 40px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.75rem; font-weight: 500; padding: 0.3rem 0.9rem; border-radius: 40px; cursor: pointer; font-family: inherit; transition: 0.2s; color: #2c3e50; }
+        .lang-btn.active { background: #2c7da0; color: white; }
+        .page-hero { padding: 8rem 0 2rem; text-align: center; }
+        .page-hero h1 { font-size: 2rem; font-weight: 600; color: #0a2b3e; margin-bottom: 0.5rem; }
+        .policy-card { background: #f8fafc; border-radius: 24px; padding: 2rem; margin: 2rem 0; border: 1px solid #eef2f8; }
+        .policy-card h2 { font-size: 1.3rem; font-weight: 600; color: #0a2b3e; margin: 1rem 0 0.5rem; border-left: 3px solid #2c7da0; padding-left: 1rem; }
+        .policy-card h2:first-of-type { margin-top: 0; }
+        .policy-card p { margin-bottom: 0.8rem; color: #4a5c6e; }
+        .policy-card ul, .policy-card ol { margin: 0.5rem 0 1rem 1.5rem; color: #4a5c6e; }
+        .policy-card li { margin-bottom: 0.3rem; }
+        .footer { background: #f8fafc; padding: 2.5rem 0 2rem; border-top: 1px solid #eef2f8; margin-top: 2rem; }
+        .footer-policy { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .footer-policy a { color: #6c7e8e; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-policy a:hover { color: #2c7da0; }
+        .footer-copyright { font-size: 0.75rem; text-align: center; color: #8ba0ae; border-top: 1px solid #eef2f8; padding-top: 1rem; }
         @media (max-width: 768px) {
-            .brand {
-                font-size: 1.8rem;
-            }
-            .page-hero h1 {
-                font-size: 1.8rem;
-            }
-            .terms-card {
-                padding: 1.2rem;
-            }
-            .terms-card h2 {
-                font-size: 1.3rem;
-            }
-            .nav-links {
-                gap: 1rem;
-            }
+            .container { padding: 0 20px; }
+            .brand { font-size: 1.2rem; }
+            .logo { height: 34px; }
+            .page-hero h1 { font-size: 1.6rem; }
+            .policy-card { padding: 1.2rem; }
+            .nav-container { flex-direction: column; align-items: center; gap: 0.8rem; }
+            .brand-wrapper, .nav-right { justify-content: center; }
         }
     </style>
 </head>
@@ -232,14 +54,17 @@
 
 <header class="navbar" id="mainHeader">
     <div class="container nav-container">
-        <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
-        <div class="nav-links">
-            <a href="index.html" id="navHome">Home</a>
-            <a href="about.html" id="navAbout">About</a>
-            <a href="membership.html" id="navMembership">Membership</a>
-            <a href="contact.html" id="navContact">Contact</a>
+        <div class="brand-wrapper">
+            <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo">
+            <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         </div>
-        <div class="lang-wrapper">
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="index.html" id="navHome">Home</a>
+                <a href="about.html" id="navAbout">About</a>
+                <a href="membership.html" id="navMembership">Membership</a>
+                <a href="contact.html" id="navContact">Contact</a>
+            </div>
             <div class="lang-toggle">
                 <button class="lang-btn" id="langNp">नेपाली</button>
                 <button class="lang-btn" id="langEn">English</button>
@@ -248,18 +73,12 @@
     </div>
 </header>
 
-<!-- Spacer to preserve layout when header is fixed -->
 <div class="navbar-spacer" id="navbarSpacer"></div>
 
 <main>
-    <div class="page-hero">
-        <div class="container">
-            <h1 id="pageTitle">Terms of Use</h1>
-        </div>
-    </div>
-
+    <div class="page-hero"><div class="container"><h1 id="pageTitle">Terms of Use</h1></div></div>
     <div class="container">
-        <div class="terms-card" id="termsContent"></div>
+        <div class="policy-card" id="termsContent"></div>
     </div>
 </main>
 
@@ -270,9 +89,7 @@
             <a href="privacy.html" id="privacyLink">Privacy Policy</a>
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
-        <div class="footer-copyright">
-            <p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p>
-        </div>
+        <div class="footer-copyright"><p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p></div>
     </div>
 </footer>
 
@@ -284,60 +101,33 @@
             pageTitle: "Terms of Use",
             htmlContent: `
                 <p><strong>Nepal Law Group (proposed company, not yet incorporated under the Companies Act, 2063 of Nepal) (hereinafter referred to as "Company", "we", "us", or "our"); and this Website https://nepallawgroup.org (hereinafter referred to as "the Website").</strong></p>
-                
                 <h2>1. Acceptance of Terms</h2>
                 <p>By accessing or using the Website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use, together with any applicable laws and regulations. If you do not agree with any part of these terms, you must immediately discontinue use of the Website. Company reserves the right to modify, amend, or replace these Terms of Use at any time without prior individual notice. Any changes become effective upon posting on the Website. Your continued use of the Website after such posting constitutes your acceptance of the modified terms.</p>
-                
                 <h2>2. No Legal Advice or Attorney-Client Relationship</h2>
                 <p>The content published on the Website – including but not limited to text, graphics, articles, research summaries, and publications – is provided for general informational and educational purposes only. Nothing on this Website constitutes legal advice, legal opinion, or any form of representation. No communication between you and Company through the Website (including email inquiries) creates an attorney-client relationship. You should not act or refrain from acting based on any information on this Website without first seeking independent professional legal counsel from a qualified advocate licensed in your jurisdiction.</p>
-                
                 <h2>3. Eligibility and User Conduct</h2>
                 <p>(1) You represent that you are at least 18 years of age and have the legal capacity to enter into these Terms of Use. You agree to use the Website only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit any other user’s use and enjoyment of the Website.</p>
-                <p>(2) Prohibited conduct includes, without limitation:</p>
-                <ul>
-                    <li>(a) Attempting to gain unauthorised access to any part of the Website, servers, or databases;</li>
-                    <li>(b) Transmitting any malware, viruses, or other harmful code;</li>
-                    <li>(c) Harassing, abusing, or threatening any person;</li>
-                    <li>(d) Impersonating any Company founder, member, or representative;</li>
-                    <li>(e) Using the Website for any commercial solicitation without our prior written consent.</li>
-                </ul>
-                
+                <p>(2) Prohibited conduct includes, without limitation: (a) Attempting to gain unauthorised access to any part of the Website, servers, or databases; (b) Transmitting any malware, viruses, or other harmful code; (c) Harassing, abusing, or threatening any person; (d) Impersonating any Company founder, member, or representative; (e) Using the Website for any commercial solicitation without our prior written consent.</p>
                 <h2>4. Intellectual Property Rights</h2>
-                <p>(1) All content, materials, and design elements on the Website – including but not limited to text, logos, graphics, images, publications, and the overall layout – are the intellectual property of Company or its licensors. Unless otherwise stated, these materials are protected under the Copyright Act, 2059 (2002) of Nepal and other applicable intellectual property laws.</p>
-                <p>(2) You may view, download, and print pages from the Website for your personal, non-commercial use only, provided you retain all copyright and proprietary notices. You may not:</p>
-                <ul>
-                    <li>(a) Republish, distribute, or reproduce any content without our prior written permission;</li>
-                    <li>(b) Modify, translate, or create derivative works based on the Website content;</li>
-                    <li>(c) Use any data mining, robots, or similar data extraction tools.</li>
-                </ul>
+                <p>(1) All content, materials, and design elements on the Website are the intellectual property of Company or its licensors, protected under the Copyright Act, 2059 (2002) of Nepal and other applicable intellectual property laws.</p>
+                <p>(2) You may view, download, and print pages from the Website for your personal, non-commercial use only, provided you retain all copyright and proprietary notices. You may not: (a) Republish, distribute, or reproduce any content without our prior written permission; (b) Modify, translate, or create derivative works based on the Website content; (c) Use any data mining, robots, or similar data extraction tools.</p>
                 <p>(3) Requests for permission to use content for educational or non-profit purposes may be directed to Company upon communication.</p>
-                
                 <h2>5. Membership Applications and Information</h2>
                 <p>The Website may provide information about becoming a Founder Member, Ordinary Member, Lifetime Member, or Honorary Member of Company. Any application or expression of interest submitted through the Website does not automatically confer membership. Membership is subject to verification of eligibility as set out in the Memorandum of Association and Articles of Association of Company, and final approval by the founding group or, after incorporation, the Board of Directors. You agree to provide accurate, current, and complete information when applying for membership. Company shall not be liable for any delay or rejection resulting from inaccurate information.</p>
-                
                 <h2>6. Disclaimers and Limitation of Liability</h2>
                 <p>(1) The Website and all content are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. Company does not warrant that the Website will be uninterrupted, error‑free, secure, or free of viruses or other harmful components.</p>
                 <p>(2) To the fullest extent permitted by the laws of Nepal, Company (including its founders, prospective members, and representatives) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of, or inability to use, the Website, even if advised of the possibility of such damages.</p>
                 <p>(3) Because the company is not yet incorporated, no individual founder or representative assumes personal liability for the Website’s content or operation. Any liability, if and when it arises, shall be governed by the Companies Act, 2063 after incorporation.</p>
-                
                 <h2>7. Third-Party Links</h2>
                 <p>The Website may contain links to external websites or resources that are not owned or controlled by Company. We provide these links solely for your convenience and do not endorse or assume any responsibility for the content, privacy policies, or practices of any third‑party websites. You access such links at your own risk.</p>
-                
                 <h2>8. Privacy and Data Protection</h2>
                 <p>Any personal information you provide through the Website (such as your name, email address, or membership application details) will be handled in accordance with our Privacy Policy, which is incorporated into these Terms of Use by reference. By using the Website, you consent to the collection and processing of your information as described in the Privacy Policy.</p>
-                
                 <h2>9. Governing Law and Dispute Resolution</h2>
                 <p>These Terms of Use shall be governed by and construed in accordance with the laws of Nepal, without regard to its conflict of law provisions. Any dispute arising out of or relating to these Terms or your use of the Website shall be subject to the exclusive jurisdiction of the courts of Kathmandu district, Nepal (or, after incorporation, the district where Company’s registered office is located). Notwithstanding the foregoing, as of the effective date, the Company is not yet incorporated; any dispute shall be amicably resolved among the founding members or referred to mediation before any legal action.</p>
-                
                 <h2>10. Modifications and Termination</h2>
                 <p>The Company reserves the right to modify, suspend, or discontinue any part of the Website at any time without notice. We may also terminate or restrict your access to the Website for any violation of these Terms of Use. Any provisions that by their nature should survive termination (including intellectual property, disclaimer, and limitation of liability) shall remain in effect.</p>
-                
                 <h2>11. Miscellaneous</h2>
-                <p>(1) If any provision of these Terms of Use is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
-                <p>(2) Our failure to enforce any right or provision shall not constitute a waiver of such right or provision.</p>
-                <p>(3) These Terms of Use constitute the entire agreement between you and the Company regarding your use of the Website, superseding any prior agreements.</p>
-                <p>(4) For any questions or notices under these Terms, please contact to the Company.</p>
-                <p>(5) By using this Website, you acknowledge that you have read, understood, and agreed to these Terms of Use.</p>
+                <p>(1) If any provision of these Terms of Use is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect. (2) Our failure to enforce any right or provision shall not constitute a waiver of such right or provision. (3) These Terms of Use constitute the entire agreement between you and the Company regarding your use of the Website, superseding any prior agreements. (4) For any questions or notices under these Terms, please contact to the Company. (5) By using this Website, you acknowledge that you have read, understood, and agreed to these Terms of Use.</p>
                 <p><em>Dated of 17th day of April, 2026.</em></p>
             `,
             footerText: "© 2026 Nepal Law Group – All rights reserved.",
@@ -349,60 +139,28 @@
             pageTitle: "प्रयोगका सर्तहरू",
             htmlContent: `
                 <p><strong>नेपाल ल ग्रुप (कम्पनी ऐन, २०६३ अन्तर्गत प्रस्तावित मुनाफा वितरण नगर्ने कम्पनी, हाल दर्ता नभएको) (यसपछि "कम्पनी", "हामी", "हाम्रो" भनिनेछ) र यो वेबसाइट: https://nepallawgroup.org (यसपछि "वेबसाइट" भनिनेछ)।</strong></p>
-                
                 <h2>१. सर्तहरूको स्वीकारोक्तिः</h2>
-                <p>यस वेबसाइटमा पहुँच वा प्रयोग गरेर, तपाईंले यी प्रयोगका सर्तहरू तथा लागू हुने कानून र नियमहरू पढी बुझी स्वीकार गर्नुभएको मानिन्छ। यदि तपाईं यी सर्तहरूको कुनै भागसँग सहमत हुनुहुन्न भने, कृपया तुरुन्त वेबसाइटको प्रयोग बन्द गर्नुहोस्। कम्पनीले कुनै पनि समयमा यी प्रयोगका सर्तहरूमा परिमार्जन, संशोधन वा प्रतिस्थापन गर्ने अधिकार सुरक्षित राख्दछ। कुनै पनि परिवर्तन वेबसाइटमा प्रकाशित भएको मितिले प्रभावकारी हुनेछ। परिवर्तन भएपछि तपाईंले वेबसाइटको निरन्तर प्रयोग गरेकोलाई संशोधित सर्तहरूको स्वीकारोक्ति मानिनेछ।</p>
-                
+                <p>यस वेबसाइटमा पहुँच वा प्रयोग गरेर, तपाईंले यी प्रयोगका सर्तहरू तथा लागू हुने कानून र नियमहरू पढी बुझी स्वीकार गर्नुभएको मानिन्छ। कम्पनीले कुनै पनि समयमा यी सर्तहरू परिमार्जन गर्न सक्छ। परिवर्तनपछि वेबसाइटको निरन्तर प्रयोगले संशोधित सर्तहरूको स्वीकारोक्ति जनाउँछ।</p>
                 <h2>२. कानूनी सल्लाह वा वकील-ग्राहक सम्बन्धको अभावः</h2>
-                <p>वेबसाइटमा प्रकाशित सामग्री – जसमा लेख, चित्र, ग्राफिक्स, अनुसन्धान सारांश र प्रकाशनहरू समावेश छन् तर यिनैमा सीमित छैन – केवल सामान्य सूचनात्मक र शैक्षिक उद्देश्यका लागि उपलब्ध गराइएको छ। यस वेबसाइटको कुनै पनि सामग्रीले कानूनी सल्लाह, कानूनी राय वा कुनै प्रकारको प्रतिनिधित्व गर्दैन। तपाईं र कम्पनी बीच वेबसाइटको माध्यमबाट (इमेल सोधपुछ सहित) कुनैपनि सञ्चारले वकील-ग्राहक सम्बन्ध सिर्जना गर्दैन। तपाईंले यस वेबसाइटको कुनै पनि जानकारीको आधारमा कार्य गर्न वा गर्नबाट अलग रहनु अघि आफ्नो अधिकार क्षेत्रको योग्य अधिवक्ताबाट स्वतन्त्र व्यावसायिक कानूनी सल्लाह लिनुपर्छ।</p>
-                
+                <p>वेबसाइटको सामग्री केवल सूचनात्मक उद्देश्यका लागि हो। यसले कानूनी सल्लाह वा वकील-ग्राहक सम्बन्ध सिर्जना गर्दैन। कुनै पनि कानूनी कारबाही गर्नु अघि योग्य अधिवक्ताबाट सल्लाह लिनुहोस्।</p>
                 <h2>३. योग्यता र प्रयोगकर्ताको आचरणः</h2>
-                <p>(१) तपाईंले आफू १८ वर्ष वा सोभन्दा माथिको उमेर पूरा गरेको र यी प्रयोगका सर्तहरूमा प्रवेश गर्न कानूनी क्षमता राख्नुभएको व्यहोरा स्वीकार गर्नुहुन्छ। तपाईं वेबसाइटलाई केवल वैध उद्देश्यका लागि र यस्तो तरिकाले प्रयोग गर्न सहमत हुनुहुन्छ जसले अरूको अधिकार हनन नगरोस्, अरूलाई प्रतिबन्ध नलगाओस् वा अरू प्रयोगकर्ताको प्रयोग तथा आनन्दमा बाधा नपुर्याओस्।</p>
-                <p>(२) निषेधित आचरणहरूमा निम्न समावेश छन् तर यिनैमा सीमित छैनन्:</p>
-                <ul>
-                    <li>(क) वेबसाइटको कुनै भाग, सर्भर वा डाटाबेसमा अनधिकृत पहुँच प्राप्त गर्ने प्रयास;</li>
-                    <li>(ख) कुनै मालवेयर, भाइरस वा अन्य हानिकारक कोड प्रसारण;</li>
-                    <li>(ग) कुनै व्यक्तिलाई दुःख दिने, दुर्व्यवहार गर्ने वा धम्की दिने;</li>
-                    <li>(घ) कम्पनीको कुनै संस्थापक, सदस्य वा प्रतिनिधिको रूप धारण गर्ने;</li>
-                    <li>(ङ) हाम्रो पूर्व लिखित सहमति बिना वेबसाइटलाई कुनै व्यावसायिक प्रस्तावको लागि प्रयोग गर्ने।</li>
-                </ul>
-                
+                <p>तपाईं १८ वर्ष वा सोभन्दा माथिको हुनुपर्छ। निषेधित आचरणमा अनधिकृत पहुँच, हानिकारक कोड पठाउने, दुर्व्यवहार, वा कम्पनीको प्रतिनिधिको रूप धारण गर्ने समावेश छ।</p>
                 <h2>४. बौद्धिक सम्पत्ति अधिकारः</h2>
-                <p>(१) वेबसाइटमा रहेका सम्पूर्ण सामग्री, सामग्रीहरू र डिजाइन तत्वहरू – जसमा पाठ, लोगो, ग्राफिक्स, छविहरू, प्रकाशनहरू र समग्र संरचना समावेश छन् तर यिनैमा सीमित छैन – कम्पनी वा यसको लाइसेन्सधारीहरूको बौद्धिक सम्पत्ति हुन्। अन्यथा उल्लेख नभएसम्म, यी सामग्रीहरू नेपालको प्रतिलिपि अधिकार ऐन, २०५९ तथा अन्य लागू हुने बौद्धिक सम्पत्ति कानूनहरूद्वारा संरक्षित छन्।</p>
-                <p>(२) तपाईंले वेबसाइटका पृष्ठहरू केवल व्यक्तिगत, गैर-व्यावसायिक प्रयोगको लागि हेर्न, डाउनलोड गर्न र छाप्न सक्नुहुन्छ, तर सबै प्रतिलिपि अधिकार र स्वामित्व सूचनाहरू कायम राख्नुपर्छ। तपाईंले यो गर्न पाउनुहुन्न:</p>
-                <ul>
-                    <li>(क) हाम्रो पूर्व लिखित अनुमति बिना कुनै सामग्री पुनः प्रकाशन, वितरण वा पुनरुत्पादन;</li>
-                    <li>(ख) वेबसाइट सामग्रीमा परिमार्जन, अनुवाद वा व्युत्पन्न कार्य सिर्जना;</li>
-                    <li>(ग) कुनै डाटा माइनिङ, रोबोट वा समान डाटा निकासी उपकरण प्रयोग।</li>
-                </ul>
-                <p>(३) शैक्षिक वा गैर-नाफामुखी उद्देश्यका लागि सामग्री प्रयोग गर्न अनुमति माग्न कम्पनीलाई सम्पर्क गर्न सकिन्छ।</p>
-                
+                <p>वेबसाइटको सम्पूर्ण सामग्री कम्पनीको सम्पत्ति हो। तपाईंले व्यक्तिगत, गैर-व्यावसायिक प्रयोगको लागि मात्र सामग्री डाउनलोड वा छाप्न सक्नुहुन्छ। कुनै पनि पुनः प्रकाशन वा परिमार्जनको लागि पूर्व लिखित अनुमति आवश्यक छ।</p>
                 <h2>५. सदस्यता आवेदन र जानकारीः</h2>
-                <p>वेबसाइटले कम्पनीको संस्थापक सदस्य, साधारण सदस्य, आजीवन सदस्य वा मानार्थ सदस्य बारे जानकारी उपलब्ध गराउन सक्छ। वेबसाइट मार्फत पेश गरिएको कुनै पनि आवेदन वा चासोको अभिव्यक्तिले आफैँमा सदस्यता प्रदान गर्दैन। सदस्यता कम्पनीको प्रबन्धपत्र र नियमावलीमा उल्लिखित योग्यता अनुसार प्रमाणीकरणको अधीनमा रहनेछ, र अन्तिम स्वीकृति संस्थापक समूह वा दर्तापश्चात् सञ्चालक समितिले दिनेछ। सदस्यताका लागि आवेदन गर्दा तपाईंले सही, वर्तमान र पूर्ण जानकारी उपलब्ध गराउनुहुनेछ भनी सहमत हुनुहुन्छ। गलत जानकारीको कारणले हुने कुनै ढिलाइ वा अस्वीकारको लागि कम्पनी उत्तरदायी हुनेछैन।</p>
-                
+                <p>वेबसाइटले सदस्यता बारे जानकारी प्रदान गर्दछ। आवेदनको माध्यमबाट स्वतः सदस्यता प्रदान हुँदैन।</p>
                 <h2>६. अस्वीकारोक्ति र दायित्वको सीमाः</h2>
-                <p>(१) वेबसाइट र यसको सम्पूर्ण सामग्री "जस्तो छ" र "जस्तो उपलब्ध छ" को आधारमा प्रदान गरिन्छ। कम्पनीले वेबसाइट निर्बाध, त्रुटिरहित, सुरक्षित वा भाइरस तथा अन्य हानिकारक कम्पोनेन्टबाट मुक्त हुने कुनै प्रकारको जमानत दिँदैन।</p>
-                <p>(२) नेपालको कानूनले अनुमति दिएको अधिकतम सीमासम्म, कम्पनी (यसका संस्थापक, संभावित सदस्य र प्रतिनिधिहरू सहित) वेबसाइटको प्रयोग वा प्रयोग गर्न नसक्नुबाट उत्पन्न वा सम्बन्धित कुनै प्रत्यक्ष, अप्रत्यक्ष, आकस्मिक, विशेष, परिणामात्मक वा दण्डात्मक क्षतिको लागि उत्तरदायी हुनेछैन, चाहे त्यस्तो क्षतिको सम्भावनाबारे सल्लाह दिइएको भए तापनि।</p>
-                <p>(३) कम्पनी हाल दर्ता नभएको हुँदा, कुनै पनि व्यक्तिगत संस्थापक वा प्रतिनिधि वेबसाइटको सामग्री वा सञ्चालनको लागि व्यक्तिगत दायित्वमा रहनेछैन। कुनै पनि दायित्व, यदि उत्पन्न भएमा, दर्तापश्चात् कम्पनी ऐन, २०६३ अनुसार शासित हुनेछ।</p>
-                
+                <p>वेबसाइट "जस्तो छ" प्रदान गरिन्छ। कम्पनीले कुनै प्रकारको वारेन्टी दिँदैन। नेपालको कानूनले अनुमति दिएको अधिकतम सीमासम्म, कम्पनी कुनै पनि क्षतिको लागि उत्तरदायी हुनेछैन। कम्पनी दर्ता नभएको हुँदा कुनै पनि व्यक्तिगत सदस्य व्यक्तिगत रूपमा उत्तरदायी हुनेछैन।</p>
                 <h2>७. तेस्रो पक्षको लिङ्कः</h2>
-                <p>वेबसाइटमा बाह्य वेबसाइट वा स्रोतहरूको लिङ्क हुन सक्छ जुन कम्पनीको स्वामित्व वा नियन्त्रणमा छैनन्। हामी यी लिङ्कहरू केवल तपाईंको सुविधाको लागि उपलब्ध गराउँछौँ, र कुनै पनि तेस्रो पक्षको वेबसाइटको सामग्री, गोपनीयता नीति वा अभ्यासहरूको समर्थन वा जिम्मेवारी लिँदैनौँ। तपाईं आफ्नै जोखिममा त्यस्ता लिङ्कहरूमा पहुँच गर्नुहुन्छ।</p>
-                
+                <p>हामी बाह्य वेबसाइटहरूको सामग्रीको लागि जिम्मेवार छैनौं।</p>
                 <h2>८. गोपनीयता र डाटा संरक्षणः</h2>
-                <p>तपाईंले वेबसाइट मार्फत उपलब्ध गराउनुभएको कुनै पनि व्यक्तिगत जानकारी (जस्तै नाम, इमेल ठेगाना, सदस्यता आवेदन विवरण) हाम्रो गोपनीयता नीति अनुसार व्यवस्थित गरिनेछ, जुन यी प्रयोगका सर्तहरूमा सन्दर्भद्वारा समावेश गरिएको छ। वेबसाइट प्रयोग गरेर, तपाईंले गोपनीयता नीतिमा वर्णित अनुसार आफ्नो जानकारीको सङ्कलन र प्रशोधनमा सहमति जनाउनुभएको मानिनेछ।</p>
-                
+                <p>तपाईंको व्यक्तिगत जानकारी हाम्रो गोपनीयता नीति अनुसार व्यवस्थित गरिनेछ।</p>
                 <h2>९. शासक कानून र विवाद समाधानः</h2>
-                <p>यी प्रयोगका सर्तहरू नेपालको कानून द्वारा शासित र व्याख्या गरिनेछ, कानूनको द्वन्द्व प्रावधानहरूलाई बेवास्ता गर्दै। यी सर्तहरू वा वेबसाइटको प्रयोग सम्बन्धी उत्पन्न हुने कुनै पनि विवाद नेपालको काठमाण्डौं जिल्ला अदालतको अनन्य अधिकार क्षेत्रको अधीनमा रहनेछ (वा दर्तापश्चात् कम्पनीको दर्ता कार्यालय रहेको जिल्लाको अदालतको)। तथापि, प्रारम्भ मिति सम्म, कम्पनी दर्ता भएको छैन; कुनै पनि विवाद संस्थापक सदस्यहरू बीच सौहार्दपूर्ण रूपमा समाधान गरिनेछ वा कुनै कानूनी कारबाही अगाडि मध्यस्थतामा पेश गरिनेछ।</p>
-                
+                <p>यी सर्तहरू नेपालको कानूनद्वारा शासित हुनेछन्। विवादहरू काठमाडौं जिल्ला अदालतको अनन्य अधिकार क्षेत्रमा पेश गरिनेछन्।</p>
                 <h2>१०. परिमार्जन र समाप्तिः</h2>
-                <p>कम्पनीले कुनै पनि समयमा बिना सूचना वेबसाइटको कुनै भाग परिमार्जन, निलम्बन वा बन्द गर्ने अधिकार सुरक्षित राख्दछ। यी प्रयोगका सर्तहरूको कुनै उल्लङ्घनको लागि हामी तपाईंको वेबसाइट पहुँच समाप्त वा प्रतिबन्धित गर्न सक्छौँ। ती प्रावधानहरू जुन प्रकृतिले समाप्तिपश्चात् पनि कायम रहनुपर्छ (जस्तै बौद्धिक सम्पत्ति, अस्वीकारोक्ति, र दायित्वको सीमा) प्रभावकारी रहनेछन्।</p>
-                
+                <p>कम्पनीले कुनै पनि समयमा वेबसाइटको भाग परिमार्जन वा बन्द गर्न सक्छ। उल्लङ्घनमा पहुँच समाप्त हुन सक्छ।</p>
                 <h2>११. विविधः</h2>
-                <p>(१) यदि यी प्रयोगका सर्तहरूको कुनै प्रावधान अमान्य वा लागू नहुने ठहरियो भने, बाँकी प्रावधानहरू पूर्ण रूपमा प्रभावकारी रहनेछन्।</p>
-                <p>(२) हामीले कुनै अधिकार वा प्रावधान लागू गर्न असफल हुनुलाई त्यस्तो अधिकार वा प्रावधानको त्याग मानिने छैन।</p>
-                <p>(३) यी प्रयोगका सर्तहरूले तपाईं र कम्पनी बीच वेबसाइटको प्रयोगको सम्बन्धमा सम्पूर्ण सम्झौता गठन गर्दछ, जसले कुनै पनि पूर्व सम्झौतालाई प्रतिस्थापन गर्दछ।</p>
-                <p>(४) यी सर्तहरू अन्तर्गत कुनै प्रश्न वा सूचनाको लागि कम्पनीलाई सम्पर्क गर्न सकिन्छ।</p>
-                <p>(५) यस वेबसाइटको प्रयोग गरेर, तपाईंले यी प्रयोगका सर्तहरू पढी, बुझी र स्वीकार गरेको स्वीकारोक्ति दिनुहुन्छ।</p>
+                <p>कुनै प्रावधान अमान्य भएमा बाँकी प्रभावकारी रहनेछन्। यी सर्तहरूले सम्पूर्ण सम्झौता गठन गर्दछ।</p>
                 <p><em>इति सम्वत् २०८३ साल वैशाख महिना ४ गते रोज ६ शुभम् .............................................. ।</em></p>
             `,
             footerText: "© २०८३ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
@@ -425,58 +183,27 @@
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
-
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
 
-    // ----- Scroll hide/show logic -----
     const header = document.getElementById('mainHeader');
     const spacer = document.getElementById('navbarSpacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateHeaderHeight() {
-        if (header) {
-            const height = header.offsetHeight;
-            spacer.style.height = height + 'px';
-        }
-    }
-
+    let lastScrollY = window.scrollY, ticking = false;
+    function updateHeaderHeight() { if (header) spacer.style.height = header.offsetHeight + 'px'; }
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        const scrollThreshold = 50;
-
-        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-            header.classList.add('hidden');
-        } else if (currentScrollY < lastScrollY) {
-            header.classList.remove('hidden');
-        }
-
-        if (currentScrollY === 0) {
-            header.classList.remove('hidden');
-        }
-
-        lastScrollY = currentScrollY;
-        ticking = false;
+        const threshold = 50;
+        if (currentScrollY > lastScrollY && currentScrollY > threshold) header.classList.add('hidden');
+        else if (currentScrollY < lastScrollY) header.classList.remove('hidden');
+        if (currentScrollY === 0) header.classList.remove('hidden');
+        lastScrollY = currentScrollY; ticking = false;
     }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(handleScroll);
-            ticking = true;
-        }
-    });
-
-    window.addEventListener('load', () => {
-        updateHeaderHeight();
-        header.classList.remove('hidden');
-    });
-    window.addEventListener('resize', () => {
-        updateHeaderHeight();
-    });
+    window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(handleScroll); ticking = true; } });
+    window.addEventListener('load', () => { updateHeaderHeight(); header.classList.remove('hidden'); });
+    window.addEventListener('resize', updateHeaderHeight);
 
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
