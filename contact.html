@@ -5,54 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group</title>
     <meta name="description" content="Contact Nepal Law Group – email us for inquiries or founder membership applications.">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #d9d9d9;
-            color: #545454;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1a2a3f;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header – white background, gold text */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
         .navbar {
-            background: #ffffff;
+            background: rgba(255,255,255,0.98);
             backdrop-filter: blur(8px);
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid #b4882a;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
-
-        .navbar.hidden {
-            transform: translateY(-100%);
-        }
-
-        .navbar-spacer {
-            transition: height 0.2s;
-            background: transparent;
-        }
-
+        .navbar.hidden { transform: translateY(-100%); }
+        .navbar-spacer { transition: height 0.2s; }
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -60,179 +39,74 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo {
-            height: 48px;
-            width: auto;
-            display: block;
-        }
-
-        .brand {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #b4882a;
-            text-decoration: none;
-            letter-spacing: -0.3px;
-            white-space: nowrap;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #b4882a;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #545454;
-        }
-
+        .brand-wrapper { display: flex; align-items: center; gap: 0.75rem; }
+        .logo { height: 42px; width: auto; display: block; }
+        .brand { font-size: 1.5rem; font-weight: 700; color: #0a2b3e; text-decoration: none; letter-spacing: -0.3px; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        .nav-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #2c7da0; }
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: #e9ecef;
+            background: #f0f2f5;
             padding: 0.2rem;
             border-radius: 40px;
         }
-
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 500;
             padding: 0.3rem 0.9rem;
             border-radius: 40px;
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #545454;
+            color: #2c3e50;
         }
+        .lang-btn.active { background: #2c7da0; color: white; }
 
-        .lang-btn.active {
-            background: #b4882a;
-            color: #ffffff;
-        }
+        .page-hero { padding: 8rem 0 2rem; text-align: center; }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; color: #0a2b3e; margin-bottom: 0.5rem; }
 
-        /* Page hero */
-        .page-hero {
-            text-align: center;
-            padding: 6rem 0 1rem;
-        }
-        .page-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #545454;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact content */
-        .contact-content {
-            text-align: center;
-            padding: 2rem 0 3rem;
-        }
-        .email-card {
-            background: #ffffff;
-            border-radius: 28px;
+        .contact-card {
+            background: #f8fafc;
+            border-radius: 32px;
             padding: 2rem;
-            margin: 1rem auto;
-            max-width: 500px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            border: 1px solid #d9d9d9;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            border: 1px solid #eef2f8;
         }
-        .email-address {
+        .contact-email {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #b4882a;
+            color: #2c7da0;
             word-break: break-all;
             margin: 1rem 0;
         }
-        .note-text {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            font-style: italic;
-        }
+        .contact-note { color: #6c7e8e; font-size: 0.9rem; margin-top: 1rem; font-style: italic; }
 
-        /* Footer */
         .footer {
-            background: #545454;
-            color: #d9d9d9;
-            padding: 2rem 0 1.5rem;
-            border-top: 4px solid #b4882a;
+            background: #f8fafc;
+            padding: 2.5rem 0 2rem;
+            border-top: 1px solid #eef2f8;
             margin-top: 2rem;
         }
-        .footer-policy {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        .footer-policy a {
-            color: #d9d9d9;
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.2s;
-        }
-        .footer-policy a:hover {
-            color: #b4882a;
-        }
-        .footer-copyright {
-            font-size: 0.75rem;
-            text-align: center;
-            color: #d9d9d9;
-            border-top: 1px solid #b4882a;
-            padding-top: 1rem;
-        }
+        .footer-policy { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .footer-policy a { color: #6c7e8e; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-policy a:hover { color: #2c7da0; }
+        .footer-copyright { font-size: 0.75rem; text-align: center; color: #8ba0ae; border-top: 1px solid #eef2f8; padding-top: 1rem; }
 
         @media (max-width: 768px) {
-            .brand {
-                font-size: 1.3rem;
-            }
-            .logo {
-                height: 36px;
-            }
-            .page-hero h1 {
-                font-size: 1.8rem;
-            }
-            .email-address {
-                font-size: 1.2rem;
-            }
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
-            }
-            .brand-wrapper {
-                justify-content: center;
-            }
-            .nav-right {
-                justify-content: center;
-            }
-            .nav-links {
-                gap: 0.8rem;
-            }
+            .container { padding: 0 20px; }
+            .brand { font-size: 1.2rem; }
+            .logo { height: 34px; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .contact-email { font-size: 1.2rem; }
+            .nav-container { flex-direction: column; align-items: center; gap: 0.8rem; }
+            .brand-wrapper, .nav-right { justify-content: center; }
         }
     </style>
 </head>
@@ -262,19 +136,12 @@
 <div class="navbar-spacer" id="navbarSpacer"></div>
 
 <main>
-    <div class="page-hero">
-        <div class="container">
-            <h1 id="pageTitle">Get in Touch</h1>
-        </div>
-    </div>
-
+    <div class="page-hero"><div class="container"><h1 id="pageTitle">Get in Touch</h1></div></div>
     <div class="container">
-        <div class="contact-content">
-            <div class="email-card">
-                <p id="inquiryText">For all inquiries, including founder membership applications, please write to:</p>
-                <div class="email-address" id="email">contact@nepallawgroup.org</div>
-                <p class="note-text" id="noteText">Please note: The company does not yet have a physical office. All communication is currently by email.</p>
-            </div>
+        <div class="contact-card">
+            <p id="inquiryText">For all inquiries, including founder membership applications, please write to:</p>
+            <div class="contact-email" id="email">contact@nepallawgroup.org</div>
+            <p class="contact-note" id="noteText">Please note: The company does not yet have a physical office. All communication is currently by email.</p>
         </div>
     </div>
 </main>
@@ -286,9 +153,7 @@
             <a href="privacy.html" id="privacyLink">Privacy Policy</a>
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
-        <div class="footer-copyright">
-            <p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p>
-        </div>
+        <div class="footer-copyright"><p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p></div>
     </div>
 </footer>
 
@@ -333,59 +198,27 @@
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
-
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
 
-    // Scroll hide/show logic
     const header = document.getElementById('mainHeader');
     const spacer = document.getElementById('navbarSpacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateHeaderHeight() {
-        if (header) {
-            const height = header.offsetHeight;
-            spacer.style.height = height + 'px';
-        }
-    }
-
+    let lastScrollY = window.scrollY, ticking = false;
+    function updateHeaderHeight() { if (header) spacer.style.height = header.offsetHeight + 'px'; }
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        const scrollThreshold = 50;
-
-        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-            header.classList.add('hidden');
-        } else if (currentScrollY < lastScrollY) {
-            header.classList.remove('hidden');
-        }
-
-        if (currentScrollY === 0) {
-            header.classList.remove('hidden');
-        }
-
-        lastScrollY = currentScrollY;
-        ticking = false;
+        const threshold = 50;
+        if (currentScrollY > lastScrollY && currentScrollY > threshold) header.classList.add('hidden');
+        else if (currentScrollY < lastScrollY) header.classList.remove('hidden');
+        if (currentScrollY === 0) header.classList.remove('hidden');
+        lastScrollY = currentScrollY; ticking = false;
     }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(handleScroll);
-            ticking = true;
-        }
-    });
-
-    window.addEventListener('load', () => {
-        updateHeaderHeight();
-        header.classList.remove('hidden');
-    });
-    window.addEventListener('resize', () => {
-        updateHeaderHeight();
-    });
-
+    window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(handleScroll); ticking = true; } });
+    window.addEventListener('load', () => { updateHeaderHeight(); header.classList.remove('hidden'); });
+    window.addEventListener('resize', updateHeaderHeight);
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
