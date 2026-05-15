@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        /* same styles as before (no change) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
@@ -37,6 +38,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            text-decoration: none;
         }
         .logo-small {
             height: 50px;
@@ -115,10 +117,10 @@
 
 <header class="site-header">
     <div class="header-inner">
-        <div class="logo-area">
+        <a href="index.html?reset=1" class="logo-area">
             <img src="/images/logo.png" alt="Logo" class="logo-small">
             <span class="brand-name" id="headerBrand">Nepal Law Group</span>
-        </div>
+        </a>
         <div class="nav-links" id="navLinks"></div>
     </div>
 </header>
@@ -135,6 +137,7 @@
 </footer>
 
 <script>
+    // Same content object and updateUI as before
     const content = {
         en: {
             headerBrand: "Nepal Law Group",
