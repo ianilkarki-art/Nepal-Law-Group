@@ -28,9 +28,9 @@
             padding: 0 24px;
         }
 
-        /* Header – fixed, larger banner */
+        /* Header – white background, gold text */
         .navbar {
-            background: #545454;
+            background: #ffffff;
             backdrop-filter: blur(8px);
             padding: 1.2rem 0;
             position: fixed;
@@ -38,8 +38,8 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 3px solid #b4882a;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #b4882a;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
@@ -76,7 +76,7 @@
         .brand {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #ffffff;
+            color: #b4882a;        /* gold */
             text-decoration: none;
             letter-spacing: -0.3px;
             white-space: nowrap;
@@ -97,7 +97,7 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: #b4882a;        /* gold */
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
@@ -105,13 +105,13 @@
         }
 
         .nav-links a:hover {
-            color: #b4882a;
+            color: #545454;        /* dark grey on hover */
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: rgba(255, 255, 255, 0.2);
+            background: #e9ecef;
             padding: 0.2rem;
             border-radius: 40px;
         }
@@ -126,18 +126,18 @@
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #ffffff;
+            color: #545454;
         }
 
         .lang-btn.active {
             background: #b4882a;
-            color: #545454;
+            color: #ffffff;
         }
 
         /* Page hero */
         .page-hero {
             text-align: center;
-            padding: 6rem 0 2rem;  /* extra padding because header is larger */
+            padding: 6rem 0 2rem;
         }
         .page-hero h1 {
             font-size: 2.5rem;
