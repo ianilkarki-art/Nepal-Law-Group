@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group</title>
     <meta name="description" content="About Nepal Law Group – our vision, mission, foundation, objectives, and efforts.">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <style>
         * {
@@ -15,10 +14,10 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #d9d9d9;
-            color: #545454;
-            line-height: 1.5;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            background: #faf9f7;
+            color: #2c3e47;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
@@ -28,18 +27,17 @@
             padding: 0 24px;
         }
 
-        /* Header – white background, gold text */
+        /* Header – scholarly navy */
         .navbar {
-            background: #ffffff;
-            backdrop-filter: blur(8px);
+            background: #1e3a5f;
             padding: 1.2rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid #b4882a;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid #c9a03d;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
@@ -50,7 +48,6 @@
 
         .navbar-spacer {
             transition: height 0.2s;
-            background: transparent;
         }
 
         .nav-container {
@@ -71,14 +68,15 @@
             height: 48px;
             width: auto;
             display: block;
+            filter: brightness(0) invert(1);
         }
 
         .brand {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #b4882a;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.2px;
             white-space: nowrap;
         }
 
@@ -97,21 +95,21 @@
         }
 
         .nav-links a {
-            color: #b4882a;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1rem;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #545454;
+            color: #c9a03d;
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: #e9ecef;
+            background: rgba(255, 255, 255, 0.15);
             padding: 0.2rem;
             border-radius: 40px;
         }
@@ -120,48 +118,48 @@
             background: transparent;
             border: none;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
             padding: 0.3rem 0.9rem;
             border-radius: 40px;
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #545454;
+            color: #ffffff;
         }
 
         .lang-btn.active {
-            background: #b4882a;
-            color: #ffffff;
+            background: #c9a03d;
+            color: #1e3a5f;
         }
 
         /* Page hero */
         .page-hero {
             text-align: center;
-            padding: 6rem 0 2rem;
+            padding: 7rem 0 2rem;
         }
         .page-hero h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #545454;
+            color: #1e3a5f;
             margin-bottom: 0.5rem;
         }
 
         /* Sections */
         section {
             padding: 2rem 0;
-            border-bottom: 1px solid rgba(180, 136, 42, 0.3);
+            border-bottom: 1px solid #e2e8f0;
         }
         .section-title {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #b4882a;
+            color: #c9a03d;
             margin-bottom: 1rem;
             letter-spacing: -0.2px;
-            border-left: 4px solid #b4882a;
+            border-left: 4px solid #c9a03d;
             padding-left: 1rem;
         }
         .section-text {
-            color: #545454;
+            color: #3a5468;
             margin-bottom: 1rem;
             line-height: 1.6;
         }
@@ -172,19 +170,19 @@
         .objectives-list li {
             margin-bottom: 1rem;
             padding-left: 1.2rem;
-            border-left: 3px solid #b4882a;
-            color: #545454;
+            border-left: 3px solid #c9a03d;
+            color: #2c3e47;
         }
         .objectives-list li strong {
-            color: #b4882a;
+            color: #c9a03d;
         }
 
         /* Footer */
         .footer {
-            background: #545454;
-            color: #d9d9d9;
+            background: #1e3a5f;
+            color: #d1dbe8;
             padding: 2rem 0 1.5rem;
-            border-top: 4px solid #b4882a;
+            border-top: 3px solid #c9a03d;
             margin-top: 2rem;
         }
         .footer-policy {
@@ -195,19 +193,19 @@
             margin-bottom: 1rem;
         }
         .footer-policy a {
-            color: #d9d9d9;
+            color: #d1dbe8;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             transition: color 0.2s;
         }
         .footer-policy a:hover {
-            color: #b4882a;
+            color: #c9a03d;
         }
         .footer-copyright {
             font-size: 0.75rem;
             text-align: center;
-            color: #d9d9d9;
-            border-top: 1px solid #b4882a;
+            color: #b0c0d0;
+            border-top: 1px solid #2d4a6e;
             padding-top: 1rem;
         }
 
@@ -420,17 +418,12 @@
     function handleScroll() {
         const currentScrollY = window.scrollY;
         const scrollThreshold = 50;
-
         if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
             header.classList.add('hidden');
         } else if (currentScrollY < lastScrollY) {
             header.classList.remove('hidden');
         }
-
-        if (currentScrollY === 0) {
-            header.classList.remove('hidden');
-        }
-
+        if (currentScrollY === 0) header.classList.remove('hidden');
         lastScrollY = currentScrollY;
         ticking = false;
     }
@@ -441,7 +434,6 @@
             ticking = true;
         }
     });
-
     window.addEventListener('load', () => {
         updateHeaderHeight();
         header.classList.remove('hidden');
