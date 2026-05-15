@@ -6,50 +6,34 @@
     <title>Nepal Law Group</title>
     <meta name="description" content="About Nepal Law Group – our vision, mission, foundation, objectives, and efforts.">
     <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Georgia', 'Times New Roman', Times, serif;
-            background: #faf9f7;
-            color: #2c3e47;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1a2a3f;
+            line-height: 1.5;
             scroll-behavior: smooth;
         }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header – scholarly navy */
+        /* Header */
         .navbar {
-            background: #1e3a5f;
-            padding: 1.2rem 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(8px);
+            padding: 1rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 3px solid #c9a03d;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
-
-        .navbar.hidden {
-            transform: translateY(-100%);
-        }
-
-        .navbar-spacer {
-            transition: height 0.2s;
-        }
-
+        .navbar.hidden { transform: translateY(-100%); }
+        .navbar-spacer { transition: height 0.2s; }
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -57,185 +41,66 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo {
-            height: 48px;
-            width: auto;
-            display: block;
-            filter: brightness(0) invert(1);
-        }
-
-        .brand {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-decoration: none;
-            letter-spacing: -0.2px;
-            white-space: nowrap;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #c9a03d;
-        }
-
+        .brand-wrapper { display: flex; align-items: center; gap: 0.75rem; }
+        .logo { height: 42px; width: auto; display: block; }
+        .brand { font-size: 1.5rem; font-weight: 700; color: #0a2b3e; text-decoration: none; letter-spacing: -0.3px; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        .nav-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #2c7da0; }
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: rgba(255, 255, 255, 0.15);
+            background: #f0f2f5;
             padding: 0.2rem;
             border-radius: 40px;
         }
-
         .lang-btn {
             background: transparent;
             border: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
             padding: 0.3rem 0.9rem;
             border-radius: 40px;
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #ffffff;
+            color: #2c3e50;
         }
-
-        .lang-btn.active {
-            background: #c9a03d;
-            color: #1e3a5f;
-        }
+        .lang-btn.active { background: #2c7da0; color: white; }
 
         /* Page hero */
-        .page-hero {
-            text-align: center;
-            padding: 7rem 0 2rem;
-        }
-        .page-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 0.5rem;
-        }
+        .page-hero { padding: 8rem 0 2rem; text-align: center; }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; color: #0a2b3e; margin-bottom: 0.5rem; }
 
-        /* Sections */
-        section {
-            padding: 2rem 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #c9a03d;
-            margin-bottom: 1rem;
-            letter-spacing: -0.2px;
-            border-left: 4px solid #c9a03d;
-            padding-left: 1rem;
-        }
-        .section-text {
-            color: #3a5468;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        .objectives-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .objectives-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.2rem;
-            border-left: 3px solid #c9a03d;
-            color: #2c3e47;
-        }
-        .objectives-list li strong {
-            color: #c9a03d;
-        }
+        /* Content blocks */
+        .wp-block { margin: 3rem 0; }
+        .wp-block-title { font-size: 1.8rem; font-weight: 600; color: #0a2b3e; margin-bottom: 1rem; border-left: 4px solid #2c7da0; padding-left: 1rem; }
+        .wp-block-text { font-size: 1rem; color: #4a5c6e; max-width: 800px; }
+        .objectives-list { list-style: none; padding-left: 0; margin-top: 1rem; }
+        .objectives-list li { margin-bottom: 1rem; padding-left: 1.2rem; border-left: 2px solid #e2e8f0; color: #4a5c6e; }
+        .objectives-list li strong { color: #2c7da0; }
 
         /* Footer */
         .footer {
-            background: #1e3a5f;
-            color: #d1dbe8;
-            padding: 2rem 0 1.5rem;
-            border-top: 3px solid #c9a03d;
+            background: #f8fafc;
+            padding: 2.5rem 0 2rem;
+            border-top: 1px solid #eef2f8;
             margin-top: 2rem;
         }
-        .footer-policy {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        .footer-policy a {
-            color: #d1dbe8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-        .footer-policy a:hover {
-            color: #c9a03d;
-        }
-        .footer-copyright {
-            font-size: 0.75rem;
-            text-align: center;
-            color: #b0c0d0;
-            border-top: 1px solid #2d4a6e;
-            padding-top: 1rem;
-        }
+        .footer-policy { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .footer-policy a { color: #6c7e8e; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-policy a:hover { color: #2c7da0; }
+        .footer-copyright { font-size: 0.75rem; text-align: center; color: #8ba0ae; border-top: 1px solid #eef2f8; padding-top: 1rem; }
 
         @media (max-width: 768px) {
-            .brand {
-                font-size: 1.3rem;
-            }
-            .logo {
-                height: 36px;
-            }
-            .page-hero h1 {
-                font-size: 1.8rem;
-            }
-            .section-title {
-                font-size: 1.4rem;
-            }
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
-            }
-            .brand-wrapper {
-                justify-content: center;
-            }
-            .nav-right {
-                justify-content: center;
-            }
-            .nav-links {
-                gap: 0.8rem;
-            }
+            .container { padding: 0 20px; }
+            .brand { font-size: 1.2rem; }
+            .logo { height: 34px; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .wp-block-title { font-size: 1.5rem; }
+            .nav-container { flex-direction: column; align-items: center; gap: 0.8rem; }
+            .brand-wrapper, .nav-right { justify-content: center; }
         }
     </style>
 </head>
@@ -265,38 +130,29 @@
 <div class="navbar-spacer" id="navbarSpacer"></div>
 
 <main>
-    <div class="page-hero">
-        <div class="container">
-            <h1 id="pageTitle">About</h1>
-        </div>
-    </div>
-
+    <div class="page-hero"><div class="container"><h1 id="pageTitle">About</h1></div></div>
     <div class="container">
-        <section>
-            <h2 class="section-title" id="visionTitle">Our Vision</h2>
-            <p class="section-text" id="visionText">To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.</p>
-        </section>
-
-        <section>
-            <h2 class="section-title" id="missionTitle">Our Mission</h2>
-            <p class="section-text" id="missionText">To establish a self sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.</p>
-        </section>
-
-        <section>
-            <h2 class="section-title" id="foundationTitle">Our Foundation</h2>
-            <p class="section-text" id="foundationText">The company’s business will be strictly service oriented, non profit, educational, scholarly, social, charitable, and of public utility.</p>
-        </section>
-
-        <section>
-            <h2 class="section-title" id="objectivesTitle">Our Objectives</h2>
-            <p class="section-text" id="objectivesSub">The company has identified four priority objectives that will receive the highest attention and resources:</p>
+        <div class="wp-block">
+            <h2 class="wp-block-title" id="visionTitle">Our Vision</h2>
+            <p class="wp-block-text" id="visionText">To become a nationally respected platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member contributes to and benefits from a culture of excellence.</p>
+        </div>
+        <div class="wp-block">
+            <h2 class="wp-block-title" id="missionTitle">Our Mission</h2>
+            <p class="wp-block-text" id="missionText">To establish a self sustaining legal community where practising advocates, researchers, academics, and publishers work collaboratively. The company will generate no profit for distribution; its entire revenue – derived solely from membership fees – will be reinvested into legal research, academic programmes, publications, and institutional development.</p>
+        </div>
+        <div class="wp-block">
+            <h2 class="wp-block-title" id="foundationTitle">Our Foundation</h2>
+            <p class="wp-block-text" id="foundationText">The company’s business will be strictly service oriented, non profit, educational, scholarly, social, charitable, and of public utility.</p>
+        </div>
+        <div class="wp-block">
+            <h2 class="wp-block-title" id="objectivesTitle">Our Objectives</h2>
+            <p class="wp-block-text" id="objectivesSub">The company has identified four priority objectives that will receive the highest attention and resources:</p>
             <ul class="objectives-list" id="objectivesList"></ul>
-        </section>
-
-        <section>
-            <h2 class="section-title" id="effortsTitle">Our Efforts</h2>
-            <p class="section-text" id="effortsText">We aim to elevate legal excellence across Nepal through collaboration and networking.</p>
-        </section>
+        </div>
+        <div class="wp-block">
+            <h2 class="wp-block-title" id="effortsTitle">Our Efforts</h2>
+            <p class="wp-block-text" id="effortsText">We aim to elevate legal excellence across Nepal through collaboration and networking.</p>
+        </div>
     </div>
 </main>
 
@@ -307,9 +163,7 @@
             <a href="privacy.html" id="privacyLink">Privacy Policy</a>
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
-        <div class="footer-copyright">
-            <p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p>
-        </div>
+        <div class="footer-copyright"><p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p></div>
     </div>
 </footer>
 
@@ -368,7 +222,7 @@
     function renderObjectives(lang) {
         const list = document.getElementById("objectivesList");
         const objectives = content[lang].objectives;
-        list.innerHTML = objectives.map(obj => `<li><strong>${obj.substring(0, 4)}</strong> ${obj.substring(4)}</li>`).join("");
+        list.innerHTML = objectives.map(obj => `<li><strong>${obj.substring(0,4)}</strong> ${obj.substring(4)}</li>`).join("");
     }
 
     function updateUI(lang) {
@@ -393,55 +247,28 @@
         document.getElementById("termsLink").innerText = d.termsText;
         document.getElementById("privacyLink").innerText = d.privacyText;
         document.getElementById("cookieLink").innerText = d.cookieText;
-
         renderObjectives(lang);
-
         document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
         if (lang === "np") document.getElementById("langNp").classList.add("active");
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
 
-    // Scroll hide/show logic
     const header = document.getElementById('mainHeader');
     const spacer = document.getElementById('navbarSpacer');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateHeaderHeight() {
-        if (header) {
-            const height = header.offsetHeight;
-            spacer.style.height = height + 'px';
-        }
-    }
-
+    let lastScrollY = window.scrollY, ticking = false;
+    function updateHeaderHeight() { if (header) spacer.style.height = header.offsetHeight + 'px'; }
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        const scrollThreshold = 50;
-        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-            header.classList.add('hidden');
-        } else if (currentScrollY < lastScrollY) {
-            header.classList.remove('hidden');
-        }
+        const threshold = 50;
+        if (currentScrollY > lastScrollY && currentScrollY > threshold) header.classList.add('hidden');
+        else if (currentScrollY < lastScrollY) header.classList.remove('hidden');
         if (currentScrollY === 0) header.classList.remove('hidden');
-        lastScrollY = currentScrollY;
-        ticking = false;
+        lastScrollY = currentScrollY; ticking = false;
     }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(handleScroll);
-            ticking = true;
-        }
-    });
-    window.addEventListener('load', () => {
-        updateHeaderHeight();
-        header.classList.remove('hidden');
-    });
-    window.addEventListener('resize', () => {
-        updateHeaderHeight();
-    });
-
+    window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(handleScroll); ticking = true; } });
+    window.addEventListener('load', () => { updateHeaderHeight(); header.classList.remove('hidden'); });
+    window.addEventListener('resize', updateHeaderHeight);
     document.getElementById("langNp").addEventListener("click", () => updateUI("np"));
     document.getElementById("langEn").addEventListener("click", () => updateUI("en"));
     updateUI(currentLang);
