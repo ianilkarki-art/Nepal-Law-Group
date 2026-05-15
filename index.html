@@ -72,7 +72,7 @@
             background: #ffffff;
             color: #be8c10;
         }
-        /* Header (shown after language selection) – same colours as before */
+        /* Header (shown after language selection) */
         .site-header {
             background: #d9d9d9;
             padding: 1rem 0;
@@ -95,6 +95,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            cursor: pointer;
         }
         .logo-small {
             height: 50px;
@@ -215,7 +216,7 @@
 <div id="mainSite" style="display: none;">
     <header class="site-header">
         <div class="header-inner">
-            <div class="logo-area">
+            <div class="logo-area" id="resetButton">
                 <img src="/images/logo.png" alt="Logo" class="logo-small">
                 <span class="brand-name" id="headerBrand">Nepal Law Group</span>
             </div>
@@ -234,6 +235,7 @@
 </div>
 
 <script>
+    // Bilingual content
     const content = {
         en: {
             headerBrand: "Nepal Law Group",
@@ -305,13 +307,34 @@
         document.getElementById("mainSite").style.display = "block";
     }
 
-    // Language toggle active state styling (visually active when clicked)
-    document.getElementById("initialLangNp").addEventListener("click", () => {
-        loadSite("np");
-    });
-    document.getElementById("initialLangEn").addEventListener("click", () => {
-        loadSite("en");
-    });
+    // Reset to initial hero (clear stored language and show initial screen)
+    function resetToInitial() {
+        localStorage.removeItem("nlgLang");
+        document.getElementById("mainSite").style.display = "none";
+        document.getElementById("initialScreen").style.display = "flex";
+        // Reset any active states on language buttons (just in case)
+        document.getElementById("initialLangNp").classList.remove("active");
+        document.getElementById("initialLangEn").classList.remove("active");
+    }
+
+    // Language button event handlers
+    document.getElementById("initialLangNp").addEventListener("click", () => loadSite("np"));
+    document.getElementById("initialLangEn").addEventListener("click", () => loadSite("en"));
+
+    // Reset when logo or brand name is clicked
+    document.getElementById("resetButton").addEventListener("click", resetToInitial);
+
+    // Check for reset query parameter (when coming from other pages)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("reset")) {
+        resetToInitial();
+    } else {
+        // If a language is already stored (e.g., from previous visit), show main site
+        const storedLang = localStorage.getItem("nlgLang");
+        if (storedLang && (storedLang === "en" || storedLang === "np")) {
+            loadSite(storedLang);
+        }
+    }
 </script>
 </body>
 </html>
