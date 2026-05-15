@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group</title>
     <meta name="description" content="Nepal Law Group – a proposed profit non-distributing company for legal excellence in Nepal.">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <style>
-        /* (all existing styles remain exactly the same) */
         * {
             margin: 0;
             padding: 0;
@@ -16,10 +14,10 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #d9d9d9;
-            color: #545454;
-            line-height: 1.5;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            background: #faf9f7;
+            color: #2c3e47;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
@@ -29,18 +27,17 @@
             padding: 0 24px;
         }
 
-        /* Header – white background, gold text */
+        /* Header – scholarly navy */
         .navbar {
-            background: #ffffff;
-            backdrop-filter: blur(8px);
+            background: #1e3a5f;
             padding: 1.2rem 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid #b4882a;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid #c9a03d;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
@@ -51,7 +48,6 @@
 
         .navbar-spacer {
             transition: height 0.2s;
-            background: transparent;
         }
 
         .nav-container {
@@ -72,14 +68,15 @@
             height: 48px;
             width: auto;
             display: block;
+            filter: brightness(0) invert(1); /* makes logo white on dark background */
         }
 
         .brand {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #b4882a;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.2px;
             white-space: nowrap;
         }
 
@@ -98,21 +95,21 @@
         }
 
         .nav-links a {
-            color: #b4882a;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1rem;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #545454;
+            color: #c9a03d;
         }
 
         .lang-toggle {
             display: flex;
             gap: 0.2rem;
-            background: #e9ecef;
+            background: rgba(255, 255, 255, 0.15);
             padding: 0.2rem;
             border-radius: 40px;
         }
@@ -121,23 +118,23 @@
             background: transparent;
             border: none;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
             padding: 0.3rem 0.9rem;
             border-radius: 40px;
             cursor: pointer;
             font-family: inherit;
             transition: 0.2s;
-            color: #545454;
+            color: #ffffff;
         }
 
         .lang-btn.active {
-            background: #b4882a;
-            color: #ffffff;
+            background: #c9a03d;
+            color: #1e3a5f;
         }
 
         /* Hero section – two columns */
         .hero {
-            padding: 6rem 0 3rem;
+            padding: 7rem 0 3rem;
         }
 
         .hero-grid {
@@ -150,57 +147,58 @@
         .hero-content h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #545454;
+            color: #1e3a5f;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero-content p {
             font-size: 1.05rem;
-            color: #545454;
+            color: #3a5468;
             margin-bottom: 1.5rem;
         }
 
         .callout-card {
             background: #ffffff;
-            border-radius: 28px;
+            border-radius: 16px;
             padding: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
-            border: 1px solid #d9d9d9;
-            transition: transform 0.2s;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .callout-card:hover {
             transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
         }
 
         .callout-card h2 {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #b4882a;
+            color: #c9a03d;
             margin-bottom: 0.75rem;
         }
 
         .callout-card p {
-            color: #545454;
+            color: #2c3e47;
             margin-bottom: 1rem;
         }
 
         .callout-card .extra {
             margin-top: 1rem;
             font-style: italic;
-            border-top: 1px solid #d9d9d9;
+            border-top: 1px solid #e2e8f0;
             padding-top: 1rem;
-            color: #545454;
+            color: #4a6275;
         }
 
         .btn-outline {
             display: inline-block;
             margin-top: 0.5rem;
             padding: 0.6rem 1.2rem;
-            border: 2px solid #b4882a;
+            border: 2px solid #c9a03d;
             border-radius: 40px;
-            color: #b4882a;
+            color: #c9a03d;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
@@ -208,16 +206,16 @@
         }
 
         .btn-outline:hover {
-            background: #b4882a;
+            background: #c9a03d;
             color: #ffffff;
         }
 
         /* Footer */
         .footer {
-            background: #545454;
-            color: #d9d9d9;
+            background: #1e3a5f;
+            color: #d1dbe8;
             padding: 2rem 0 1.5rem;
-            border-top: 4px solid #b4882a;
+            border-top: 3px solid #c9a03d;
             margin-top: 2rem;
         }
 
@@ -230,21 +228,21 @@
         }
 
         .footer-policy a {
-            color: #d9d9d9;
+            color: #d1dbe8;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             transition: color 0.2s;
         }
 
         .footer-policy a:hover {
-            color: #b4882a;
+            color: #c9a03d;
         }
 
         .footer-copyright {
             font-size: 0.75rem;
             text-align: center;
-            color: #d9d9d9;
-            border-top: 1px solid #b4882a;
+            color: #b0c0d0;
+            border-top: 1px solid #2d4a6e;
             padding-top: 1rem;
         }
 
@@ -254,7 +252,7 @@
                 gap: 2rem;
             }
             .hero-content h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             .brand {
                 font-size: 1.3rem;
@@ -284,7 +282,7 @@
 <header class="navbar" id="mainHeader">
     <div class="container nav-container">
         <div class="brand-wrapper">
-            <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo" id="logoImg">
+            <img src="/images/logo.png" alt="Nepal Law Group Logo" class="logo">
             <a href="index.html" class="brand" id="brandName">Nepal Law Group</a>
         </div>
         <div class="nav-right">
@@ -302,7 +300,6 @@
     </div>
 </header>
 
-<!-- Spacer to preserve layout when header is fixed -->
 <div class="navbar-spacer" id="navbarSpacer"></div>
 
 <main>
