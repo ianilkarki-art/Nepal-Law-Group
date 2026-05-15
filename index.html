@@ -41,7 +41,7 @@
         }
         .initial-brand-en {
             font-family: 'Merriweather', serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: #545454;
             margin-bottom: 2rem;
@@ -50,7 +50,7 @@
             display: flex;
             justify-content: center;
             gap: 0.5rem;
-            background: #be8c10;
+            background: #e9ecef; /* light grey background */
             padding: 0.3rem;
             border-radius: 60px;
             width: fit-content;
@@ -68,15 +68,15 @@
             transition: all 0.2s;
             color: #545454;
         }
-        .lang-btn.active {
-            background: #ffffff;
-            color: #be8c10;
+        .lang-btn:hover {
+            background: #d6a12f;
+            color: #ffffff;
         }
         /* Header (shown after language selection) */
         .site-header {
             background: #ffffff;
             padding: 1rem 0;
-            border-bottom: 1px solid #be8c10;
+            border-bottom: 1px solid #d6a12f;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -123,8 +123,8 @@
             transition: all 0.2s;
         }
         .nav-links a:hover, .nav-links a.active {
-            color: #be8c10;
-            border-bottom-color: #be8c10;
+            color: #d6a12f;
+            border-bottom-color: #d6a12f;
         }
         .main-content {
             max-width: 1100px;
@@ -133,7 +133,7 @@
         }
         .callout {
             background: #f8f6f0;
-            border-left: 6px solid #be8c10;
+            border-left: 6px solid #d6a12f;
             padding: 2rem;
             margin: 2rem 0;
         }
@@ -146,7 +146,7 @@
         }
         .btn {
             display: inline-block;
-            background: #be8c10;
+            background: #d6a12f;
             color: white;
             padding: 0.6rem 1.2rem;
             text-decoration: none;
@@ -154,14 +154,14 @@
             font-weight: 500;
             transition: background 0.2s;
         }
-        .btn:hover { background: #9a7210; }
+        .btn:hover { background: #b8891a; }
         .section { margin: 3rem 0; }
         .section h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.8rem;
             font-weight: 600;
             color: #545454;
-            border-left: 4px solid #be8c10;
+            border-left: 4px solid #d6a12f;
             padding-left: 1rem;
             margin-bottom: 1rem;
         }
@@ -169,7 +169,7 @@
         .footer {
             background: #f8f6f0;
             padding: 2rem 0;
-            border-top: 1px solid #be8c10;
+            border-top: 1px solid #d6a12f;
             text-align: center;
         }
         .footer-policy {
@@ -184,10 +184,10 @@
             text-decoration: none;
             font-size: 0.8rem;
         }
-        .footer-policy a:hover { color: #be8c10; }
+        .footer-policy a:hover { color: #d6a12f; }
         @media (max-width: 700px) {
             .initial-brand-np { font-size: 2rem; }
-            .initial-brand-en { font-size: 2rem; }
+            .initial-brand-en { font-size: 1.8rem; }
             .initial-logo img { height: 140px; }
             .logo-small { height: 40px; }
             .brand-name { font-size: 1.1rem; }
@@ -310,19 +310,12 @@
         localStorage.removeItem("nlgLang");
         document.getElementById("mainSite").style.display = "none";
         document.getElementById("initialScreen").style.display = "flex";
-        // Reset active states on language buttons
-        document.getElementById("initialLangEn").classList.remove("active");
-        document.getElementById("initialLangNp").classList.remove("active");
     }
 
-    // Language button event handlers (English first, then Nepali)
     document.getElementById("initialLangEn").addEventListener("click", () => loadSite("en"));
     document.getElementById("initialLangNp").addEventListener("click", () => loadSite("np"));
-
-    // Reset when logo or brand name is clicked
     document.getElementById("resetButton").addEventListener("click", resetToInitial);
 
-    // Check for reset query parameter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("reset")) {
         resetToInitial();
