@@ -2,111 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepal Law Group</title>
-    <meta name="description" content="Become a Founder Member of Nepal Law Group – join a membership‑driven, non‑profit legal institution.">
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
+        /* same as above */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: #1a2a3f;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-        .navbar {
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(8px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            transform: translateY(0);
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #ffffff; color: #111; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: #ffffff; padding: 1rem 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 100; border-bottom: 1px solid #eaeef2; transition: transform 0.2s; }
         .navbar.hidden { transform: translateY(-100%); }
-        .navbar-spacer { transition: height 0.2s; }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .brand-wrapper { display: flex; align-items: center; gap: 0.75rem; }
-        .logo { height: 42px; width: auto; display: block; }
-        .brand { font-size: 1.5rem; font-weight: 700; color: #0a2b3e; text-decoration: none; letter-spacing: -0.3px; white-space: nowrap; }
-        .nav-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-        .nav-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .navbar-spacer { height: 80px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .brand-wrapper { display: flex; align-items: center; gap: 0.5rem; }
+        .logo { height: 40px; width: auto; }
+        .brand { font-size: 1.4rem; font-weight: 600; color: #1a2a3f; text-decoration: none; }
+        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 1.2rem; }
+        .nav-links a { color: #2c3e50; text-decoration: none; font-size: 0.9rem; }
         .nav-links a:hover { color: #2c7da0; }
-        .lang-toggle {
-            display: flex;
-            gap: 0.2rem;
-            background: #f0f2f5;
-            padding: 0.2rem;
-            border-radius: 40px;
-        }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 0.3rem 0.9rem;
-            border-radius: 40px;
-            cursor: pointer;
-            font-family: inherit;
-            transition: 0.2s;
-            color: #2c3e50;
-        }
+        .lang-toggle { display: flex; gap: 0.2rem; background: #f0f2f5; padding: 0.2rem; border-radius: 30px; }
+        .lang-btn { background: transparent; border: none; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 30px; cursor: pointer; }
         .lang-btn.active { background: #2c7da0; color: white; }
-
-        .page-hero { padding: 8rem 0 2rem; text-align: center; }
-        .page-hero h1 { font-size: 2.5rem; font-weight: 700; color: #0a2b3e; margin-bottom: 0.5rem; }
-
-        .wp-block { margin: 3rem 0; }
-        .wp-block-title { font-size: 1.8rem; font-weight: 600; color: #0a2b3e; margin-bottom: 1rem; border-left: 4px solid #2c7da0; padding-left: 1rem; }
-        .wp-block-text { font-size: 1rem; color: #4a5c6e; max-width: 800px; }
-
-        .btn-cta {
-            display: inline-block;
-            background: #2c7da0;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: background 0.2s;
-        }
-        .btn-cta:hover { background: #1e5e7a; }
-
-        .footer {
-            background: #f8fafc;
-            padding: 2.5rem 0 2rem;
-            border-top: 1px solid #eef2f8;
-            margin-top: 2rem;
-        }
-        .footer-policy { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-        .footer-policy a { color: #6c7e8e; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .footer-policy a:hover { color: #2c7da0; }
-        .footer-copyright { font-size: 0.75rem; text-align: center; color: #8ba0ae; border-top: 1px solid #eef2f8; padding-top: 1rem; }
-
-        @media (max-width: 768px) {
-            .container { padding: 0 20px; }
-            .brand { font-size: 1.2rem; }
-            .logo { height: 34px; }
-            .page-hero h1 { font-size: 1.8rem; }
-            .wp-block-title { font-size: 1.5rem; }
-            .nav-container { flex-direction: column; align-items: center; gap: 0.8rem; }
-            .brand-wrapper, .nav-right { justify-content: center; }
-        }
+        .content { margin: 2rem 0 4rem; }
+        h1 { font-size: 2rem; margin-bottom: 1rem; font-weight: 600; }
+        h2 { font-size: 1.5rem; margin: 1.5rem 0 0.5rem; font-weight: 500; }
+        p { margin-bottom: 1rem; }
+        .footer { background: #f8fafc; padding: 1.5rem 0; border-top: 1px solid #eaeef2; text-align: center; font-size: 0.8rem; color: #6c7e8e; }
+        .footer-policy { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+        .footer-policy a { color: #6c7e8e; text-decoration: none; }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; align-items: center; } .brand { font-size: 1.2rem; } .logo { height: 32px; } .navbar-spacer { height: 110px; } }
     </style>
 </head>
 <body>
@@ -132,28 +57,21 @@
     </div>
 </header>
 
-<div class="navbar-spacer" id="navbarSpacer"></div>
+<div class="navbar-spacer"></div>
 
-<main>
-    <div class="page-hero"><div class="container"><h1 id="pageTitle">Become a Founder Member</h1></div></div>
-    <div class="container">
-        <div class="wp-block">
-            <p class="wp-block-text" id="inviteText">We invite legally qualified individuals who share our vision of independent, ethical, and knowledge driven legal practice to join as Founder Members.</p>
-        </div>
-        <div class="wp-block">
-            <h2 class="wp-block-title" id="eligTitle">Eligibility</h2>
-            <p class="wp-block-text" id="eligText">Legal qualifications – such as being an advocate, legal scholar, researcher, or legally trained professional – are strongly preferred, though other professionals who can contribute to the company’s mission may also be considered.</p>
-        </div>
-        <div class="wp-block">
-            <h2 class="wp-block-title" id="reqTitle">Requirements</h2>
-            <p class="wp-block-text" id="reqText">Founder Members must pay the prescribed founder membership fee (currently nominal, set to cover only the initial registration and documentation costs). They are expected to actively participate in the first general meeting, contribute to the formulation of the company’s initial rules and code of conduct, and uphold the company’s ethical and professional standards. They must renew their membership annually as per the rules, unless they opt for lifetime membership. Founder Members also bear a duty to promote the company’s objectives and to act in a manner that does not bring the institution into disrepute.</p>
-        </div>
-        <div class="wp-block">
-            <h2 class="wp-block-title" id="whyTitle">Why Join as a Founder Member?</h2>
-            <p class="wp-block-text" id="whyText">By becoming a Founder Member, you will help create an institution that places legal knowledge and public service above commercial profit. You will be a founder of Nepal’s first membership driven, non profit law group – an institution designed to advance the rule of law, legal scholarship, and professional integrity for generations to come.</p>
-            <div style="text-align: center;"><a href="contact.html" class="btn-cta" id="ctaBtn">Express Interest →</a></div>
-        </div>
-    </div>
+<main class="container content">
+    <h1 id="pageTitle">Become a Founder Member</h1>
+    <p id="inviteText">We invite legally qualified individuals who share our vision of independent, ethical, and knowledge driven legal practice to join as Founder Members.</p>
+
+    <h2 id="eligTitle">Eligibility</h2>
+    <p id="eligText">Legal qualifications – such as being an advocate, legal scholar, researcher, or legally trained professional – are strongly preferred, though other professionals who can contribute to the company’s mission may also be considered.</p>
+
+    <h2 id="reqTitle">Requirements</h2>
+    <p id="reqText">Founder Members must pay the prescribed founder membership fee (currently nominal, set to cover only the initial registration and documentation costs). They are expected to actively participate in the first general meeting, contribute to the formulation of the company’s initial rules and code of conduct, and uphold the company’s ethical and professional standards. They must renew their membership annually as per the rules, unless they opt for lifetime membership. Founder Members also bear a duty to promote the company’s objectives and to act in a manner that does not bring the institution into disrepute.</p>
+
+    <h2 id="whyTitle">Why Join as a Founder Member?</h2>
+    <p id="whyText">By becoming a Founder Member, you will help create an institution that places legal knowledge and public service above commercial profit. You will be a founder of Nepal’s first membership driven, non profit law group – an institution designed to advance the rule of law, legal scholarship, and professional integrity for generations to come.</p>
+    <p><a href="contact.html" id="ctaBtn">Express Interest →</a></p>
 </main>
 
 <footer class="footer">
@@ -163,7 +81,7 @@
             <a href="privacy.html" id="privacyLink">Privacy Policy</a>
             <a href="cookie.html" id="cookieLink">Cookie Policy</a>
         </div>
-        <div class="footer-copyright"><p id="footerText">© 2026 Nepal Law Group – All rights reserved.</p></div>
+        <div id="footerText">© 2026 Nepal Law Group – All rights reserved.</div>
     </div>
 </footer>
 
@@ -202,7 +120,6 @@
     };
 
     let currentLang = localStorage.getItem("nlgLang") || "en";
-
     function updateUI(lang) {
         const d = content[lang];
         document.getElementById("brandName").innerText = d.brand;
@@ -228,14 +145,12 @@
         else document.getElementById("langEn").classList.add("active");
         localStorage.setItem("nlgLang", lang);
     }
-
+    // scroll logic as before
     const header = document.getElementById('mainHeader');
-    const spacer = document.getElementById('navbarSpacer');
     let lastScrollY = window.scrollY, ticking = false;
-    function updateHeaderHeight() { if (header) spacer.style.height = header.offsetHeight + 'px'; }
+    function updateHeaderHeight() { if (header) document.querySelector('.navbar-spacer').style.height = header.offsetHeight + 'px'; }
     function handleScroll() {
-        const currentScrollY = window.scrollY;
-        const threshold = 50;
+        const currentScrollY = window.scrollY, threshold = 50;
         if (currentScrollY > lastScrollY && currentScrollY > threshold) header.classList.add('hidden');
         else if (currentScrollY < lastScrollY) header.classList.remove('hidden');
         if (currentScrollY === 0) header.classList.remove('hidden');
