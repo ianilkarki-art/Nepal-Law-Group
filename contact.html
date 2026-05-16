@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nepal Law Group – Contact</title>
+    <meta name="description" content="Contact Nepal Law Group for inquiries about founder membership, legal collaboration, or general information. Email us – we do not yet have a physical office.">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -154,21 +155,25 @@
             background: #f8f6f0;
             border-left: 6px solid #d6a12f;
             padding: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             text-align: center;
         }
-        .contact-email {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #545454;
-            margin: 1rem 0;
-            word-break: break-all;
+        .contact-card p {
+            margin-bottom: 1rem;
         }
-        .note-text {
-            color: #6b7b8c;
+        .email {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #d6a12f;
+            word-break: break-all;
+            margin: 1rem 0;
+            font-family: 'Merriweather', serif;
+        }
+        .note {
             font-size: 0.9rem;
-            margin-top: 1rem;
             font-style: italic;
+            color: #6b7b8c;
+            margin-top: 1rem;
         }
         .footer {
             background: #f8f6f0;
@@ -200,7 +205,7 @@
         }
         @media (max-width: 700px) {
             .footer-policy a { font-size: 0.85rem; }
-            .contact-email { font-size: 1.1rem; }
+            .email { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -290,8 +295,8 @@
         mainDiv.innerHTML = `
             <div class="contact-card">
                 <p>${d.inquiryText}</p>
-                <div class="contact-email">${d.email}</div>
-                <p class="note-text">${d.noteText}</p>
+                <div class="email">${d.email}</div>
+                <p class="note">${d.noteText}</p>
             </div>
         `;
         localStorage.setItem("nlgLang", lang);
