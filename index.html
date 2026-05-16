@@ -331,10 +331,8 @@
     const acceptBtn = document.getElementById('acceptCookiesBtn');
     const rejectBtn = document.getElementById('rejectCookiesBtn');
 
-    // Check if user has already made a choice
-    const cookieChoice = localStorage.getItem('cookieConsent');
-    if (!cookieChoice) {
-        cookieBanner.style.display = 'flex';  // show banner
+    if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'flex';
     } else {
         cookieBanner.style.display = 'none';
     }
@@ -342,16 +340,14 @@
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'accepted');
         cookieBanner.style.display = 'none';
-        // Optionally, you could enable analytics scripts here
     });
 
     rejectBtn.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'rejected');
         cookieBanner.style.display = 'none';
-        // Optionally, disable non-essential scripts
     });
 
-    // Existing bilingual and navigation code (unchanged)
+    // Bilingual content
     const content = {
         en: {
             headerBrand: "Nepal Law Group",
