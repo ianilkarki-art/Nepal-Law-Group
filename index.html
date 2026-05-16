@@ -90,6 +90,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            position: relative;
         }
         .logo-area {
             display: flex;
@@ -108,6 +109,7 @@
             color: #545454;
             text-decoration: none;
         }
+        /* Desktop navigation */
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -125,6 +127,82 @@
         .nav-links a:hover, .nav-links a.active {
             color: #d6a12f;
             border-bottom-color: #d6a12f;
+        }
+        /* Hamburger button (hidden on desktop) */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 101;
+        }
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #545454;
+            margin: 5px 0;
+            transition: 0.2s;
+            border-radius: 2px;
+        }
+        /* Mobile menu overlay */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(4px);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.2s;
+        }
+        .mobile-menu.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 28px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+        }
+        .mobile-nav a {
+            color: #545454;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.2s;
+        }
+        .mobile-nav a:hover, .mobile-nav a.active {
+            color: #d6a12f;
+        }
+        /* Responsive: hide nav-links on mobile, show hamburger */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .brand-name {
+                font-size: 1.2rem;
+            }
+            .logo-small {
+                height: 40px;
+            }
         }
         .main-content {
             max-width: 1100px;
@@ -184,12 +262,6 @@
             margin-top: 0.5rem;
         }
         @media (max-width: 700px) {
-            .initial-brand-np { font-size: 2rem; }
-            .initial-brand-en { font-size: 1.8rem; }
-            .initial-logo img { height: 140px; }
-            .logo-small { height: 40px; }
-            .brand-name { font-size: 1.1rem; }
-            .nav-links { gap: 1rem; }
             .footer-policy a { font-size: 0.85rem; }
             .callout h2 { font-size: 1.3rem; }
         }
@@ -218,9 +290,18 @@
                 <img src="/images/logo.png" alt="Logo" class="logo-small">
                 <span class="brand-name" id="headerBrand">Nepal Law Group</span>
             </div>
+            <!-- Desktop navigation -->
             <div class="nav-links" id="navLinks"></div>
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
+    <!-- Mobile dropdown overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav" id="mobileNav"></div>
+    </div>
     <div class="main-content" id="mainContent"></div>
     <footer class="footer">
         <div class="footer-policy">
@@ -256,9 +337,13 @@
         }
     };
 
+    let currentLang = localStorage.getItem("nlgLang") || null;
+    let mobileMenuOpen = false;
+
     function loadSite(lang) {
         const d = content[lang];
         document.getElementById("headerBrand").innerText = d.headerBrand;
+        // Update desktop nav
         const navContainer = document.getElementById("navLinks");
         navContainer.innerHTML = `
             <a href="index.html?reset=1">${d.navHome}</a>
@@ -267,6 +352,18 @@
             <a href="contact.html">${d.navContact}</a>
         `;
         document.querySelectorAll("#navLinks a").forEach(link => {
+            if (link.getAttribute("href") === "index.html?reset=1") link.classList.add("active");
+            else link.classList.remove("active");
+        });
+        // Update mobile nav
+        const mobileNavContainer = document.getElementById("mobileNav");
+        mobileNavContainer.innerHTML = `
+            <a href="index.html?reset=1">${d.navHome}</a>
+            <a href="about.html">${d.navAbout}</a>
+            <a href="membership.html">${d.navMembership}</a>
+            <a href="contact.html">${d.navContact}</a>
+        `;
+        document.querySelectorAll("#mobileNav a").forEach(link => {
             if (link.getAttribute("href") === "index.html?reset=1") link.classList.add("active");
             else link.classList.remove("active");
         });
@@ -292,8 +389,36 @@
         localStorage.removeItem("nlgLang");
         document.getElementById("mainSite").style.display = "none";
         document.getElementById("initialScreen").style.display = "flex";
+        // Close mobile menu if open
+        if (mobileMenuOpen) toggleMobileMenu();
     }
 
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    function toggleMobileMenu() {
+        if (mobileMenuOpen) {
+            mobileMenu.classList.remove("active");
+        } else {
+            mobileMenu.classList.add("active");
+        }
+        mobileMenuOpen = !mobileMenuOpen;
+    }
+    // Close mobile menu when a link is clicked
+    mobileMenu.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+            toggleMobileMenu();
+        }
+    });
+    // Close when clicking outside the mobile-nav area (on the overlay background)
+    mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) {
+            toggleMobileMenu();
+        }
+    });
+    hamburger.addEventListener("click", toggleMobileMenu);
+
+    // Language selection from initial screen
     document.getElementById("initialLangEn").addEventListener("click", () => loadSite("en"));
     document.getElementById("initialLangNp").addEventListener("click", () => loadSite("np"));
     document.getElementById("resetButton").addEventListener("click", resetToInitial);
