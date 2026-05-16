@@ -242,7 +242,41 @@
     <div class="footer-copyright" id="footerText">© 2026 Nepal Law Group – All rights reserved.</div>
 </footer>
 
+<!-- Cookie Consent Banner (with Accept & Reject) -->
+<div id="cookieConsentBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #2c2b28; color: #faf8f2; padding: 0.8rem 1rem; text-align: center; z-index: 1100; font-family: 'Inter', sans-serif; display: none; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem;">
+    <p style="margin: 0; display: inline-block;">
+        We use cookies to improve your experience. By accepting, you agree to our 
+        <a href="/cookie.html" style="color: #d6a12f; text-decoration: underline;">Cookie Policy</a>.
+    </p>
+    <div style="display: inline-flex; gap: 0.8rem;">
+        <button id="acceptCookiesBtn" style="background: #d6a12f; border: none; color: #ffffff; padding: 0.4rem 1.2rem; border-radius: 30px; cursor: pointer; font-weight: 500;">Accept</button>
+        <button id="rejectCookiesBtn" style="background: transparent; border: 1px solid #d6a12f; color: #d6a12f; padding: 0.4rem 1.2rem; border-radius: 30px; cursor: pointer; font-weight: 500;">Reject</button>
+    </div>
+</div>
+
 <script>
+    // Cookie consent logic (Accept / Reject)
+    const cookieBanner = document.getElementById('cookieConsentBanner');
+    const acceptBtn = document.getElementById('acceptCookiesBtn');
+    const rejectBtn = document.getElementById('rejectCookiesBtn');
+
+    if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'flex';
+    } else {
+        cookieBanner.style.display = 'none';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieBanner.style.display = 'none';
+    });
+
+    rejectBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'rejected');
+        cookieBanner.style.display = 'none';
+    });
+
+    // Bilingual content and navigation logic
     const content = {
         en: {
             headerBrand: "Nepal Law Group",
