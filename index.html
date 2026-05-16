@@ -155,17 +155,6 @@
             transition: background 0.2s;
         }
         .btn:hover { background: #b8891a; }
-        .section { margin: 3rem 0; }
-        .section h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #545454;
-            border-left: 4px solid #d6a12f;
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-        }
-        .section p { color: #3c3c3c; margin-bottom: 1rem; }
         .footer {
             background: #f8f6f0;
             padding: 2rem 0;
@@ -203,7 +192,6 @@
             .nav-links { gap: 1rem; }
             .footer-policy a { font-size: 0.85rem; }
             .callout h2 { font-size: 1.3rem; }
-            .section h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -253,10 +241,6 @@
             ctaText: "We are now inviting legally qualified individuals and professionals who share our vision to join as Founder Members. Founder Members will have the unique honour of shaping the company’s governance, policies, and strategic direction from the very beginning.",
             ctaExtra: "If you believe that legal practice can be independent, ethical, and knowledge‑driven – and that a collective of members can advance law beyond individual gain – we invite you to become a Founder Member today.",
             ctaBtn: "Learn more →",
-            visionTitle: "Our Vision",
-            visionText: "To evolve into a nationally esteemed institutional platform that advances the rule of law, legal scholarship, and professional integrity – while ensuring that every member both contributes to and benefits from a culture of excellence.",
-            missionTitle: "Our Mission",
-            missionText: "To create a self‑sustaining legal community wherein practising advocates, legal researchers, academics, and publishers collaborate synergistically. The Group shall distribute no profit; its entire revenue (derived exclusively from membership fees) will be reinvested into legal research, academic programmes, publications, and institutional development.",
             footerText: "© 2026 Nepal Law Group – All rights reserved.",
             termsText: "Terms of Use", privacyText: "Privacy Policy", cookieText: "Cookie Policy"
         },
@@ -267,10 +251,6 @@
             ctaText: "कम्पनी अहिलेसम्म दर्ता भएको छैन। हामी अहिले कानूनी क्षेत्रका योग्य व्यक्ति तथा व्यवसायीहरूलाई संस्थापक सदस्य का रूपमा सामेल हुन आमन्त्रण गर्दछौँ। संस्थापक सदस्यहरूले कम्पनीको सुशासन, नीति तथा रणनीतिक दिशा निर्धारण गर्ने अवसर पाउनेछन्।",
             ctaExtra: "यदि तपाईं स्वतन्त्र, नैतिक र ज्ञान–संचालित कानूनी अभ्यासमा विश्वास राख्नुहुन्छ भने, आजै संस्थापक सदस्य बन्नुहोस्।",
             ctaBtn: "थप जान्नुहोस् →",
-            visionTitle: "हाम्रो सोच",
-            visionText: "राष्ट्रियस्तरमा सम्मानित संस्थाको रूपमा विकसित हुने, जसले कानूनको शासन, कानूनी विद्वत्ता र व्यावसायिक इमानदारीलाई अगाडि बढाउँछ – र जहाँ प्रत्येक सदस्यको योगदान र लाभ उत्कृष्टताको संस्कृतिभित्र सुनिश्चित हुन्छ।",
-            missionTitle: "हाम्रो लक्ष्य",
-            missionText: "एक आत्मनिर्भर कानूनी समुदायको स्थापना गर्ने, जहाँ अभ्यासरत अधिवक्ता, कानूनी अनुसन्धानकर्ता, शिक्षाविद् र प्रकाशकहरूले सहकार्य गर्छन्। समूहले कुनै मुनाफा वितरण गर्दैन; यसको सम्पूर्ण आम्दानी (केवल सदस्यता शुल्कबाट) कानूनी अनुसन्धान, शैक्षिक कार्यक्रम, प्रकाशन र संस्थागत विकासमा पुनः लगानी गरिनेछ।",
             footerText: "© २०८३ नेपाल ल ग्रुप – सबै अधिकार सुरक्षित",
             termsText: "प्रयोगका सर्तहरू", privacyText: "गोपनीयता नीति", cookieText: "कुकी नीति"
         }
@@ -297,14 +277,6 @@
                 <p>${d.ctaText}</p>
                 <p>${d.ctaExtra}</p>
                 <a href="membership.html" class="btn">${d.ctaBtn}</a>
-            </div>
-            <div class="section">
-                <h2>${d.visionTitle}</h2>
-                <p>${d.visionText}</p>
-            </div>
-            <div class="section">
-                <h2>${d.missionTitle}</h2>
-                <p>${d.missionText}</p>
             </div>
         `;
         document.getElementById("termsLink").innerText = d.termsText;
