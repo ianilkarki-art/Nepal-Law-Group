@@ -41,7 +41,7 @@
         }
         .initial-brand-en {
             font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             color: #545454;
             margin-bottom: 2rem;
@@ -182,8 +182,8 @@
         .footer-policy a {
             color: #545454;
             text-decoration: none;
-            font-size: 1rem;          /* same as nav tabs */
-            font-weight: 500;          /* same weight */
+            font-size: 1rem;
+            font-weight: 500;
             transition: color 0.2s;
         }
         .footer-policy a:hover {
@@ -196,7 +196,7 @@
         }
         @media (max-width: 700px) {
             .initial-brand-np { font-size: 2rem; }
-            .initial-brand-en { font-size: 1.8rem; }
+            .initial-brand-en { font-size: 1.9rem; }
             .initial-logo img { height: 140px; }
             .logo-small { height: 40px; }
             .brand-name { font-size: 1.1rem; }
@@ -281,13 +281,13 @@
         document.getElementById("headerBrand").innerText = d.headerBrand;
         const navContainer = document.getElementById("navLinks");
         navContainer.innerHTML = `
-            <a href="index.html">${d.navHome}</a>
+            <a href="index.html?reset=1">${d.navHome}</a>
             <a href="about.html">${d.navAbout}</a>
             <a href="membership.html">${d.navMembership}</a>
             <a href="contact.html">${d.navContact}</a>
         `;
         document.querySelectorAll("#navLinks a").forEach(link => {
-            if (link.getAttribute("href") === "index.html") link.classList.add("active");
+            if (link.getAttribute("href") === "index.html?reset=1") link.classList.add("active");
             else link.classList.remove("active");
         });
         const mainDiv = document.getElementById("mainContent");
